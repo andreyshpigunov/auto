@@ -1,0 +1,28 @@
+//
+//	_inline-blocks.scss
+// Инлайн-блоки + base.js
+// 
+// В инлайн-блоках важно соблюдать одно из правил:
+// - не разрывать пробелом или переносом группы с <li/>;
+// - не ставить закрывающий тег </li>.
+// В противном случае между блоками будет пробел.
+//
+//	Copyright © 2019 Andrey Shpigunov. All right reserved.
+//
+
+
+ul,
+nav,
+menu {
+	
+	&.inline-blocks {
+		position: relative;
+		list-style-type: none;
+		
+		> li {
+			position: relative;
+			display: inline-block;
+			vertical-align: top;
+		}
+	}
+}

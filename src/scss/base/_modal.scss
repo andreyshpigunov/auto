@@ -1,0 +1,271 @@
+//
+//	_modal.scss
+//	Модальные окна
+//
+//	Copyright © 2019 Andrey Shpigunov. All right reserved.
+//
+
+
+html.modal-active {
+	
+	body {
+		overflow: hidden;
+	}
+}
+
+
+// DIV с содержимым окна
+//	---------------------
+.modal-content {
+	display: none;
+}
+
+
+// Обертка окна
+//	------------
+.modal {
+	position: fixed;
+	z-index: -10000;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 0;
+	visibility: hidden;
+	
+	&.top {
+		z-index: 10000;
+		visibility: visible;
+	}
+	
+	@for $level from 1 through 10 {
+		
+		&.top.level-#{$level} {
+			z-index: 10000 + $level;
+		}
+	}
+	
+	
+//	Фон
+//	---
+	.modal-overlay {
+		position: absolute;
+		z-index: 10010;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background-color: rgba(0,0,0,0.4);
+	}
+
+
+//	Таблица для форматирования
+//	--------------------------
+	.modal-outer {
+		position: relative;
+		z-index: 10020;
+		width: 100%;
+		height: 100%;
+		padding: 60px;
+		overflow: auto;
+		-webkit-overflow-scrolling: touch;
+		
+		@include screen-small {
+			padding: 5px;
+		}
+	}
+	.modal-inner {
+		display: flex;
+		flex-direction: column;
+		min-height: 100%;
+	}
+	
+	
+// Окно с содержимым
+//	-----------------
+	.modal-window {
+		position: relative;
+		z-index: 10030;
+		width: 100%;
+		max-width: 800px;
+		margin: auto;
+		padding: 40px 50px;
+		text-align: left;
+		background: #fff;
+		box-shadow: 0 6px 30px rgba(0,0,0,0.25);
+		border-radius: 6px;
+		
+		@include screen-small {
+			padding: 40px 6vw;
+			box-shadow: none;
+		}
+	}
+	
+		
+//	Крестик закрытия окна
+//	---------------------
+	.modal-close {
+		display: block;
+		position: absolute;
+		z-index: 10040;
+		top: 6px;
+		right: 6px;
+		width: 40px;
+		height: 40px;
+		font-weight: 200;
+		border: none;
+		border-radius: 100%;
+		
+		will-change: opacity;
+		opacity: 0;
+		transition: opacity .15s ease-out;
+		
+		&:before,
+		&:after {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 19px;
+			left: 8px;
+			width: 24px;
+			height: 2px;
+			
+			will-change: color;
+			background: #ccc;
+			transition: background .15s ease-out;
+			transform-origin: center;
+		}
+		
+		&:before {
+			transform: rotate(-45deg);
+		}
+		&:after {
+			transform: rotate(45deg);
+		}
+	}
+	
+	&.active .modal-close {
+		opacity: 1;
+		
+		&:hover,
+		&:active {
+			
+			&:before,
+			&:after {
+				background: #f00;
+			}
+		}
+	}
+}
+
+
+
+
+// Эффекты для модального окна
+// ---------------------------
+// Вдохновение: https://github.com/codrops/ModalWindowEffects
+
+
+.modal {
+
+	.modal-overlay {
+		will-change: opacity;
+		opacity: 0;
+		transition: opacity .2s linear;
+	}
+	&.active .modal-overlay {
+		opacity: 1;
+	}
+
+	.modal-window {
+		will-change: opacity, transform;
+		opacity: 0;
+		transform: scale(0.97);
+		transition: all .12s ease-out;
+	}
+	&.active .modal-window {
+		transform: scale(1);
+		opacity: 1;
+	}
+
+
+	&.effect-in {
+	
+		.modal-window {
+			transform: scale(0.9);
+			transition: all 0.15s ease-out;
+		}
+		&.active .modal-window {
+			transform: scale(1);
+			transition: all 0.2s ease-out;
+		}
+	
+	}
+	
+	
+	&.effect-out {
+	
+		.modal-window {
+			transform: scale(1.1);
+			transition: all 0.15s ease-out;
+		}
+		&.active .modal-window {
+			transform: scale(1);
+			transition: all 0.2s ease-out;
+		}
+	
+	}
+	
+	
+	&.effect-up {
+	
+		.modal-window {
+			transform: translateY(30px);
+			transition: all 0.2s ease-out;
+		}
+		&.active .modal-window {
+			transform: translateY(0);
+		}
+	
+	}
+	
+	
+	&.effect-down {
+	
+		.modal-window {
+			transform: translateY(-30px);
+			transition: all 0.2s ease-out;;
+		}
+		&.active .modal-window {
+			transform: translateY(0);
+		}
+	
+	}
+	
+	
+	&.effect-left {
+	
+		.modal-window {
+			transform: translateX(-30px);
+			transition: all 0.2s ease-out;
+		}
+		&.active .modal-window {
+			transform: translateX(0);
+		}
+	
+	}
+	
+	
+	&.effect-right {
+	
+		.modal-window {
+			transform: translateX(30px);
+			transition: all 0.2s ease-out;;
+		}
+		&.active .modal-window {
+			transform: translateX(0);
+		}
+	
+	}
+
+}

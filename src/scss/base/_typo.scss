@@ -1,0 +1,246 @@
+//
+//	_typo.scss
+//	Типографика
+//
+//	Copyright © 2019 Andrey Shpigunov. All right reserved.
+//
+
+
+body,
+input,
+textarea,
+select,
+button {
+	font-synthesis: initial;
+	text-rendering: optimizeLegibility;
+	-moz-font-feature-settings: 'liga', 'kern';
+}
+
+.antialiased {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+@if $use-antialiasing {
+	
+	body,
+	input,
+	textarea,
+	select,
+	button {
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+}
+
+$base-text-h1-font-size: 2.4rem;
+$base-text-h2-font-size: 2rem;
+$base-text-h3-font-size: 1.4rem;
+$base-text-h4-font-size: 1.2rem;
+$base-text-h5-font-size: 1rem;
+$base-text-h6-font-size: 1rem;
+$base-text-font-size: 1rem;
+
+.text {
+	font-size: $base-text-font-size;
+		
+	@include screen-medium {
+		font-size: $base-text-font-size * .9;
+	}
+	
+	hgroup {
+		margin: 1.6rem 0 1.2rem 0;
+	}
+	
+	h1, .h1,
+	h2, .h2,
+	h3, .h3,
+	h4, .h4,
+	h5, .h5,
+	h6, .h6 {
+		margin: 0 0 1.2rem 0;
+		font-weight: 700;
+	}
+	* + h1, * + .h1,
+	* + h2, * + .h2,
+	* + h3, * + .h3,
+	* + h4, * + .h4,
+	* + h5, * + .h5,
+	* + h6, * + .h6 {
+		margin-top: 1.6rem
+	}
+	
+	h1, .h1 {
+		font-size: $base-text-h1-font-size;
+		line-height: 1.2;
+		
+		@include screen-medium {
+			font-size: $base-text-h1-font-size * .9;
+		}
+		
+		@include screen-small {
+			font-size: $base-text-h1-font-size * .8;
+		}
+		
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+	h2, .h2 {
+		font-size: $base-text-h2-font-size;
+		line-height: 1.25;
+		
+		@include screen-medium {
+			font-size: $base-text-h2-font-size * .9;
+		}
+		
+		@include screen-small {
+			font-size: $base-text-h2-font-size * .8;
+		}
+	}
+	h3, .h3 {
+		font-size: $base-text-h3-font-size;
+		line-height: 1.3;
+		
+		@include screen-medium {
+			font-size: $base-text-h3-font-size * .9;
+		}
+		
+		@include screen-small {
+			font-size: $base-text-h3-font-size * .8;
+		}
+	}
+	h4, .h4 {
+		font-size: $base-text-h4-font-size;
+		line-height: 1.4;
+		
+		@include screen-medium {
+			font-size: $base-text-h4-font-size * .9;
+		}
+		
+		@include screen-small {
+			font-size: $base-text-h4-font-size * .8;
+		}
+	}
+	h5, .h5 {
+		font-size: $base-text-h5-font-size;
+		line-height: 1.4;
+		
+		@include screen-medium {
+			font-size: $base-text-h4-font-size * .9;
+		}
+		
+		@include screen-small {
+			font-size: $base-text-h1-font-size * .8;
+		}
+	}
+	h6, .h6 {
+		font-size: $base-text-h6-font-size;
+		line-height: 1.4;
+		
+		@include screen-medium {
+			font-size: $base-text-h4-font-size * .9;
+		}
+		
+		@include screen-small {
+			font-size: $base-text-h1-font-size * .8;
+		}
+	}
+	
+	p {
+		margin: 1.2rem 0;
+		font-style: inherit;
+		hyphens: auto;
+	}
+	
+	figure {
+		margin: 1.2rem 0;
+		
+		figcaption {
+			font-size: .9rem;
+			color: #999;
+		}
+	}
+	
+	blockquote {
+		margin: 1rem 0;
+		padding: 0.3rem 1.6rem;
+		background: #fafafa;
+		font-style: italic;
+		hyphens: auto;
+	}
+	
+	pre {
+		margin: 1rem 0;
+		font-family: inherit;
+	}
+	
+	ul,
+	ol {
+		margin: 1rem 0;
+		padding-left: 1.4rem;
+	}
+	ul {
+		list-style-type: disc;
+		list-style-position: inside;
+   }
+	ol {
+		list-style-type: decimal;
+		list-style-position: inside;
+	}
+	ul ul,
+	ol ul {
+		list-style-type: circle;
+		list-style-position: inside;
+	}
+	ol ol,
+	ul ol {
+		list-style-type: lower-latin;
+		list-style-position: inside;
+	}
+	ul ol,
+	ul ul,
+	ol ol,
+	ol ul {
+		margin: 0.2rem 0;
+		padding-left: 1.4rem;
+	}
+	ul li,
+	ol li,
+	dl dd {
+		margin: 0.2rem 0;
+	}
+	dl {
+		margin: 1rem 0;
+		
+		dt { font-weight: bold; }
+		dd { padding-left: 1.4rem; }
+	}
+	
+	table {
+		border-collapse: collapse;
+		border-spacing: 0;
+		
+		caption {
+			margin-bottom: 4px;
+			padding: 0 10px;
+			font-weight: 700;
+			text-align: left;
+		}
+		tr th,
+		tr td {
+			padding: 6px 10px;
+			border: 1px solid #eee;
+			text-align: left;
+			vertical-align: top;
+		}
+	}
+	
+	> :first-child {
+		margin-top: 0 !important;
+	}
+	
+	> :last-child {
+		margin-bottom: 0 !important;
+	}
+}

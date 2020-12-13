@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>Base — библиотека базовых функция для сайта</title>
+	<link rel="stylesheet" href="css/docs.css" />
+</head>
+<body>
+	<div id="top" class="page">
+		
+		<main>
+			<div class="ruler">
+				<span class="xlarge-hide large-hide medium-hide small-hide">xsmall</span>
+				<span class="xlarge-hide large-hide medium-hide xsmall-hide">small</span>
+				<span class="xlarge-hide large-hide small-hide xsmall-hide">medium</span>
+				<span class="xlarge-hide medium-hide small-hide xsmall-hide">large</span>
+				<span class="large-hide medium-hide small-hide xsmall-hide">xlarge</span>
+			</div>
+			
+			<aside class="sidebar unselectable">
+				<div class="sidebar-logo small-hide">
+					<a data-scrollto="top"><img src="i/logo.svg" alt="Base"/></a>
+				</div>
+				<menu class="small-mt-0">
+					<li class="sidebar-header">Base.css</li>
+					<li><a data-scrollto="css-helpers">Классы-помощники</a></li>
+					<li><a data-scrollto="floating-blocks">Плавающие блоки</a></li>
+					<li><a data-scrollto="adaptive-blocks">Адаптивные блоки</a></li>
+					<li><a data-scrollto="inline-blocks">Инлайн-блоки</a></li>
+					<li><a data-scrollto="adaptive-inline-blocks">Адаптивные инлайн-блоки</a></li>
+					<li><a data-scrollto="grid">Сетка</a></li>
+					<li><a data-scrollto="responsive-css">Адаптивность</a></li>
+					<li><a data-scrollto="buttons">Кнопки</a></li>
+				</menu>
+				<menu>
+					<li class="sidebar-header">Base.js</li>
+					<li><a data-scrollto="responsive-js">Адаптивность</a></li>
+					<li><a data-scrollto="modal">Модальные окна</a></li>
+					<li><a data-scrollto="animate">Анимации</a></li>
+					<li><a data-scrollto="scrollto">Скроллер</a></li>
+					<li><a data-scrollto="loadmore">Загрузчик</a></li>
+					<li><a data-scrollto="lazyload">Ленивая загрузка</a></li>
+					<li><a data-scrollto="ajax">AJAX</a></li>
+					<li><a data-scrollto="utils">Утилиты</a></li>
+				</menu>
+			</aside>
+			
+			<nav class="header-menu">
+				<ul>
+					<li class="active">Документация</li>
+					<li><a href="https://github.com/andreyshpigunov/base">GitHub →</a></li>
+				</ul>
+			</nav>
+			
+			<nav class="header-menu-mobile">
+				<ul>
+					<li class="header-menu-mobile_button">
+						<i></i>
+						<i></i>
+						<i></i>
+					</li>
+					<li class="header-menu-mobile_logo" data-scrollto="top"><img src="i/logo.svg" alt="Base"/></li>
+					<li class="header-menu-mobile_github"><a href="https://github.com/andreyshpigunov/base">GitHub →</a></li>
+				</ul>
+			</nav>
+			
+			
+			<h2>Установка</h2>
+
+			<section id="setup">
+				<h2>Github</h2>
+				<p>Загрузить и подключить файлы вручную: <a href="https://github.com/andreyshpigunov/base">https://github.com/andreyshpigunov/base</a></p>
+				<p>Стили лучше внедрять в свой проект с помощью scss, тогда будут доступны все настройки. Если подключить css файл, настройки придется перекрывать стилями вручную.</p>
+				
+				<h2>CDN</h2>
+				<p>Актуальные версии файлов доступны по ссылкам:</p>
+				<p>
+					<a href="https://cdn.jsdelivr.net/gh/andreyshpigunov/base@latest/css/base.css">https://cdn.jsdelivr.net/gh/andreyshpigunov/base@latest/css/base.css</a><br/>
+					<a href="https://cdn.jsdelivr.net/gh/andreyshpigunov/base@latest/js/base.js">https://cdn.jsdelivr.net/gh/andreyshpigunov/base@latest/js/base.js</a>
+				</p>
+			</section>
+			
+			<h2 class="mt-40">Base.css</h2>
+
+			<section id="css-helpers">
+				<h2>Классы-помощники</h2>
+				<p>Расширяют функциональность элементов.</p>
+				
+				<h3>Ссылки</h3>
+				<p>
+					<code>.no-visited</code> — у ссылки с данным класс убирает выделение <code>:visited</code><br/>
+					<code>.pseudo</code> — псевдоссылка, подчеркнута точками<br/>
+					<code>.no-border</code> — ссылка без подчеркивания
+				</p>
+				<p>Если в ссылке находится картинка, подчеркивание убирается автоматически (ссылке добавляется класс <code>.no-border</code>), вернуть его можно добавив класс <code>.border</code>.
+				
+				<h3>Помощники</h3>
+				<p><code>[size]</code> — размер: xsmall, small, medium, large или xlarge, от большего к меньшему.</p>
+				<table>
+					<tr>
+						<td style="width: 200px">Размер</td>
+						<td style="width: 200px">Ширина экрана</td>
+					</tr>
+					<tr>
+						<td><code>xsmall</code></td>
+						<td><= 420px</td>
+					</tr>
+					<tr>
+						<td><code>small</code></td>
+						<td><= 720px</td>
+					</tr>
+					<tr>
+						<td><code>medium</code></td>
+						<td><= 1080px</td>
+					</tr>
+					<tr>
+						<td><code>large</code></td>
+						<td><= 1440px</td>
+					</tr>
+					<tr>
+						<td><code>xlarge</code></td>
+						<td>> 1440px</td>
+					</tr>
+				</table>
+				<p>
+					<code>.unselectable</code> — запрещает выделение элемента и всех его потомков<br/>
+					<code>.clear</code> — клеарфикс<br/>
+					<code>.text-left</code> — выравнивание текста по левому краю<br/>
+					<code>.[size]-text-left</code> — выравнивание текста по левому краю, адаптивный<br/>
+					<code>.text-center</code> — выравнивание текста по центру<br/>
+					<code>.[size]-text-center</code> — выравнивание текста по центру, адаптивный<br/>
+					<code>.text-right</code> — выравнивание текста по правому краю<br/>
+					<code>.[size]-text-right</code> — выравнивание текста по правому краю, адаптивный<br/>
+					<code>.uppercase</code> — конвертация в прописные<br/>
+					<code>.lowercase</code> — конвертация в строчные<br/>
+					<code>.capitalize</code> — первые символы слов прописные<br/>
+					<code>.nowrap</code> — запрет переноса строки<br/>
+					<code>.hyphens</code> — автоматическая расстановка переносов (работает только в современных браузерах)<br/>
+					<code>.video</code> — обертка для <code>iframe</code>, <code>object</code> и <code>embed</code>, пропорционально масштабирует видео<br/>
+					<code>.break-word</code> — переносит непереносимые текстовые конструкции<br/>
+					<code>.visuallyhidden</code> — скрывает блок специальным способом<br/>
+					<code>.hidden</code> — присваивает блоку <code>display: none</code><br/>
+					<code>.hidden-next</code> — присваивает следующему блоку <code>display: none</code><br/>
+					<code>.invisible</code> — присваивает блоку <code>visibility: hidden</code><br/>
+					<code>.table-responsive</code> — горизонтальная прокрутка таблицы, если она не помещается<br/>
+					<code>.up</code> — поднимает элемент над контекстом (добавляет ему <code>z-index: 2</code>)
+				</p>
+				
+				<h3>Экшн-классы</h3>
+				<p>
+					<code>.sync-hover</code> — синхронное добавление класса <code>.hover</code> к ссылкам с одинаковым <code>href</code><br/>
+					<code>.is-appeared</code> — при появлении во viewport элементу присваиваются классы <code>.appeared</code> и <code>.visible</code>. При исчезновении из viewport класс <code>.visible</code> исчезает, а <code>.appeared</code> остается.
+				</p>
+				<script async src="//jsfiddle.net/andreyshpigunov/masohftg/embed/html,css,js,result/dark/"></script>
+			</section>
+				
+				<section id="floating-blocks">
+					<h2>Плавающие блоки</h2>
+					<p>Простые floating-блоки, можно указывать нужные параметры через css.</p>
+					<script async src="//jsfiddle.net/andreyshpigunov/z5fpcgnh/embed/html,css,js,result/dark/"></script>
+				</section>
+				
+				<section id="adaptive-blocks">
+					<h2>Адаптивные блоки</h2>
+					<p>Автоматически подстраивающиеся под ширину строки блоки.</p>
+					<p>Параметр <code>data-rows</code> указывает максимальное число строк, в которые должны помещаться блоки.</p>
+					<script async src="//jsfiddle.net/andreyshpigunov/q6nrx4yw/embed/html,css,js,result/dark/"></script>
+				</section>
+				
+				<section id="inline-blocks">
+					<h2>Инлайн-блоки</h2>
+					<p>Простые инлайн-блоки, можно указывать нужные параметры через css.</p>
+					<script async src="//jsfiddle.net/andreyshpigunov/sq5vjnm3/embed/html,css,js,result/dark/"></script>
+				</section>
+												
+				<section id="adaptive-inline-blocks">
+					<h2>Адаптивные инлайн-блоки</h2>
+					<p>Автоматически подстраивающиеся под ширину строки инлайн-блоки.</p>
+					<p>Параметр <code>data-rows</code> указывает максимальное число строк, в которые должны помещаться блоки.
+					<br/>Поддерживаются теги menu и ul. Не нужно закрывать теги <code>li</code>.</p>
+					<script async src="//jsfiddle.net/andreyshpigunov/p7ncd9oj/embed/html,css,js,result/dark/"></script>
+				</section>
+		
+				<section id="grid">
+					<h2>Сетка</h2>
+					<p>Автоматически подстраивающиеся под ширину строки адаптивные флексбокс-блоки. Весь принцип работы основан на флексбоксах, можно очень гибко манипулировать сеткой в CSS, если стандартных возможнонстей не хватает.</p>
+					<p>
+						В файле _base.scss можно увидеть настраиваемые параметры:<br/>
+						<code>$grid-columns: 12</code> — количество колонок в сетке<br/>
+						<code>$grid-gutters-large: 1.2vw</code> — отступы внутри блоков на разных размерах экрана<br/>
+						<code>$grid-gutters-medium: 1.2vw</code><br/>
+						<code>$grid-gutters-small: 1.2vw</code>
+					</p>
+					<p><code>[size]</code> — размер: xsmall, small, medium, large или xlarge</p>
+					<p>
+						<code>.modules</code> — группа модулей<br/>
+						<code>.modules.-nearby</code> — убирает отступы между колонками и под рядом<br/>
+						<code>.modules.-line</code> — убирает отступ под рядом, оставляет между колонками<br/>
+	
+						<code>.modules.[size]-row</code> — модули в ряд, слева направо (по умолчанию)<br/>
+						<code>.modules.[size]-row-reverse</code> — модули в ряд, справа налево<br/>
+						<code>.modules.[size]-column</code> — модули в колонку, сверху вниз<br/>
+						<code>.modules.[size]-column-reverse</code> — модули в колонку, снизу вверх<br/>
+						<code>.modules.[size]-wrap</code> — переносимые модули<br/>
+						<code>.modules.[size]-wrap-reverse</code> — переносимые модули справа налево<br/>
+						<code>.modules.[size]-nowrap</code> — запрет переноса модулей<br/>
+						<code>.modules.[size]-start</code> — модули по левому краю<br/>
+						<code>.modules.[size]-end</code> — модули по правому краю<br/>
+						<code>.modules.[size]-centered</code> — модули по центру<br/>
+						<code>.modules.[size]-space-between</code> — одинаковое расстояние между модулями<br/>
+						<code>.modules.[size]-space-around</code> — одинаковое расстояние вокруг модулей<br/>
+						<code>.modules.[size]-align-stretch</code> — одинаковые по высоте (по умолчанию)<br/>
+						<code>.modules.[size]-align-centered</code> — выравнивание по центру по вертиками<br/>
+					</p>
+					<p>
+						<code>.module</code> — один модуль<br/>
+						<code>.module.[size]-[columns]</code> — где columns это количество колонок, занимаемое модулем<br/>
+						<code>.module.[size]-[0..12]</code> — автоматическая ширина модуля<br/>
+						<code>.module.[size]-auto</code> — автоматическая ширина модуля<br/>
+						<code>.module.[size]-offset-[0..12]</code> — отступ от предыдущей колонки<br/>
+						<code>.module.[size]-order-[0..12]</code> — порядок сортировки модулей<br/>
+						<code>.module.ml-auto</code> — сдвиг колонки вправо<br/>
+						<code>.module.[size]-ml-auto</code> — сдвиг колонки вправо<br/>
+						<code>.module.mr-auto</code> — сдвиг колонки влево<br/>
+						<code>.module.[size]-mr-auto</code> — сдвиг колонки влево
+					</p>
+					<script async src="//jsfiddle.net/andreyshpigunov/12n4pqv0/embed/html,css,js,result/dark/"></script>
+				</section>
+				
+				<section id="responsive-css">
+					<h2>Адаптивность</h2>
+					
+					<h3>CSS</h3>
+					<p>Скрывает/показывает элементы при разных разрешениях экрана.</p>
+					<p>
+						<code>.xlarge-[hide|show|show-inline|show-inlineblock]</code> — скрывает/показывает блок на большом экране<br/>
+						<code>.large-[hide|show|show-inline|show-inlineblock]</code> — скрывает/показывает блок на стандартном экране<br/>
+						<code>.medium-[hide|show|show-inline|show-inlineblock]</code> — скрывает/показывает блок на среднем экране<br/>
+						<code>.small-[hide|show|show-inline|show-inlineblock]</code> — скрывает/показывает блок на маленьком экране<br/>
+						<code>.xsmall-[hide|show|show-inline|show-inlineblock]</code> — скрывает/показывает блок на очень маленьком экране
+					</p>
+					
+					<h3>SASS</h3>
+					<p>Использование в SCSS</p>
+					<p>
+						<code>@media only screen and (max-width: $screen-xlarge) {...}</code><br/>
+						<code>@media only screen and (max-width: $screen-large) {...}</code><br/>
+						<code>@media only screen and (max-width: $screen-medium) {...}</code><br/>
+						<code>@media only screen and (max-width: $screen-small) {...}</code><br/>
+						<code>@media only screen and (max-width: $screen-xsmall) {...}</code>
+					</p>
+					<p>Сокращенный вариант:</p>
+					<p>
+						<code>@include screen-xlarge {...}</code><br/>
+						<code>@include screen-large) {...}</code><br/>
+						<code>@include screen-medium) {...}</code><br/>
+						<code>@include screen-small) {...}</code><br/>
+						<code>@include screen-xsmall) {...}</code>
+					</p>
+				</section>
+				
+				<section id="buttons">
+					<h2>Кнопки</h2>
+					
+					<p>Чтобы создать кнопку, надо добавить элементу класс <code>.button</code>.</p>
+					
+					<div class="section-example">
+						<a class="button">.button</a>
+						<a class="button -bold">.button.-bold</a>
+						<a class="button -bordered">.button.-bordered</a>
+						
+						<div style="height: 6px"></div>
+						<a class="button -large">.button.-large</a>
+						<a class="button -small">.button.-small</a>
+						<a class="button -xsmall">.button.-xsmall</a>
+					</div>
+					
+					<script async src="//jsfiddle.net/andreyshpigunov/pc2tvj05/embed/html,css,js,result/dark/"></script>
+				</section>
+				
+				<h2 class="mt-40">Base.js</h2>
+				
+				<section id="responsive-js">
+					<h2>Адаптивность</h2>
+					<p>Функция срабатывает только при первой загрузке страницы.</p>
+					<p>
+						<code>if(Base.adaptive.xlarge()){ ... }</code><br/>
+						<code>if(Base.adaptive.large()){ ... }</code><br/>
+						<code>if(Base.adaptive.medium()){ ... }</code><br/>
+						<code>if(Base.adaptive.small()){ ... }</code><br/>
+						<code>if(Base.adaptive.xsmall()){ ... }</code>
+					</p>
+				</section>
+				
+				<section id="modal">
+					<h2>Модальные окна</h2>
+					<p>Универсальное модальное окно.</p>
+					<p>По умолчанию код модального окна добавляется в конец тега body, но если необходимо расположить его в другом месте, нужно добавить блоку, где должен расположиться код окна, класс <code>.modal-here</code></p>
+					
+					<h3>API</h3>
+					<p>
+						<code>Base.modal.show(id)</code> — открыть окно<br/>
+						<code>Base.modal.hide(id)</code> — закрыть окно
+					</p>
+          
+          <a data-modal="modal-test">TEST</a>
+          <a onclick="Base.modal.show('modal-test')">API SHOW</a>
+          <div id="modal-test" class="modal-content">
+            <div class="text">
+              <h2>Модальные окна</h2>
+    					<p>Универсальное модальное окно.</p>
+    					<p>По умолчанию код модального окна добавляется в конец тега body, но если необходимо расположить его в другом месте, нужно добавить блоку, где должен расположиться код окна, класс <code>.modal-here</code></p>
+            </div>
+          </div>
+					
+					<h3>События</h3>
+					<p>
+						<code>modal:ready</code> — перед открытием окна<br/>
+						<code>modal:open</code> — окно открыто<br/>
+						<code>modal:close</code> — после закрытия окна
+					</p>
+					<p>
+						Пример обработки события:<br/>
+						<code>document.getElementById('modal-id').addEventListener('modal:ready', function(event){ ... })</code>
+					</p>
+					
+					<h3>Инициализация</h3>
+					<script async src="//jsfiddle.net/andreyshpigunov/71cykth4/embed/html/dark/"></script>
+					
+					<h3>Примеры</h3>
+					<script async src="//jsfiddle.net/andreyshpigunov/2voaby6k/embed/result,html,css,js/dark/"></script>
+				</section>
+				
+				<section id="animate">
+					<h2>Анимации</h2>
+					
+					<p>Запускает функцию с анимацией или управляет классом элемента при достижении им или его элементом-триггером определенной точки прокрутки.</p>
+					
+					<h3>Инициализация</h3>
+					<script async src="//jsfiddle.net/andreyshpigunov/r0osq3tx/embed/html/dark/"></script>
+					
+					<p>
+						<code>TriggerID</code> — указатель на ID эелемента, у которого мы отслеживаем положение<br/>
+						<code>Start</code> — точка начала анимации (высота от верхнего края экрана в px или vh)<br/>
+						<code>End</code> — точка окончания анимации (высота от верхнего края экрана в px или vh)<br/>
+						<code>FunctionName</code> — название функции, выполнение которой начинается, когда элемент движется между Start и End<br/>
+						<code>Class</code> — класс, присваиваемый ссылке, когда Target находится между Start и End<br/>
+						<code>ClassRemove</code> — удалять ли Class у елемента после выхода его из зоны анимации, по умолчанию false
+					</p>
+					
+					<p>Если элемент сам является триггером, TriggerID указывать не нужно.</p>
+					
+					<p>Функция FunctionName получает параметр со всеми полями элемента, описанными выше и параметром Progress, который изменяется от 0 до 1, в процессе прокрутки страницы и перемещения элемента.</p>
+					
+					<h3>Пример</h3>
+					<iframe width="100%" height="400" src="//jsfiddle.net/andreyshpigunov/b1zn7cg2/embedded/result,html,css,js/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+				</section>
+				
+				<section id="scrollto">
+					<h2>Скроллер</h2>
+					<p>
+						Прокручивает страницу до элемента с указанным ID.<br/>
+						Автоматически применяется к элементам с data-scroll.
+					</p>
+					
+					<h3>Инициализация</h3>
+					<script async src="//jsfiddle.net/andreyshpigunov/9hjtywL3/embed/html/dark/"></script>
+					
+					<p>
+						<code>Target</code> — ID цели<br/>
+						<code>Offset</code> — смещение в пикселях (по умолчанию 0)<br/>
+						<code>Speed</code> — скорость прокрутки (по умолчанию 500 мс)<br/>
+						<code>ClassActive</code> — класс, присваиваемый ссылке, когда Target находится в зоне viewport
+					</p>
+					
+					<h3>API</h3>
+					<p><code>Base.scrollTo(target, offset, speed)</code></p>
+					<p>
+						<code>target</code> — ID цели<br/>
+						<code>offset</code> — скорость прокрутки (по умолчанию 500 мс, необязательные параметр)<br/>
+						<code>speed</code> — смещение в пикселях (по умолчанию 0, необязательные параметр)<br/>
+					</p>
+				</section>
+				
+				<section id="loadmore">
+					<h2>Загрузчик</h2>
+					<p>
+						Запускает функцию подгрузки данных при прокрутке до конца блока.<br/>
+						Автоматически применяется к элементам с data-loadmore.
+					</p>
+					
+					<h3>Инициализация</h3>
+					<script async src="//jsfiddle.net/andreyshpigunov/39zt1xs4/embed/html/dark/"></script>
+					
+					<p>
+						<code>FunctionName</code> — название функции, выполняющей загрузку<br/>
+						<code>Offset</code> — смещение в пикселях от нижнего края страница (по умолчанию 0)
+					</p>
+					<p>В функцию при каждом ее запуске передается инкрементный параметр <code>page</code>.</p>
+				</section>
+				
+				<section id="lazyload">
+					<h2>Ленивая загрузка</h2>
+					<p>
+						Загрузка изображений при их появлении в viewport.<br/>
+						Работает с помощью метода IntersectionObserver, только в современных браузерах.<br/>
+						Если IntersectionObserver не поддерживается, картинки загружаются обычным способом.
+					</p>
+					
+					<h3>Инициализация</h3>
+					<script async src="//jsfiddle.net/andreyshpigunov/0mt3ys59/embed/html/dark/"></script>
+				</section>
+				
+				<section id="ajax">
+					<h2>AJAX</h2>
+					<p>Библиотека для работы с AJAX-запросами.</p>
+					<p>Исходная документация: <a href="https://github.com/fdaciuk/ajax/blob/dev/README.md" target="_blank">https://github.com/fdaciuk/ajax/blob/dev/README.md</a></p>
+										
+					<h3>Использование</h3>
+					<script async src="//jsfiddle.net/andreyshpigunov/7dtrup9h/embed/js/dark/"></script>
+					
+					<h3>GET</h3>
+					<script async src="//jsfiddle.net/andreyshpigunov/hka0t47r/embed/js/dark/"></script>
+					
+					<h3>POST</h3>
+					<script async src="//jsfiddle.net/andreyshpigunov/Lx0fcn3v/embed/js/dark/"></script>
+					
+					<h3>PUT</h3>
+					<script async src="//jsfiddle.net/andreyshpigunov/0ntkgwfe/embed/js/dark/"></script>
+					
+					<h3>DELETE</h3>
+					<script async src="//jsfiddle.net/andreyshpigunov/2k1b8phv/embed/js/dark/"></script>
+					
+					<h3>Обработка ответов</h3>
+					<script async src="//jsfiddle.net/andreyshpigunov/ebw68h04/embed/js/dark/"></script>
+					
+					<h3>Отмена запроса</h3>
+					<script async src="//jsfiddle.net/andreyshpigunov/mrc6fLqo/embed/js/dark/"></script>
+
+				</section>
+				
+				<section id="utils">
+					<h2>Утилиты</h2>
+					<p>Часто используемые функции.</p>
+					<script async src="//jsfiddle.net/andreyshpigunov/uoxv1eLd/embed/js/dark/"></script>
+				</section>
+			</main>
+		</div>
+		
+		<script src="js/base.js" ></script>
+		<script>
+			var
+			html = document.documentElement,
+			mobileButton = document.querySelector('.header-menu-mobile_button');
+			
+			mobileButton.addEventListener('click', function(event) {
+				if (html.classList.contains('show-menu')) {
+					html.classList.remove('show-menu')
+				} else {
+					html.classList.add('show-menu')
+				}
+			})
+		</script>
+	</body>
+</html>
+																				
+																				
