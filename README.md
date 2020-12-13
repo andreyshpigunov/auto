@@ -1,5 +1,3 @@
-# Base
+# Auto
 
-Библиотека стилей и скриптов для создания сайтов.
-
-Документация: [https://andreyshpigunov.github.io/base/](https://andreyshpigunov.github.io/base/)
+Small CSS + JS library for website development
