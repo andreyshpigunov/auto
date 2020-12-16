@@ -1,0 +1,131 @@
+/*---------------------------
+_buttons.scss
+Buttons styles.
+
+Created by Andrey Shpigunov on 15.12.2020.
+---------------------------*/
+
+.button,
+.button:visited {
+	position: relative;
+	display: inline-block;
+	width: auto;
+	height: auto;
+	padding: 0.6em 1em;
+	color: #000;
+	font-family: $font-family;
+	font-size: 1rem;
+	font-weight: 400;
+	vertical-align: bottom;
+	white-space: nowrap;
+	line-height: 1;
+	text-shadow: none;
+	text-transform: none;
+	outline: none;
+	cursor: pointer;
+	overflow: hidden;
+	border: solid 1px #f3f3f3;
+	border-radius: 4px;
+	background: #f3f3f3;
+	transition: all 0.1s linear;
+	user-select: none;
+	appearance: none;
+	@extend .unselectable;
+
+	&:hover,
+	&.hover {
+		color: #000;
+		border-color: darken(#f3f3f3, 3%);
+		background-color: darken(#f3f3f3, 3%);
+	}
+
+	&:active,
+	&.active {
+		color: #000;
+		border-color: darken(#f3f3f3, 10%);
+		background-color: darken(#f3f3f3, 10%);
+	}
+
+	&[disabled],
+	&.disabled {
+		opacity: 0.5;
+		pointer-events: none;
+	}
+
+	&.-bordered {
+		border: solid 1px #eee;
+		background: none;
+
+		&:hover,
+		&.hover {
+			border-color: darken(#f3f3f3, 3%);
+			background: none;
+		}
+
+		&:active,
+		&.active {
+			border-color: darken(#f3f3f3, 10%);
+			background: none;
+		}
+
+		&.-bold {
+			border-width: 2px;
+		}
+	}
+
+	&.-bold {
+		font-weight: 700;
+	}
+	&.-xsmall {
+		font-size: 0.8rem;
+	}
+	&.-small {
+		font-size: 0.9rem;
+	}
+	&.-large {
+		font-size: 1.2rem;
+	}
+	&.-xlarge {
+		font-size: 1.4rem;
+	}
+
+	@each $name, $color in $buttons-colors {
+		&.-#{$name} {
+			color: scss_contrast($color);
+			border-color: $color;
+			background-color: $color;
+
+			&:hover,
+			&.hover {
+				color: scss_contrast($color);
+				border-color: darken($color, 3%);
+				background-color: darken($color, 3%);
+			}
+
+			&:active,
+			&.active {
+				color: scss_contrast($color);
+				border-color: darken($color, 10%);
+				background-color: darken($color, 10%);
+			}
+
+			&.-bordered {
+				color: $color;
+				border: solid 1px $color;
+				background: none;
+
+				&:hover,
+				&.hover {
+					border-color: darken($color, 3%);
+					background: none;
+				}
+
+				&:active,
+				&.active {
+					border-color: darken($color, 10%);
+					background: none;
+				}
+			}
+		}
+	}
+}

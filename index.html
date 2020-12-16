@@ -16,11 +16,9 @@
 		
 		<main>
 			<div class="ruler">
-				<span class="xlarge-hide large-hide medium-hide small-hide">xsmall</span>
-				<span class="xlarge-hide large-hide medium-hide xsmall-hide">small</span>
-				<span class="xlarge-hide large-hide small-hide xsmall-hide">medium</span>
-				<span class="xlarge-hide medium-hide small-hide xsmall-hide">large</span>
-				<span class="large-hide medium-hide small-hide xsmall-hide">xlarge</span>
+				<span class="large-hide medium-hide">small</span>
+				<span class="large-hide small-hide">medium</span>
+				<span class="medium-hide small-hide">large</span>
 			</div>
 			
 			<aside class="sidebar unselectable">
@@ -28,33 +26,29 @@
 					<a data-scrollto="top"><img src="i/logo.svg" alt="Base"/></a>
 				</div>
 				<menu class="small-mt-0">
-					<li class="sidebar-header">Base.css</li>
-					<li><a data-scrollto="css-helpers">Классы-помощники</a></li>
-					<li><a data-scrollto="floating-blocks">Плавающие блоки</a></li>
-					<li><a data-scrollto="adaptive-blocks">Адаптивные блоки</a></li>
-					<li><a data-scrollto="inline-blocks">Инлайн-блоки</a></li>
-					<li><a data-scrollto="adaptive-inline-blocks">Адаптивные инлайн-блоки</a></li>
-					<li><a data-scrollto="grid">Сетка</a></li>
-					<li><a data-scrollto="responsive-css">Адаптивность</a></li>
-					<li><a data-scrollto="buttons">Кнопки</a></li>
+					<li class="sidebar-header">auto.css</li>
+					<li><a data-scrollto="css-helpers">Helpers</a></li>
+					<li><a data-scrollto="grid">Grid</a></li>
+					<li><a data-scrollto="responsive-css">Adaptivity</a></li>
+					<li><a data-scrollto="buttons">Buttons</a></li>
 				</menu>
 				<menu>
-					<li class="sidebar-header">Base.js</li>
-					<li><a data-scrollto="responsive-js">Адаптивность</a></li>
-					<li><a data-scrollto="modal">Модальные окна</a></li>
-					<li><a data-scrollto="animate">Анимации</a></li>
-					<li><a data-scrollto="scrollto">Скроллер</a></li>
-					<li><a data-scrollto="loadmore">Загрузчик</a></li>
-					<li><a data-scrollto="lazyload">Ленивая загрузка</a></li>
+					<li class="sidebar-header">auto.js</li>
+					<li><a data-scrollto="responsive-js">Adaptivity</a></li>
+					<li><a data-scrollto="modal">Modals</a></li>
+					<li><a data-scrollto="animate">Animations</a></li>
+					<li><a data-scrollto="scrollto">Scroller</a></li>
+					<li><a data-scrollto="loadmore">Loader</a></li>
+					<li><a data-scrollto="lazyload">Lazyload</a></li>
 					<li><a data-scrollto="ajax">AJAX</a></li>
-					<li><a data-scrollto="utils">Утилиты</a></li>
+					<li><a data-scrollto="utils">Utils</a></li>
 				</menu>
 			</aside>
 			
 			<nav class="header-menu">
 				<ul>
-					<li class="active">Документация</li>
-					<li><a href="https://github.com/andreyshpigunov/base">GitHub →</a></li>
+					<li class="active">Docs</li>
+					<li><a href="https://github.com/andreyshpigunov/auto">GitHub →</a></li>
 				</ul>
 			</nav>
 			
@@ -66,77 +60,64 @@
 						<i></i>
 					</li>
 					<li class="header-menu-mobile_logo" data-scrollto="top"><img src="i/logo.svg" alt="Base"/></li>
-					<li class="header-menu-mobile_github"><a href="https://github.com/andreyshpigunov/base">GitHub →</a></li>
+					<li class="header-menu-mobile_github"><a href="https://github.com/andreyshpigunov/auto">GitHub →</a></li>
 				</ul>
 			</nav>
 			
 			
-			<h2>Установка</h2>
+			<h2>Installing</h2>
 
 			<section id="setup">
 				<h2>Github</h2>
-				<p>Загрузить и подключить файлы вручную: <a href="https://github.com/andreyshpigunov/base">https://github.com/andreyshpigunov/base</a></p>
-				<p>Стили лучше внедрять в свой проект с помощью scss, тогда будут доступны все настройки. Если подключить css файл, настройки придется перекрывать стилями вручную.</p>
+				<p>Download and connect files manually: <a href="https://github.com/andreyshpigunov/base">https://github.com/andreyshpigunov/base</a></p>
+				<p>It is better to implement styles in your project using scss, then all the settings will be available. if you connect a css file, you will have to manually override the settings with styles.</p>
 				
 				<h2>CDN</h2>
-				<p>Актуальные версии файлов доступны по ссылкам:</p>
+				<p>Current versions of files are available at the following links:</p>
 				<p>
 					<a href="https://cdn.jsdelivr.net/gh/andreyshpigunov/base@latest/css/base.css">https://cdn.jsdelivr.net/gh/andreyshpigunov/base@latest/css/base.css</a><br/>
 					<a href="https://cdn.jsdelivr.net/gh/andreyshpigunov/base@latest/js/base.js">https://cdn.jsdelivr.net/gh/andreyshpigunov/base@latest/js/base.js</a>
 				</p>
 			</section>
 			
-			<h2 class="mt-40">Base.css</h2>
+			<br/>
+			<br/>
+			<h2>Auto.css</h2>
 
 			<section id="css-helpers">
-				<h2>Классы-помощники</h2>
-				<p>Расширяют функциональность элементов.</p>
+				<h2>Helpers</h2>
+				<p>Extend the functionality of elements.</p>
 				
-				<h3>Ссылки</h3>
+				<h3>Links</h3>
 				<p>
-					<code>.no-visited</code> — у ссылки с данным класс убирает выделение <code>:visited</code><br/>
-					<code>.pseudo</code> — псевдоссылка, подчеркнута точками<br/>
-					<code>.no-border</code> — ссылка без подчеркивания
+					<code>.no-visited</code> — the class removes the selection from the link with this data <code>:visited</code><br/>
+					<code>.pseudo</code> — pseudo-link, underlined with dots<br/>
+					<code>.no-border</code> — link without underscores
 				</p>
-				<p>Если в ссылке находится картинка, подчеркивание убирается автоматически (ссылке добавляется класс <code>.no-border</code>), вернуть его можно добавив класс <code>.border</code>.
+				<p>If the link contains an image, the underscore is removed automatically (class <code>.no-border</code> added to link), you can return it by adding a class <code>.border</code>.</p>
 				
-				<h3>Помощники</h3>
-				<p><code>[size]</code> — размер: xsmall, small, medium, large или xlarge, от большего к меньшему.</p>
+				<h3>Screen sizes</h3>
 				<table>
 					<tr>
-						<td style="width: 200px">Размер</td>
-						<td style="width: 200px">Ширина экрана</td>
-					</tr>
-					<tr>
-						<td><code>xsmall</code></td>
-						<td><= 420px</td>
+						<td style="width: 200px">Size</td>
+						<td style="width: 200px">Screen width, px</td>
 					</tr>
 					<tr>
 						<td><code>small</code></td>
-						<td><= 720px</td>
+						<td>0..500</td>
 					</tr>
 					<tr>
 						<td><code>medium</code></td>
-						<td><= 1080px</td>
+						<td>501..1000</td>
 					</tr>
 					<tr>
 						<td><code>large</code></td>
-						<td><= 1440px</td>
-					</tr>
-					<tr>
-						<td><code>xlarge</code></td>
-						<td>> 1440px</td>
+						<td>1001..∞</td>
 					</tr>
 				</table>
 				<p>
 					<code>.unselectable</code> — запрещает выделение элемента и всех его потомков<br/>
 					<code>.clear</code> — клеарфикс<br/>
-					<code>.text-left</code> — выравнивание текста по левому краю<br/>
-					<code>.[size]-text-left</code> — выравнивание текста по левому краю, адаптивный<br/>
-					<code>.text-center</code> — выравнивание текста по центру<br/>
-					<code>.[size]-text-center</code> — выравнивание текста по центру, адаптивный<br/>
-					<code>.text-right</code> — выравнивание текста по правому краю<br/>
-					<code>.[size]-text-right</code> — выравнивание текста по правому краю, адаптивный<br/>
 					<code>.uppercase</code> — конвертация в прописные<br/>
 					<code>.lowercase</code> — конвертация в строчные<br/>
 					<code>.capitalize</code> — первые символы слов прописные<br/>
@@ -160,32 +141,6 @@
 				<script async src="//jsfiddle.net/andreyshpigunov/masohftg/embed/html,css,js,result/dark/"></script>
 			</section>
 				
-				<section id="floating-blocks">
-					<h2>Плавающие блоки</h2>
-					<p>Простые floating-блоки, можно указывать нужные параметры через css.</p>
-					<script async src="//jsfiddle.net/andreyshpigunov/z5fpcgnh/embed/html,css,js,result/dark/"></script>
-				</section>
-				
-				<section id="adaptive-blocks">
-					<h2>Адаптивные блоки</h2>
-					<p>Автоматически подстраивающиеся под ширину строки блоки.</p>
-					<p>Параметр <code>data-rows</code> указывает максимальное число строк, в которые должны помещаться блоки.</p>
-					<script async src="//jsfiddle.net/andreyshpigunov/q6nrx4yw/embed/html,css,js,result/dark/"></script>
-				</section>
-				
-				<section id="inline-blocks">
-					<h2>Инлайн-блоки</h2>
-					<p>Простые инлайн-блоки, можно указывать нужные параметры через css.</p>
-					<script async src="//jsfiddle.net/andreyshpigunov/sq5vjnm3/embed/html,css,js,result/dark/"></script>
-				</section>
-												
-				<section id="adaptive-inline-blocks">
-					<h2>Адаптивные инлайн-блоки</h2>
-					<p>Автоматически подстраивающиеся под ширину строки инлайн-блоки.</p>
-					<p>Параметр <code>data-rows</code> указывает максимальное число строк, в которые должны помещаться блоки.
-					<br/>Поддерживаются теги menu и ul. Не нужно закрывать теги <code>li</code>.</p>
-					<script async src="//jsfiddle.net/andreyshpigunov/p7ncd9oj/embed/html,css,js,result/dark/"></script>
-				</section>
 		
 				<section id="grid">
 					<h2>Сетка</h2>

@@ -5,19 +5,20 @@ $link-border-opacity: 0.2;
 
 
 
-@import "base/_base";
+@import "auto";
 
 
 
 
 main {
-	padding: 30px 30px 30px 290px;
 	
-	@include screen-medium {
-		padding: 30px 20px 30px 260px;
+	@include screen(large) {
+		padding: 30px 30px 30px 240px;
 	}
-	
-	@include screen-small {
+	@include screen(medium) {
+		padding: 30px 20px 30px 240px;
+	}
+	@include screen(small) {
 		padding: 80px 20px 30px 20px;
 	}
 }
@@ -27,9 +28,8 @@ h2 {
 	font-size: 3rem;
 	font-weight: 700;
 	line-height: 1.25;
-	/*border-bottom: solid 1px #eee;*/
 	
-	@include screen-small {
+	@include screen(small) {
 		font-size: 2.4rem;
 	}
 }
@@ -73,7 +73,7 @@ h2 {
 		}
 	}
 	
-	@include screen-small {
+	@include screen(small) {
 		display: none;
 	}
 }
@@ -91,7 +91,7 @@ h2 {
 	background: #fff;
 	border-bottom: solid 1px #eee;
 	
-	@include screen-small {
+	@include screen(small) {
 		display: block;
 		font-size: .9rem;
 	}
@@ -101,14 +101,14 @@ h2 {
 		align-items: center;
 		height: 50px;
 		
-		@include screen-small {
+		@include screen(small) {
 			justify-content: space-between;
 		}
 		
 		li {
 			margin-right: 20px;
 			
-			@include screen-small {
+			@include screen(small) {
 				margin-right: 0;
 			}
 			
@@ -170,7 +170,7 @@ h2 {
 
 
 
-@include screen-small {
+@include screen(small) {
 	
 	html.show-menu {
 		
@@ -206,7 +206,7 @@ h2 {
 	left: 0;
 	top: 0;
 	bottom: 0;
-	width: 260px;
+	width: 240px;
 	padding: 30px;
 	background: #fff;
 	overflow: auto;
@@ -216,13 +216,11 @@ h2 {
 	transform: translateX(0);
 	transition: transform .2s ease-out;
 	
-	@include screen-medium {
-		width: 240px;
+	@include screen(medium, small) {
+		width: 220px;
 		padding: 30px 20px;
 	}
-	
-	@include screen-small {
-		/*display: none;*/
+	@include screen(small) {
 		top: 50px;
 		border-right: solid 1px #eee;
 		transform: translateX(-261px);
@@ -261,7 +259,7 @@ h2 {
 	}
 }
 
-@include screen-small {
+@include screen(small) {
 
 	html.show-menu {
 	
@@ -275,18 +273,18 @@ h2 {
 
 
 .sidebar-logo {
-	width: 60px;
-	height: 60px;
+	width: 100px;
+	height: 100px;
 	margin-bottom: 30px;
 	
-	@include screen-small {
+	@include screen(small) {
 		display: none;
 	}
 	
 	img {
 		display: block;
-		width: 60px;
-		height: 60px;
+		width: 100px;
+		height: 100px;
 	}
 }
 
@@ -298,9 +296,8 @@ section {
 	padding: calc(35px - 1em) 35px 35px 35px;
 	background: #f8f8f8;
 	border-radius: 12px;
-	/*border-bottom: solid 1px #eee;*/
 	
-	@include screen-small {
+	@include screen(small) {
 		margin-left: -10px;
 		margin-right: -10px;
 		padding: 15px;
@@ -312,7 +309,7 @@ section {
 		font-weight: 700;
 		color: #000;
 		
-		@include screen-small {
+		@include screen(small) {
 			font-size: 1.6rem;
 		}
 	}
@@ -323,7 +320,7 @@ section {
 		font-weight: 700;
 		color: #000;
 		
-		@include screen-small {
+		@include screen(small) {
 			font-size: 1.1rem;
 		}
 	}

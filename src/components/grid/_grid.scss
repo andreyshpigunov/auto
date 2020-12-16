@@ -1,0 +1,321 @@
+/*---------------------------
+_grid.scss
+Flexbox grid
+
+Created by Andrey Shpigunov on 15.12.2020.
+---------------------------*/
+
+.modules {
+	display: flex;
+	flex-wrap: wrap;
+
+	.module {
+		position: relative;
+		order: 0;
+		flex: 1;
+		max-width: 100%;
+	}
+
+	&.-nearby {
+		margin-left: 0;
+		margin-right: 0;
+		margin-bottom: 0;
+
+		> .module {
+			padding-left: 0;
+			padding-right: 0;
+			margin-bottom: 0;
+		}
+	}
+
+	&.-line {
+		margin-bottom: 0;
+
+		> .module {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.flex-linebreak {
+	flex-basis: 100% !important;
+	height: 0 !important;
+}
+
+.flex-colbreak {
+	flex-basis: 100% !important;
+	width: 0 !important;
+}
+
+@include screen(large) {
+	.modules {
+		margin-left: -$grid-gutters-large;
+		margin-right: -$grid-gutters-large;
+		margin-bottom: -$grid-gutters-large * 2;
+
+		> .module {
+			padding-left: $grid-gutters-large;
+			padding-right: $grid-gutters-large;
+			margin-bottom: $grid-gutters-large * 2;
+
+			&.large-0 {
+				flex: 0 0 auto;
+			}
+			&.large-offset-0 {
+				margin-left: 0;
+			}
+			&.large-auto {
+				flex: 1 0 auto;
+				max-width: none;
+			}
+
+			@for $col from 1 through $grid-columns {
+				&.large-#{$col} {
+					flex-basis: $col / $grid-columns * 100%;
+					max-width: $col / $grid-columns * 100%;
+				}
+				&.large-offset-#{$col} {
+					margin-left: $col / $grid-columns * 100%;
+				}
+				&.large-order-#{$col} {
+					order: $col;
+				}
+			}
+		}
+
+		&.large-row {
+			flex-direction: row;
+		}
+		&.large-row-reverse {
+			flex-direction: row-reverse;
+		}
+		&.large-column {
+			flex-direction: column;
+		}
+		&.large-column-reverse {
+			flex-direction: column-reverse;
+		}
+		&.large-wrap {
+			flex-wrap: wrap;
+		}
+		&.large-wrap-reverse {
+			flex-wrap: wrap-reverse;
+		}
+		&.large-nowrap {
+			flex-wrap: nowrap;
+			white-space: normal;
+		}
+		&.large-start {
+			justify-content: flex-start;
+		}
+		&.large-end {
+			justify-content: flex-end;
+		}
+		&.large-centered {
+			justify-content: center;
+		}
+		&.large-space-between {
+			justify-content: space-between;
+		}
+		&.large-space-around {
+			justify-content: space-around;
+		}
+		&.large-align-stretch {
+			align-items: stretch;
+		}
+		&.large-align-centered {
+			align-items: center;
+		}
+
+		> * {
+			&.large-order-first {
+				order: -1;
+			}
+			&.large-order-last {
+				order: 9999;
+			}
+		}
+	}
+}
+
+@include screen(medium) {
+	.modules {
+		margin-left: -$grid-gutters-medium;
+		margin-right: -$grid-gutters-medium;
+		margin-bottom: -$grid-gutters-medium * 2;
+
+		> .module {
+			padding-left: $grid-gutters-medium;
+			padding-right: $grid-gutters-medium;
+			margin-bottom: $grid-gutters-medium * 2;
+
+			&.medium-0 {
+				flex: 0 0 auto;
+			}
+			&.medium-offset-0 {
+				margin-left: 0;
+			}
+			&.medium-auto {
+				flex: 1 0 auto;
+				max-width: none;
+			}
+
+			@for $col from 1 through $grid-columns {
+				&.medium-#{$col} {
+					flex-basis: $col / $grid-columns * 100%;
+					max-width: $col / $grid-columns * 100%;
+				}
+				&.medium-offset-#{$col} {
+					margin-left: $col / $grid-columns * 100%;
+				}
+				&.medium-order-#{$col} {
+					order: $col;
+				}
+			}
+		}
+
+		&.medium-row {
+			flex-direction: row;
+		}
+		&.medium-row-reverse {
+			flex-direction: row-reverse;
+		}
+		&.medium-column {
+			flex-direction: column;
+		}
+		&.medium-column-reverse {
+			flex-direction: column-reverse;
+		}
+		&.medium-wrap {
+			flex-wrap: wrap;
+		}
+		&.medium-wrap-reverse {
+			flex-wrap: wrap-reverse;
+		}
+		&.medium-nowrap {
+			flex-wrap: nowrap;
+			white-space: normal;
+		}
+		&.medium-start {
+			justify-content: flex-start;
+		}
+		&.medium-end {
+			justify-content: flex-end;
+		}
+		&.medium-centered {
+			justify-content: center;
+		}
+		&.medium-space-between {
+			justify-content: space-between;
+		}
+		&.medium-space-around {
+			justify-content: space-around;
+		}
+		&.medium-align-stretch {
+			align-items: stretch;
+		}
+		&.medium-align-centered {
+			align-items: center;
+		}
+
+		> * {
+			&.medium-order-first {
+				order: -1;
+			}
+			&.medium-order-last {
+				order: 9999;
+			}
+		}
+	}
+}
+
+@include screen(small) {
+	.modules {
+		margin-left: -$grid-gutters-small;
+		margin-right: -$grid-gutters-small;
+		margin-bottom: -$grid-gutters-small * 2;
+
+		> .module {
+			padding-left: $grid-gutters-small;
+			padding-right: $grid-gutters-small;
+			margin-bottom: $grid-gutters-small * 2;
+
+			&.small-0 {
+				flex: 0 0 auto;
+			}
+			&.small-offset-0 {
+				margin-left: 0;
+			}
+			&.small-auto {
+				flex: 1 0 auto;
+				max-width: none;
+			}
+
+			@for $col from 1 through $grid-columns {
+				&.small-#{$col} {
+					flex-basis: $col / $grid-columns * 100%;
+					max-width: $col / $grid-columns * 100%;
+				}
+				&.small-offset-#{$col} {
+					margin-left: $col / $grid-columns * 100%;
+				}
+				&.small-order-#{$col} {
+					order: $col;
+				}
+			}
+		}
+
+		&.small-row {
+			flex-direction: row;
+		}
+		&.small-row-reverse {
+			flex-direction: row-reverse;
+		}
+		&.small-column {
+			flex-direction: column;
+		}
+		&.small-column-reverse {
+			flex-direction: column-reverse;
+		}
+		&.small-wrap {
+			flex-wrap: wrap;
+		}
+		&.small-wrap-reverse {
+			flex-wrap: wrap-reverse;
+		}
+		&.small-nowrap {
+			flex-wrap: nowrap;
+			white-space: normal;
+		}
+		&.small-start {
+			justify-content: flex-start;
+		}
+		&.small-end {
+			justify-content: flex-end;
+		}
+		&.small-centered {
+			justify-content: center;
+		}
+		&.small-space-between {
+			justify-content: space-between;
+		}
+		&.small-space-around {
+			justify-content: space-around;
+		}
+		&.small-align-stretch {
+			align-items: stretch;
+		}
+		&.small-align-centered {
+			align-items: center;
+		}
+
+		> * {
+			&.small-order-first {
+				order: -1;
+			}
+			&.small-order-last {
+				order: 9999;
+			}
+		}
+	}
+}

@@ -12,3 +12,6 @@ profile
 .sass-cache
 
 node_modules/
+
+# files
+i/logo.pxd

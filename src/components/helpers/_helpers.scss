@@ -1,0 +1,103 @@
+/*---------------------------
+_helpers.scss
+Helpers classes.
+
+Created by Andrey Shpigunov on 15.12.2020.
+---------------------------*/
+
+// Unselectable
+.unselectable,
+.unselectable * {
+	user-select: none;
+}
+
+// Clearfix
+.clear {
+	&:after {
+		content: "";
+		display: table;
+		width: 100%;
+		clear: both;
+	}
+}
+
+// Chars register
+.uppercase {
+	text-transform: uppercase;
+}
+.lowercase {
+	text-transform: lowercase;
+}
+.capitalize {
+	text-transform: capitalize;
+}
+
+// Nowrap
+.nowrap {
+	white-space: nowrap;
+}
+
+// Auto hyphens
+.hyphens {
+	hyphens: auto;
+}
+
+// Video wrapper for proportional scaling
+.video {
+	position: relative;
+	height: 0;
+	padding-bottom: 56.25%;
+	overflow: hidden;
+
+	iframe,
+	object,
+	embed {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+// Force words breaking
+.break-word {
+	word-wrap: break-word;
+}
+
+// Visually hide block
+.visuallyhidden {
+	position: absolute;
+	top: 0;
+	left: 0;
+	clip: rect(1px 1px 1px 1px);
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(0px 0px 99.9% 99.9%);
+	overflow: hidden;
+	height: 1px;
+	width: 1px;
+	padding: 0;
+	border: 0;
+}
+
+// Hide this or next sibling
+.hidden,
+.hidden-next + * {
+	display: none !important;
+}
+
+// Make element invisible
+.invisible {
+	visibility: hidden !important;
+}
+
+// Wrapper for tables, add horizontal scrolling on small screen
+.table-responsive {
+	overflow-x: auto;
+}
+
+// Raises the element above the context
+.up {
+	position: relative;
+	z-index: 2;
+}

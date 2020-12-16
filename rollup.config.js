@@ -4,12 +4,12 @@ import babel from "rollup-plugin-babel";
 
 export default [
 	{
-		input: ["src/js/base.js"],
+		input: ["src/js/auto.js"],
 		output: [
 			{
-				file: "js/base.js",
+				file: "js/auto.js",
 				format: "iife",
-				name: "Base",
+				name: "auto",
 			},
 		],
 		plugins: [terser(), resolve(), babel({ exclude: "node_modules/**" })],

@@ -1,0 +1,121 @@
+/*---------------------------
+_forms.scss
+Forms decorations.
+
+Created by Andrey Shpigunov on 15.12.2020.
+---------------------------*/
+
+input,
+textarea,
+select,
+button {
+	max-width: 100%;
+	font-family: $font-family;
+	box-sizing: border-box;
+	box-shadow: none;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="number"],
+input[type="range"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+input[type="month"],
+input[type="week"],
+textarea {
+	position: relative;
+	width: 400px;
+	margin: 0;
+	padding: 0.4rem 0.6rem;
+	font-size: 1rem;
+	outline: none;
+	border: 1px solid $forms-border-color;
+	appearance: none;
+	border-radius: 4px;
+
+	&:focus {
+		border-color: $forms-border-color-focused;
+		box-shadow: 0 0 0 1px $forms-border-color-focused;
+	}
+	&.error {
+		border-color: $forms-border-color-error;
+
+		&:focus {
+			border-color: $forms-border-color-error;
+			box-shadow: 0 0 0 1px $forms-border-color-error;
+		}
+	}
+}
+
+textarea {
+	line-height: 1.4;
+	vertical-align: bottom;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="number"],
+input[type="range"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+input[type="month"],
+input[type="week"],
+textarea,
+select {
+	[readonly],
+	[readonly]:focus {
+		border-color: #ddd;
+		background: #f8f8f8;
+		box-shadow: none;
+	}
+}
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="number"],
+input[type="range"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+input[type="month"],
+input[type="week"],
+textarea,
+select {
+	[disabled],
+	[disabled]:focus {
+		border-color: #ddd;
+		background: #f6f6f6;
+		color: #999;
+		cursor: not-allowed !important;
+		box-shadow: none;
+	}
+}
+
+::placeholder {
+	color: $forms-placeholder-color;
+}
+
+input[placeholder],
+input::-moz-placeholder,
+input:-moz-placeholder,
+input:-ms-input-placeholder {
+	text-overflow: ellipsis;
+}

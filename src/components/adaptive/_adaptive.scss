@@ -1,0 +1,48 @@
+/*---------------------------
+_adaptive.scss
+Adaptivity
+
+Created by Andrey Shpigunov on 13.12.2020.
+---------------------------*/
+
+// Using:
+// @include screen-large { ... }
+// @include screen-medium { ... }
+// @include screen-small { ... }
+
+$screen-small: "(max-width: 500px)" !default;
+$screen-medium: "(min-width: 501px) and (max-width: 1000px)" !default;
+$screen-large: "(min-width: 1001px)" !default;
+
+$screens: (
+	small: $screen-small,
+	medium: $screen-medium,
+	large: $screen-large
+);
+
+@mixin screen($sizes...) {
+	$args: ();
+	@each $size in $sizes {
+		$args: join($args, map-get($screens, $size), comma);
+	}
+	@media #{$args} {
+		@content;
+	}
+}
+
+
+@include screen(small) {
+	.small-hide {
+		display: none !important;
+	}
+}
+@include screen(medium) {
+	.medium-hide {
+		display: none !important;
+	}
+}
+@include screen(large) {
+	.large-hide {
+		display: none !important;
+	}
+}
