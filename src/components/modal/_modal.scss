@@ -150,7 +150,7 @@ html.modal-active {
 	.modal-overlay {
 		will-change: opacity;
 		opacity: 0;
-		transition: opacity 0.2s linear;
+		transition: opacity 0.2s ease-out;
 	}
 	&.active .modal-overlay {
 		opacity: 1;

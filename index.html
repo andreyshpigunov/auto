@@ -23,7 +23,7 @@
 			
 			<aside class="sidebar unselectable">
 				<div class="sidebar-logo small-hide">
-					<a data-scrollto="top"><img src="i/logo.svg" alt="Base"/></a>
+					<a data-scrollto="top"><img src="i/logo.svg" alt="Auto"/></a>
 				</div>
 				<menu class="small-mt-0">
 					<li class="sidebar-header">auto.css</li>
@@ -59,7 +59,7 @@
 						<i></i>
 						<i></i>
 					</li>
-					<li class="header-menu-mobile_logo" data-scrollto="top"><img src="i/logo.svg" alt="Base"/></li>
+					<li class="header-menu-mobile_logo" data-scrollto="top"><img src="i/logo.svg" alt="Auto"/></li>
 					<li class="header-menu-mobile_github"><a href="https://github.com/andreyshpigunov/auto">GitHub →</a></li>
 				</ul>
 			</nav>
@@ -69,14 +69,14 @@
 
 			<section id="setup">
 				<h2>Github</h2>
-				<p>Download and connect files manually: <a href="https://github.com/andreyshpigunov/base">https://github.com/andreyshpigunov/base</a></p>
+				<p>Download and connect files manually: <a href="https://github.com/andreyshpigunov/auto">https://github.com/andreyshpigunov/auto</a></p>
 				<p>It is better to implement styles in your project using scss, then all the settings will be available. if you connect a css file, you will have to manually override the settings with styles.</p>
 				
 				<h2>CDN</h2>
 				<p>Current versions of files are available at the following links:</p>
 				<p>
-					<a href="https://cdn.jsdelivr.net/gh/andreyshpigunov/base@latest/css/base.css">https://cdn.jsdelivr.net/gh/andreyshpigunov/base@latest/css/base.css</a><br/>
-					<a href="https://cdn.jsdelivr.net/gh/andreyshpigunov/base@latest/js/base.js">https://cdn.jsdelivr.net/gh/andreyshpigunov/base@latest/js/base.js</a>
+					<a href="https://cdn.jsdelivr.net/gh/andreyshpigunov/auto@latest/css/auto.css">https://cdn.jsdelivr.net/gh/andreyshpigunov/auto@latest/css/auto.css</a><br/>
+					<a href="https://cdn.jsdelivr.net/gh/andreyshpigunov/auto@latest/js/auto.js">https://cdn.jsdelivr.net/gh/andreyshpigunov/auto@latest/js/auto.js</a>
 				</p>
 			</section>
 			
@@ -115,46 +115,49 @@
 						<td>1001..∞</td>
 					</tr>
 				</table>
+				
+				<h3>Helpers classes</h3>
 				<p>
-					<code>.unselectable</code> — запрещает выделение элемента и всех его потомков<br/>
-					<code>.clear</code> — клеарфикс<br/>
-					<code>.uppercase</code> — конвертация в прописные<br/>
-					<code>.lowercase</code> — конвертация в строчные<br/>
-					<code>.capitalize</code> — первые символы слов прописные<br/>
-					<code>.nowrap</code> — запрет переноса строки<br/>
-					<code>.hyphens</code> — автоматическая расстановка переносов (работает только в современных браузерах)<br/>
-					<code>.video</code> — обертка для <code>iframe</code>, <code>object</code> и <code>embed</code>, пропорционально масштабирует видео<br/>
-					<code>.break-word</code> — переносит непереносимые текстовые конструкции<br/>
-					<code>.visuallyhidden</code> — скрывает блок специальным способом<br/>
-					<code>.hidden</code> — присваивает блоку <code>display: none</code><br/>
-					<code>.hidden-next</code> — присваивает следующему блоку <code>display: none</code><br/>
-					<code>.invisible</code> — присваивает блоку <code>visibility: hidden</code><br/>
-					<code>.table-responsive</code> — горизонтальная прокрутка таблицы, если она не помещается<br/>
-					<code>.up</code> — поднимает элемент над контекстом (добавляет ему <code>z-index: 2</code>)
+					<code>.unselectable</code> — disables the selection of an element and all its descendants<br/>
+					<code>.clear</code> — clearfix<br/>
+					<code>.uppercase</code> — uppercase text<br/>
+					<code>.lowercase</code> — lowercase text<br/>
+					<code>.capitalize</code> — the first characters of words are uppercase<br/>
+					<code>.nowrap</code> — prohibiting line wrapping<br/>
+					<code>.hyphens</code> — automatic hyphenation (works only in modern browsers)<br/>
+					<code>.video</code> — wrapper for <code>iframe</code>, <code>object</code> и <code>embed</code>, proportionally scale filter<br/>
+					<code>.break-word</code> — transfers non-portable text constructs<br/>
+					<code>.visuallyhidden</code> — hides the block in a special way<br/>
+					<code>.hidden</code> — assigns to a block <code>display: none</code><br/>
+					<code>.hidden-next</code> — assigns to the next block <code>display: none</code><br/>
+					<code>.invisible</code> — assigns to a block <code>visibility: hidden</code><br/>
+					<code>.table-responsive</code> — horizontal scrolling of the table if it doesn't fit<br/>
+					<code>.up</code> — raises the element above the context (adds to it <code>z-index: 2</code>)
 				</p>
 				
-				<h3>Экшн-классы</h3>
+				<h3>Actions classes</h3>
 				<p>
-					<code>.sync-hover</code> — синхронное добавление класса <code>.hover</code> к ссылкам с одинаковым <code>href</code><br/>
-					<code>.is-appeared</code> — при появлении во viewport элементу присваиваются классы <code>.appeared</code> и <code>.visible</code>. При исчезновении из viewport класс <code>.visible</code> исчезает, а <code>.appeared</code> остается.
+					<code>.sync-hover</code> — adding a class synchronously <code>.hover</code> to links with the same <code>href</code><br/>
+					<code>.is-appeared</code> — when it appears in the viewport, the element is assigned classes <code>.appeared</code> and <code>.visible</code>. When disappearing from viewport class <code>.visible</code> disappear, <code>.appeared</code> remains.
 				</p>
-				<script async src="//jsfiddle.net/andreyshpigunov/masohftg/embed/html,css,js,result/dark/"></script>
+				
+				<iframe height="1280" style="width: 100%;" scrolling="no" title="Auto / Helpers" src="https://codepen.io/andreyshpigunov/embed/WNGjRBG?height=369&theme-id=dark&default-tab=html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
 			</section>
 				
 		
 				<section id="grid">
-					<h2>Сетка</h2>
-					<p>Автоматически подстраивающиеся под ширину строки адаптивные флексбокс-блоки. Весь принцип работы основан на флексбоксах, можно очень гибко манипулировать сеткой в CSS, если стандартных возможнонстей не хватает.</p>
+					<h2>Grid</h2>
+					<p>Adaptive flexbox blocks that automatically adjust to the line width. The whole principle of operation is based on flexboxes, you can very flexibly manipulate the grid in CSS, if there are not enough standard features.</p>
 					<p>
-						В файле _base.scss можно увидеть настраиваемые параметры:<br/>
-						<code>$grid-columns: 12</code> — количество колонок в сетке<br/>
-						<code>$grid-gutters-large: 1.2vw</code> — отступы внутри блоков на разных размерах экрана<br/>
+						In the auto.scss you can see the custom parameters:<br/>
+						<code>$grid-columns: 12</code> — number of columns in the grid<br/>
+						<code>$grid-gutters-large: 1.2vw</code> — margins inside blocks on different screen sizes<br/>
 						<code>$grid-gutters-medium: 1.2vw</code><br/>
 						<code>$grid-gutters-small: 1.2vw</code>
 					</p>
-					<p><code>[size]</code> — размер: xsmall, small, medium, large или xlarge</p>
+					<p><code>[size]</code> — sizes: small, medium or large.</p>
 					<p>
-						<code>.modules</code> — группа модулей<br/>
+						<code>.modules</code> — modules group<br/>
 						<code>.modules.-nearby</code> — убирает отступы между колонками и под рядом<br/>
 						<code>.modules.-line</code> — убирает отступ под рядом, оставляет между колонками<br/>
 	
@@ -185,7 +188,7 @@
 						<code>.module.mr-auto</code> — сдвиг колонки влево<br/>
 						<code>.module.[size]-mr-auto</code> — сдвиг колонки влево
 					</p>
-					<script async src="//jsfiddle.net/andreyshpigunov/12n4pqv0/embed/html,css,js,result/dark/"></script>
+					<iframe height="1500" style="width: 100%;" scrolling="no" title="Auto / Grid" src="https://codepen.io/andreyshpigunov/embed/MWjmmKx?height=265&theme-id=dark&default-tab=html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
 				</section>
 				
 				<section id="responsive-css">
@@ -239,17 +242,15 @@
 					<script async src="//jsfiddle.net/andreyshpigunov/pc2tvj05/embed/html,css,js,result/dark/"></script>
 				</section>
 				
-				<h2 class="mt-40">Base.js</h2>
+				<h2 class="mt-40">Auto.js</h2>
 				
 				<section id="responsive-js">
 					<h2>Адаптивность</h2>
 					<p>Функция срабатывает только при первой загрузке страницы.</p>
 					<p>
-						<code>if(Base.adaptive.xlarge()){ ... }</code><br/>
-						<code>if(Base.adaptive.large()){ ... }</code><br/>
-						<code>if(Base.adaptive.medium()){ ... }</code><br/>
-						<code>if(Base.adaptive.small()){ ... }</code><br/>
-						<code>if(Base.adaptive.xsmall()){ ... }</code>
+						<code>if(auto.adaptive.large){ ... }</code><br/>
+						<code>if(auto.adaptive.medium){ ... }</code><br/>
+						<code>if(auto.adaptive.small){ ... }</code><br/>
 					</p>
 				</section>
 				
@@ -260,12 +261,12 @@
 					
 					<h3>API</h3>
 					<p>
-						<code>Base.modal.show(id)</code> — открыть окно<br/>
-						<code>Base.modal.hide(id)</code> — закрыть окно
+						<code>auto.modal.show(id)</code> — открыть окно<br/>
+						<code>auto.modal.hide(id)</code> — закрыть окно
 					</p>
           
           <a data-modal="modal-test">TEST</a>
-          <a onclick="Base.modal.show('modal-test')">API SHOW</a>
+          <a onclick="auto.modal.show('modal-test')">API SHOW</a>
           <div id="modal-test" class="modal-content">
             <div class="text">
               <h2>Модальные окна</h2>
@@ -335,7 +336,7 @@
 					</p>
 					
 					<h3>API</h3>
-					<p><code>Base.scrollTo(target, offset, speed)</code></p>
+					<p><code>auto.scrollTo(target, offset, speed)</code></p>
 					<p>
 						<code>target</code> — ID цели<br/>
 						<code>offset</code> — скорость прокрутки (по умолчанию 500 мс, необязательные параметр)<br/>
@@ -408,7 +409,7 @@
 			</main>
 		</div>
 		
-		<script src="js/base.js" ></script>
+		<script src="js/auto.js" ></script>
 		<script>
 			var
 			html = document.documentElement,

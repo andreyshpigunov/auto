@@ -37,12 +37,12 @@ Created by Andrey Shpigunov on 15.12.2020.
 	}
 }
 
-.flex-linebreak {
+.modules-linebreak {
 	flex-basis: 100% !important;
 	height: 0 !important;
 }
 
-.flex-colbreak {
+.modules-colbreak {
 	flex-basis: 100% !important;
 	width: 0 !important;
 }
@@ -81,50 +81,6 @@ Created by Andrey Shpigunov on 15.12.2020.
 					order: $col;
 				}
 			}
-		}
-
-		&.large-row {
-			flex-direction: row;
-		}
-		&.large-row-reverse {
-			flex-direction: row-reverse;
-		}
-		&.large-column {
-			flex-direction: column;
-		}
-		&.large-column-reverse {
-			flex-direction: column-reverse;
-		}
-		&.large-wrap {
-			flex-wrap: wrap;
-		}
-		&.large-wrap-reverse {
-			flex-wrap: wrap-reverse;
-		}
-		&.large-nowrap {
-			flex-wrap: nowrap;
-			white-space: normal;
-		}
-		&.large-start {
-			justify-content: flex-start;
-		}
-		&.large-end {
-			justify-content: flex-end;
-		}
-		&.large-centered {
-			justify-content: center;
-		}
-		&.large-space-between {
-			justify-content: space-between;
-		}
-		&.large-space-around {
-			justify-content: space-around;
-		}
-		&.large-align-stretch {
-			align-items: stretch;
-		}
-		&.large-align-centered {
-			align-items: center;
 		}
 
 		> * {
@@ -174,50 +130,6 @@ Created by Andrey Shpigunov on 15.12.2020.
 			}
 		}
 
-		&.medium-row {
-			flex-direction: row;
-		}
-		&.medium-row-reverse {
-			flex-direction: row-reverse;
-		}
-		&.medium-column {
-			flex-direction: column;
-		}
-		&.medium-column-reverse {
-			flex-direction: column-reverse;
-		}
-		&.medium-wrap {
-			flex-wrap: wrap;
-		}
-		&.medium-wrap-reverse {
-			flex-wrap: wrap-reverse;
-		}
-		&.medium-nowrap {
-			flex-wrap: nowrap;
-			white-space: normal;
-		}
-		&.medium-start {
-			justify-content: flex-start;
-		}
-		&.medium-end {
-			justify-content: flex-end;
-		}
-		&.medium-centered {
-			justify-content: center;
-		}
-		&.medium-space-between {
-			justify-content: space-between;
-		}
-		&.medium-space-around {
-			justify-content: space-around;
-		}
-		&.medium-align-stretch {
-			align-items: stretch;
-		}
-		&.medium-align-centered {
-			align-items: center;
-		}
-
 		> * {
 			&.medium-order-first {
 				order: -1;
@@ -263,50 +175,6 @@ Created by Andrey Shpigunov on 15.12.2020.
 					order: $col;
 				}
 			}
-		}
-
-		&.small-row {
-			flex-direction: row;
-		}
-		&.small-row-reverse {
-			flex-direction: row-reverse;
-		}
-		&.small-column {
-			flex-direction: column;
-		}
-		&.small-column-reverse {
-			flex-direction: column-reverse;
-		}
-		&.small-wrap {
-			flex-wrap: wrap;
-		}
-		&.small-wrap-reverse {
-			flex-wrap: wrap-reverse;
-		}
-		&.small-nowrap {
-			flex-wrap: nowrap;
-			white-space: normal;
-		}
-		&.small-start {
-			justify-content: flex-start;
-		}
-		&.small-end {
-			justify-content: flex-end;
-		}
-		&.small-centered {
-			justify-content: center;
-		}
-		&.small-space-between {
-			justify-content: space-between;
-		}
-		&.small-space-around {
-			justify-content: space-around;
-		}
-		&.small-align-stretch {
-			align-items: stretch;
-		}
-		&.small-align-centered {
-			align-items: center;
 		}
 
 		> * {
