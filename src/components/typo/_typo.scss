@@ -6,13 +6,13 @@ Created by Andrey Shpigunov on 16.12.2020.
 ---------------------------*/
 
 
-$base-text-h1-font-size: 2.4rem;
-$base-text-h2-font-size: 2rem;
-$base-text-h3-font-size: 1.4rem;
-$base-text-h4-font-size: 1.2rem;
-$base-text-h5-font-size: 1rem;
-$base-text-h6-font-size: 1rem;
-$base-text-font-size: 1rem;
+$typo-h1-font-size: 2.4rem;
+$typo-h2-font-size: 2rem;
+$typo-h3-font-size: 1.4rem;
+$typo-h4-font-size: 1.2rem;
+$typo-h5-font-size: 1rem;
+$typo-h6-font-size: 1rem;
+$typo-font-size: 1rem;
 
 
 body,
@@ -45,13 +45,10 @@ button {
 .text {
 	
 	@include screen(large) {
-		font-size: $base-text-font-size;
+		font-size: $typo-font-size;
 	}
-	@include screen(medium) {
-		font-size: $base-text-font-size * .9;
-	}
-	@include screen(small) {
-		font-size: $base-text-font-size * .9;
+	@include screen(medium, small) {
+		font-size: $typo-font-size * .9;
 	}
 	
 	hgroup {
@@ -80,13 +77,13 @@ button {
 		line-height: 1.2;
 		
 		@include screen(large) {
-			font-size: $base-text-h1-font-size;
+			font-size: $typo-h1-font-size;
 		}
 		@include screen(medium) {
-			font-size: $base-text-h1-font-size * .9;
+			font-size: $typo-h1-font-size * .9;
 		}
 		@include screen(small) {
-			font-size: $base-text-h1-font-size * .8;
+			font-size: $typo-h1-font-size * .8;
 		}
 		
 		&:first-child {
@@ -97,65 +94,65 @@ button {
 		line-height: 1.25;
 		
 		@include screen(large) {
-			font-size: $base-text-h2-font-size;
+			font-size: $typo-h2-font-size;
 		}
 		@include screen(medium) {
-			font-size: $base-text-h2-font-size * .9;
+			font-size: $typo-h2-font-size * .9;
 		}
 		@include screen(small) {
-			font-size: $base-text-h2-font-size * .8;
+			font-size: $typo-h2-font-size * .8;
 		}
 	}
 	h3, .h3 {
 		line-height: 1.3;
 		
 		@include screen(large) {
-			font-size: $base-text-h3-font-size;
+			font-size: $typo-h3-font-size;
 		}
 		@include screen(medium) {
-			font-size: $base-text-h3-font-size * .9;
+			font-size: $typo-h3-font-size * .9;
 		}
 		@include screen(small) {
-			font-size: $base-text-h3-font-size * .8;
+			font-size: $typo-h3-font-size * .8;
 		}
 	}
 	h4, .h4 {
 		line-height: 1.4;
 		
 		@include screen(large) {
-			font-size: $base-text-h4-font-size;
+			font-size: $typo-h4-font-size;
 		}
 		@include screen(medium) {
-			font-size: $base-text-h4-font-size * .9;
+			font-size: $typo-h4-font-size * .9;
 		}
 		@include screen(small) {
-			font-size: $base-text-h4-font-size * .8;
+			font-size: $typo-h4-font-size * .8;
 		}
 	}
 	h5, .h5 {
 		line-height: 1.4;
 		
 		@include screen(large) {
-			font-size: $base-text-h5-font-size;
+			font-size: $typo-h5-font-size;
 		}
 		@include screen(medium) {
-			font-size: $base-text-h5-font-size * .9;
+			font-size: $typo-h5-font-size * .9;
 		}
 		@include screen(small) {
-			font-size: $base-text-h5-font-size * .8;
+			font-size: $typo-h5-font-size * .8;
 		}
 	}
 	h6, .h6 {
 		line-height: 1.4;
 		
 		@include screen(large) {
-			font-size: $base-text-h6-font-size;
+			font-size: $typo-h6-font-size;
 		}
 		@include screen(medium) {
-			font-size: $base-text-h6-font-size * .9;
+			font-size: $typo-h6-font-size * .9;
 		}
 		@include screen(small) {
-			font-size: $base-text-h6-font-size * .8;
+			font-size: $typo-h6-font-size * .8;
 		}
 	}
 	

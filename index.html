@@ -96,26 +96,6 @@
 				</p>
 				<p>If the link contains an image, the underscore is removed automatically (class <code>.no-border</code> added to link), you can return it by adding a class <code>.border</code>.</p>
 				
-				<h3>Screen sizes</h3>
-				<table>
-					<tr>
-						<td style="width: 200px">Size</td>
-						<td style="width: 200px">Screen width, px</td>
-					</tr>
-					<tr>
-						<td><code>small</code></td>
-						<td>0..500</td>
-					</tr>
-					<tr>
-						<td><code>medium</code></td>
-						<td>501..1000</td>
-					</tr>
-					<tr>
-						<td><code>large</code></td>
-						<td>1001..∞</td>
-					</tr>
-				</table>
-				
 				<h3>Helpers classes</h3>
 				<p>
 					<code>.unselectable</code> — disables the selection of an element and all its descendants<br/>
@@ -172,38 +152,54 @@
 						<code>.modules-linebreak</code> — modules linebreak<br/>
 						<code>.modules-colbreak</code> — modules colbreak
 					</p>
-					<iframe height="1500" style="width: 100%;" scrolling="no" title="Auto / Grid" src="https://codepen.io/andreyshpigunov/embed/MWjmmKx?height=265&theme-id=dark&default-tab=html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
+					<iframe height="1300" style="width: 100%;" scrolling="no" title="Auto / Grid" src="https://codepen.io/andreyshpigunov/embed/MWjmmKx?height=265&theme-id=dark&default-tab=html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
 				</section>
 				
 				<section id="responsive-css">
-					<h2>Адаптивность</h2>
+					<h2>Adaptivity</h2>
+					
+					<h3>Screen sizes</h3>
+					<table>
+						<tr>
+							<td style="width: 200px">Size</td>
+							<td style="width: 200px">Screen width, px</td>
+						</tr>
+						<tr>
+							<td><code>small</code></td>
+							<td>0..500</td>
+						</tr>
+						<tr>
+							<td><code>medium</code></td>
+							<td>501..1000</td>
+						</tr>
+						<tr>
+							<td><code>large</code></td>
+							<td>1001..∞</td>
+						</tr>
+					</table>
 					
 					<h3>CSS</h3>
-					<p>Скрывает/показывает элементы при разных разрешениях экрана.</p>
+					<p>Hide elements on differente screen sizes.</p>
 					<p>
-						<code>.xlarge-[hide|show|show-inline|show-inlineblock]</code> — скрывает/показывает блок на большом экране<br/>
-						<code>.large-[hide|show|show-inline|show-inlineblock]</code> — скрывает/показывает блок на стандартном экране<br/>
-						<code>.medium-[hide|show|show-inline|show-inlineblock]</code> — скрывает/показывает блок на среднем экране<br/>
-						<code>.small-[hide|show|show-inline|show-inlineblock]</code> — скрывает/показывает блок на маленьком экране<br/>
-						<code>.xsmall-[hide|show|show-inline|show-inlineblock]</code> — скрывает/показывает блок на очень маленьком экране
+						<code>.large-hide</code> — hide on large screen<br/>
+						<code>.medium-hide</code> — hide on medium screen<br/>
+						<code>.small-hide</code> — hide on small screen<br/>
 					</p>
 					
 					<h3>SASS</h3>
-					<p>Использование в SCSS</p>
+					<p>Using in SCSS</p>
 					<p>
-						<code>@media only screen and (max-width: $screen-xlarge) {...}</code><br/>
-						<code>@media only screen and (max-width: $screen-large) {...}</code><br/>
-						<code>@media only screen and (max-width: $screen-medium) {...}</code><br/>
-						<code>@media only screen and (max-width: $screen-small) {...}</code><br/>
-						<code>@media only screen and (max-width: $screen-xsmall) {...}</code>
+						<code>@media #{$screen-large} {...}</code><br/>
+						<code>@media #{$screen-medium} {...}</code><br/>
+						<code>@media #{$screen-small} {...}</code><br/>
+						<code>@media #{$screen-medium}, #{$screen-small} {...}</code> — mixing
 					</p>
-					<p>Сокращенный вариант:</p>
+					<p>Cleaner variant:</p>
 					<p>
-						<code>@include screen-xlarge {...}</code><br/>
-						<code>@include screen-large) {...}</code><br/>
-						<code>@include screen-medium) {...}</code><br/>
-						<code>@include screen-small) {...}</code><br/>
-						<code>@include screen-xsmall) {...}</code>
+						<code>@include screen(large) {...}</code><br/>
+						<code>@include screen(medium) {...}</code><br/>
+						<code>@include screen(small) {...}</code><br/>
+						<code>@include screen(medium, small) {...}</code>
 					</p>
 				</section>
 				

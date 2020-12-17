@@ -25,7 +25,7 @@
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"build:js": "rollup -c",
 		"build:scss": "node-sass 'src/scss' -o css",
-		"build:postcss": "postcss css/ --use autoprefixer cssnano -d css/",
+		"build:postcss": "postcss css/ --use autoprefixer cssnano -d css/ --no-map",
 		"build:css": "npm run build:scss && npm run build:postcss",
 		"build": "npm run build:js && npm run build:css",
 		"build:watch": "watch 'npm run build' src/*",

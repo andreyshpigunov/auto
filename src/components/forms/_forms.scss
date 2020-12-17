@@ -33,12 +33,14 @@ textarea {
 	position: relative;
 	width: 400px;
 	margin: 0;
-	padding: 0.4rem 0.6rem;
-	font-size: 1rem;
+	padding: $forms-padding;
+	font-size: $forms-font-size;
 	outline: none;
-	border: 1px solid $forms-border-color;
+	border-width: $forms-border-width;
+	border-style: solid;
+	border-color: $forms-border-color;
+	border-radius: $forms-border-radius;
 	appearance: none;
-	border-radius: 4px;
 
 	&:focus {
 		border-color: $forms-border-color-focused;
@@ -77,8 +79,9 @@ textarea,
 select {
 	[readonly],
 	[readonly]:focus {
-		border-color: #ddd;
-		background: #f8f8f8;
+		border-color: $forms-border-color-readonly;
+		background-color: $forms-background-color-readonly;
+		color: $forms-font-color-readonly;
 		box-shadow: none;
 	}
 }
@@ -101,16 +104,16 @@ textarea,
 select {
 	[disabled],
 	[disabled]:focus {
-		border-color: #ddd;
-		background: #f6f6f6;
-		color: #999;
+		border-color: $forms-border-color-disabled;
+		background-color: $forms-background-color-disabled;
+		color: $forms-font-color-disabled;
 		cursor: not-allowed !important;
 		box-shadow: none;
 	}
 }
 
 ::placeholder {
-	color: $forms-placeholder-color;
+	color: $forms-font-color-placeholder;
 }
 
 input[placeholder],

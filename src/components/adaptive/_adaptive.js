@@ -5,9 +5,9 @@
 //	Created by Andrey Shpigunov on 15.12.2020.
 //
 
-// if (auto.adaptive.small { ... }
-// if (auto.adaptive.medium { ... }
-// if (auto.adaptive.large { ... }
+// if (auto.adaptive.small) { ... }
+// if (auto.adaptive.medium) { ... }
+// if (auto.adaptive.large) { ... }
 
 class Adaptive {
 	constructor() {

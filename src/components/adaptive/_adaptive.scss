@@ -10,10 +10,6 @@ Created by Andrey Shpigunov on 13.12.2020.
 // @include screen-medium { ... }
 // @include screen-small { ... }
 
-$screen-small: "(max-width: 500px)" !default;
-$screen-medium: "(min-width: 501px) and (max-width: 1000px)" !default;
-$screen-large: "(min-width: 1001px)" !default;
-
 $screens: (
 	small: $screen-small,
 	medium: $screen-medium,

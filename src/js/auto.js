@@ -5,8 +5,6 @@
 //	Created by Andrey Shpigunov on 14.12.2020.
 //
 
-
-
 import init from "../components/init/_init";
 import adaptive from "../components/adaptive/_adaptive";
 import device from "../components/device/_device";

@@ -57,16 +57,16 @@ const scroll = (function () {
 				if (_isValidJSON(e.dataset.scrollto)) {
 					var json = JSON.parse(e.dataset.scrollto);
 					if (
-						json.hasOwnProperty("Target") &&
-						document.getElementById(json.Target)
+						json.hasOwnProperty("target") &&
+						document.getElementById(json.target)
 					) {
 						var item = {};
 
-						item.Link = e;
-						item.Target = document.getElementById(json.Target);
-						item.Speed = json.Speed || _speed;
-						item.Offset = json.Offset || _offset;
-						item.ClassActive = json.ClassActive || _classActive;
+						item.link = e;
+						item.target = document.getElementById(json.target);
+						item.speed = json.speed || _speed;
+						item.offset = json.offset || _offset;
+						item.classActive = json.classActive || _classActive;
 					} else {
 						console.log(
 							"Target required in JSON " +
@@ -78,13 +78,13 @@ const scroll = (function () {
 					if (document.getElementById(e.dataset.scrollto)) {
 						var item = {};
 
-						item.Link = e;
-						item.Target = document.getElementById(
+						item.link = e;
+						item.target = document.getElementById(
 							e.dataset.scrollto
 						);
-						item.Speed = _speed;
-						item.Offset = _offset;
-						item.ClassActive = _classActive;
+						item.speed = _speed;
+						item.offset = _offset;
+						item.classActive = _classActive;
 					} else {
 						console.log(
 							"Target '" + e.dataset.scrollto + "' not exist."
@@ -97,7 +97,7 @@ const scroll = (function () {
 					e.removeAttribute("data-scrollto");
 					e.addEventListener("click", event => {
 						event.preventDefault();
-						scrollTo(item.Target, item.Offset, item.Speed);
+						scrollTo(item.target, item.offset, item.speed);
 					});
 				}
 			} catch (err) {
@@ -146,24 +146,24 @@ const scroll = (function () {
 
 	function _scrollObserve(linksHash) {
 		Object.keys(linksHash).forEach(i => {
-			var item = linksHash[i],
-				targetOffset = item.Target.getBoundingClientRect(),
-				speed = item.Speed,
-				offset = item.Offset;
-
+			let item = linksHash[i],
+				targetOffset = item.target.getBoundingClientRect(),
+				speed = item.speed,
+				offset = item.offset;
+			
 			if (
 				targetOffset.top <= offset + 5 &&
 				targetOffset.bottom > offset + 5
 			) {
-				if (item.ClassActive != null) {
-					item.Link.classList.add(item.ClassActive);
+				if (item.classActive != null) {
+					item.link.classList.add(item.classActive);
 				}
 			} else {
 				if (
-					item.ClassActive != null &&
-					item.Link.classList.contains(item.ClassActive)
+					item.classActive != null &&
+					item.link.classList.contains(item.classActive)
 				) {
-					item.Link.classList.remove(item.ClassActive);
+					item.link.classList.remove(item.classActive);
 				}
 			}
 		});
