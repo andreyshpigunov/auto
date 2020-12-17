@@ -5,6 +5,13 @@ Flexbox grid
 Created by Andrey Shpigunov on 15.12.2020.
 ---------------------------*/
 
+
+$grid-columns: 12 !default;
+$grid-gutters-large: 1.2vw !default;
+$grid-gutters-medium: 1.2vw !default;
+$grid-gutters-small: 1.2vw !default;
+
+
 .modules {
 	display: flex;
 	flex-wrap: wrap;
