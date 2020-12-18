@@ -4,10 +4,35 @@ $link-color-visited: #000;
 $link-border-opacity: 0.2;
 
 
-
 @import "auto";
 
 
+@include color-scheme(dark) {
+	
+	a,
+	a:visited {
+		color: #fff;
+		border-color: rgba(#fff, .2);
+		
+		&:hover {
+			color: #fff;
+			border-color: #fff;
+		}
+	}
+}
+
+
+main {
+	background: #fff;
+}
+
+
+@include color-scheme(dark){
+	main {
+		background: #111;
+		color: #fff;
+	}
+}
 
 
 main {
@@ -226,6 +251,10 @@ h2 {
 		transform: translateX(-261px);
 	}
 	
+	@include color-scheme(dark) {
+		background: #111;
+	}
+	
 	menu {
 		margin-top: 20px;
 		
@@ -253,6 +282,10 @@ h2 {
 				&.active {
 					color: #fff;
 					background: #CD00BE;
+				}
+				
+				@include color-scheme(dark) {
+					color: #eee;
 				}
 			}
 		}
@@ -303,6 +336,10 @@ section {
 		padding: 15px;
 	}
 	
+	@include color-scheme(dark) {
+		background: #333;
+	}
+	
 	h2 {
 		margin: 1rem 0;
 		font-size: 2.1rem;
@@ -311,6 +348,10 @@ section {
 		
 		@include screen(small) {
 			font-size: 1.6rem;
+		}
+		
+		@include color-scheme(dark) {
+			color: #fff;
 		}
 	}
 	
@@ -323,12 +364,20 @@ section {
 		@include screen(small) {
 			font-size: 1.1rem;
 		}
+		
+		@include color-scheme(dark) {
+			color: #fff;
+		}
 	}
 	
 	p {
 		margin: 1rem 0;
 		font-size: .9rem;
 		color: #111;
+		
+		@include color-scheme(dark) {
+			color: #eee;
+		}
 	}
 
 	a {
@@ -346,6 +395,12 @@ section {
 		color: #000;
 		background: #fff;
 		outline: solid 2px #fff;
+		
+		@include color-scheme(dark) {
+			color: #fff;
+			background: #444;
+			outline: solid 2px #444;
+		}
 	}
 	
 	table {
