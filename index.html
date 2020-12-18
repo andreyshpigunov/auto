@@ -121,7 +121,7 @@
 					<code>.is-appeared</code> — when it appears in the viewport, the element is assigned classes <code>.appeared</code> and <code>.visible</code>. When disappearing from viewport class <code>.visible</code> disappear, <code>.appeared</code> remains.
 				</p>
 				
-				<iframe height="1280" style="width: 100%;" scrolling="no" title="Auto / Helpers" src="https://codepen.io/andreyshpigunov/embed/WNGjRBG?height=369&theme-id=dark&default-tab=html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
+				<iframe height="1280" style="width: 100%;" scrolling="no" title="Auto / Helpers" src="https://codepen.io/andreyshpigunov/embed/WNGjRBG?height=1280&theme-id=dark&default-tab=html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
 			</section>
 				
 		
@@ -152,7 +152,7 @@
 						<code>.modules-linebreak</code> — modules linebreak<br/>
 						<code>.modules-colbreak</code> — modules colbreak
 					</p>
-					<iframe height="1300" style="width: 100%;" scrolling="no" title="Auto / Grid" src="https://codepen.io/andreyshpigunov/embed/MWjmmKx?height=265&theme-id=dark&default-tab=html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
+					<iframe height="1300" style="width: 100%;" scrolling="no" title="Auto / Grid" src="https://codepen.io/andreyshpigunov/embed/MWjmmKx?height=1300&theme-id=dark&default-tab=html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
 				</section>
 				
 				<section id="responsive-css">
@@ -204,198 +204,193 @@
 				</section>
 				
 				<section id="buttons">
-					<h2>Кнопки</h2>
-					
-					<p>Чтобы создать кнопку, надо добавить элементу класс <code>.button</code>.</p>
+
+					<h2>Buttons</h2>
+					<p>To create a button, add a class to the element <code>.button</code>.</p>
 					
 					<div class="section-example">
-						<a class="button">.button</a>
-						<a class="button -bold">.button.-bold</a>
-						<a class="button -bordered">.button.-bordered</a>
-						
-						<div style="height: 6px"></div>
 						<a class="button -large">.button.-large</a>
 						<a class="button -small">.button.-small</a>
 						<a class="button -xsmall">.button.-xsmall</a>
+						<div style="height: 6px"></div>
+						<a class="button">.button</a>
+						<a class="button -bold">.button.-bold</a>
+						<a class="button -bordered">.button.-bordered</a>
 					</div>
+					<br/>
 					
-					<script async src="//jsfiddle.net/andreyshpigunov/pc2tvj05/embed/html,css,js,result/dark/"></script>
+					<iframe height="800" style="width: 100%;" scrolling="no" title="Auto / Buttons" src="https://codepen.io/andreyshpigunov/embed/qBajZjb?height=800&theme-id=dark&default-tab=html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
+					
 				</section>
 				
 				<h2 class="mt-40">Auto.js</h2>
 				
 				<section id="responsive-js">
-					<h2>Адаптивность</h2>
-					<p>Функция срабатывает только при первой загрузке страницы.</p>
+					<h2>Adaptivity</h2>
+					<p>The function is triggered only when the page is loaded for the first time.</p>
 					<p>
-						<code>if(auto.adaptive.large){ ... }</code><br/>
-						<code>if(auto.adaptive.medium){ ... }</code><br/>
-						<code>if(auto.adaptive.small){ ... }</code><br/>
+						<code>if (auto.adaptive.large) { ... }</code><br/>
+						<code>if (auto.adaptive.medium) { ... }</code><br/>
+						<code>if (auto.adaptive.small) { ... }</code>
 					</p>
 				</section>
 				
 				<section id="modal">
-					<h2>Модальные окна</h2>
-					<p>Универсальное модальное окно.</p>
-					<p>По умолчанию код модального окна добавляется в конец тега body, но если необходимо расположить его в другом месте, нужно добавить блоку, где должен расположиться код окна, класс <code>.modal-here</code></p>
+					<h2>Modals</h2>
+					<p>Universal modal windows.</p>
+					<p>By default, the modal window code is added to the end of the body tag, but if you need to place it elsewhere, you need to add a class <code>.modal-here</code> to the block where the window code should be located.</p>
 					
 					<h3>API</h3>
 					<p>
-						<code>auto.modal.show(id)</code> — открыть окно<br/>
-						<code>auto.modal.hide(id)</code> — закрыть окно
+						<code>auto.modal.show(id)</code> — open modal<br/>
+						<code>auto.modal.hide(id)</code> — close modal
 					</p>
           
-          <a data-modal="modal-test">TEST</a>
-          <a onclick="auto.modal.show('modal-test')">API SHOW</a>
-          <div id="modal-test" class="modal-content">
-            <div class="text">
-              <h2>Модальные окна</h2>
-    					<p>Универсальное модальное окно.</p>
-    					<p>По умолчанию код модального окна добавляется в конец тега body, но если необходимо расположить его в другом месте, нужно добавить блоку, где должен расположиться код окна, класс <code>.modal-here</code></p>
-            </div>
-          </div>
+					<a data-modal="modal-test">TEST</a>
+					<a onclick="auto.modal.show('modal-test')">API SHOW</a>
+					<div id="modal-test" class="modal-content">
+						<div class="text">
+							<h2>Modal windows</h2>
+							<p>Universal modal window.</p>
+							<p>By default, the modal window code is added to the end of the body tag, but if you need to place it elsewhere, you need to add a class <code>.modal-here</code> to the block where the window code should be located.</p>
+						</div>
+					</div>
 					
-					<h3>События</h3>
+					<h3>Events</h3>
 					<p>
-						<code>modal:ready</code> — перед открытием окна<br/>
-						<code>modal:open</code> — окно открыто<br/>
-						<code>modal:close</code> — после закрытия окна
+						<code>modal:ready</code> — before modal opened<br/>
+						<code>modal:open</code> — modal opened<br/>
+						<code>modal:close</code> — modal closed
 					</p>
 					<p>
-						Пример обработки события:<br/>
-						<code>document.getElementById('modal-id').addEventListener('modal:ready', function(event){ ... })</code>
+						Example:<br/>
+						<code>document.getElementById('modal-id').addEventListener('modal:ready', event => { ... })</code>
 					</p>
 					
-					<h3>Инициализация</h3>
-					<script async src="//jsfiddle.net/andreyshpigunov/71cykth4/embed/html/dark/"></script>
+					<h3>Init modals</h3>
+					<iframe height="700" style="width: 100%;" scrolling="no" title="Auto / Modal init" src="https://codepen.io/andreyshpigunov/embed/vYXZGpm?height=700&theme-id=dark&default-tab=html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
 					
-					<h3>Примеры</h3>
-					<script async src="//jsfiddle.net/andreyshpigunov/2voaby6k/embed/result,html,css,js/dark/"></script>
+					<h3>Examples</h3>
+					<iframe height="800" style="width: 100%;" scrolling="no" title="Auto / Modals examples" src="https://codepen.io/andreyshpigunov/embed/KKgqzBE?height=800&theme-id=dark&default-tab=html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
 				</section>
 				
 				<section id="animate">
-					<h2>Анимации</h2>
+					<h2>Animations</h2>
 					
-					<p>Запускает функцию с анимацией или управляет классом элемента при достижении им или его элементом-триггером определенной точки прокрутки.</p>
+					<p>Starts a function with animation or controls the class of an element when it or its trigger element reaches a certain scroll point.</p>
 					
-					<h3>Инициализация</h3>
-					<script async src="//jsfiddle.net/andreyshpigunov/r0osq3tx/embed/html/dark/"></script>
+					<h3>Initialization</h3>
+					<iframe height="285" style="width: 100%;" scrolling="no" title="Auto / Animation init" src="https://codepen.io/andreyshpigunov/embed/mdrwEWG?height=285&theme-id=dark&default-tab=html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
 					
 					<p>
-						<code>TriggerID</code> — указатель на ID эелемента, у которого мы отслеживаем положение<br/>
-						<code>Start</code> — точка начала анимации (высота от верхнего края экрана в px или vh)<br/>
-						<code>End</code> — точка окончания анимации (высота от верхнего края экрана в px или vh)<br/>
-						<code>FunctionName</code> — название функции, выполнение которой начинается, когда элемент движется между Start и End<br/>
-						<code>Class</code> — класс, присваиваемый ссылке, когда Target находится между Start и End<br/>
-						<code>ClassRemove</code> — удалять ли Class у елемента после выхода его из зоны анимации, по умолчанию false
+						<code>triggerID</code> — pointer to the ID of the element that we are tracking the position<br/>
+						<code>start</code> — animation start point (height from the top edge of the screen in px or vh)<br/>
+						<code>end</code> — animation end point (height from the top edge of the screen in px or vh)<br/>
+						<code>functionName</code> — name of the function that starts executing when the element moves between "start" and "end"<br/>
+						<code>class</code> — class assigned to a reference when "target" is between "start" and "end"<br/>
+						<code>classRemove</code> — whether to delete the "class" from the element after it leaves the animation zone, by default false
 					</p>
 					
-					<p>Если элемент сам является триггером, TriggerID указывать не нужно.</p>
+					<p>if the element itself is a trigger, you don't need to specify the triggerID.</p>
 					
-					<p>Функция FunctionName получает параметр со всеми полями элемента, описанными выше и параметром Progress, который изменяется от 0 до 1, в процессе прокрутки страницы и перемещения элемента.</p>
+					<p>The "functionName" function gets a parameter with all the fields of the element described above and the "progress" parameter, which changes from 0 to 1, as the page scrolls and the element moves.</p>
 					
-					<h3>Пример</h3>
-					<iframe width="100%" height="400" src="//jsfiddle.net/andreyshpigunov/b1zn7cg2/embedded/result,html,css,js/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+					<h3>Example</h3>
+					<iframe height="400" style="width: 100%;" scrolling="no" title="Auto / Animation example" src="https://codepen.io/andreyshpigunov/embed/jOMwrGE?height=400&theme-id=dark&default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
 				</section>
 				
 				<section id="scrollto">
-					<h2>Скроллер</h2>
+					<h2>Scrolle</h2>
 					<p>
-						Прокручивает страницу до элемента с указанным ID.<br/>
-						Автоматически применяется к элементам с data-scroll.
+						Scrolls the page to the element with the specified ID.<br/>
+						Automatically applied to elements with "data-scroll".
 					</p>
 					
-					<h3>Инициализация</h3>
-					<script async src="//jsfiddle.net/andreyshpigunov/9hjtywL3/embed/html/dark/"></script>
+					<h3>Init</h3>
+					<iframe height="265" style="width: 100%;" scrolling="no" title="Auto / Scroller" src="https://codepen.io/andreyshpigunov/embed/qBajNxp?height=265&theme-id=dark&default-tab=html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
 					
 					<p>
-						<code>Target</code> — ID цели<br/>
-						<code>Offset</code> — смещение в пикселях (по умолчанию 0)<br/>
-						<code>Speed</code> — скорость прокрутки (по умолчанию 500 мс)<br/>
-						<code>ClassActive</code> — класс, присваиваемый ссылке, когда Target находится в зоне viewport
+						<code>target</code> — target ID<br/>
+						<code>offset</code> — offset in pixels (default 0)<br/>
+						<code>speed</code> — scroll speed (default 500 ms)<br/>
+						<code>classActive</code> — class assigned to a reference when the "target" is in the viewport zone
 					</p>
 					
 					<h3>API</h3>
-					<p><code>auto.scrollTo(target, offset, speed)</code></p>
-					<p>
-						<code>target</code> — ID цели<br/>
-						<code>offset</code> — скорость прокрутки (по умолчанию 500 мс, необязательные параметр)<br/>
-						<code>speed</code> — смещение в пикселях (по умолчанию 0, необязательные параметр)<br/>
-					</p>
+					<p><code>auto.scroll.scrollTo(target, offset, speed)</code></p>
+					<p><code>auto.scrollTo(target, offset, speed)</code> — shortcut</p>
 				</section>
 				
 				<section id="loadmore">
-					<h2>Загрузчик</h2>
+					<h2>Loader</h2>
 					<p>
-						Запускает функцию подгрузки данных при прокрутке до конца блока.<br/>
-						Автоматически применяется к элементам с data-loadmore.
+						Starts the data loading function when scrolling to the end of the block.<br/>
+						Automatically applied to elements with "data-loadmore".
 					</p>
 					
-					<h3>Инициализация</h3>
-					<script async src="//jsfiddle.net/andreyshpigunov/39zt1xs4/embed/html/dark/"></script>
-					
+					<h3>Init</h3>
+					<iframe height="265" style="width: 100%;" scrolling="no" title="Auto / Loader" src="https://codepen.io/andreyshpigunov/embed/LYRLZmd?height=265&theme-id=dark&default-tab=html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>					
 					<p>
-						<code>FunctionName</code> — название функции, выполняющей загрузку<br/>
-						<code>Offset</code> — смещение в пикселях от нижнего края страница (по умолчанию 0)
+						<code>functionName</code> — loader function name<br/>
+						<code>offset</code> — offset in pixels from the bottom edge of the page (default 0)
 					</p>
-					<p>В функцию при каждом ее запуске передается инкрементный параметр <code>page</code>.</p>
+					<p>An incremental parameter <code>page</code> is passed to the function each time it is run.</p>
 				</section>
 				
 				<section id="lazyload">
-					<h2>Ленивая загрузка</h2>
+					<h2>Lazyload</h2>
 					<p>
-						Загрузка изображений при их появлении в viewport.<br/>
-						Работает с помощью метода IntersectionObserver, только в современных браузерах.<br/>
-						Если IntersectionObserver не поддерживается, картинки загружаются обычным способом.
+						Loading images when they appear in viewport.<br/>
+						Works with the IntersectionObserver method, only in modern browsers.<br/>
+						If IntersectionObserver is not supported, images are loaded in the usual way.
 					</p>
 					
-					<h3>Инициализация</h3>
-					<script async src="//jsfiddle.net/andreyshpigunov/0mt3ys59/embed/html/dark/"></script>
+					<h3>Init</h3>
+					<iframe height="200" style="width: 100%;" scrolling="no" title="Auto / Lazyload" src="https://codepen.io/andreyshpigunov/embed/YzGQWvO?height=200&theme-id=dark&default-tab=html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
 				</section>
 				
 				<section id="ajax">
 					<h2>AJAX</h2>
-					<p>Библиотека для работы с AJAX-запросами.</p>
-					<p>Исходная документация: <a href="https://github.com/fdaciuk/ajax/blob/dev/README.md" target="_blank">https://github.com/fdaciuk/ajax/blob/dev/README.md</a></p>
+					<p>Library for working with ajax requests.</p>
+					<p>Source documentation: <a href="https://github.com/fdaciuk/ajax/blob/dev/README.md" target="_blank">https://github.com/fdaciuk/ajax/blob/dev/README.md</a></p>
 										
-					<h3>Использование</h3>
-					<script async src="//jsfiddle.net/andreyshpigunov/7dtrup9h/embed/js/dark/"></script>
+					<h3>Using</h3>
+					<iframe height="265" style="width: 100%;" scrolling="no" title="Auto / Ajax using" src="https://codepen.io/andreyshpigunov/embed/OJRgXrK?height=265&theme-id=dark&default-tab=js" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
 					
 					<h3>GET</h3>
-					<script async src="//jsfiddle.net/andreyshpigunov/hka0t47r/embed/js/dark/"></script>
+					<iframe height="160" style="width: 100%;" scrolling="no" title="Auto / Ajax GET" src="https://codepen.io/andreyshpigunov/embed/abmwZXE?height=160&theme-id=dark&default-tab=js" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
 					
 					<h3>POST</h3>
-					<script async src="//jsfiddle.net/andreyshpigunov/Lx0fcn3v/embed/js/dark/"></script>
+					<iframe height="290" style="width: 100%;" scrolling="no" title="Auto / Ajax POST" src="https://codepen.io/andreyshpigunov/embed/QWKgEoy?height=290&theme-id=dark&default-tab=js" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
 					
 					<h3>PUT</h3>
-					<script async src="//jsfiddle.net/andreyshpigunov/0ntkgwfe/embed/js/dark/"></script>
+					<iframe height="160" style="width: 100%;" scrolling="no" title="Auto / Ajax PUT" src="https://codepen.io/andreyshpigunov/embed/zYKzBbP?height=160&theme-id=dark&default-tab=js" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
 					
 					<h3>DELETE</h3>
-					<script async src="//jsfiddle.net/andreyshpigunov/2k1b8phv/embed/js/dark/"></script>
+					<iframe height="160" style="width: 100%;" scrolling="no" title="Auto / Ajax DELETE" src="https://codepen.io/andreyshpigunov/embed/gOwRMEN?height=160&theme-id=dark&default-tab=js" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
 					
-					<h3>Обработка ответов</h3>
-					<script async src="//jsfiddle.net/andreyshpigunov/ebw68h04/embed/js/dark/"></script>
+					<h3>Processing responses</h3>
+					<iframe height="300" style="width: 100%;" scrolling="no" title="Auto / Ajax processing responses" src="https://codepen.io/andreyshpigunov/embed/wvzeWbB?height=300&theme-id=dark&default-tab=js" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
 					
-					<h3>Отмена запроса</h3>
-					<script async src="//jsfiddle.net/andreyshpigunov/mrc6fLqo/embed/js/dark/"></script>
+					<h3>Cancel request</h3>
+					<iframe height="290" style="width: 100%;" scrolling="no" title="Auto / Ajax cancel requests" src="https://codepen.io/andreyshpigunov/embed/MWjoedp?height=290&theme-id=dark&default-tab=js" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
 
 				</section>
 				
 				<section id="utils">
-					<h2>Утилиты</h2>
-					<p>Часто используемые функции.</p>
-					<script async src="//jsfiddle.net/andreyshpigunov/uoxv1eLd/embed/js/dark/"></script>
+					<h2>Utils</h2>
+					<p>Frequently used functions.</p>
+					<iframe height="1100" style="width: 100%;" scrolling="no" title="Auto / Utils" src="https://codepen.io/andreyshpigunov/embed/JjRJKeL?height=1100&theme-id=dark&default-tab=js" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
 				</section>
 			</main>
 		</div>
 		
 		<script src="js/auto.js" ></script>
 		<script>
-			var
-			html = document.documentElement,
-			mobileButton = document.querySelector('.header-menu-mobile_button');
+			let html = document.documentElement,
+			let mobileButton = document.querySelector('.header-menu-mobile_button');
 			
-			mobileButton.addEventListener('click', function(event) {
+			mobileButton.addEventListener('click', event => {
 				if (html.classList.contains('show-menu')) {
 					html.classList.remove('show-menu')
 				} else {
