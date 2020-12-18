@@ -394,11 +394,7 @@
 			let mobileButton = document.querySelector('.header-menu-mobile_button');
 			
 			mobileButton.addEventListener('click', event => {
-				if (html.classList.contains('show-menu')) {
-					html.classList.remove('show-menu')
-				} else {
-					html.classList.add('show-menu')
-				}
+				html.classList.toggle('show-menu')
 			})
 		</script>
 	</body>
