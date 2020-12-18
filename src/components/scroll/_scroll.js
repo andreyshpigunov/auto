@@ -14,7 +14,7 @@
 // <a data-scrollto='{"target": "top", "speed": "1000", "offset": "100", "classActive": "active"}'>Up</a>
 
 
-const scroll = (function () {
+const scroll = (() => {
 	
 	// Scroll direction
 

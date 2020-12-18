@@ -1,30 +1,29 @@
 //
-//	_url.js | Vanilla JS
-//	Работа с URL
+//	_url.js
+//	Work with URL
 //
-//	Copyright © 2019 Andrey Shpigunov. All right reserved.
+//	Created by Andrey Shpigunov on 18.12.2020.
 //
-
 	
-// Обновление страницы
+// Reload page
 export function reload() {
   location.reload()
 }
 
-// Обновление страницы с новым хешем
+// Reload page with new hash
 export function reloadWithHash(hash) {
   redirectTo(location.href.replace(location.hash, '#' + hash));
   reload()
 }
 
-// Переход по указанной ссылке
+// Redirect to link
 export function redirectTo(url) {
   window.location = url;
   return false
 }
 
-// Изменение title и url страницы без перезагрузки
-// Можно добавить и просто хеш в конце: Base.url.updateURL('#ok')
+// Update title and page url without reload
+// Or you can add only hash: auto.url.updateURL('#ok')
 export function updateURL(url, title) {
   if (typeof (history.pushState) != 'undefined') {
     history.pushState(null, title, url)
