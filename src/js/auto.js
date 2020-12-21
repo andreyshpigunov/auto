@@ -7,3 +7,4 @@
 
 import auto from "../components/auto/_auto";
 
+export default auto;
