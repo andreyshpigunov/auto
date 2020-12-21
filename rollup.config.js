@@ -2,7 +2,14 @@ import { terser } from "rollup-plugin-terser";
 import resolve from "@rollup/plugin-node-resolve";
 import babel from "@rollup/plugin-babel";
 
-const plugins = [terser(), resolve(), babel({ exclude: "node_modules/**" })];
+const plugins = [
+	terser(),
+	resolve(),
+	babel({
+		exclude: ["node_modules/**", "admin/**", "admin-modules/**"],
+		babelHelpers: "bundled",
+	}),
+];
 
 export default [
 	{
