@@ -63,7 +63,9 @@ export function toggleActive(
 	elementSelector,
 	readyClass,
 	activeClass,
-	inactiveClass
+	inactiveClass,
+	toggleOnDelay,
+	toggleOffDelay
 ) {
 	var element = document.querySelector(elementSelector);
 	if (element) {
@@ -74,20 +76,24 @@ export function toggleActive(
 			inactiveClass =
 				typeof inactiveClass !== "undefined"
 					? inactiveClass
-					: "inactive";
+					: "inactive",
+			toggleOnDelay =
+				typeof toggleOnDelay !== "undefined" ? toggleOnDelay : 50,
+			toggleOffDelay =
+				typeof toggleOffDelay !== "undefined" ? toggleOffDelay : 200;
 
 		if (element.classList.contains(activeClass)) {
 			element.classList.remove(activeClass);
 			element.classList.add(inactiveClass);
 			setTimeout(() => {
 				element.classList.remove(readyClass);
-			}, 200);
+			}, toggleOffDelay);
 		} else {
 			element.classList.add(readyClass);
 			setTimeout(() => {
 				element.classList.remove(inactiveClass);
 				element.classList.add(activeClass);
-			}, 50);
+			}, toggleOnDelay);
 		}
 	}
 }
