@@ -56,44 +56,57 @@ export function numberDecline(a, b, c, d) {
 	return e;
 }
 
-// Changing the activity class of an element with the preparation class
-// It is necessary when the element must be initialized before the activity, for example, add display: block.
-// When turned off, the preparation class is turned off with a delay so that the effect has time to end.
-export function toggleActive(
-	elementSelector,
-	readyClass,
-	activeClass,
-	inactiveClass,
-	toggleOnDelay,
-	toggleOffDelay
+// Add activation class after ready class in two steps, with delay
+export function addClass(
+	element,
+	readyClass = "ready",
+	activeClass = "active",
+	delay = 50
 ) {
-	var element = document.querySelector(elementSelector);
-	if (element) {
-		var readyClass =
-				typeof readyClass !== "undefined" ? readyClass : "ready",
-			activeClass =
-				typeof activeClass !== "undefined" ? activeClass : "active",
-			inactiveClass =
-				typeof inactiveClass !== "undefined"
-					? inactiveClass
-					: "inactive",
-			toggleOnDelay =
-				typeof toggleOnDelay !== "undefined" ? toggleOnDelay : 50,
-			toggleOffDelay =
-				typeof toggleOffDelay !== "undefined" ? toggleOffDelay : 200;
+	// If element value is html element or query selector
+	let item = typeof element == "string" ? document.querySelector(element) : element;
+	if (
+		item &&
+		!item.classList.contains(readyClass) &&
+		!item.classList.contains(activeClass)
+	) {
+		item.classList.add(readyClass);
+		setTimeout(() => {
+			item.classList.add(activeClass);
+		}, delay);
+	}
+}
 
-		if (element.classList.contains(activeClass)) {
-			element.classList.remove(activeClass);
-			element.classList.add(inactiveClass);
-			setTimeout(() => {
-				element.classList.remove(readyClass);
-			}, toggleOffDelay);
+// Remove activation class before removing reade class in two steps, with delay
+export function removeClass(
+	element,
+	readyClass = "ready",
+	activeClass = "active",
+	delay = 200
+) {
+	// If element value is html element or query selector
+	let item = typeof element == "string" ? document.querySelector(element) : element;
+	if (
+		item &&
+		item.classList.contains(readyClass) &&
+		item.classList.contains(activeClass)
+	) {
+		item.classList.remove(activeClass);
+		setTimeout(() => {
+			item.classList.remove(readyClass);
+		}, delay);
+	}
+}
+
+// Toggle activation class using ready class in two steps, with delay
+export function toggleClass(element, readyClass, activeClass, delayAdd, delayRemove) {
+	// If element value is html element or query selector
+	let item = typeof element == "string" ? document.querySelector(element) : element;
+	if (item) {
+		if (!item.classList.contains(activeClass)) {
+			addClass(element, readyClass, activeClass, delayAdd);
 		} else {
-			element.classList.add(readyClass);
-			setTimeout(() => {
-				element.classList.remove(inactiveClass);
-				element.classList.add(activeClass);
-			}, toggleOnDelay);
+			removeClass(element, readyClass, activeClass, delayRemove);
 		}
 	}
 }
