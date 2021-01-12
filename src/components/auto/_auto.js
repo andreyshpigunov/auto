@@ -18,7 +18,6 @@ import * as url from "./url/_url";
 import * as utils from "./utils/_utils";
 import ajax from "./ajax/_ajax";
 import polyfills from "./polyfills/_polyfills";
-import Cookies from "js-cookie";
 
 const auto = (function () {
 	return {
@@ -31,8 +30,7 @@ const auto = (function () {
 		url: url,
 		utils: utils,
 		ajax: ajax,
-		loadmore: loadmore,
-		cookies: Cookies,
+		loadmore: loadmore
 	};
 })();
 

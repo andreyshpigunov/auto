@@ -3,9 +3,6 @@
 	"version": "1.0.0",
 	"description": "Библиотека базовых стилей и скриптов для создания сайтов.",
 	"main": "rollup.config.js",
-	"dependencies": {
-		"js-cookie": "^3.0.0-rc.1"
-	},
 	"devDependencies": {
 		"@babel/core": "^7.11.6",
 		"@babel/preset-env": "^7.11.5",
@@ -22,11 +19,10 @@
 		"watch": "^1.0.2"
 	},
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1",
+		"_build:scss": "node-sass 'src/scss' -o css",
+		"_build:postcss": "postcss css/ --use autoprefixer cssnano -d css/ --no-map",
+		"build:css": "npm run _build:scss && npm run _build:postcss",
 		"build:js": "rollup -c",
-		"build:scss": "node-sass 'src/scss' -o css",
-		"build:postcss": "postcss css/ --use autoprefixer cssnano -d css/ --no-map",
-		"build:css": "npm run build:scss && npm run build:postcss",
 		"build": "npm run build:js && npm run build:css",
 		"build:watch": "watch 'npm run build' src/*",
 		"build:watch:js": "watch 'npm run build:js' src/*",
