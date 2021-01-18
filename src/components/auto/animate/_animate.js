@@ -70,13 +70,13 @@ const animate = (function () {
 			_scroll(animationsHash);
 			document.addEventListener("scroll", () => {
 				_scroll(animationsHash);
-			});
+			}, { passive: true });
 			if (document.querySelector(".animate-scrollarea")) {
 				document
 					.querySelector(".animate-scrollarea")
 					.addEventListener("scroll", () => {
 						_scroll(animationsHash);
-					});
+					}, { passive: true });
 			}
 		}
 	}

@@ -38,7 +38,7 @@ const appear = (function () {
 			_scroll(itemsHash);
 			document.addEventListener("scroll", () => {
 				_scroll(itemsHash);
-			});
+			}, { passive: true });
 		}
 	}
 

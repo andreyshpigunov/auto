@@ -109,7 +109,7 @@ const scroll = (() => {
 			_scrollObserve(linksHash);
 			document.addEventListener("scroll", () => {
 				_scrollObserve(linksHash);
-			});
+			}, { passive: true });
 		}
 	}
 

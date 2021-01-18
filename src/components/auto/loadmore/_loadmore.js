@@ -51,7 +51,7 @@ const loadmore = (function () {
 			_scrollObserve(blocksHash);
 			document.addEventListener("scroll", () => {
 				_scrollObserve(blocksHash);
-			});
+			}, { passive: true });
 		}
 	}
 

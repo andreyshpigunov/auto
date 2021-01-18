@@ -34,4 +34,6 @@ const auto = (function () {
 	};
 })();
 
+window.auto = auto;
+
 export default auto;
