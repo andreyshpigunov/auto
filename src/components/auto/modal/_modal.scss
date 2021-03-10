@@ -5,6 +5,12 @@ Modal windows
 Created by Andrey Shpigunov on 14.12.2020.
 ---------------------------*/
 
+$modal-background: #fff !default;
+$modal-box-shadow: 0 6px 30px rgba(0, 0, 0, 0.25) !default;
+$modal-border-radius: 8px !default;
+$modal-closer-color: #ccc !default;
+$modal-overlay-background-color: rgba(0, 0, 0, 0.4) !default;
+
 html.modal-active {
 	body {
 		overflow: hidden;
@@ -46,7 +52,7 @@ html.modal-active {
 		bottom: 0;
 		left: 0;
 		right: 0;
-		background-color: rgba(0, 0, 0, 0.4);
+		background-color: $modal-overlay-background-color;
 	}
 
 	// Main structure
@@ -78,9 +84,9 @@ html.modal-active {
 		margin: auto;
 		padding: 40px 50px;
 		text-align: left;
-		background: #fff;
-		box-shadow: 0 6px 30px rgba(0, 0, 0, 0.25);
-		border-radius: 6px;
+		background: $modal-background;
+		box-shadow: $modal-box-shadow;
+		border-radius: $modal-border-radius;
 
 		@include screen(small) {
 			padding: 40px 6vw;
@@ -116,7 +122,7 @@ html.modal-active {
 			height: 2px;
 
 			will-change: color;
-			background: #ccc;
+			background: $modal-closer-color;
 			transition: background 0.15s ease-out;
 			transform-origin: center;
 		}

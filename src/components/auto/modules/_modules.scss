@@ -1,0 +1,232 @@
+/*-------------------------------------
+_modules.scss
+Modules grid
+
+Created by Andrey Shpigunov on 08.03.2021
+Copyright © 2021 . All rights reserved.
+-------------------------------------*/
+
+// Modules grid settings
+$modules-columns: 12 !default;
+$modules-gutters: (
+	large: 1.4vw,
+	medium: 1.6vw,
+	small: 1.8vw,
+) !default;
+
+$modules-columns-names: (
+	1: one,
+	2: two,
+	3: three,
+	4: four,
+	5: five,
+	6: six,
+	7: seven,
+	8: eight,
+	9: nine,
+	10: ten,
+	11: eleven,
+	12: twelve,
+	13: thirteen,
+	14: fourtee,
+	15: fifteen,
+	16: sixteen,
+) !default;
+
+.flex {
+	display: flex;
+}
+
+.modules-linebreak {
+	flex-basis: 100% !important;
+	height: 0 !important;
+}
+
+.modules-colbreak {
+	flex-basis: 100% !important;
+	width: 0 !important;
+}
+
+.modules {
+	display: flex;
+	flex-wrap: wrap;
+
+	&.centered {
+		justify-content: center;
+	}
+
+	.module {
+		position: relative;
+		flex-shrink: 1;
+
+		&.compact {
+			flex-shrink: 0;
+		}
+	}
+}
+
+.offset-none {
+	margin-left: 0;
+}
+
+@for $col from $modules-columns through 1 {
+	$cname1: #{map-get($modules-columns-names, $col)};
+	// .[one..twelve]
+	.#{$cname1} {
+		flex-basis: $col / $modules-columns * 100%;
+		max-width: $col / $modules-columns * 100%;
+
+		@for $i from $col through 1 {
+			$cname2: #{map-get($modules-columns-names, $i)};
+			// .[one..twelve]
+			.#{$cname2} {
+				flex-basis: $i / $col * 100%;
+				max-width: $i / $col * 100%;
+			}
+
+			@if $cname1 != $cname2 {
+				// .[offset-one..offset-twelve]
+				.offset-#{$cname2} {
+					margin-left: $i / $col * 100%;
+				}
+			}
+		}
+	}
+	// .[offset-one..offset-twelve]
+	.offset-#{$cname1} {
+		margin-left: $col / $modules-columns * 100%;
+	}
+}
+
+// Set modules columns (only for parent module)
+@for $col from $modules-columns through 1 {
+	$mname1: #{map-get($modules-columns-names, $col)};
+	// .modules.[one..twelve]
+	.modules.#{$mname1} {
+		flex-basis: auto;
+		max-width: none;
+
+		@for $i from $col through 1 {
+			$mname2: #{map-get($modules-columns-names, $i)};
+			// .[one..twelve]
+			> .#{$mname2} {
+				flex-basis: $i / $col * 100%;
+				max-width: $i / $col * 100%;
+			}
+
+			@if $mname1 != $mname2 {
+				// .[offset-one..offset-twelve]
+				> .offset-#{$mname2} {
+					margin-left: $i / $col * 100%;
+				}
+			}
+		}
+	}
+}
+
+.order-first {
+	order: -1;
+}
+.order-last {
+	order: 9999;
+}
+@for $col from $modules-columns through 1 {
+	.order-#{$col} {
+		order: $col;
+	}
+}
+
+@each $size, $query in $screens {
+	@include screen(#{$size}) {
+		.modules {
+			margin: -#{map-get($modules-gutters, $size)};
+
+			&.#{$size}-centered {
+				justify-content: center;
+			}
+
+			+ .modules {
+				margin-top: map-get($modules-gutters, $size);
+			}
+
+			.module {
+				padding: map-get($modules-gutters, $size);
+
+				&.#{$size}-compact {
+					flex-shrink: 0;
+				}
+			}
+		}
+		// .[size-offset-none]
+		.#{$size}-offset-none {
+			margin-left: 0;
+		}
+
+		@for $col from $modules-columns through 1 {
+			$cname3: #{map-get($modules-columns-names, $col)};
+			// .[size-one..twelve]
+			.#{$size}-#{$cname3} {
+				flex-basis: $col / $modules-columns * 100%;
+				max-width: $col / $modules-columns * 100%;
+
+				@for $i from $col through 1 {
+					$cname4: #{map-get($modules-columns-names, $i)};
+					// .[size-one..twelve]
+					.#{$size}-#{$cname4} {
+						flex-basis: $i / $col * 100%;
+						max-width: $i / $col * 100%;
+					}
+
+					@if $cname3 != $cname4 {
+						// .[size-offset-one..twelve]
+						.#{$size}-offset-#{$cname4} {
+							margin-left: $i / $col * 100%;
+						}
+					}
+				}
+			}
+			// .[size-offset-one..twelve]
+			.#{$size}-offset-#{$cname3} {
+				margin-left: $col / $modules-columns * 100%;
+			}
+		}
+
+		@for $col from $modules-columns through 1 {
+			$mname3: #{map-get($modules-columns-names, $col)};
+			// .modules.[size-one..twelve]
+			.modules.#{$size}-#{$mname3} {
+				flex-basis: auto;
+				max-width: none;
+
+				@for $i from $col through 1 {
+					$mname4: #{map-get($modules-columns-names, $i)};
+					// .[size-one..twelve]
+					> .#{$size}-#{$mname4} {
+						flex-basis: $i / $col * 100%;
+						max-width: $i / $col * 100%;
+					}
+
+					@if $mname3 != $mname4 {
+						// .[size-offset-one..twelve]
+						> .#{$size}-offset-#{$mname4} {
+							margin-left: $i / $col * 100%;
+						}
+					}
+				}
+			}
+		}
+
+		.#{$size}-order-first {
+			order: -1;
+		}
+		.#{$size}-order-last {
+			order: 9999;
+		}
+
+		@for $col from $modules-columns through 1 {
+			.#{$size}-order-#{$col} {
+				order: $col;
+			}
+		}
+	}
+}

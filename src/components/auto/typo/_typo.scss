@@ -6,13 +6,15 @@ Created by Andrey Shpigunov on 16.12.2020.
 ---------------------------*/
 
 
-$typo-h1-font-size: 2.4rem;
-$typo-h2-font-size: 2rem;
-$typo-h3-font-size: 1.4rem;
-$typo-h4-font-size: 1.2rem;
-$typo-h5-font-size: 1rem;
-$typo-h6-font-size: 1rem;
-$typo-font-size: 1rem;
+$use-antialiasing: false !default;
+
+$typo-font-size: 1rem !default;
+$typo-h1-font-size: 2.4rem !default;
+$typo-h2-font-size: 2rem !default;
+$typo-h3-font-size: 1.4rem !default;
+$typo-h4-font-size: 1.2rem !default;
+$typo-h5-font-size: 1rem !default;
+$typo-h6-font-size: 1rem !default;
 
 
 body,
@@ -61,7 +63,7 @@ button {
 	h4, .h4,
 	h5, .h5,
 	h6, .h6 {
-		margin: 0 0 1.2rem 0;
+		margin: 0 0 1.25rem 0;
 		font-weight: 700;
 	}
 	* + h1, * + .h1,
@@ -157,13 +159,13 @@ button {
 	}
 	
 	p {
-		margin: 1.2rem 0;
+		margin: 1.25rem 0;
 		font-style: inherit;
 		hyphens: auto;
 	}
 	
 	figure {
-		margin: 1.2rem 0;
+		margin: 1.25rem 0;
 		
 		figcaption {
 			font-size: .9rem;
@@ -245,11 +247,11 @@ button {
 		}
 	}
 	
-	> :first-child {
-		margin-top: 0 !important;
-	}
+	// > :first-child {
+	// 	margin-top: 0 !important;
+	// }
 	
-	> :last-child {
-		margin-bottom: 0 !important;
-	}
+	// > :last-child {
+	// 	margin-bottom: 0 !important;
+	// }
 }

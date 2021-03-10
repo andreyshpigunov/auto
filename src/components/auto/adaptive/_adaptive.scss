@@ -1,20 +1,20 @@
-/*---------------------------
+/*-------------------------------------
 _adaptive.scss
 Adaptivity
 
-Created by Andrey Shpigunov on 13.12.2020.
----------------------------*/
+Created by Andrey Shpigunov on 08.03.2021
+Copyright © 2021 . All rights reserved.
+-------------------------------------*/
 
-// Using:
-// @include screen-large { ... }
-// @include screen-medium { ... }
-// @include screen-small { ... }
+// Using
+// @include screen(small|medium|large) { ... }
+// @include screen(small,medium) { ... }
 
 $screens: (
-	small: $screen-small,
-	medium: $screen-medium,
-	large: $screen-large
-);
+	small: "(max-width: 500px)",
+	medium: "(min-width: 501px) and (max-width: 1000px)",
+	large: "(min-width: 1001px)",
+) !default;
 
 @mixin screen($sizes...) {
 	$args: ();
@@ -26,19 +26,10 @@ $screens: (
 	}
 }
 
-
-@include screen(small) {
-	.small-hide {
-		display: none !important;
-	}
-}
-@include screen(medium) {
-	.medium-hide {
-		display: none !important;
-	}
-}
-@include screen(large) {
-	.large-hide {
-		display: none !important;
+@each $size, $query in $screens {
+	@include screen(#{$size}) {
+		.#{$size}-hide {
+			display: none !important;
+		}
 	}
 }
