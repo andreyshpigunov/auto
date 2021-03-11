@@ -54,14 +54,14 @@ $modules-columns-names: (
 	&.centered {
 		justify-content: center;
 	}
+}
 
-	.module {
-		position: relative;
-		flex-shrink: 1;
+.module {
+	position: relative;
+	flex-shrink: 1;
 
-		&.compact {
-			flex-shrink: 0;
-		}
+	&.compact {
+		flex-shrink: 0;
 	}
 }
 
@@ -148,15 +148,16 @@ $modules-columns-names: (
 			+ .modules {
 				margin-top: map-get($modules-gutters, $size);
 			}
+		}
 
-			.module {
-				padding: map-get($modules-gutters, $size);
+		.module {
+			padding: map-get($modules-gutters, $size);
 
-				&.#{$size}-compact {
-					flex-shrink: 0;
-				}
+			&.#{$size}-compact {
+				flex-shrink: 0;
 			}
 		}
+		
 		// .[size-offset-none]
 		.#{$size}-offset-none {
 			margin-left: 0;
