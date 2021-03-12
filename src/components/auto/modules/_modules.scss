@@ -9,9 +9,9 @@ Copyright © 2021 . All rights reserved.
 // Modules grid settings
 $modules-columns: 12 !default;
 $modules-gutters: (
-	large: 1.4vw,
-	medium: 1.6vw,
-	small: 1.8vw,
+	large: 32px,
+	medium: 26px,
+	small: 20px,
 ) !default;
 
 $modules-columns-names: (
@@ -139,22 +139,31 @@ $modules-columns-names: (
 @each $size, $query in $screens {
 	@include screen(#{$size}) {
 		.modules {
-			margin: -#{map-get($modules-gutters, $size)};
+			margin: -1 * map-get($modules-gutters, $size) / 2;
 
 			&.#{$size}-centered {
 				justify-content: center;
 			}
 
 			+ .modules {
-				margin-top: map-get($modules-gutters, $size);
+				margin-top: map-get($modules-gutters, $size) / 2;
 			}
 		}
 
 		.module {
-			padding: map-get($modules-gutters, $size);
+			padding: map-get($modules-gutters, $size) / 2;
 
 			&.#{$size}-compact {
 				flex-shrink: 0;
+			}
+		}
+		
+		.compact,
+		.compact .modules {
+			margin: -1 * map-get($modules-gutters, $size) / 3.5;
+			
+			.module {
+				padding: map-get($modules-gutters, $size) / 3.5;
 			}
 		}
 		

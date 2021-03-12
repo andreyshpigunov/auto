@@ -6,10 +6,10 @@ Created by Andrey Shpigunov on 14.12.2020.
 ---------------------------*/
 
 $modal-background: #fff !default;
-$modal-box-shadow: 0 6px 30px rgba(0, 0, 0, 0.25) !default;
+$modal-box-shadow: 0 6px 30px rgba(#000, 0.25) !default;
 $modal-border-radius: 8px !default;
 $modal-closer-color: #ccc !default;
-$modal-overlay-background-color: rgba(0, 0, 0, 0.4) !default;
+$modal-overlay-background-color: rgba(#000, 0.4) !default;
 
 html.modal-active {
 	body {

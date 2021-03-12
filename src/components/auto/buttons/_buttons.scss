@@ -28,7 +28,8 @@ $buttons: (
 	dark: #111111
 ) !default;
 
-.button {
+.button,
+.button:visited {
 	position: relative;
 	display: inline-block;
 	width: auto;
