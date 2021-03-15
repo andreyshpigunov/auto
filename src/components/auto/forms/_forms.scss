@@ -94,8 +94,8 @@ input[type="month"],
 input[type="week"],
 textarea,
 select {
-	[readonly],
-	[readonly]:focus {
+	&[readonly],
+	&[readonly]:focus {
 		color: $forms-font-color-readonly;
 		border-color: $forms-border-color-readonly;
 		background-color: $forms-background-color-readonly;
@@ -119,8 +119,8 @@ input[type="month"],
 input[type="week"],
 textarea,
 select {
-	[disabled],
-	[disabled]:focus {
+	&[disabled],
+	&[disabled]:focus {
 		color: $forms-font-color-disabled;
 		border-color: $forms-border-color-disabled;
 		background-color: $forms-background-color-disabled;
