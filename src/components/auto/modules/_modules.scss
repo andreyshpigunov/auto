@@ -139,6 +139,7 @@ $modules-columns-names: (
 @each $size, $query in $screens {
 	@include screen(#{$size}) {
 		.container {
+			margin: 0 auto;
 			padding: 0 map-get($modules-gutters, $size);
 		}
 		
