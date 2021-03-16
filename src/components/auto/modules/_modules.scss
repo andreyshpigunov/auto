@@ -138,6 +138,14 @@ $modules-columns-names: (
 
 @each $size, $query in $screens {
 	@include screen(#{$size}) {
+		.container {
+			padding: 0 map-get($modules-gutters, $size);
+		}
+		
+		.spacer {
+			height: map-get($modules-gutters, $size);
+		}
+		
 		.modules {
 			margin: -1 * map-get($modules-gutters, $size) / 2;
 
