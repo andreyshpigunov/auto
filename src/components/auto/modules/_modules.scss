@@ -138,13 +138,26 @@ $modules-columns-names: (
 
 @each $size, $query in $screens {
 	@include screen(#{$size}) {
+		
 		.container {
 			margin: 0 auto;
 			padding: 0 map-get($modules-gutters, $size);
+			
+			@for $coeff from 1 through 5 {
+				&.x#{$coeff} {
+					padding: 0 map-get($modules-gutters, $size) * $coeff;
+				}
+			}
 		}
 		
 		.spacer {
 			height: map-get($modules-gutters, $size);
+			
+			@for $coeff from 1 through 5 {
+				&.x#{$coeff} {
+					height: map-get($modules-gutters, $size) * $coeff;
+				}
+			}
 		}
 		
 		.modules {
