@@ -150,12 +150,26 @@ $modules-columns-names: (
 			}
 		}
 		
-		.spacer {
-			height: map-get($modules-gutters, $size);
-			
-			@for $coeff from 1 through 5 {
-				&.x#{$coeff} {
-					height: map-get($modules-gutters, $size) * $coeff;
+		.space {
+			@for $coeff from 1 through 6 {
+				&#{$coeff} {
+					height: $coeff * map-get($modules-gutters, $size) / 2;
+				}
+			}
+		}
+		
+		.mt {
+			@for $coeff from 1 through 6 {
+				&#{$coeff} {
+					margin-top: $coeff * map-get($modules-gutters, $size) / 2;
+				}
+			}
+		}
+		
+		.mb {
+			@for $coeff from 1 through 6 {
+				&#{$coeff} {
+					margin-bottom: $coeff * map-get($modules-gutters, $size) / 2;
 				}
 			}
 		}
