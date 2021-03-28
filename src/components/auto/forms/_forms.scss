@@ -18,8 +18,9 @@ $forms-border-color-readonly: #ddd !default;
 $forms-border-color-disabled: #ddd !default;
 $forms-background-color-readonly: #f8f8f8 !default;
 $forms-background-color-disabled: #f6f6f6 !default;
-$forms-font-color-readonly: #888 !default;
-$forms-font-color-disabled: #999 !default;
+$forms-font-color: #000 !default;
+$forms-font-color-readonly: #000 !default;
+$forms-font-color-disabled: #888 !default;
 $forms-font-color-placeholder: #ccc !default;
 
 input,
@@ -52,6 +53,7 @@ textarea {
 	margin: 0;
 	padding: $forms-padding;
 	font-size: $forms-font-size;
+	color: $forms-font-color;
 	outline: none;
 	border-width: $forms-border-width;
 	border-style: solid;

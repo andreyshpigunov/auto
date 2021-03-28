@@ -18,29 +18,29 @@ const scroll = (() => {
 	
 	// Scroll direction
 
-	let html = document.documentElement;
-	let lastScrollPosition = 0,
-		newScrollPosition,
-		maxScrollPosition;
-
-	window.onscroll = () => {
-		newScrollPosition = window.scrollY;
-		maxScrollPosition =
-			document.body.scrollHeight - document.documentElement.clientHeight;
-
-		if (newScrollPosition < lastScrollPosition) {
-			if (newScrollPosition < maxScrollPosition) {
-				html.classList.remove("scroll-down");
-				html.classList.add("scroll-up");
-			}
-		} else {
-			if (newScrollPosition > 0) {
-				html.classList.remove("scroll-up");
-				html.classList.add("scroll-down");
-			}
-		}
-		lastScrollPosition = newScrollPosition;
-	};
+// 	let html = document.documentElement;
+// 	let lastScrollPosition = 0,
+// 		newScrollPosition,
+// 		maxScrollPosition;
+// 
+// 	window.onscroll = () => {
+// 		newScrollPosition = window.scrollY;
+// 		maxScrollPosition =
+// 			document.body.scrollHeight - document.documentElement.clientHeight;
+// 
+// 		if (newScrollPosition < lastScrollPosition) {
+// 			if (newScrollPosition < maxScrollPosition) {
+// 				html.classList.remove("scroll-down");
+// 				html.classList.add("scroll-up");
+// 			}
+// 		} else {
+// 			if (newScrollPosition > 0) {
+// 				html.classList.remove("scroll-up");
+// 				html.classList.add("scroll-down");
+// 			}
+// 		}
+// 		lastScrollPosition = newScrollPosition;
+// 	};
 
 	// Page scroll
 

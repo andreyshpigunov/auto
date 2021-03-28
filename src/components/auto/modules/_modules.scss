@@ -143,9 +143,9 @@ $modules-columns-names: (
 			margin: 0 auto;
 			padding: 0 map-get($modules-gutters, $size);
 			
-			@for $coeff from 1 through 5 {
-				&.x#{$coeff} {
-					padding: 0 map-get($modules-gutters, $size) * $coeff;
+			@for $coeff from 1 through 6 {
+				&#{$coeff} {
+					padding: 0 $coeff * map-get($modules-gutters, $size) / 2;
 				}
 			}
 		}
@@ -180,9 +180,42 @@ $modules-columns-names: (
 			&.#{$size}-centered {
 				justify-content: center;
 			}
+			
+			&.compact,
+			&.compact .modules {
+				margin-top: 0;
+				
+				.module {
+					padding-top: 0;
+				}
+			}
 
 			+ .modules {
 				margin-top: map-get($modules-gutters, $size) / 2;
+			}
+			
+			&.join-rows {
+				margin-top: 0;
+				margin-bottom: 0;
+				
+				.module {
+					padding-top: 0;
+					padding-bottom: 0;
+				}
+				
+				+ .modules {
+					margin-top: 0;
+				}
+			}
+			
+			&.join-columns {
+				margin-left: 0;
+				margin-right: 0;
+				
+				.module {
+					padding-left: 0;
+					padding-right: 0;
+				}
 			}
 		}
 
@@ -191,15 +224,6 @@ $modules-columns-names: (
 
 			&.#{$size}-compact {
 				flex-shrink: 0;
-			}
-		}
-		
-		.compact,
-		.compact .modules {
-			margin: -1 * map-get($modules-gutters, $size) / 3.5;
-			
-			.module {
-				padding: map-get($modules-gutters, $size) / 3.5;
 			}
 		}
 		
