@@ -10,7 +10,7 @@
 export default function ajax(options) {
 	var methods = ["get", "post", "put", "delete"];
 	options = options || {};
-
+    
 	options.baseUrl = options.baseUrl || "";
 	if (options.method && options.url) {
 		return xhrConnection(
@@ -20,7 +20,7 @@ export default function ajax(options) {
 			options
 		);
 	}
-
+    
 	return methods.reduce(function (acc, method) {
 		acc[method] = function (url, data) {
 			return xhrConnection(

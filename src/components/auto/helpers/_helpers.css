@@ -1,0 +1,81 @@
+/*-------------------------------------
+_helpers.css
+auto
+
+Created by Andrey Shpigunov on 10.05.2021
+Copyright © 2021 . All rights reserved.
+-------------------------------------*/
+
+
+
+
+/* Helpers
+   Small help for you code. */
+
+.unselectable,
+.unselectable * {
+    user-select: none;
+}
+.clear {
+    &:after {
+        content: "";
+        display: table;
+        width: 100%;
+        clear: both;
+    }
+}
+.uppercase {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.lowercase {
+    text-transform: lowercase;
+}
+.nowrap {
+    white-space: nowrap;
+}
+.hyphens {
+    hyphens: auto;
+}
+.video {
+    position: relative;
+    height: 0;
+    padding-bottom: 56.25%;
+    overflow: hidden;
+}
+.video {
+    & iframe,
+    & object,
+    & embed {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+.break-word {
+    word-wrap: break-word;
+}
+.visuallyhidden {
+    position: absolute;
+    top: 0;
+    left: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(0px 0px 99.9% 99.9%);
+    overflow: hidden;
+    height: 1px;
+    width: 1px;
+    padding: 0;
+    border: 0;
+}
+.hidden,
+.hidden-next + * {
+    display: none !important;
+}
+.invisible {
+    visibility: hidden !important;
+}
+.table-responsive {
+    overflow-x: auto;
+}

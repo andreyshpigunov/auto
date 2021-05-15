@@ -1,17 +1,15 @@
-# nova
-.nova
-
-# osx noise
 .DS_Store
-profile
 
-# webstorm noise
-.idea
-
-# sass noise
-.sass-cache
-
-node_modules/
-
-# files
 i/logo.pxd
+
+.nova
+.parcel-cache
+.sass-cache
+*.css.map
+*.sass.map
+*.scss.map
+
+*.log
+
+node_modules
+package-lock.json

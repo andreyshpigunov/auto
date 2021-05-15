@@ -13,19 +13,19 @@ const appear = (function () {
 		_classAppeared = "appeared",
 		_classVisible = "visible",
 		items = document.querySelectorAll("." + _classIsAppeared);
-
+        
 	if (items.length) {
 		var itemsHash = {};
-
+        
 		items.forEach((e, index) => {
 			try {
 				var item = {};
-
+                
 				item.element = e;
 				item.classAppeared = _classAppeared;
 				item.classVisible = _classVisible;
 				itemsHash[index] = item;
-
+                
 				if (item.element.classList.contains(_classIsAppeared)) {
 					item.element.classList.remove(_classIsAppeared);
 				}
@@ -33,7 +33,7 @@ const appear = (function () {
 				console.log(err);
 			}
 		});
-
+        
 		if (Object.keys(itemsHash).length) {
 			_scroll(itemsHash);
 			document.addEventListener("scroll", () => {
@@ -41,12 +41,12 @@ const appear = (function () {
 			}, { passive: true });
 		}
 	}
-
+    
 	function _scroll(itemsHash) {
 		Object.keys(itemsHash).forEach(i => {
 			var item = itemsHash[i];
 			var elementOffset = item.element.getBoundingClientRect();
-
+            
 			if (
 				elementOffset.top < window.innerHeight &&
 				elementOffset.bottom > 0
@@ -54,7 +54,7 @@ const appear = (function () {
 				if (item.classAppeared != null) {
 					item.element.classList.add(item.classAppeared);
 				}
-
+                
 				if (item.classVisible != null) {
 					item.element.classList.add(item.classVisible);
 				}
@@ -68,7 +68,7 @@ const appear = (function () {
 			}
 		});
 	}
-
+    
 	return null;
 })();
 

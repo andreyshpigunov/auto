@@ -1,8 +1,9 @@
 //
 //	_adaptive.js
-//	Adaptive functions.
+//	auto
 //
-//	Created by Andrey Shpigunov on 15.12.2020.
+//	Created by Andrey Shpigunov on 15.05.2021
+//	Copyright © 2021 . All rights reserved.
 //
 
 // if (auto.adaptive.small) { ... }
@@ -12,8 +13,8 @@
 class Adaptive {
 	constructor() {
 		this.breakpoints = {
-			small: 500,
-			medium: 1000,
+			small: 639,
+			medium: 1023,
 		};
 	}
 	get small() {

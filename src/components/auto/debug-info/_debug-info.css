@@ -1,0 +1,56 @@
+/*-------------------------------------
+_debug.css
+auto
+
+Created by Andrey Shpigunov on 10.05.2021
+Copyright © 2021 . All rights reserved.
+-------------------------------------*/
+
+
+
+/* CMS debugger styles */
+
+.debug-info {
+	position: fixed;
+	z-index: 999999999999;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	padding: 20px;
+	background: rgba(#000, .9);
+	overflow: auto;
+	-webkit-overflow-scrolling: touch;
+	-ms-overflow-style: -ms-autohiding-scrollbar;
+
+    & * {
+    	font-family: var(--font-family-mono);
+    	font-size: .8rem;
+    	color: #fff;
+    }
+    & .sql-log {
+    	margin-top: 12px;
+    
+        & .sql-stat {
+            font-weight: 700;
+            color: #ff0;
+        }
+        & .sql-queries {
+            margin-top: 12px;
+            padding-left: 20px;
+            list-style-type: decimal;
+            
+            & li {
+                margin-bottom: 10px !important;
+                font-style: italic;
+                
+                & .sql-log-query {
+                    font-style: normal;
+                    word-break: break-all;
+                    background: none;
+                    border: none;
+                }
+            }
+        }
+    }
+}

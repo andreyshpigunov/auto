@@ -17,7 +17,6 @@ import scroll from "./scroll/_scroll";
 import * as url from "./url/_url";
 import * as utils from "./utils/_utils";
 import ajax from "./ajax/_ajax";
-import polyfills from "./polyfills/_polyfills";
 
 const auto = (function () {
 	return {

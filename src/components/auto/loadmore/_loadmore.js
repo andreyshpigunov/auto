@@ -16,13 +16,13 @@ const loadmore = (function () {
 	let watch = true;
 	let blocksHash = {};
 	let item;
-
+    
 	if (blocks.length) {
 		blocks.forEach((e, index) => {
 			try {
 				if (_isValidJSON(e.dataset.loadmore)) {
 					let json = JSON.parse(e.dataset.loadmore);
-
+                    
 					if (json.hasOwnProperty("functionName")) {
 						item = {};
 						item.block = e;
@@ -34,7 +34,7 @@ const loadmore = (function () {
 				} else {
 					console.log("Invalid JSON in data-loadmore");
 				}
-
+                
 				if (item) {
 					let name = e.hasAttribute("id")
 						? e.getAttribute("id")
@@ -46,7 +46,7 @@ const loadmore = (function () {
 				console.error(err);
 			}
 		});
-
+        
 		if (Object.keys(blocksHash).length) {
 			_scrollObserve(blocksHash);
 			document.addEventListener("scroll", () => {
@@ -54,7 +54,7 @@ const loadmore = (function () {
 			}, { passive: true });
 		}
 	}
-
+    
 	function _scrollObserve(blocksHash) {
 		Object.keys(blocksHash).forEach(i => {
 			let item = blocksHash[i];
@@ -65,7 +65,7 @@ const loadmore = (function () {
 			let scrollTarget = parseInt(
 				item.block.offsetTop + item.Block.clientHeight - item.offset
 			);
-
+            
 			if (scrollPosition >= scrollTarget) {
 				if (watch) {
 					if (typeof window[item.functionName] === "function") {
@@ -79,7 +79,7 @@ const loadmore = (function () {
 			}
 		});
 	}
-
+    
 	function _isValidJSON(str) {
 		try {
 			JSON.parse(str);
@@ -88,11 +88,11 @@ const loadmore = (function () {
 			return false;
 		}
 	}
-
+    
 	function unwatch(id) {
 		delete blocksHash[id];
 	}
-
+    
 	return {
 		unwatch: unwatch,
 	};
