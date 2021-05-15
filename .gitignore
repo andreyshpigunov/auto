@@ -12,4 +12,3 @@ i/logo.pxd
 *.log
 
 node_modules
-package-lock.json
