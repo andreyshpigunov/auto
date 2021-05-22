@@ -12,9 +12,10 @@
 		"postcss-nesting": "^8.0.1"
 	},
 	"scripts": {
-		"styles": "postcss src/css/*.css --use postcss-import --use postcss-custom-media --use postcss-nesting --use autoprefixer --use cssnano --no-map --dir css/",
-		"scripts": "parcel build src/js/*.js --no-source-maps --dist-dir js/",
-		"build": "npm run styles && npm run scripts"
+		"styles": "postcss sources/styles/*.css --use postcss-import --use postcss-custom-media --use postcss-nesting --use autoprefixer --use cssnano --no-map --dir assets/styles/",
+		"scripts": "parcel build sources/scripts/*.js --no-source-maps --dist-dir assets/scripts/",
+    "make-dist": "rm -r dist/ && mkdir dist/ && cp assets/styles/auto.css dist/ && cp assets/scripts/auto.js dist/",
+		"build": "npm run styles && npm run scripts && npm run make-dist"
 	},
 	"repository": {
 		"type": "git",
