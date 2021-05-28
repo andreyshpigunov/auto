@@ -1,0 +1,100 @@
+/*---------------------------
+_grid.css
+auto
+
+Created by andreyshpigunov on 26.05.2021.
+---------------------------*/
+
+/* Grid prototype */
+
+:root {
+    --grid-gap: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-gap: var(--grid-gap);
+    grid-template-columns: repeat(12, 1fr);
+    
+    &.g1 { grid-template-columns: repeat(1, 1fr) }
+    &.g2 { grid-template-columns: repeat(2, 1fr) }
+    &.g3 { grid-template-columns: repeat(3, 1fr) }
+    &.g4 { grid-template-columns: repeat(4, 1fr) }
+    &.g5 { grid-template-columns: repeat(5, 1fr) }
+    &.g6 { grid-template-columns: repeat(6, 1fr) }
+    &.g7 { grid-template-columns: repeat(7, 1fr) }
+    &.g8 { grid-template-columns: repeat(8, 1fr) }
+    &.g9 { grid-template-columns: repeat(9, 1fr) }
+    &.g10 { grid-template-columns: repeat(10, 1fr) }
+    &.g11 { grid-template-columns: repeat(11, 1fr) }
+    &.g12 { grid-template-columns: repeat(12, 1fr) }
+    
+    & .c1  { grid-column: span 1 }
+    & .c2  { grid-column: span 2 }
+    & .c3  { grid-column: span 3 }
+    & .c4  { grid-column: span 4 }
+    & .c5  { grid-column: span 5 }
+    & .c6  { grid-column: span 6 }
+    & .c7  { grid-column: span 7 }
+    & .c8  { grid-column: span 8 }
+    & .c9  { grid-column: span 9 }
+    & .c10 { grid-column: span 10 }
+    & .c11 { grid-column: span 11 }
+    & .c12 { grid-column: span 12 }
+    
+    @media(max-width: 1023px){
+        &.md\:g1 { grid-template-columns: repeat(1, 1fr) }
+        &.md\:g2 { grid-template-columns: repeat(2, 1fr) }
+        &.md\:g3 { grid-template-columns: repeat(3, 1fr) }
+        &.md\:g4 { grid-template-columns: repeat(4, 1fr) }
+        &.md\:g5 { grid-template-columns: repeat(5, 1fr) }
+        &.md\:g6 { grid-template-columns: repeat(6, 1fr) }
+        &.md\:g7 { grid-template-columns: repeat(7, 1fr) }
+        &.md\:g8 { grid-template-columns: repeat(8, 1fr) }
+        &.md\:g9 { grid-template-columns: repeat(9, 1fr) }
+        &.md\:g10 { grid-template-columns: repeat(10, 1fr) }
+        &.md\:g11 { grid-template-columns: repeat(11, 1fr) }
+        &.md\:g12 { grid-template-columns: repeat(12, 1fr) }
+        
+        & .md\:c1  { grid-column: span 1 }
+        & .md\:c2  { grid-column: span 2 }
+        & .md\:c3  { grid-column: span 3 }
+        & .md\:c4  { grid-column: span 4 }
+        & .md\:c5  { grid-column: span 5 }
+        & .md\:c6  { grid-column: span 6 }
+        & .md\:c7  { grid-column: span 7 }
+        & .md\:c8  { grid-column: span 8 }
+        & .md\:c9  { grid-column: span 9 }
+        & .md\:c10 { grid-column: span 10 }
+        & .md\:c11 { grid-column: span 11 }
+        & .md\:c12 { grid-column: span 12 }
+    }
+    
+    @media(max-width: 639px){
+        &.sm\:g1 { grid-template-columns: repeat(1, 1fr) }
+        &.sm\:g2 { grid-template-columns: repeat(2, 1fr) }
+        &.sm\:g3 { grid-template-columns: repeat(3, 1fr) }
+        &.sm\:g4 { grid-template-columns: repeat(4, 1fr) }
+        &.sm\:g5 { grid-template-columns: repeat(5, 1fr) }
+        &.sm\:g6 { grid-template-columns: repeat(6, 1fr) }
+        &.sm\:g7 { grid-template-columns: repeat(7, 1fr) }
+        &.sm\:g8 { grid-template-columns: repeat(8, 1fr) }
+        &.sm\:g9 { grid-template-columns: repeat(9, 1fr) }
+        &.sm\:g10 { grid-template-columns: repeat(10, 1fr) }
+        &.sm\:g11 { grid-template-columns: repeat(11, 1fr) }
+        &.sm\:g12 { grid-template-columns: repeat(12, 1fr) }
+        
+        & .sm\:c1  { grid-column: span 1 }
+        & .sm\:c2  { grid-column: span 2 }
+        & .sm\:c3  { grid-column: span 3 }
+        & .sm\:c4  { grid-column: span 4 }
+        & .sm\:c5  { grid-column: span 5 }
+        & .sm\:c6  { grid-column: span 6 }
+        & .sm\:c7  { grid-column: span 7 }
+        & .sm\:c8  { grid-column: span 8 }
+        & .sm\:c9  { grid-column: span 9 }
+        & .sm\:c10 { grid-column: span 10 }
+        & .sm\:c11 { grid-column: span 11 }
+        & .sm\:c12 { grid-column: span 12 }
+    }
+}

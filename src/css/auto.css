@@ -1,11 +1,17 @@
-/*-------------------------------------
+/*---------------------------
 auto.css
 auto
 
-Created by Andrey Shpigunov on 08.05.2021
-Copyright © 2021 . All rights reserved.
--------------------------------------*/
+Created by andreyshpigunov on 25.05.2021.
+---------------------------*/
 
 
-
-@import "../components/auto/_auto.css";
+@import "../components/auto/reset.css";
+@import "../components/auto/links.css";
+@import "../components/auto/helpers.css";
+@import "../components/auto/typo.css";
+@import "../components/auto/grid.css";
+@import "../components/auto/forms.css";
+@import "../components/auto/buttons.css";
+@import "../components/auto/modal.css";
+@import "../components/auto/debug.css";
