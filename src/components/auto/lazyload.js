@@ -13,7 +13,7 @@ class Lazyload {
     constructor() {
         this.options = {
             root: null,
-            rootMargin: 0,
+            rootMargin: '0px',
             threshold: 0.5
         }
     }

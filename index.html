@@ -32,7 +32,7 @@
 					<li><a data-scrollto="loadmore">Loader</a></li>
 					<li><a data-scrollto="lazyload">Lazyload</a></li>
 					<li><a data-scrollto="ajax">Ajax</a></li>
-					<li><a data-scrollto="lib">Lib</a></li>
+					<li><a data-scrollto="others">Others</a></li>
 				</menu>
 			</aside>
 
@@ -62,7 +62,7 @@
 				<h2>GitHub</h2>
 				<p>Download and connect files manually: <a href="https://github.com/andreyshpigunov/auto">https://github.com/andreyshpigunov/auto</a></p>
 				<p>Connect script at the and of page, before others scripts, and init all available components: <code>auto.init()</code>.</p>
-
+                
 				<h2>CDN</h2>
 				<p>Current versions of files are available at the following links:</p>
 				<p>
@@ -148,9 +148,10 @@
 					<code>auto.modal.hide(id)</code> — close modal
 				</p>
 
-				<a data-modal="modal-test">TEST</a>
-				<a onclick="auto.modal.show('modal-test')">API SHOW</a>
-				<div id="modal-test" class="modal-content">
+				<a class="button" data-modal="modal-test">TEST</a>
+                <a class="button" onclick="auto.modal.show('modal-test')">API SHOW</a>
+				
+                <div id="modal-test" class="modal-content">
 					<div class="text">
 						<h2>Modal windows</h2>
 						<p>Universal modal window.</p>
@@ -219,8 +220,8 @@
 				</p>
 
 				<h3>API</h3>
-				<p><code>auto.scroll.scrollTo(target, offset, speed)</code></p>
-				<p><code>auto.scrollTo(target, offset, speed)</code> — shortcut</p>
+				<p><code>auto.scroll.to(target, offset, speed)</code></p>
+                <p><code>target</code> — element or element selector (string)</p>
 			</section>
 
 			<section id="loadmore">
@@ -253,7 +254,7 @@
 
 			<section id="ajax">
 				<h2>AJAX</h2>
-                <p style="color: red">Not supported. Move to axios, fetch or others actual libraries.</p>
+                <p style="color: red">Working, but not supported. Move to axios, fetch or others actual libraries.</p>
 				<p>Library for working with ajax requests.</p>
 				<p>Source documentation: <a href="https://github.com/fdaciuk/ajax/blob/dev/README.md" target="_blank">https://github.com/fdaciuk/ajax/blob/dev/README.md</a></p>
 
@@ -283,8 +284,8 @@
 
 			</section>
 
-			<section id="lib">
-				<h2>Lib</h2>
+			<section id="others">
+				<h2>Others</h2>
 				<p>Frequently used functions.</p>
 				<iframe height="1100" style="width: 100%;" scrolling="no" title="Auto / Utils" src="https://codepen.io/andreyshpigunov/embed/JjRJKeL?height=1100&theme-id=dark&default-tab=js" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
 			</section>
@@ -292,11 +293,24 @@
 	</div>
 
     <script src="dist/auto.js"></script>
+    <script src="https://unpkg.com/vue@next"></script>
     <script>
-        auto.init();
-        let html = document.documentElement;
-        let mobileButton = document.querySelector('.header-menu-mobile_button');
-        mobileButton.addEventListener('click', event => {
+        const App = {
+            data() {
+                return {
+                    
+                }
+            },
+            mounted() {
+               auto.init();
+            }
+        }
+        Vue.createApp(App).mount('#app');
+        
+        let mb = document.querySelector('.header-menu-mobile_button'),
+            html = document.documentElement;
+            
+        mb.addEventListener('click', (event) => {
             html.classList.toggle('show-menu')
         });
     </script>

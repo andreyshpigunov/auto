@@ -44,50 +44,29 @@ class Modal {
         if (modalContents.length) {
             modalContents.forEach((e, index) => {
                 let html,
-                    content = e.innerHTML;
-                    
-                e.classList.add("modal");
-                e.innerHTML = '';
+                    here = document.querySelector(".modal-here"),
+                    placeholder = document.querySelector("body"),
                 
-                html = `
-                    <div class="modal-overlay"></div>
-                    <div class="modal-outer">
-                        <div class="modal-inner">
-                            <div class="modal-window">
-                                <a class="modal-close"></a>
-                                ${content}
+                    id = e.getAttribute("id"),
+                    classes = e.getAttribute("class").replace("modal-content", ""),
+                    content = e.innerHTML;
+                
+                if (here) placeholder = here;
+                
+                placeholder.insertAdjacentHTML("beforeend", `
+                    <div id="${id}" class="modal ${classes}">
+                        <div class="modal-overlay"></div>
+                        <div class="modal-outer">
+                            <div class="modal-inner">
+                                <div class="modal-window">
+                                    <a class="modal-close"></a>
+                                    ${content}
+                                </div>
                             </div>
                         </div>
                     </div>
-                `;
-                    
-                e.insertAdjacentHTML("beforeend", html);
-                
-                // let html,
-                //     here = document.querySelector(".modal-here"),
-                //     placeholder = document.querySelector("body"),
-                //
-                //     id = e.getAttribute("id"),
-                //     classes = e.getAttribute("class").replace("modal-content", ""),
-                //     content = e.innerHTML;
-                //
-                // if (here) placeholder = here;
-                // html = `
-                //     <div id="${id}" class="modal ${classes}">
-                //         <div class="modal-overlay"></div>
-                //         <div class="modal-outer">
-                //             <div class="modal-inner">
-                //                 <div class="modal-window">
-                //                     <a class="modal-close"></a>
-                //                     ${content}
-                //                 </div>
-                //             </div>
-                //         </div>
-                //     </div>
-                // `;
-                //
-                // placeholder.insertAdjacentHTML("beforeend", html);
-                // e.remove();
+                `);
+                e.remove();
             });
         }
         
