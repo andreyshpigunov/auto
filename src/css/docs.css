@@ -1,17 +1,15 @@
-/*-------------------------------------
+/*---------------------------
 docs.css
 auto
 
-Created by Andrey Shpigunov on 14.05.2021
-Copyright © 2021 . All rights reserved.
--------------------------------------*/
+Created by andreyshpigunov on 25.05.2021.
+---------------------------*/
 
 
+@import "./auto.css";
 
-@import "../components/auto/_auto.css";
 
-
-@media (--scheme-dark) {
+@media (prefers-color-scheme: dark) {
     :root {
         --link-color: #8bcdff;
         --link-color-hovered: #8bcdff;
@@ -21,20 +19,20 @@ Copyright © 2021 . All rights reserved.
 
 
 main {
-	background: #fff;
+    background: #fff;
     padding: 30px 30px 30px 240px;
 
-    @media (--screen-medium) {
+    @media (max-width: 1023px) {
         & {
             padding: 30px 20px 30px 240px;
         }
     }
-    @media (--screen-small) {
+    @media (max-width: 639px) {
         & {
             padding: 80px 20px 30px 20px;
         }
     }
-    @media (--scheme-dark) {
+    @media (prefers-color-scheme: dark) {
         & {
             background: #111;
             color: #fff;
@@ -44,12 +42,10 @@ main {
 
 
 h2 {
-	/* margin: 2rem 0 1.6rem 0; */
-	font-size: 3rem;
-	font-weight: 700;
-	line-height: 1.25;
+    font-size: 3rem;
+    font-weight: 700;
 
-    @media (--screen-small) {
+    @media (max-width: 639px) {
         & {
             font-size: 2.4rem;
         }
@@ -58,22 +54,22 @@ h2 {
 
 
 .ruler {
-	position: fixed;
-	z-index: 100;
-	bottom: 20px;
-	right: 20px;
-	padding: 0 10px;
-	line-height: 26px;
-	font-size: .8rem;
-	color: #fff;
-	background: #222;
-	border-radius: 6px;
+    position: fixed;
+    z-index: 100;
+    bottom: 20px;
+    right: 20px;
+    padding: 0 10px;
+    line-height: 26px;
+    font-size: .8rem;
+    color: #fff;
+    background: #222;
+    border-radius: 6px;
 }
 
 
 .header-menu {
-	height: 60px;
-	margin-bottom: 30px;
+    height: 60px;
+    margin-bottom: 30px;
 
     & ul {
         display: flex;
@@ -94,7 +90,7 @@ h2 {
         }
     }
 
-    @media (--screen-small) {
+    @media (max-width: 639px) {
         & {
             display: none;
         }
@@ -103,24 +99,24 @@ h2 {
 
 
 .header-menu-mobile {
-	display: none;
-	position: fixed;
-	z-index: 20;
-	top: 0;
-	left: 0;
-	right: 0;
-	height: 50px;
-	padding: 0 20px;
-	background: #fff;
-	border-bottom: solid 1px #eee;
+    display: none;
+    position: fixed;
+    z-index: 20;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    padding: 0 20px;
+    background: #fff;
+    border-bottom: solid 1px #eee;
 
-    @media (--screen-small) {
+    @media (max-width: 639px) {
         & {
             display: block;
             font-size: .9rem;
         }
     }
-    @media (--scheme-dark) {
+    @media (prefers-color-scheme: dark) {
         & {
             background: #000;
             border-bottom: solid 1px #444;
@@ -128,18 +124,19 @@ h2 {
     }
 
     & ul {
-    	display: flex;
-    	align-items: center;
-    	height: 50px;
+        display: flex;
+        align-items: center;
+        height: 50px;
+        list-style: none;
 
-        @media (--screen-small) {
+        @media (max-width: 639px) {
             & {
                 justify-content: space-between;
             }
         }
     }
-	& li {
-		margin-right: 20px;
+    & li {
+        margin-right: 20px;
 
         &.active {
             font-weight: 700;
@@ -148,28 +145,28 @@ h2 {
             transition: all .15s;
         }
 
-        @media (--screen-small) {
+        @media (max-width: 639px) {
             & {
                 margin-right: 0;
             }
         }
-	}
+    }
 }
 
 
 .header-menu-mobile_button {
-	position: relative;
-	width: 70px;
-	height: 40px;
-	cursor: pointer;
+    position: relative;
+    width: 70px;
+    height: 40px;
+    cursor: pointer;
 
     & i {
-		display: block;
-		position: absolute;
-		left: 0;
-		width: 26px;
-		height: 2px;
-		background: #000;
+        display: block;
+        position: absolute;
+        left: 0;
+        width: 26px;
+        height: 2px;
+        background: #000;
 
         &:nth-child(1) {
             top: 11px;
@@ -181,7 +178,7 @@ h2 {
             top: 27px;
         }
 
-        @media (--scheme-dark) {
+        @media (prefers-color-scheme: dark) {
             & {
                 background: #fff;
             }
@@ -192,24 +189,24 @@ h2 {
 
 
 .header-menu-mobile_logo {
-	width: 30px;
-	height: 30px;
+    width: 30px;
+    height: 30px;
 
-	& img {
-		display: block;
-		width: 30px;
-		height: 30px;
+    & img {
+        display: block;
+        width: 30px;
+        height: 30px;
 
-        @media (--scheme-dark) {
+        @media (prefers-color-scheme: dark) {
             & {
                 display: none;
             }
         }
-	}
+    }
     & img.-light {
         display: none;
 
-        @media (--scheme-dark) {
+        @media (prefers-color-scheme: dark) {
             & {
                 display: block;
             }
@@ -217,106 +214,106 @@ h2 {
     }
 }
 .header-menu-mobile_github {
-	width: 70px;
-	text-align: right;
+    width: 70px;
+    text-align: right;
 }
 
 
 
-@media (--screen-small) {
+@media (max-width: 639px) {
 
-	html.show-menu {
-		& .header-menu-mobile_button {
-			& i {
-				&:nth-child(1) {
-					top: 19px;
-					transform: rotate(45deg);
-					transform-origin: center;
-				}
-				&:nth-child(2) {
-					display: none;
-				}
-				&:nth-child(3) {
-					top: 19px;
-					transform: rotate(-45deg);
-					transform-origin: center;
-				}
-			}
-		}
-	}
+    html.show-menu {
+        & .header-menu-mobile_button {
+            & i {
+                &:nth-child(1) {
+                    top: 19px;
+                    transform: rotate(45deg);
+                    transform-origin: center;
+                }
+                &:nth-child(2) {
+                    display: none;
+                }
+                &:nth-child(3) {
+                    top: 19px;
+                    transform: rotate(-45deg);
+                    transform-origin: center;
+                }
+            }
+        }
+    }
 }
 
 
 
 .sidebar {
-	position: fixed;
-	z-index: 10;
-	left: 0;
-	top: 0;
-	bottom: 0;
-	width: 240px;
-	padding: 30px;
-	background: #fff;
-	overflow: auto;
-	-webkit-overflow-scrolling: touch;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 240px;
+    padding: 30px;
+    background: #fff;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
 
-	will-change: transform;
-	transform: translateX(0);
-	transition: transform .2s ease-out;
+    will-change: transform;
+    transform: translateX(0);
+    transition: transform .2s ease-out;
 
-    @media (--screen-medium) {
+    @media (max-width: 1023px) {
         & {
             width: 220px;
             padding: 30px 20px;
         }
     }
 
-    @media (--scheme-dark) {
+    @media (prefers-color-scheme: dark) {
         & {
             background: #111;
         }
     }
 
-    @media (--screen-small) {
+    @media (max-width: 639px) {
         & {
             top: 50px;
             border-right: solid 1px #eee;
             transform: translateX(-261px);
         }
 
-        @media (--scheme-dark) {
+        @media (prefers-color-scheme: dark) {
             & {
                 border-right: solid 1px #444;
             }
         }
     }
 
-	& menu {
-		margin-top: 20px;
+    & menu {
+        margin-top: 20px;
 
-		& li {
+        & li {
 
-			&.sidebar-header {
-				margin-bottom: 8px;
-				font-weight: 700;
-			}
+            &.sidebar-header {
+                margin-bottom: 8px;
+                font-weight: 700;
+            }
 
-			& > a {
-				display: block;
-				margin: 0 -12px;
-				padding: 6px 12px;
-				font-size: .8rem;
-				color: #111;
-				text-decoration: none;
-				border: none;
-				border-radius: 8px;
+            & > a {
+                display: block;
+                margin: 0 -12px;
+                padding: 6px 12px;
+                font-size: .9rem;
+                color: #111;
+                text-decoration: none;
+                border: none;
+                border-radius: 8px;
 
-				&:hover {
-					color: #111;
-					background: #f8f8f8;
-				}
+                &:hover {
+                    color: #111;
+                    background: #f8f8f8;
+                }
 
-                @media (--scheme-dark) {
+                @media (prefers-color-scheme: dark) {
                     & {
                         color: #eee;
 
@@ -327,69 +324,69 @@ h2 {
                     }
                 }
 
-				&.active {
-					color: #fff;
-					background: #CD00BE;
-				}
-			}
-		}
-	}
+                &.active {
+                    color: #fff;
+                    background: #CD00BE;
+                }
+            }
+        }
+    }
 }
 
 
 
-@media (--screen-small) {
-	html.show-menu {
-		& .sidebar {
-			transform: translateX(0);
-		}
-	}
+@media (max-width: 639px) {
+    html.show-menu {
+        & .sidebar {
+            transform: translateX(0);
+        }
+    }
 }
 
 
 .sidebar-logo {
-	width: 100px;
-	height: 100px;
-	margin-bottom: 30px;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 30px;
 
-    @media (--screen-small) {
+    @media (max-width: 639px) {
         & {
             display: none;
         }
     }
 
-	& img {
-		display: block;
-		width: 100px;
-		height: 100px;
+    & img {
+        display: block;
+        width: 100px;
+        height: 100px;
 
-        @media (--scheme-dark) {
+        @media (prefers-color-scheme: dark) {
             & {
                 display: none;
             }
         }
 
-		&.-light {
-			display: none;
+        &.-light {
+            display: none;
 
-            @media (--scheme-dark) {
+            @media (prefers-color-scheme: dark) {
                 & {
                     display: block;
                 }
             }
-		}
-	}
+        }
+    }
 }
 
 
 
 section {
-	margin-top: 30px;
-	padding: calc(35px - 1em) 35px 35px 35px;
-	background: #f8f8f8;
-	border-radius: 12px;
+    margin-top: 30px;
+    padding: calc(35px - 1em) 35px 35px 35px;
+    background: #f8f8f8;
+    border-radius: 12px;
 
-    @media (--screen-small) {
+    @media (max-width: 639px) {
         & {
             margin-left: -10px;
             margin-right: -10px;
@@ -397,96 +394,86 @@ section {
         }
     }
 
-    @media (--scheme-dark) {
+    @media (prefers-color-scheme: dark) {
         & {
             background: #333;
         }
     }
 
-	& h2 {
-		margin: 1rem 0;
-		font-size: 2.1rem;
-		font-weight: 700;
-		color: #000;
+    & h2 {
+        margin: 1rem 0;
+        font-size: 2.1rem;
+        font-weight: 700;
+        color: #000;
 
-        @media (--screen-small) {
+        @media (max-width: 639px) {
             & {
                 font-size: 1.6rem;
             }
         }
 
-        @media (--scheme-dark) {
+        @media (prefers-color-scheme: dark) {
             & {
                 color: #fff;
             }
         }
-	}
+    }
 
-	& h3 {
-		margin: 1rem 0;
-		font-size: 1.2rem;
-		font-weight: 700;
-		color: #000;
+    & h3 {
+        margin: 1rem 0;
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: #000;
 
-        @media (--screen-small) {
+        @media (max-width: 639px) {
             & {
                 font-size: 1.1rem;
             }
         }
 
-        @media (--scheme-dark) {
+        @media (prefers-color-scheme: dark) {
             & {
                 color: #fff;
             }
         }
-	}
+    }
 
-	& p {
-		margin: 1rem 0;
-		font-size: .9rem;
-		color: #111;
+    & p {
+        color: #111;
 
-        @media (--scheme-dark) {
+        @media (prefers-color-scheme: dark) {
             & {
                 color: #eee;
             }
         }
-	}
+    }
 
-	/* & a {
-		display: inline-block;
-		max-width: 100%;
-		white-space: nowrap;
-		text-overflow: ellipsis;
-		overflow: hidden;
-	} */
-
-	& code {
-		margin: 0 2px;
-		/* font-family: "SF Mono", "Monaco", "Andale Mono", "Lucida Console", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace; */
+    & code {
+        margin: 0 2px;
         font-family: var(--font-family-mono);
-		color: #000;
-		background: #fff;
-		outline: solid 2px #fff;
+        font-size: .9rem;
+        color: #000;
+        background: #fff;
+        outline: solid 2px #fff;
 
-        @media (--scheme-dark) {
+        @media (prefers-color-scheme: dark) {
             & {
                 color: #fff;
                 background: #444;
                 outline: solid 2px #444;
             }
         }
-	}
+    }
 
-	& table {
+    & table {
 
-		& tr {
+        & tr {
 
-			& td {
-				border: 1px solid #eee;
-				padding: 5px;
-				font-size: .9rem;
-			}
-		}
-	}
+            & td {
+                border: 1px solid #eee;
+                padding: 5px;
+                font-size: .9rem;
+            }
+        }
+    }
 }

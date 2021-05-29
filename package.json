@@ -7,15 +7,13 @@
 		"parcel": "^2.0.0-beta.2",
 		"postcss": "^8.2.1",
 		"postcss-cli": "^8.3.0",
-		"postcss-custom-media": "^8.0.0",
 		"postcss-import": "^14.0.2",
 		"postcss-nesting": "^8.0.1"
 	},
 	"scripts": {
-		"css": "postcss src/css/*.css --use postcss-import --use postcss-custom-media --use postcss-nesting --use autoprefixer --use cssnano --no-map --dir assets/css/",
-		"js": "parcel build src/js/*.js --no-source-maps --dist-dir assets/js/",
-    "dist": "rm -r dist/ && mkdir dist/ && cp assets/css/auto.css dist/ && cp assets/js/auto.js dist/",
-		"build": "npm run css && npm run js && npm run dist"
+		"css": "postcss src/css/*.css --use postcss-import --use postcss-nesting --use autoprefixer --use cssnano --no-map --dir dist/",
+		"js": "parcel build src/js/*.js --no-source-maps --dist-dir dist/",
+		"build": "npm run css && npm run js"
 	},
 	"repository": {
 		"type": "git",

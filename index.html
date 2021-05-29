@@ -4,41 +4,35 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<title>Auto — super simple CSS+JS library for website</title>
-
-	<link rel="shortcut icon" href="https://andreyshpigunov.github.io/auto/assets/i/logo.png">
-	<link rel="apple-touch-icon" href="https://andreyshpigunov.github.io/auto/assets/i/apple-touch-icon.png">
-
-	<link rel="stylesheet" href="assets/css/docs.css" />
+	<title>Auto — super simple CSS + JS library for you website</title>
+	<link rel="shortcut icon" href="https://andreyshpigunov.github.io/auto/assets/logo.png">
+	<link rel="apple-touch-icon" href="https://andreyshpigunov.github.io/auto/assets/apple-touch-icon.png">
+	<link rel="stylesheet" href="dist/docs.css" />
 </head>
 <body>
-	<div id="top" class="page">
-
+	<div id="app" class="page">
 		<main>
 			<aside class="sidebar unselectable">
 				<div class="sidebar-logo small-hide">
-					<a data-scrollto="top">
-						<img src="assets/i/logo.svg" alt="Auto"/>
-						<img class="-light" src="assets/i/logo-light.svg" alt="Auto"/>
+					<a data-scrollto="app">
+						<img src="assets/logo.svg" alt="Auto"/>
+						<img class="-light" src="assets/logo-light.svg" alt="Auto"/>
 					</a>
 				</div>
 				<menu>
 					<li class="sidebar-header">auto.css</li>
 					<li><a data-scrollto="helpers">Helpers</a></li>
-					<li><a data-scrollto="grid">Grid</a></li>
-					<li><a data-scrollto="responsive-css">Adaptivity</a></li>
 					<li><a data-scrollto="buttons">Buttons</a></li>
 				</menu>
 				<menu>
 					<li class="sidebar-header">auto.js</li>
-					<li><a data-scrollto="responsive-js">Adaptivity</a></li>
 					<li><a data-scrollto="modal">Modals</a></li>
 					<li><a data-scrollto="animate">Animations</a></li>
 					<li><a data-scrollto="scrollto">Scroller</a></li>
 					<li><a data-scrollto="loadmore">Loader</a></li>
 					<li><a data-scrollto="lazyload">Lazyload</a></li>
-					<li><a data-scrollto="ajax">AJAX</a></li>
-					<li><a data-scrollto="utils">Utils</a></li>
+					<li><a data-scrollto="ajax">Ajax</a></li>
+					<li><a data-scrollto="others">Others</a></li>
 				</menu>
 			</aside>
 
@@ -56,9 +50,9 @@
 						<i></i>
 						<i></i>
 					</li>
-					<li class="header-menu-mobile_logo" data-scrollto="top">
-						<img src="assets/i/logo.svg" alt="Auto"/>
-						<img class="-light" src="assets/i/logo-light.svg" alt="Auto"/>
+					<li class="header-menu-mobile_logo" data-scrollto="app">
+						<img src="assets/logo.svg" alt="Auto"/>
+						<img class="-light" src="assets/logo-light.svg" alt="Auto"/>
 					</li>
 					<li class="header-menu-mobile_github"><a href="https://github.com/andreyshpigunov/auto">GitHub →</a></li>
 				</ul>
@@ -67,8 +61,8 @@
 			<section id="setup">
 				<h2>GitHub</h2>
 				<p>Download and connect files manually: <a href="https://github.com/andreyshpigunov/auto">https://github.com/andreyshpigunov/auto</a></p>
-				<p>It is better to implement styles in your project using scss, then all the settings will be available. if you connect a css file, you will have to manually override the settings with styles.</p>
-
+				<p>Connect script at the and of page, before others scripts, and init all available components: <code>auto.init()</code>.</p>
+                
 				<h2>CDN</h2>
 				<p>Current versions of files are available at the following links:</p>
 				<p>
@@ -86,7 +80,6 @@
 
 				<h3>Links</h3>
 				<p><code>.pseudo</code> — pseudo-link, underlined with dots<br/></p>
-				<p>If the link contains an image, class <code>.no-border</code> added to link.</p>
 
 				<h3>Helpers classes</h3>
 				<p>
@@ -104,41 +97,14 @@
 					<code>.invisible</code> — assigns to a block <code>visibility: hidden</code><br/>
 					<code>.table-responsive</code> — horizontal scrolling of the table if it doesn't fit<br/>
 				</p>
-
+                
 				<h3>Actions classes</h3>
 				<p>
 					<code>.sync-hover</code> — adding a class synchronously <code>.hover</code> to links with the same <code>href</code><br/>
 					<code>.is-appeared</code> — when it appears in the viewport, the element is assigned classes <code>.appeared</code> and <code>.visible</code>. When disappearing from viewport class <code>.visible</code> disappear, <code>.appeared</code> remains.
 				</p>
 
-				<h3>Custom media</h3>
-                <p>Required <a href="https://github.com/postcss/postcss-custom-media">postcss-custom-media</a> PostCSS plugin.</p>
-                <p><strong>Predefined values:</strong></p>
-                <p>
-                    <code>@custom-media --screen-small (max-width: 639px);</code><br/>
-                    <code>@custom-media --screen-medium (max-width: 1023px);</code><br/>
-                    <code>@custom-media --screen-medium-only (min-width: 640px) and (max-width: 1023px);</code><br/>
-                    <code>@custom-media --screen-large (min-width: 1024px);</code><br/>
-                    <code>@custom-media --scheme-dark (prefers-color-scheme: dark);</code><br/>
-                    <code>@custom-media --scheme-light (prefers-color-scheme: light);</code><br/>
-                </p>
-                <p><strong>Usage:</strong></p>
-				<p>
-                    <code>@media (--screen-small)</code><br/>
-                    <code>@media (--scheme-dark)</code>
-				</p>
-
 				<iframe height="1200" style="width: 100%;" scrolling="no" title="Auto / Helpers" src="https://codepen.io/andreyshpigunov/embed/WNGjRBG?height=1280&theme-id=dark&default-tab=html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
-			</section>
-
-			<section id="grid">
-				<h2>Grid</h2>
-				<p>No reason to use framework grid in 2021, when great css <code>display: flex</code> and <code>display: grid</code> are widely supported by browsers. Of course, if you don't need IE11 support.</p>
-			</section>
-
-			<section id="responsive-css">
-				<h2>Adaptivity</h2>
-                <p>View <a data-scrollto="helpers">helpers</a> «Custom media» section.</p>
 			</section>
 
 			<section id="buttons">
@@ -171,16 +137,6 @@
 
 			<h2>Auto.js</h2>
 
-			<section id="responsive-js">
-				<h2>Adaptivity</h2>
-				<p>The function is triggered only when the page is loaded for the first time.</p>
-				<p>
-					<code>if (auto.adaptive.large) { ... }</code><br/>
-					<code>if (auto.adaptive.medium) { ... }</code><br/>
-					<code>if (auto.adaptive.small) { ... }</code>
-				</p>
-			</section>
-
 			<section id="modal">
 				<h2>Modals</h2>
 				<p>Universal modal windows.</p>
@@ -192,9 +148,10 @@
 					<code>auto.modal.hide(id)</code> — close modal
 				</p>
 
-				<a data-modal="modal-test">TEST</a>
-				<a onclick="auto.modal.show('modal-test')">API SHOW</a>
-				<div id="modal-test" class="modal-content">
+				<a class="button" data-modal="modal-test">TEST</a>
+                <a class="button" onclick="auto.modal.show('modal-test')">API SHOW</a>
+				
+                <div id="modal-test" class="modal-content">
 					<div class="text">
 						<h2>Modal windows</h2>
 						<p>Universal modal window.</p>
@@ -263,8 +220,8 @@
 				</p>
 
 				<h3>API</h3>
-				<p><code>auto.scroll.scrollTo(target, offset, speed)</code></p>
-				<p><code>auto.scrollTo(target, offset, speed)</code> — shortcut</p>
+				<p><code>auto.scroll.to(target, offset, speed)</code></p>
+                <p><code>target</code> — element or element selector (string)</p>
 			</section>
 
 			<section id="loadmore">
@@ -297,6 +254,7 @@
 
 			<section id="ajax">
 				<h2>AJAX</h2>
+                <p style="color: red">Working, but not supported. Move to axios, fetch or others actual libraries.</p>
 				<p>Library for working with ajax requests.</p>
 				<p>Source documentation: <a href="https://github.com/fdaciuk/ajax/blob/dev/README.md" target="_blank">https://github.com/fdaciuk/ajax/blob/dev/README.md</a></p>
 
@@ -326,23 +284,35 @@
 
 			</section>
 
-			<section id="utils">
-				<h2>Utils</h2>
+			<section id="others">
+				<h2>Others</h2>
 				<p>Frequently used functions.</p>
 				<iframe height="1100" style="width: 100%;" scrolling="no" title="Auto / Utils" src="https://codepen.io/andreyshpigunov/embed/JjRJKeL?height=1100&theme-id=dark&default-tab=js" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
 			</section>
 		</main>
 	</div>
 
-    <script src="assets/js/auto.js" ></script>
+    <script src="dist/auto.js"></script>
+    <script src="https://unpkg.com/vue@next"></script>
     <script>
-        let html = document.documentElement;
-        let mobileButton = document.querySelector('.header-menu-mobile_button');
-
-        mobileButton.addEventListener('click', event => {
+        const App = {
+            data() {
+                return {
+                    
+                }
+            },
+            mounted() {
+               auto.init();
+            }
+        }
+        Vue.createApp(App).mount('#app');
+        
+        let mb = document.querySelector('.header-menu-mobile_button'),
+            html = document.documentElement;
+            
+        mb.addEventListener('click', (event) => {
             html.classList.toggle('show-menu')
-        })
+        });
     </script>
-
 </body>
 </html>

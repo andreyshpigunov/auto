@@ -1,0 +1,177 @@
+/*---------------------------
+_buttons.css
+auto
+
+Created by andreyshpigunov on 25.05.2021.
+---------------------------*/
+
+/* Buttons */
+
+:root {
+    --button-padding: .6em 1em;
+    --button-font-family: var(--font-family);
+    --button-font-size: 1rem;
+    --button-font-weight: 400;
+    --button-border-radius: 6px;
+    --button-transition: all .1s linear;
+    
+    --button-color: #f3f3f3;
+    --button-color-hover: #f8f8f8;
+    --button-color-active: #ededed;
+    --button-font-color: #000;
+    
+    --button-primary-color: #0074d9;
+    --button-primary-color-hover: #007de2;
+    --button-primary-color-active: #006acf;
+    --button-primary-font-color: #fff;
+    
+    --button-success-color: #2ecc40;
+    --button-success-color-hover: #38d549;
+    --button-success-color-active: #23c249;
+    --button-success-font-color: #fff;
+    
+    --button-danger-color: #ff4136;
+    --button-danger-color-hover: #ff4a40;
+    --button-danger-color-active: #f5372c;
+    --button-danger-font-color: #fff;
+    
+    --button-warning-color: #ff851b;
+    --button-warning-color-hover: #ff8f24;
+    --button-warning-color-active: #f57a11;
+    --button-warning-font-color: #fff;
+}
+
+.button {
+    position: relative;
+    display: inline-block;
+    width: auto;
+    height: auto;
+    padding: var(--button-padding);
+    color: var(--button-font-color);
+    font-family: var(--button-font-family);
+    font-size: var(--button-font-size);
+    font-weight: var(--button-font-weight);
+    vertical-align: bottom;
+    white-space: nowrap;
+    line-height: 1;
+    text-shadow: none;
+    text-transform: none;
+    text-decoration: none;
+    outline: none;
+    cursor: pointer;
+    overflow: hidden;
+    border: none;
+    border-radius: var(--button-border-radius);
+    background-color: var(--button-color);
+    transition: var(--button-transition);
+    user-select: none;
+    appearance: none;
+    
+    &:hover,
+    &.hover {
+        text-decoration: none;
+        color: var(--button-font-color);
+        background-color: var(--button-color-hover);
+    }
+    
+    &:active,
+    &.active {
+        text-decoration: none;
+        color: var(--button-font-color);
+        background-color: var(--button-color-active);
+    }
+    
+    &[disabled],
+    &.disabled {
+        opacity: .5;
+        pointer-events: none;
+    }
+    
+    &.bold {
+        font-weight: 700;
+    }
+    &.xsmall {
+        font-size: .8rem;
+    }
+    &.small {
+        font-size: .9rem;
+    }
+    &.large {
+        font-size: 1.2rem;
+    }
+    &.xlarge {
+        font-size: 1.4rem;
+    }
+}
+
+/* Primary */
+
+.button.primary {
+    color: var(--button-primary-font-color);
+    background-color: var(--button-primary-color);
+
+    &:hover,
+    &.hover {
+        color: var(--button-primary-font-color);
+        background-color: var(--button-primary-color-hover);
+    }
+    &:active,
+    &.active {
+        color: var(--button-primary-font-color);
+        background-color: var(--button-primary-color-active);
+    }
+}
+
+/* Success */
+
+.button.success {
+    color: var(--button-success-font-color);
+    background-color: var(--button-success-color);
+    
+    &:hover,
+    &.hover {
+        color: var(--button-success-font-color);
+        background-color: var(--button-success-color-hover);
+    }
+    &:active,
+    &.active {
+        color: var(--button-success-font-color);
+        background-color: var(--button-success-color-active);
+    }
+}
+
+/* Danger */
+
+.button.danger {
+    color: var(--button-danger-font-color);
+    background-color: var(--button-danger-color);
+    
+    &:hover,
+    &.hover {
+        color: var(--button-danger-font-color);
+        background-color: var(--button-danger-color-hover);
+    }
+    &:active,
+    &.active {
+        color: var(--button-danger-font-color);
+        background-color: var(--button-danger-color-active);
+    }
+}
+
+/* Warning */
+
+.button.warning {
+    color: var(--button-warning-font-color);
+    background-color: var(--button-warning-color);
+    
+    &:hover,
+    &.hover {
+        color: var(--button-warning-font-color);
+        background-color: var(--button-warning-color-hover);
+    }
+    &:active,
+    &.active {
+        color: var(--button-warning-font-color);
+        background-color: var(--button-warning-color-active);
+    }
+}

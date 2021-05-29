@@ -1,0 +1,43 @@
+/*---------------------------
+_links.css
+auto
+
+Created by andreyshpigunov on 25.05.2021.
+---------------------------*/
+
+/* Links styles */
+
+:root {
+    --link-color: #0366d6;
+    --link-color-hovered: #0366d6;
+    --link-color-visited: var(--link-color);
+    /* --link-color-visited: #630094; */
+}
+
+a, a:link {
+    outline: none;
+    cursor: pointer;
+    color: var(--link-color);
+    text-decoration: none;
+}
+a:not(.button):visited {
+    color: var(--link-color-visited);
+}
+a:hover, a.hover,
+a:active, a.active {
+    color: var(--link-color-hovered);
+    text-decoration: underline;
+}
+a.pseudo {
+    text-decoration-style: dotted;
+}
+
+/* Remove underline from phones */
+
+a[href^="tel"],
+a[href^="tel"]:hover,
+a[href^="tel"]:active {
+    color: inherit !important;
+    text-decoration: inherit !important;
+    border: inherit !important;
+}
