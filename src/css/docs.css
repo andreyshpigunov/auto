@@ -128,6 +128,7 @@ h2 {
         align-items: center;
         height: 50px;
         margin: 0;
+        padding: 0;
         list-style: none;
 
         @media (max-width: 639px) {
