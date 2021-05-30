@@ -2,6 +2,7 @@
 	"name": "auto",
 	"version": "1.0.0",
 	"devDependencies": {
+		"@parcel/logger": "*",
 		"autoprefixer": "^10.1.0",
 		"cssnano": "^5.0.2",
 		"parcel": "^2.0.0-beta.2",
