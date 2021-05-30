@@ -130,9 +130,10 @@ class Modal {
                 setTimeout(() => { modal.dispatchEvent(this.eventOpen) }, 400);
                 
                 if (device.iphone || device.ipad || device.android) {
-                    this.scrollPosition = window.scrollY;
+                    this.scrollPosition = window.pageYOffset;
                     document.body.style.position = "fixed";
                     document.body.style.top = "-" + this.scrollPosition + "px";
+                    document.body.style.width = window.innerWidth + "px";
                 }
             }, timeout);
         }
@@ -157,6 +158,7 @@ class Modal {
         if (device.iphone || device.ipad || device.android) {
             document.body.style.position = null;
             document.body.style.top = null;
+            document.body.style.width = null;
             window.scrollTo(0, this.scrollPosition);
         }
     }
