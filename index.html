@@ -1,296 +1,310 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<title>Auto — super simple CSS + JS library for you website</title>
-	<link rel="shortcut icon" href="https://andreyshpigunov.github.io/auto/assets/logo.png">
-	<link rel="apple-touch-icon" href="https://andreyshpigunov.github.io/auto/assets/apple-touch-icon.png">
-	<link rel="stylesheet" href="dist/docs.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Auto — super simple CSS + JS library for you website</title>
+    <link rel="shortcut icon" href="https://andreyshpigunov.github.io/auto/assets/logo.png">
+    <link rel="apple-touch-icon" href="https://andreyshpigunov.github.io/auto/assets/apple-touch-icon.png">
+    <link rel="stylesheet" href="dist/docs.css" />
 </head>
 <body>
-	<div id="app" class="page">
-		<main>
-			<aside class="sidebar unselectable">
-				<div class="sidebar-logo small-hide">
-					<a data-scrollto="app">
-						<img src="assets/logo.svg" alt="Auto"/>
-						<img class="-light" src="assets/logo-light.svg" alt="Auto"/>
-					</a>
-				</div>
-				<menu>
-					<li class="sidebar-header">auto.css</li>
-					<li><a data-scrollto="helpers">Helpers</a></li>
-					<li><a data-scrollto="buttons">Buttons</a></li>
-				</menu>
-				<menu>
-					<li class="sidebar-header">auto.js</li>
-					<li><a data-scrollto="modal">Modals</a></li>
-					<li><a data-scrollto="animate">Animations</a></li>
-					<li><a data-scrollto="scrollto">Scroller</a></li>
-					<li><a data-scrollto="loadmore">Loader</a></li>
-					<li><a data-scrollto="lazyload">Lazyload</a></li>
-					<li><a data-scrollto="ajax">Ajax</a></li>
-					<li><a data-scrollto="others">Others</a></li>
-				</menu>
-			</aside>
+    <div id="app" class="page">
+        <main>
+            <aside class="sidebar unselectable">
+                <div class="sidebar-logo small-hide">
+                    <a data-scrollto="app">
+                        <img src="assets/logo.svg" alt="Auto"/>
+                        <img class="-light" src="assets/logo-light.svg" alt="Auto"/>
+                    </a>
+                </div>
+                <menu>
+                    <li class="sidebar-header">auto.css</li>
+                    <li><a data-scrollto="helpers">Helpers</a></li>
+                    <li><a data-scrollto="buttons">Buttons</a></li>
+                </menu>
+                <menu>
+                    <li class="sidebar-header">auto.js</li>
+                    <li><a data-scrollto="modal">Modals</a></li>
+                    <li><a data-scrollto="animate">Animations</a></li>
+                    <li><a data-scrollto="scrollto">Scroller</a></li>
+                    <li><a data-scrollto="loadmore">Loader</a></li>
+                    <li><a data-scrollto="lazyload">Lazyload</a></li>
+                    <li><a data-scrollto="ajax">Ajax</a></li>
+                    <li><a data-scrollto="others">Others</a></li>
+                </menu>
+            </aside>
 
-			<nav class="header-menu">
-				<ul>
-					<li class="active">Docs 1.0 β</li>
-					<li><a href="https://github.com/andreyshpigunov/auto">GitHub →</a></li>
-				</ul>
-			</nav>
+            <nav class="header-menu">
+                <ul>
+                    <li class="active">Docs 1.0 β</li>
+                    <li><a href="https://github.com/andreyshpigunov/auto">GitHub →</a></li>
+                </ul>
+            </nav>
 
-			<nav class="header-menu-mobile">
-				<ul>
-					<li class="header-menu-mobile_button">
-						<i></i>
-						<i></i>
-						<i></i>
-					</li>
-					<li class="header-menu-mobile_logo" data-scrollto="app">
-						<img src="assets/logo.svg" alt="Auto"/>
-						<img class="-light" src="assets/logo-light.svg" alt="Auto"/>
-					</li>
-					<li class="header-menu-mobile_github"><a href="https://github.com/andreyshpigunov/auto">GitHub →</a></li>
-				</ul>
-			</nav>
+            <nav class="header-menu-mobile">
+                <ul>
+                    <li class="header-menu-mobile_button">
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                    </li>
+                    <li class="header-menu-mobile_logo" data-scrollto="app">
+                        <img src="assets/logo.svg" alt="Auto"/>
+                        <img class="-light" src="assets/logo-light.svg" alt="Auto"/>
+                    </li>
+                    <li class="header-menu-mobile_github"><a href="https://github.com/andreyshpigunov/auto">GitHub →</a></li>
+                </ul>
+            </nav>
 
-			<section id="setup">
-				<h2>GitHub</h2>
-				<p>Download and connect files manually: <a href="https://github.com/andreyshpigunov/auto">https://github.com/andreyshpigunov/auto</a></p>
-				<p>Connect script at the and of page, before others scripts, and init all available components: <code>auto.init()</code>.</p>
+            <section id="setup">
+                <h2>GitHub</h2>
+                <p>Download and connect files manually: <a href="https://github.com/andreyshpigunov/auto">https://github.com/andreyshpigunov/auto</a></p>
+                <p>Connect script at the and of page, before others scripts, and init all available components: <code>auto.init()</code>.</p>
                 
-				<h2>CDN</h2>
-				<p>Current versions of files are available at the following links:</p>
-				<p class="break-word">
-					<a href="https://gitcdn.link/repo/andreyshpigunov/auto/main/dist/auto.css">https://gitcdn.link/repo/andreyshpigunov/auto/main/dist/auto.css</a><br/>
-					<a href="https://gitcdn.link/repo/andreyshpigunov/auto/main/dist/auto.js">https://gitcdn.link/repo/andreyshpigunov/auto/main/dist/auto.js</a>
-				</p>
-			</section>
+                <h2>CDN</h2>
+                <p>Current versions of files are available at the following links:</p>
+                
+                <h3>JsDelivr</h3>
+                <p class="break-word">
+                    <a href="https://cdn.jsdelivr.net/gh/andreyshpigunov/auto@1.0.beta.3/dist/auto.css">https://cdn.jsdelivr.net/gh/andreyshpigunov/auto@1.0.beta.3/dist/auto.css</a><br/>
+                    <a href="https://cdn.jsdelivr.net/gh/andreyshpigunov/auto@1.0.beta.3/dist/auto.js">https://cdn.jsdelivr.net/gh/andreyshpigunov/auto@1.0.beta.3/dist/auto.css</a>
+                </p>
+                
+                <h3>GitCDN</h3>
+                <p class="break-word">
+                    Latest:<br/>
+                    <a href="https://gitcdn.link/repo/andreyshpigunov/auto/main/dist/auto.css">https://gitcdn.link/repo/andreyshpigunov/auto/main/dist/auto.css</a><br/>
+                    <a href="https://gitcdn.link/repo/andreyshpigunov/auto/main/dist/auto.js">https://gitcdn.link/repo/andreyshpigunov/auto/main/dist/auto.js</a>
+                </p>
+                <p class="break-word">
+                    Latest release:<br/>
+                    <a href="https://gitcdn.link/repo/andreyshpigunov/auto@1.0.beta.3/main/dist/auto.css">https://gitcdn.link/repo/andreyshpigunov/auto@1.0.beta.3/main/dist/auto.css</a><br/>
+                    <a href="https://gitcdn.link/repo/andreyshpigunov/auto@1.0.beta.3/main/dist/auto.js">https://gitcdn.link/repo/andreyshpigunov/auto@1.0.beta.3/main/dist/auto.js</a>
+                </p>
+            </section>
 
-			<h2>Auto.css</h2>
+            <h2>Auto.css</h2>
 
-			<section id="helpers">
+            <section id="helpers">
                            
-				<h2>Helpers</h2>
-				<p>Extend the functionality of elements.</p>
+                <h2>Helpers</h2>
+                <p>Extend the functionality of elements.</p>
 
-				<h3>Links</h3>
-				<p><code>.pseudo</code> — pseudo-link, underlined with dots<br/></p>
+                <h3>Links</h3>
+                <p><code>.pseudo</code> — pseudo-link, underlined with dots<br/></p>
 
-				<h3>Helpers classes</h3>
-				<p>
-					<code>.unselectable</code> — disables the selection of an element and all its descendants<br/>
-					<code>.clear</code> — clearfix<br/>
-					<code>.uppercase</code> — uppercase text<br/>
-					<code>.lowercase</code> — lowercase text<br/>
-					<code>.nowrap</code> — prohibiting line wrapping<br/>
-					<code>.hyphens</code> — automatic hyphenation (works only in modern browsers)<br/>
-					<code>.video</code> — wrapper for <code>iframe</code>, <code>object</code> и <code>embed</code>, proportionally scale filter<br/>
-					<code>.break-word</code> — transfers non-portable text constructs<br/>
-					<code>.visuallyhidden</code> — hides the block in a special way<br/>
-					<code>.hidden</code> — assigns to a block <code>display: none</code><br/>
-					<code>.hidden-next</code> — assigns to the next block <code>display: none</code><br/>
-					<code>.invisible</code> — assigns to a block <code>visibility: hidden</code><br/>
-					<code>.table-responsive</code> — horizontal scrolling of the table if it doesn't fit<br/>
-				</p>
+                <h3>Helpers classes</h3>
+                <p>
+                    <code>.unselectable</code> — disables the selection of an element and all its descendants<br/>
+                    <code>.clear</code> — clearfix<br/>
+                    <code>.uppercase</code> — uppercase text<br/>
+                    <code>.lowercase</code> — lowercase text<br/>
+                    <code>.nowrap</code> — prohibiting line wrapping<br/>
+                    <code>.hyphens</code> — automatic hyphenation (works only in modern browsers)<br/>
+                    <code>.video</code> — wrapper for <code>iframe</code>, <code>object</code> и <code>embed</code>, proportionally scale filter<br/>
+                    <code>.break-word</code> — transfers non-portable text constructs<br/>
+                    <code>.visuallyhidden</code> — hides the block in a special way<br/>
+                    <code>.hidden</code> — assigns to a block <code>display: none</code><br/>
+                    <code>.hidden-next</code> — assigns to the next block <code>display: none</code><br/>
+                    <code>.invisible</code> — assigns to a block <code>visibility: hidden</code><br/>
+                    <code>.table-responsive</code> — horizontal scrolling of the table if it doesn't fit<br/>
+                </p>
                 
-				<h3>Actions classes</h3>
-				<p>
-					<code>.sync-hover</code> — adding a class synchronously <code>.hover</code> to links with the same <code>href</code><br/>
-					<code>.is-appeared</code> — when it appears in the viewport, the element is assigned classes <code>.appeared</code> and <code>.visible</code>. When disappearing from viewport class <code>.visible</code> disappear, <code>.appeared</code> remains.
-				</p>
+                <h3>Actions classes</h3>
+                <p>
+                    <code>.sync-hover</code> — adding a class synchronously <code>.hover</code> to links with the same <code>href</code><br/>
+                    <code>.is-appeared</code> — when it appears in the viewport, the element is assigned classes <code>.appeared</code> and <code>.visible</code>. When disappearing from viewport class <code>.visible</code> disappear, <code>.appeared</code> remains.
+                </p>
 
-				<iframe height="1200" style="width: 100%;" scrolling="no" title="Auto / Helpers" src="https://codepen.io/andreyshpigunov/embed/WNGjRBG?height=1280&theme-id=dark&default-tab=html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
-			</section>
+                <iframe height="1200" style="width: 100%;" scrolling="no" title="Auto / Helpers" src="https://codepen.io/andreyshpigunov/embed/WNGjRBG?height=1280&theme-id=dark&default-tab=html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
+            </section>
 
-			<section id="buttons">
+            <section id="buttons">
 
-				<h2>Buttons</h2>
-				<p>To create a button, add a class to the element <code>.button</code>.</p>
+                <h2>Buttons</h2>
+                <p>To create a button, add a class to the element <code>.button</code>.</p>
 
-				<div class="section-example">
-					<a class="button xlarge">.xlarge</a>
-					<a class="button large">.large</a>
+                <div class="section-example">
+                    <a class="button xlarge">.xlarge</a>
+                    <a class="button large">.large</a>
                     <a class="button">default</a>
-					<a class="button small">.small</a>
-					<a class="button xsmall">.xsmall</a>
-				</div>
-				<br/>
-				<div class="section-example">
+                    <a class="button small">.small</a>
+                    <a class="button xsmall">.xsmall</a>
+                </div>
+                <br/>
+                <div class="section-example">
                     <a class="button">default</a>
                     <a class="button bold">.bold</a>
-					<a class="button primary">.primary</a>
-					<a class="button success">.success</a>
-					<a class="button danger">.danger</a>
-					<a class="button warning">.warning</a>
-				</div>
+                    <a class="button primary">.primary</a>
+                    <a class="button success">.success</a>
+                    <a class="button danger">.danger</a>
+                    <a class="button warning">.warning</a>
+                </div>
 
-				<br/>
+                <br/>
 
-				<iframe height="520" style="width: 100%;" scrolling="no" title="Auto / Buttons" src="https://codepen.io/andreyshpigunov/embed/qBajZjb?height=800&theme-id=dark&default-tab=html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
+                <iframe height="520" style="width: 100%;" scrolling="no" title="Auto / Buttons" src="https://codepen.io/andreyshpigunov/embed/qBajZjb?height=800&theme-id=dark&default-tab=html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
 
-			</section>
+            </section>
 
-			<h2>Auto.js</h2>
+            <h2>Auto.js</h2>
 
-			<section id="modal">
-				<h2>Modals</h2>
-				<p>Universal modal windows.</p>
-				<p>By default, the modal window code is added to the end of the body tag, but if you need to place it elsewhere, you need to add a class <code>.modal-here</code> to the block where the window code should be located.</p>
+            <section id="modal">
+                <h2>Modals</h2>
+                <p>Universal modal windows.</p>
+                <p>By default, the modal window code is added to the end of the body tag, but if you need to place it elsewhere, you need to add a class <code>.modal-here</code> to the block where the window code should be located.</p>
 
-				<h3>API</h3>
-				<p>
-					<code>auto.modal.show(id)</code> — open modal<br/>
-					<code>auto.modal.hide(id)</code> — close modal
-				</p>
+                <h3>API</h3>
+                <p>
+                    <code>auto.modal.show(id)</code> — open modal<br/>
+                    <code>auto.modal.hide(id)</code> — close modal
+                </p>
 
-				<a class="button" data-modal="modal-test">TEST</a>
+                <a class="button" data-modal="modal-test">TEST</a>
                 <a class="button" onclick="auto.modal.show('modal-test')">API SHOW</a>
-				
+                
                 <div id="modal-test" class="modal-content">
-					<div class="text">
-						<h2>Modal windows</h2>
-						<p>Universal modal window.</p>
-						<p>By default, the modal window code is added to the end of the body tag, but if you need to place it elsewhere, you need to add a class <code>.modal-here</code> to the block where the window code should be located.</p>
-					</div>
-				</div>
+                    <div class="text">
+                        <h2>Modal windows</h2>
+                        <p>Universal modal window.</p>
+                        <p>By default, the modal window code is added to the end of the body tag, but if you need to place it elsewhere, you need to add a class <code>.modal-here</code> to the block where the window code should be located.</p>
+                    </div>
+                </div>
 
-				<h3>Events</h3>
-				<p>
-					<code>modal:ready</code> — before modal opened<br/>
-					<code>modal:open</code> — modal opened<br/>
-					<code>modal:close</code> — modal closed
-				</p>
-				<p>
-					Example:<br/>
-					<code>document.getElementById('modal-id').addEventListener('modal:ready', event => { ... })</code>
-				</p>
+                <h3>Events</h3>
+                <p>
+                    <code>modal:ready</code> — before modal opened<br/>
+                    <code>modal:open</code> — modal opened<br/>
+                    <code>modal:close</code> — modal closed
+                </p>
+                <p>
+                    Example:<br/>
+                    <code>document.getElementById('modal-id').addEventListener('modal:ready', event => { ... })</code>
+                </p>
 
-				<h3>Init modals</h3>
-				<iframe height="700" style="width: 100%;" scrolling="no" title="Auto / Modal init" src="https://codepen.io/andreyshpigunov/embed/vYXZGpm?height=700&theme-id=dark&default-tab=html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
+                <h3>Init modals</h3>
+                <iframe height="700" style="width: 100%;" scrolling="no" title="Auto / Modal init" src="https://codepen.io/andreyshpigunov/embed/vYXZGpm?height=700&theme-id=dark&default-tab=html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
 
-				<h3>Examples</h3>
-				<iframe height="800" style="width: 100%;" scrolling="no" title="Auto / Modals examples" src="https://codepen.io/andreyshpigunov/embed/KKgqzBE?height=800&theme-id=dark&default-tab=html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
-			</section>
+                <h3>Examples</h3>
+                <iframe height="800" style="width: 100%;" scrolling="no" title="Auto / Modals examples" src="https://codepen.io/andreyshpigunov/embed/KKgqzBE?height=800&theme-id=dark&default-tab=html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
+            </section>
 
-			<section id="animate">
-				<h2>Animations</h2>
+            <section id="animate">
+                <h2>Animations</h2>
 
-				<p>Starts a function with animation or controls the class of an element when it or its trigger element reaches a certain scroll point.</p>
+                <p>Starts a function with animation or controls the class of an element when it or its trigger element reaches a certain scroll point.</p>
 
-				<h3>Initialization</h3>
-				<iframe height="285" style="width: 100%;" scrolling="no" title="Auto / Animation init" src="https://codepen.io/andreyshpigunov/embed/mdrwEWG?height=285&theme-id=dark&default-tab=html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
+                <h3>Initialization</h3>
+                <iframe height="285" style="width: 100%;" scrolling="no" title="Auto / Animation init" src="https://codepen.io/andreyshpigunov/embed/mdrwEWG?height=285&theme-id=dark&default-tab=html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
 
-				<p>
-					<code>triggerID</code> — pointer to the ID of the element that we are tracking the position<br/>
-					<code>start</code> — animation start point (height from the top edge of the screen in px or vh)<br/>
-					<code>end</code> — animation end point (height from the top edge of the screen in px or vh)<br/>
-					<code>functionName</code> — name of the function that starts executing when the element moves between "start" and "end"<br/>
-					<code>class</code> — class assigned to a reference when "target" is between "start" and "end"<br/>
-					<code>classRemove</code> — whether to delete the "class" from the element after it leaves the animation zone, by default false
-				</p>
+                <p>
+                    <code>triggerID</code> — pointer to the ID of the element that we are tracking the position<br/>
+                    <code>start</code> — animation start point (height from the top edge of the screen in px or vh)<br/>
+                    <code>end</code> — animation end point (height from the top edge of the screen in px or vh)<br/>
+                    <code>functionName</code> — name of the function that starts executing when the element moves between "start" and "end"<br/>
+                    <code>class</code> — class assigned to a reference when "target" is between "start" and "end"<br/>
+                    <code>classRemove</code> — whether to delete the "class" from the element after it leaves the animation zone, by default false
+                </p>
 
-				<p>if the element itself is a trigger, you don't need to specify the triggerID.</p>
+                <p>if the element itself is a trigger, you don't need to specify the triggerID.</p>
 
-				<p>The "functionName" function gets a parameter with all the fields of the element described above and the "progress" parameter, which changes from 0 to 1, as the page scrolls and the element moves.</p>
+                <p>The "functionName" function gets a parameter with all the fields of the element described above and the "progress" parameter, which changes from 0 to 1, as the page scrolls and the element moves.</p>
 
-				<h3>Example</h3>
-				<iframe height="400" style="width: 100%;" scrolling="no" title="Auto / Animation example" src="https://codepen.io/andreyshpigunov/embed/jOMwrGE?height=400&theme-id=dark&default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
-			</section>
+                <h3>Example</h3>
+                <iframe height="400" style="width: 100%;" scrolling="no" title="Auto / Animation example" src="https://codepen.io/andreyshpigunov/embed/jOMwrGE?height=400&theme-id=dark&default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
+            </section>
 
-			<section id="scrollto">
-				<h2>Scroller</h2>
-				<p>
-					Scrolls the page to the element with the specified ID.<br/>
-					Automatically applied to elements with "data-scroll".
-				</p>
+            <section id="scrollto">
+                <h2>Scroller</h2>
+                <p>
+                    Scrolls the page to the element with the specified ID.<br/>
+                    Automatically applied to elements with "data-scroll".
+                </p>
 
-				<h3>Init</h3>
-				<iframe height="265" style="width: 100%;" scrolling="no" title="Auto / Scroller" src="https://codepen.io/andreyshpigunov/embed/qBajNxp?height=265&theme-id=dark&default-tab=html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
+                <h3>Init</h3>
+                <iframe height="265" style="width: 100%;" scrolling="no" title="Auto / Scroller" src="https://codepen.io/andreyshpigunov/embed/qBajNxp?height=265&theme-id=dark&default-tab=html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
 
-				<p>
-					<code>target</code> — target ID<br/>
-					<code>offset</code> — offset in pixels (default 0)<br/>
-					<code>speed</code> — scroll speed (default 500 ms)<br/>
-					<code>classActive</code> — class assigned to a reference when the "target" is in the viewport zone
-				</p>
+                <p>
+                    <code>target</code> — target ID<br/>
+                    <code>offset</code> — offset in pixels (default 0)<br/>
+                    <code>speed</code> — scroll speed (default 500 ms)<br/>
+                    <code>classActive</code> — class assigned to a reference when the "target" is in the viewport zone
+                </p>
 
-				<h3>API</h3>
-				<p><code>auto.scroll.to(target, offset, speed)</code></p>
+                <h3>API</h3>
+                <p><code>auto.scroll.to(target, offset, speed)</code></p>
                 <p><code>target</code> — element or element selector (string)</p>
-			</section>
+            </section>
 
-			<section id="loadmore">
-				<h2>Loader</h2>
-				<p>
-					Starts the data loading function when scrolling to the end of the block.<br/>
-					Automatically applied to elements with "data-loadmore".
-				</p>
+            <section id="loadmore">
+                <h2>Loader</h2>
+                <p>
+                    Starts the data loading function when scrolling to the end of the block.<br/>
+                    Automatically applied to elements with "data-loadmore".
+                </p>
 
-				<h3>Init</h3>
-				<iframe height="265" style="width: 100%;" scrolling="no" title="Auto / Loader" src="https://codepen.io/andreyshpigunov/embed/LYRLZmd?height=265&theme-id=dark&default-tab=html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
-				<p>
-					<code>functionName</code> — loader function name<br/>
-					<code>offset</code> — offset in pixels from the bottom edge of the page (default 0)
-				</p>
-				<p>An incremental parameter <code>page</code> is passed to the function each time it is run.</p>
-			</section>
+                <h3>Init</h3>
+                <iframe height="265" style="width: 100%;" scrolling="no" title="Auto / Loader" src="https://codepen.io/andreyshpigunov/embed/LYRLZmd?height=265&theme-id=dark&default-tab=html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
+                <p>
+                    <code>functionName</code> — loader function name<br/>
+                    <code>offset</code> — offset in pixels from the bottom edge of the page (default 0)
+                </p>
+                <p>An incremental parameter <code>page</code> is passed to the function each time it is run.</p>
+            </section>
 
-			<section id="lazyload">
-				<h2>Lazyload</h2>
-				<p>
-					Loading images when they appear in viewport.<br/>
-					Works with the IntersectionObserver method, only in modern browsers.<br/>
-					If IntersectionObserver is not supported, images are loaded in the usual way.
-				</p>
+            <section id="lazyload">
+                <h2>Lazyload</h2>
+                <p>
+                    Loading images when they appear in viewport.<br/>
+                    Works with the IntersectionObserver method, only in modern browsers.<br/>
+                    If IntersectionObserver is not supported, images are loaded in the usual way.
+                </p>
 
-				<h3>Init</h3>
-				<iframe height="200" style="width: 100%;" scrolling="no" title="Auto / Lazyload" src="https://codepen.io/andreyshpigunov/embed/YzGQWvO?height=200&theme-id=dark&default-tab=html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
-			</section>
+                <h3>Init</h3>
+                <iframe height="200" style="width: 100%;" scrolling="no" title="Auto / Lazyload" src="https://codepen.io/andreyshpigunov/embed/YzGQWvO?height=200&theme-id=dark&default-tab=html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
+            </section>
 
-			<section id="ajax">
-				<h2>AJAX</h2>
+            <section id="ajax">
+                <h2>AJAX</h2>
                 <p style="color: red">Working, but not supported. Move to axios, fetch or others actual libraries.</p>
-				<p>Library for working with ajax requests.</p>
-				<p>Source documentation: <a href="https://github.com/fdaciuk/ajax/blob/dev/README.md" target="_blank">https://github.com/fdaciuk/ajax/blob/dev/README.md</a></p>
+                <p>Library for working with ajax requests.</p>
+                <p>Source documentation: <a href="https://github.com/fdaciuk/ajax/blob/dev/README.md" target="_blank">https://github.com/fdaciuk/ajax/blob/dev/README.md</a></p>
 
-				<h3>Using</h3>
-				<iframe height="265" style="width: 100%;" scrolling="no" title="Auto / Ajax using" src="https://codepen.io/andreyshpigunov/embed/OJRgXrK?height=265&theme-id=dark&default-tab=js" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
+                <h3>Using</h3>
+                <iframe height="265" style="width: 100%;" scrolling="no" title="Auto / Ajax using" src="https://codepen.io/andreyshpigunov/embed/OJRgXrK?height=265&theme-id=dark&default-tab=js" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
 
-				<h3>GET</h3>
-				<iframe height="160" style="width: 100%;" scrolling="no" title="Auto / Ajax GET" src="https://codepen.io/andreyshpigunov/embed/abmwZXE?height=160&theme-id=dark&default-tab=js" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
+                <h3>GET</h3>
+                <iframe height="160" style="width: 100%;" scrolling="no" title="Auto / Ajax GET" src="https://codepen.io/andreyshpigunov/embed/abmwZXE?height=160&theme-id=dark&default-tab=js" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
 
-				<h3>POST</h3>
-				<iframe height="290" style="width: 100%;" scrolling="no" title="Auto / Ajax POST" src="https://codepen.io/andreyshpigunov/embed/QWKgEoy?height=290&theme-id=dark&default-tab=js" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
+                <h3>POST</h3>
+                <iframe height="290" style="width: 100%;" scrolling="no" title="Auto / Ajax POST" src="https://codepen.io/andreyshpigunov/embed/QWKgEoy?height=290&theme-id=dark&default-tab=js" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
 
-				<h3>POST FormData</h3>
-				<iframe height="265" style="width: 100%;" scrolling="no" title="Auto / Ajax POST FormData" src="https://codepen.io/andreyshpigunov/embed/vYXZXBP?height=265&theme-id=dark&default-tab=js" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
+                <h3>POST FormData</h3>
+                <iframe height="265" style="width: 100%;" scrolling="no" title="Auto / Ajax POST FormData" src="https://codepen.io/andreyshpigunov/embed/vYXZXBP?height=265&theme-id=dark&default-tab=js" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
 
-				<h3>PUT</h3>
-				<iframe height="160" style="width: 100%;" scrolling="no" title="Auto / Ajax PUT" src="https://codepen.io/andreyshpigunov/embed/zYKzBbP?height=160&theme-id=dark&default-tab=js" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
+                <h3>PUT</h3>
+                <iframe height="160" style="width: 100%;" scrolling="no" title="Auto / Ajax PUT" src="https://codepen.io/andreyshpigunov/embed/zYKzBbP?height=160&theme-id=dark&default-tab=js" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
 
-				<h3>DELETE</h3>
-				<iframe height="160" style="width: 100%;" scrolling="no" title="Auto / Ajax DELETE" src="https://codepen.io/andreyshpigunov/embed/gOwRMEN?height=160&theme-id=dark&default-tab=js" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
+                <h3>DELETE</h3>
+                <iframe height="160" style="width: 100%;" scrolling="no" title="Auto / Ajax DELETE" src="https://codepen.io/andreyshpigunov/embed/gOwRMEN?height=160&theme-id=dark&default-tab=js" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
 
-				<h3>Processing responses</h3>
-				<iframe height="300" style="width: 100%;" scrolling="no" title="Auto / Ajax processing responses" src="https://codepen.io/andreyshpigunov/embed/wvzeWbB?height=300&theme-id=dark&default-tab=js" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
+                <h3>Processing responses</h3>
+                <iframe height="300" style="width: 100%;" scrolling="no" title="Auto / Ajax processing responses" src="https://codepen.io/andreyshpigunov/embed/wvzeWbB?height=300&theme-id=dark&default-tab=js" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
 
-				<h3>Cancel request</h3>
-				<iframe height="290" style="width: 100%;" scrolling="no" title="Auto / Ajax cancel requests" src="https://codepen.io/andreyshpigunov/embed/MWjoedp?height=290&theme-id=dark&default-tab=js" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
+                <h3>Cancel request</h3>
+                <iframe height="290" style="width: 100%;" scrolling="no" title="Auto / Ajax cancel requests" src="https://codepen.io/andreyshpigunov/embed/MWjoedp?height=290&theme-id=dark&default-tab=js" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
 
-			</section>
+            </section>
 
-			<section id="others">
-				<h2>Others</h2>
-				<p>Frequently used functions.</p>
-				<iframe height="1100" style="width: 100%;" scrolling="no" title="Auto / Utils" src="https://codepen.io/andreyshpigunov/embed/JjRJKeL?height=1100&theme-id=dark&default-tab=js" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
-			</section>
-		</main>
-	</div>
+            <section id="others">
+                <h2>Others</h2>
+                <p>Frequently used functions.</p>
+                <iframe height="1100" style="width: 100%;" scrolling="no" title="Auto / Utils" src="https://codepen.io/andreyshpigunov/embed/JjRJKeL?height=1100&theme-id=dark&default-tab=js" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
+            </section>
+        </main>
+    </div>
 
     <script src="dist/auto.js"></script>
     <script src="https://unpkg.com/vue@next"></script>
