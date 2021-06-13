@@ -11,6 +11,7 @@
 //  or
 //  <a data-scrollto='
 //    {
+//      "parent": "#id or .class selector" — default "window"
 //      "target": "top",
 //      "speed": "1000",
 //      "offset": "100",
@@ -52,6 +53,7 @@ class Scroll {
                             item.target = document.getElementById(json.target);
                             item.speed = json.speed || this.speed;
                             item.offset = json.offset || this.offset;
+                            item.parent = json.parent || null;
                             item.classActive = json.classActive || this.classActive;
                         } else {
                             console.log(
@@ -65,6 +67,7 @@ class Scroll {
                             item.target = document.getElementById(e.dataset.scrollto);
                             item.speed = this.speed;
                             item.offset = this.offset;
+                            item.parent = null;
                             item.classActive = this.classActive;
                         } else {
                             console.log(
@@ -78,7 +81,7 @@ class Scroll {
                         e.removeAttribute("data-scrollto");
                         e.addEventListener("click", (event) => {
                             event.preventDefault();
-                            this.scrollTo(item.target, item.offset, item.speed);
+                            this.scrollTo(item.target, item.offset, item.speed, item.parent);
                         });
                     }
                 } catch (err) {
@@ -95,21 +98,30 @@ class Scroll {
         }
     }
     
-    scrollTo(target, offset, speed) {
+    scrollTo(target, offset, speed, parent) {
         if (typeof target === "string") {
             target = document.querySelector(target);
         }
         speed = speed || this.speed;
         offset = offset || this.offset;
+        parent = document.querySelector(parent) || window;
         
-        let startingY = window.pageYOffset,
-            elementY = window.pageYOffset + target.getBoundingClientRect().top,
-            targetY =
-                document.body.scrollHeight - elementY < window.innerHeight ?
-                document.body.scrollHeight - window.innerHeight :
-                elementY,
-            diff = targetY - startingY;
-            
+        let elementY, startingY, targetY, diff;
+        
+        if (parent == window) {
+            // Page scroll offset value
+            startingY = parent.pageYOffset;
+            // Distance to target element, from page top
+            elementY = parent.pageYOffset + target.getBoundingClientRect().top;
+            diff = elementY - startingY - offset;
+        } else {
+            // Code for not window object (scrollable div and others)
+            startingY = parent.scrollTop;
+            parentY = parent.getBoundingClientRect().top;
+            elementY = parent.scrollTop + target.getBoundingClientRect().top - parentY;
+            diff = elementY - startingY - offset;
+        }
+        
         let easeInOutCubic = (t) => {
             return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
         };
@@ -123,7 +135,7 @@ class Scroll {
             // Scroll progress percent (0..1)
             let percent = speed > 0 ? Math.min(time / speed, 1) : 1;
             percent = easeInOutCubic(percent);
-            window.scrollTo(0, startingY + (diff - offset) * percent);
+            parent.scrollTo(0, startingY + diff * percent);
             if (time < speed) {
                 window.requestAnimationFrame(step);
             }

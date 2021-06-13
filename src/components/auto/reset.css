@@ -132,3 +132,6 @@ ul.reset li {
     padding: 0;
     list-style: none;
 }
+pre {
+    white-space: pre-wrap;
+}
