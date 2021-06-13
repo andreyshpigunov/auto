@@ -59,6 +59,7 @@ Created by andreyshpigunov on 25.05.2021.
     }
 }
 .break-word {
+    white-space: pre-wrap;
     word-wrap: break-word;
 }
 .visuallyhidden {

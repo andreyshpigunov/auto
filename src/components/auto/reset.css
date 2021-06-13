@@ -10,7 +10,7 @@ Created by andreyshpigunov on 25.05.2021.
 :root {
     /* Base variables */
     --line-height: 1.5;
-    --font-size: 16px;
+    --font-size: 100%;
     --font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica,
                    Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji,
                    Segoe UI Symbol;
@@ -44,7 +44,7 @@ time, mark, audio, video {
 }
 html {
     font-family: var(--font-family);
-    font-size: var(--font-size);
+    /* font-size: var(--font-size); */
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
@@ -124,4 +124,11 @@ img {
     width: auto;
     height: auto;
     max-width: 100%;
+}
+ul.reset,
+ul.reset ul,
+ul.reset li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }

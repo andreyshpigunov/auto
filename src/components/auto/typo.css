@@ -46,6 +46,7 @@ h3, .h3,
 h4, .h4,
 h5, .h5,
 h6, .h6 {
+    margin-top: 0;
     margin-bottom: var(--headers-margin-bottom);
     font-weight: var(--headers-font-weight);
 }

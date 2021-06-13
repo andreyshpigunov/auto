@@ -14,7 +14,7 @@ Created by andreyshpigunov on 25.05.2021.
     /* --link-color-visited: #630094; */
 }
 
-a, a:link {
+a {
     outline: none;
     cursor: pointer;
     color: var(--link-color);

@@ -29,12 +29,12 @@ Created by andreyshpigunov on 25.05.2021.
 input, textarea,
 select, button {
     max-width: 100%;
-    font-family: var(--font-family);
+    font-family: inherit;
     box-sizing: border-box;
     box-shadow: none;
 }
 
-input:not([type="submit"]),
+input:not([type="checkbox"]):not([type="submit"]),
 textarea {
     position: relative;
     width: var(--forms-width);
@@ -62,8 +62,9 @@ textarea {
     }
 }
 
-input:not([type="submit"]),
-textarea, select {
+input:not([type="checkbox"]):not([type="submit"]),
+textarea,
+select {
     
     &[readonly],
     &[readonly]:focus {

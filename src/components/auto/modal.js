@@ -59,8 +59,8 @@ class Modal {
                         <div class="modal-outer">
                             <div class="modal-inner">
                                 <div class="modal-window">
-                                    <a class="modal-close"></a>
                                     ${content}
+                                    <a class="modal-close"></a>
                                 </div>
                             </div>
                         </div>
