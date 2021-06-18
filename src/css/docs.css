@@ -290,15 +290,13 @@ h2 {
         }
     }
 
-    & menu {
-        margin-top: 20px;
-
+    & nav {
+        
+        & ul {
+            margin-top: 20px;
+        }
+    
         & li {
-
-            &.sidebar-header {
-                margin-bottom: 8px;
-                font-weight: 700;
-            }
 
             & > a {
                 display: block;
