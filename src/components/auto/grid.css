@@ -13,6 +13,7 @@ Created by andreyshpigunov on 26.05.2021.
 
 .grid {
     display: grid;
+    width: 100%;
     grid-gap: var(--grid-gap);
     grid-template-columns: repeat(12, 1fr);
     

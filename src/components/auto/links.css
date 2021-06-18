@@ -9,28 +9,34 @@ Created by andreyshpigunov on 25.05.2021.
 
 :root {
     --link-color: #0366d6;
-    --link-color-hovered: #0366d6;
-    --link-color-visited: var(--link-color);
-    /* --link-color-visited: #630094; */
+    --link-hovered-color: #f40000;
+    --link-visited-color: var(--link-color);
+    --link-hovered-decoration: none;
+    --link-hovered-decoration: none;
+    --link-hovered-decoration-pseudo: none;
 }
 
-a {
-    outline: none;
-    cursor: pointer;
-    color: var(--link-color);
-    text-decoration: none;
+a:not(.button) {
+    
+    & {
+        outline: none;
+        cursor: pointer;
+        color: var(--link-color);
+        text-decoration: none;
+    }
+    &:visited {
+        color: var(--link-visited-color);
+    }
+    &:hover, &.hover,
+    &:active, &.active {
+        color: var(--link-hovered-color);
+        text-decoration: var(--link-hovered-decoration);
+    }
+    &.pseudo {
+        text-decoration-style: var(--link-hovered-decoration-pseudo);
+    }
 }
-a:not(.button):visited {
-    color: var(--link-color-visited);
-}
-a:hover, a.hover,
-a:active, a.active {
-    color: var(--link-color-hovered);
-    text-decoration: underline;
-}
-a.pseudo {
-    text-decoration-style: dotted;
-}
+
 
 /* Remove underline from phones */
 

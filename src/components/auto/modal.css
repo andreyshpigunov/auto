@@ -107,6 +107,15 @@ html.modal-active body {
         }
     }
     
+    &.max {
+        max-width: 100%;
+    }
+    &.max400 .modal-window { max-width: 400px }
+    &.max500 .modal-window { max-width: 500px }
+    &.max600 .modal-window { max-width: 600px }
+    &.max700 .modal-window { max-width: 700px }
+    &.max800 .modal-window { max-width: 800px }
+    
     /* Close cross */
     & .modal-close {
         display: block;

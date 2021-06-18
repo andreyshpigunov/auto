@@ -99,47 +99,51 @@ class Scroll {
     }
     
     scrollTo(target, offset, speed, parent) {
-        if (typeof target === "string") {
-            target = document.querySelector(target);
-        }
-        speed = speed || this.speed;
-        offset = offset || this.offset;
-        parent = document.querySelector(parent) || window;
-        
-        let elementY, startingY, targetY, diff;
-        
-        if (parent == window) {
-            // Page scroll offset value
-            startingY = parent.pageYOffset;
-            // Distance to target element, from page top
-            elementY = parent.pageYOffset + target.getBoundingClientRect().top;
-            diff = elementY - startingY - offset;
-        } else {
-            // Code for not window object (scrollable div and others)
-            startingY = parent.scrollTop;
-            parentY = parent.getBoundingClientRect().top;
-            elementY = parent.scrollTop + target.getBoundingClientRect().top - parentY;
-            diff = elementY - startingY - offset;
-        }
-        
-        let easeInOutCubic = (t) => {
-            return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
-        };
-        
-        let start;
-        if (!diff) return;
-        
-        window.requestAnimationFrame(function step(timestamp) {
-            if (!start) start = timestamp;
-            let time = timestamp - start;
-            // Scroll progress percent (0..1)
-            let percent = speed > 0 ? Math.min(time / speed, 1) : 1;
-            percent = easeInOutCubic(percent);
-            parent.scrollTo(0, startingY + diff * percent);
-            if (time < speed) {
-                window.requestAnimationFrame(step);
+        return new Promise((resolve, reject) => {
+            if (typeof target === "string") {
+                target = document.querySelector(target);
             }
-        });
+            speed = speed || this.speed;
+            offset = offset || this.offset;
+            parent = document.querySelector(parent) || window;
+            
+            let elementY, startingY, targetY, diff;
+            
+            if (parent == window) {
+                // Page scroll offset value
+                startingY = parent.pageYOffset;
+                // Distance to target element, from page top
+                elementY = parent.pageYOffset + target.getBoundingClientRect().top;
+                diff = elementY - startingY - offset;
+            } else {
+                // Code for not window object (scrollable div and others)
+                startingY = parent.scrollTop;
+                parentY = parent.getBoundingClientRect().top;
+                elementY = parent.scrollTop + target.getBoundingClientRect().top - parentY;
+                diff = elementY - startingY - offset;
+            }
+            
+            let easeInOutCubic = (t) => {
+                return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+            };
+            
+            let start;
+            if (!diff) return;
+            
+            window.requestAnimationFrame(function step(timestamp) {
+                if (!start) start = timestamp;
+                let time = timestamp - start;
+                // Scroll progress percent (0..1)
+                let percent = speed > 0 ? Math.min(time / speed, 1) : 1;
+                percent = easeInOutCubic(percent);
+                parent.scrollTo(0, startingY + diff * percent);
+                if (time < speed) {
+                    window.requestAnimationFrame(step);
+                } else {
+                    resolve();
+                }
+            })
+        })
     }
     
     _scrollObserve(linksHash) {

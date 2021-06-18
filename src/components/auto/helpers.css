@@ -83,3 +83,28 @@ Created by andreyshpigunov on 25.05.2021.
 .table-responsive {
     overflow-x: auto;
 }
+
+/* .mt10 { margin-top: 10px }
+.mt20 { margin-top: 20px }
+.mt30 { margin-top: 30px }
+.mt40 { margin-top: 40px }
+.mt50 { margin-top: 50px }
+.mt60 { margin-top: 60px }
+
+@media(max-width: 1023px){
+    .md\:mt10 { margin-top: 10px }
+    .md\:mt20 { margin-top: 20px }
+    .md\:mt30 { margin-top: 30px }
+    .md\:mt40 { margin-top: 40px }
+    .md\:mt50 { margin-top: 50px }
+    .md\:mt60 { margin-top: 60px }
+}
+
+@media(max-width: 639px){
+    .sm\:mt10 { margin-top: 10px }
+    .sm\:mt20 { margin-top: 20px }
+    .sm\:mt30 { margin-top: 30px }
+    .sm\:mt40 { margin-top: 40px }
+    .sm\:mt50 { margin-top: 50px }
+    .sm\:mt60 { margin-top: 60px }
+} */

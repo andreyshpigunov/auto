@@ -60,6 +60,18 @@ textarea {
         border-color: var(--forms-border-color-error);
         box-shadow: 0 0 0 1px var(--forms-border-color-error);
     }
+    
+    &.max {
+        width: 100%;
+    }
+    &.max100 { width: 100%; max-width: 100px; }
+    &.max200 { width: 100%; max-width: 200px; }
+    &.max300 { width: 100%; max-width: 300px; }
+    &.max400 { width: 100%; max-width: 400px; }
+    &.max500 { width: 100%; max-width: 500px; }
+    &.max600 { width: 100%; max-width: 600px; }
+    &.max700 { width: 100%; max-width: 700px; }
+    &.max800 { width: 100%; max-width: 800px; }
 }
 
 input:not([type="checkbox"]):not([type="submit"]),

@@ -52,9 +52,6 @@ body {
     line-height: var(--line-height);
     background: #fff;
 }
-ol, ul, menu {
-    list-style: none;
-}
 blockquote, q {
     quotes: none;
     
