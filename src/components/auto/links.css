@@ -12,7 +12,6 @@ Created by andreyshpigunov on 25.05.2021.
     --link-hovered-color: #f40000;
     --link-visited-color: var(--link-color);
     --link-hovered-decoration: none;
-    --link-hovered-decoration: none;
     --link-hovered-decoration-pseudo: none;
 }
 

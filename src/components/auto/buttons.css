@@ -10,12 +10,12 @@ Created by andreyshpigunov on 25.05.2021.
 :root {
     --button-padding: .6em 1em;
     --button-font-family: var(--font-family);
-    --button-font-size: 1rem;
+    --button-font-size: var(--font-size);
     --button-font-weight: 400;
     --button-border-radius: 6px;
     --button-transition: all .1s linear;
     
-    --button-color: #f3f3f3;
+    --button-color: #f6f6f6;
     --button-color-hover: #f8f8f8;
     --button-color-active: #ededed;
     --button-font-color: #000;
@@ -91,16 +91,16 @@ Created by andreyshpigunov on 25.05.2021.
         font-weight: 700;
     }
     &.xsmall {
-        font-size: .8rem;
+        font-size: calc(var(--button-font-size) * .8);
     }
     &.small {
-        font-size: .9rem;
+        font-size: calc(var(--button-font-size) * .9);
     }
     &.large {
-        font-size: 1.2rem;
+        font-size: calc(var(--button-font-size) * 1.2);
     }
     &.xlarge {
-        font-size: 1.4rem;
+        font-size: calc(var(--button-font-size) * 1.4);
     }
 }
 

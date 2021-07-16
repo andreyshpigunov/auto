@@ -10,7 +10,13 @@ Created by andreyshpigunov on 25.05.2021.
 :root {
     --forms-width: 400px;
     --forms-padding: .4rem .6rem;
-    --forms-font-size: 1rem;
+    
+    --forms-font-size: var(--font-size);
+    --forms-font-color: #000;
+    --forms-font-color-readonly: #000;
+    --forms-font-color-disabled: #888;
+    --forms-font-color-placeholder: #ccc;
+    
     --forms-border-width: 1px;
     --forms-border-radius: 4px;
     --forms-border-color: #ddd;
@@ -18,12 +24,9 @@ Created by andreyshpigunov on 25.05.2021.
     --forms-border-color-error: #f00;
     --forms-border-color-readonly: #ddd;
     --forms-border-color-disabled: #ddd;
+    
     --forms-background-color-readonly: #f8f8f8;
     --forms-background-color-disabled: #f6f6f6;
-    --forms-font-color: #000;
-    --forms-font-color-readonly: #000;
-    --forms-font-color-disabled: #888;
-    --forms-font-color-placeholder: #ccc;
 }
 
 input, textarea,
@@ -34,7 +37,18 @@ select, button {
     box-shadow: none;
 }
 
-input:not([type="checkbox"]):not([type="submit"]),
+input[type=color],
+input[type=date],
+input[type=datetime],
+input[type=email],
+input[type=month],
+input[type=number],
+input[type=password],
+input[type=search],
+input[type=text],
+input[type=time],
+input[type=url],
+input[type=week],
 textarea {
     position: relative;
     width: var(--forms-width);
@@ -74,7 +88,18 @@ textarea {
     &.max800 { width: 100%; max-width: 800px; }
 }
 
-input:not([type="checkbox"]):not([type="submit"]),
+input[type=color],
+input[type=date],
+input[type=datetime],
+input[type=email],
+input[type=month],
+input[type=number],
+input[type=password],
+input[type=search],
+input[type=text],
+input[type=time],
+input[type=url],
+input[type=week],
 textarea,
 select {
     

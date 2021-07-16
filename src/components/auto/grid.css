@@ -8,7 +8,7 @@ Created by andreyshpigunov on 26.05.2021.
 /* Grid prototype */
 
 :root {
-    --grid-gap: 20px;
+    --grid-gap: 1.25rem;
 }
 
 .grid {

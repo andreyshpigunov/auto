@@ -8,31 +8,27 @@ Created by andreyshpigunov on 25.05.2021.
 /* Typo */
 
 :root {
-    --headers-margin-top: 2rem;
-    --headers-margin-bottom: 1rem;
+    --headers-margin-top: 24px;
+    --headers-margin-bottom: 16px;
     --headers-font-family: var(--font-family);
     --headers-font-weight: 700;
-    --h1-font-size: 2.4rem;
-    --h2-font-size: 2rem;
-    --h3-font-size: 1.6rem;
-    --h4-font-size: 1.4rem;
-    --h5-font-size: 1.1rem;
-    --h6-font-size: 1rem;
-    --paragraph-margin: 1rem;
-    --figcaption-font-size: .9rem;
+    --h1-font-size: 44px;
+    --h2-font-size: 36px;
+    --h3-font-size: 28px;
+    --h4-font-size: 24px;
+    --h5-font-size: 20px;
+    --h6-font-size: 16px;
+    --paragraph-margin: 16px;
+    --figcaption-font-size: 14px;
     --figcaption-color: #999;
 }
 
-body,
 input,
 textarea,
 select,
 button {
     font-family: inherit;
     font-size: var(--font-size);
-    font-synthesis: initial;
-    text-rendering: optimizeLegibility;
-    -moz-font-feature-settings: 'liga', 'kern';
 }
 
 .antialiased {
@@ -48,6 +44,7 @@ h5, .h5,
 h6, .h6 {
     margin-top: 0;
     margin-bottom: var(--headers-margin-bottom);
+    font-family: var(--headers-font-family);
     font-weight: var(--headers-font-weight);
 }
 /* * + h1, * + .h1, */
@@ -81,7 +78,6 @@ h6, .h6 {
 p {
     margin: var(--paragraph-margin) 0;
     font-style: inherit;
-    hyphens: auto;
 }
 
 figure {

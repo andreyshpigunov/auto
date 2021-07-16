@@ -38,5 +38,10 @@ const auto = {
     }
 };
 
+// Shorthands
+window.qs = auto.lib.qs;
+window.qsa = auto.lib.qsa;
+
+// Export auto
 window.auto = auto;
 export default auto;

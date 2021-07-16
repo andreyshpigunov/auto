@@ -107,9 +107,7 @@ html.modal-active body {
         }
     }
     
-    &.max {
-        max-width: 100%;
-    }
+    &.max .modal-window { max-width: 100% }
     &.max400 .modal-window { max-width: 400px }
     &.max500 .modal-window { max-width: 500px }
     &.max600 .modal-window { max-width: 600px }

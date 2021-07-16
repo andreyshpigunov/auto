@@ -9,6 +9,11 @@
 
 
 const lib = {
+    
+    // Shorthands
+    qs: (s, o = document) => o.querySelector(s),
+    qsa: (s, o = document) => o.querySelectorAll(s),
+    
     // Reload page
     reload() {
         location.reload()
