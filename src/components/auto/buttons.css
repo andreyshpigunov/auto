@@ -87,20 +87,25 @@ Created by andreyshpigunov on 25.05.2021.
         pointer-events: none;
     }
     
-    &.bold {
-        font-weight: 700;
+    &.bold { font-weight: 700 }
+    
+    &.xsmall { font-size: calc(var(--button-font-size) * .8) }
+    &.small  { font-size: calc(var(--button-font-size) * .9) }
+    &.large  { font-size: calc(var(--button-font-size) * 1.2) }
+    &.xlarge { font-size: calc(var(--button-font-size) * 1.4) }
+    
+    @media(max-width: 1023px){
+        &.md\:xsmall { font-size: calc(var(--button-font-size) * .8) }
+        &.md\:small  { font-size: calc(var(--button-font-size) * .9) }
+        &.md\:large  { font-size: calc(var(--button-font-size) * 1.2) }
+        &.md\:xlarge { font-size: calc(var(--button-font-size) * 1.4) }
     }
-    &.xsmall {
-        font-size: calc(var(--button-font-size) * .8);
-    }
-    &.small {
-        font-size: calc(var(--button-font-size) * .9);
-    }
-    &.large {
-        font-size: calc(var(--button-font-size) * 1.2);
-    }
-    &.xlarge {
-        font-size: calc(var(--button-font-size) * 1.4);
+    
+    @media(max-width: 639px){
+        &.sm\:xsmall { font-size: calc(var(--button-font-size) * .8) }
+        &.sm\:small  { font-size: calc(var(--button-font-size) * .9) }
+        &.sm\:large  { font-size: calc(var(--button-font-size) * 1.2) }
+        &.sm\:xlarge { font-size: calc(var(--button-font-size) * 1.4) }
     }
 }
 

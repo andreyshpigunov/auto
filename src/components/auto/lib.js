@@ -61,7 +61,7 @@ const lib = {
         let x = a.split("."),
             x1 = x[0],
             x2 = x.length > 1 ? "." + x[1] : "";
-        for (let b = /(\d+)(\d{3})/; b.test(x1);) x1 = x1.replace(b, "$1 $2");
+        for (let b = /(\d+)(\d{3})/; b.test(x1);) x1 = x1.replace(b, "$1 $2");
         return x1 + x2;
     },
     
@@ -146,9 +146,9 @@ const lib = {
                    element;
         if (item) {
             if (!item.classList.contains(activeClass)) {
-                addClass(element, readyClass, activeClass, delayAdd);
+                this.addClass(element, readyClass, activeClass, delayAdd);
             } else {
-                removeClass(element, readyClass, activeClass, delayRemove);
+                this.removeClass(element, readyClass, activeClass, delayRemove);
             }
         }
     },

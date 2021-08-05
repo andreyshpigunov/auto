@@ -11,6 +11,11 @@ Created by andreyshpigunov on 26.05.2021.
     --grid-gap: 1.25rem;
 }
 
+.mtg { margin-top: var(--grid-gap) }
+.mbg { margin-bottom: var(--grid-gap) }
+.mlg { margin-left: var(--grid-gap) }
+.mrg { margin-right: var(--grid-gap) }
+
 .grid {
     display: grid;
     width: 100%;
