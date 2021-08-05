@@ -10,6 +10,7 @@ Created by andreyshpigunov on 25.05.2021.
 @import "../components/auto/links.css";
 @import "../components/auto/helpers.css";
 @import "../components/auto/typo.css";
+@import "../components/auto/container.css";
 @import "../components/auto/grid.css";
 @import "../components/auto/forms.css";
 @import "../components/auto/buttons.css";
