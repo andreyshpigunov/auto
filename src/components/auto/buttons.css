@@ -41,7 +41,8 @@ Created by andreyshpigunov on 25.05.2021.
     --button-warning-font-color: #fff;
 }
 
-.button {
+.button,
+a.button {
     position: relative;
     display: inline-block;
     width: auto;
@@ -54,6 +55,7 @@ Created by andreyshpigunov on 25.05.2021.
     vertical-align: bottom;
     white-space: nowrap;
     line-height: 1;
+    text-align: center;
     text-shadow: none;
     text-transform: none;
     text-decoration: none;

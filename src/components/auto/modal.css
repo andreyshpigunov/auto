@@ -107,12 +107,25 @@ html.modal-active body {
         }
     }
     
+    &.max,
+    &.max400,
+    &.max500,
+    &.max600,
+    &.max700,
+    &.max800,
+    &.max900,
+    &.max1000 {
+        max-width: 100% !important;
+    }
+    
     &.max .modal-window { max-width: 100% }
     &.max400 .modal-window { max-width: 400px }
     &.max500 .modal-window { max-width: 500px }
     &.max600 .modal-window { max-width: 600px }
     &.max700 .modal-window { max-width: 700px }
     &.max800 .modal-window { max-width: 800px }
+    &.max900 .modal-window { max-width: 900px }
+    &.max1000 .modal-window { max-width: 1000px }
     
     /* Close cross */
     & .modal-close {

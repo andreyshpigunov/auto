@@ -17,8 +17,6 @@ Created by andreyshpigunov on 26.05.2021.
     grid-gap: var(--grid-gap);
     grid-template-columns: repeat(12, 1fr);
     
-    &.center { justify-content: center }
-    
     &.g1 { grid-template-columns: repeat(1, 1fr) }
     &.g2 { grid-template-columns: repeat(2, 1fr) }
     &.g3 { grid-template-columns: repeat(3, 1fr) }
@@ -45,13 +43,7 @@ Created by andreyshpigunov on 26.05.2021.
     & .c11 { grid-column: span 11 }
     & .c12 { grid-column: span 12 }
     
-    @media(min-width: 1024px){
-        &.lg\:center { justify-content: center }
-    }
-    
     @media(max-width: 1023px){
-        
-        &.md\:center { justify-content: center }
         
         &.md\:g1 { grid-template-columns: repeat(1, 1fr) }
         &.md\:g2 { grid-template-columns: repeat(2, 1fr) }
@@ -81,8 +73,6 @@ Created by andreyshpigunov on 26.05.2021.
     }
     
     @media(max-width: 639px){
-        
-        &.sm\:center { justify-content: center }
         
         &.sm\:g1 { grid-template-columns: repeat(1, 1fr) }
         &.sm\:g2 { grid-template-columns: repeat(2, 1fr) }
@@ -118,9 +108,3 @@ Created by andreyshpigunov on 26.05.2021.
 .mbg { margin-bottom: var(--grid-gap) }
 .mlg { margin-left: var(--grid-gap) }
 .mrg { margin-right: var(--grid-gap) }
-
-/* Flexbox */
-
-.flex {
-    display: flex;
-}

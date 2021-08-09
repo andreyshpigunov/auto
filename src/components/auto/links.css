@@ -15,7 +15,7 @@ Created by andreyshpigunov on 25.05.2021.
     --link-hovered-decoration-pseudo: none;
 }
 
-a:not(.button) {
+a {
     
     & {
         outline: none;
