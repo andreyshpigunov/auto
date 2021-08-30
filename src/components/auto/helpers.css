@@ -84,7 +84,7 @@ Created by andreyshpigunov on 25.05.2021.
         display: none !important;
     }
 }
-@media (max-width: 1023px) {
+@media (min-width: 640px) and (max-width: 1023px) {
     .md\:hidden,
     .md\:hidden-next + * {
         display: none !important;

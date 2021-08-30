@@ -46,28 +46,32 @@ const lib = {
         return Math.floor(Math.random() * (b - a + 1)) + a;
     },
     
-    // Price format 9 999 999,99
+    // Price format 9 999 999.99
     price(price) {
         let p = parseFloat(price);
         return p
             .toFixed(2)
-            .replace(/\d(?=(\d{3})+\.)/g, "$& ")
-            .replace(".", ",");
+            .replace(/\d(?=(\d{3})+\.)/g, '$& ')
+            .replace('.00', '')
     },
     
     // Number format
+    number(a) {
+        return this.numberFormat(a);
+    },
+    
     numberFormat(a) {
-        a += "";
-        let x = a.split("."),
+        a += '';
+        let x = a.split('.'),
             x1 = x[0],
-            x2 = x.length > 1 ? "." + x[1] : "";
-        for (let b = /(\d+)(\d{3})/; b.test(x1);) x1 = x1.replace(b, "$1 $2");
+            x2 = x.length > 1 ? '.' + x[1] : '';
+        for (let b = /(\d+)(\d{3})/; b.test(x1);) x1 = x1.replace(b, '$1 $2');
         return x1 + x2;
     },
     
     // Number decline
     numberDecline(a, b, c, d) {
-        let e = "";
+        let e = '';
         if (a > 10 && 1 == parseInt((a % 100) / 10)) {
             e = b;
         } else {
@@ -95,12 +99,12 @@ const lib = {
     // Add activeClass after readyClass in two steps, with delay
     addClass(
         element,
-        readyClass = "ready",
-        activeClass = "active",
+        readyClass = 'ready',
+        activeClass = 'active',
         delay = 50
     ) {
         // If element value is html element or query selector
-        let item = typeof element == "string" ?
+        let item = typeof element == 'string' ?
                    document.querySelector(element) :
                    element;
         if (
@@ -118,12 +122,12 @@ const lib = {
     // Remove activeClass before removing readyClass in two steps, with delay
     removeClass(
         element,
-        readyClass = "ready",
-        activeClass = "active",
+        readyClass = 'ready',
+        activeClass = 'active',
         delay = 200
     ) {
         // If element value is html element or query selector
-        let item = typeof element == "string" ?
+        let item = typeof element == 'string' ?
                    document.querySelector(element) :
                    element;
         if (
@@ -141,7 +145,7 @@ const lib = {
     // Toggle activeClass using readyClass in two steps, with delay
     toggleClass(element, readyClass, activeClass, delayAdd, delayRemove) {
         // If element value is html element or query selector
-        let item = typeof element == "string" ?
+        let item = typeof element == 'string' ?
                    document.querySelector(element) :
                    element;
         if (item) {
@@ -162,18 +166,18 @@ const lib = {
     // )
     loadScript(path, callback, type) {
         if (this.loadedScripts.indexOf(path) == -1) {
-            let script = document.createElement("script");
+            let script = document.createElement('script');
             script.onload = () => {
-                if (typeof callback === "function") {
+                if (typeof callback === 'function') {
                     callback();
                 }
             };
             script.src = path;
-            if (type) script.setAttribute(type, "");
+            if (type) script.setAttribute(type, '');
             document.body.appendChild(script);
             this.loadedScripts.push(path);
         } else {
-            if (typeof callback === "function") {
+            if (typeof callback === 'function') {
                 callback();
             }
         }
