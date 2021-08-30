@@ -201,6 +201,14 @@ Created by andreyshpigunov on 25.05.2021.
 .tar { text-align: right }
 .tac { text-align: center }
 
+.r4 { border-radius: 4px }
+.r6 { border-radius: 6px }
+.r8 { border-radius: 8px }
+.r10 { border-radius: 10px }
+.r12 { border-radius: 12px }
+.r14 { border-radius: 14px }
+.r16 { border-radius: 16px }
+
 @media (max-width: 1023px) {
     .md\:mt0 { margin-top: 0 !important }
     .md\:mt1 { margin-top: .25rem !important }
@@ -252,6 +260,14 @@ Created by andreyshpigunov on 25.05.2021.
     .md\:tal { text-align: left }
     .md\:tar { text-align: right }
     .md\:tac { text-align: center }
+    
+    .md\:r4 { border-radius: 4px }
+    .md\:r6 { border-radius: 6px }
+    .md\:r8 { border-radius: 8px }
+    .md\:r10 { border-radius: 10px }
+    .md\:r12 { border-radius: 12px }
+    .md\:r14 { border-radius: 14px }
+    .md\:r16 { border-radius: 16px }
 }
 
 @media (max-width: 639px) {
@@ -305,4 +321,12 @@ Created by andreyshpigunov on 25.05.2021.
     .sm\:tal { text-align: left }
     .sm\:tar { text-align: right }
     .sm\:tac { text-align: center }
+    
+    .sm\:r4 { border-radius: 4px }
+    .sm\:r6 { border-radius: 6px }
+    .sm\:r8 { border-radius: 8px }
+    .sm\:r10 { border-radius: 10px }
+    .sm\:r12 { border-radius: 12px }
+    .sm\:r14 { border-radius: 14px }
+    .sm\:r16 { border-radius: 16px }
 }
