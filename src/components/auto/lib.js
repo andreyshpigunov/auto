@@ -61,7 +61,7 @@ const lib = {
     },
     
     numberFormat(a) {
-        a += '';
+        a = parseFloat(a) + '';
         let x = a.split('.'),
             x1 = x[0],
             x2 = x.length > 1 ? '.' + x[1] : '';
