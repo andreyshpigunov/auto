@@ -43,8 +43,8 @@ time, mark, audio, video {
 }
 html,
 body {
-    height: auto;
-    min-height: 100vh;
+    height: 100vh;
+    max-height: -webkit-fill-available;
 }
 html {
     line-height: var(--line-height);
