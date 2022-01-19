@@ -1,0 +1,137 @@
+/*---------------------------
+_flex.css
+auto
+
+Created by andreyshpigunov on 19.01.2022.
+---------------------------*/
+
+/* Flexbox */
+
+:root {
+    --flex-gap: 0;
+}
+
+.flex {
+    display: flex;
+    gap: var(--flex-gap);
+    
+    &.fr { flex-direction: row }
+    &.fc { flex-direction: column }
+    &.fw { flex-wrap: wrap }
+    &.fnw { flex-wrap: nowrap }
+    
+    &.ais { align-items: stretch }
+    &.ait { align-items: flex-start }
+    &.aic { align-items: center }
+    &.aib { align-items: flex-end }
+    
+    &.jct { justify-content: flex-start }
+    &.jcc { justify-content: center }
+    &.jcb { justify-content: flex-end }
+    &.jcsb { justify-content: space-between }
+    &.jcsa { justify-content: space-around }
+    
+    &.f1 { flex: 1 }
+    &.f2 { flex: 2 }
+    &.f3 { flex: 3 }
+    &.f4 { flex: 4 }
+    &.f5 { flex: 5 }
+    &.f6 { flex: 6 }
+    &.f7 { flex: 7 }
+    &.f8 { flex: 8 }
+    &.f9 { flex: 9 }
+    &.f10 { flex: 10 }
+    
+    &.o1 { order: 1 }
+    &.o2 { order: 2 }
+    &.o3 { order: 3 }
+    &.o4 { order: 4 }
+    &.o5 { order: 5 }
+    &.o6 { order: 6 }
+    &.o7 { order: 7 }
+    &.o8 { order: 8 }
+    &.o9 { order: 9 }
+    &.o10 { order: 10 }
+    
+    @media(max-width: 1023px){
+        
+        &.md\:fr { flex-direction: row }
+        &.md\:fc { flex-direction: column }
+        &.md\:fw { flex-wrap: wrap }
+        &.md\:fnw { flex-wrap: nowrap }
+        
+        &.md\:ais { align-items: stretch }
+        &.md\:ait { align-items: flex-start }
+        &.md\:aic { align-items: center }
+        &.md\:aib { align-items: flex-end }
+        
+        &.md\:jct { justify-content: flex-start }
+        &.md\:jcc { justify-content: center }
+        &.md\:jcb { justify-content: flex-end }
+        &.md\:jcsb { justify-content: space-between }
+        &.md\:jcsa { justify-content: space-around }
+        
+        &.md\:f1 { flex: 1 }
+        &.md\:f2 { flex: 2 }
+        &.md\:f3 { flex: 3 }
+        &.md\:f4 { flex: 4 }
+        &.md\:f5 { flex: 5 }
+        &.md\:f6 { flex: 6 }
+        &.md\:f7 { flex: 7 }
+        &.md\:f8 { flex: 8 }
+        &.md\:f9 { flex: 9 }
+        &.md\:f10 { flex: 10 }
+        
+        &.md\:o1 { order: 1 }
+        &.md\:o2 { order: 2 }
+        &.md\:o3 { order: 3 }
+        &.md\:o4 { order: 4 }
+        &.md\:o5 { order: 5 }
+        &.md\:o6 { order: 6 }
+        &.md\:o7 { order: 7 }
+        &.md\:o8 { order: 8 }
+        &.md\:o9 { order: 9 }
+        &.md\:o10 { order: 10 }
+    }
+    
+    @media(max-width: 639px){
+        
+        &.sm\:fr { flex-direction: row }
+        &.sm\:fc { flex-direction: column }
+        &.sm\:fw { flex-wrap: wrap }
+        &.sm\:fnw { flex-wrap: nowrap }
+        
+        &.sm\:ais { align-items: stretch }
+        &.sm\:ait { align-items: flex-start }
+        &.sm\:aic { align-items: center }
+        &.sm\:aib { align-items: flex-end }
+        
+        &.sm\:jct { justify-content: flex-start }
+        &.sm\:jcc { justify-content: center }
+        &.sm\:jcb { justify-content: flex-end }
+        &.sm\:jcsb { justify-content: space-between }
+        &.sm\:jcsa { justify-content: space-around }
+        
+        &.sm\:f1 { flex: 1 }
+        &.sm\:f2 { flex: 2 }
+        &.sm\:f3 { flex: 3 }
+        &.sm\:f4 { flex: 4 }
+        &.sm\:f5 { flex: 5 }
+        &.sm\:f6 { flex: 6 }
+        &.sm\:f7 { flex: 7 }
+        &.sm\:f8 { flex: 8 }
+        &.sm\:f9 { flex: 9 }
+        &.sm\:f10 { flex: 10 }
+        
+        &.sm\:o1 { order: 1 }
+        &.sm\:o2 { order: 2 }
+        &.sm\:o3 { order: 3 }
+        &.sm\:o4 { order: 4 }
+        &.sm\:o5 { order: 5 }
+        &.sm\:o6 { order: 6 }
+        &.sm\:o7 { order: 7 }
+        &.sm\:o8 { order: 8 }
+        &.sm\:o9 { order: 9 }
+        &.sm\:o10 { order: 10 }
+    }
+}

@@ -21,6 +21,7 @@ Created by andreyshpigunov on 25.05.2021.
     --paragraph-margin: 16px;
     --figcaption-font-size: 14px;
     --figcaption-color: #999;
+    --table-border-color: #eee;
 }
 
 input,
@@ -133,7 +134,7 @@ table {
     & tr th,
     & tr td {
         padding: 6px 10px;
-        border: 1px solid #eee;
+        border: 1px solid var(--table-border-color);
         text-align: left;
         vertical-align: top;
     }

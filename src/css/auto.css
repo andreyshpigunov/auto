@@ -11,6 +11,7 @@ Created by andreyshpigunov on 25.05.2021.
 @import "../components/auto/helpers.css";
 @import "../components/auto/typo.css";
 @import "../components/auto/grid.css";
+@import "../components/auto/flex.css";
 @import "../components/auto/forms.css";
 @import "../components/auto/buttons.css";
 @import "../components/auto/modal.css";
