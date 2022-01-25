@@ -25,6 +25,7 @@
                         <li><a data-scrollto="helpers">Helpers</a></li>
                         <li><a data-scrollto="buttons">Buttons</a></li>
                         <li><a data-scrollto="grid">Grid</a></li>
+                        <li><a data-scrollto="flex">Flex</a></li>
                     </ul>
                     <ul class="reset">
                         <li><h4>auto.js</h4></li>
@@ -106,13 +107,53 @@
                     <code>.hidden</code> — assigns to a block <code>display: none</code><br/>
                     <code>.hidden-next</code> — assigns to the next block <code>display: none</code><br/>
                     <code>.invisible</code> — assigns to a block <code>visibility: hidden</code><br/>
-                    <code>.table-responsive</code> — horizontal scrolling of the table if it doesn't fit<br/>
+                    <code>.table-responsive</code> — horizontal scrolling of the table if it doesn't fit
+                </p>
+                <p>
+                    <code>.tal</code> — text-align: left<br/>
+                    <code>.tar</code> — text-align: right<br/>
+                    <code>.tac</code> — text-align: center<br/>
+                    Supports <code>md:</code>, <code>sm:</code> modifiers.
                 </p>
                 
                 <h3>Actions classes</h3>
                 <p>
                     <code>.sync-hover</code> — adding a class synchronously <code>.hover</code> to links with the same <code>href</code><br/>
                     <code>.is-appeared</code> — when it appears in the viewport, the element is assigned classes <code>.appeared</code> and <code>.visible</code>. When disappearing from viewport class <code>.visible</code> disappear, <code>.appeared</code> remains.
+                </p>
+                
+                <h3>Spacers</h3>
+                <p>
+                    <code>.container</code> — max width container (use --container-max-width variable for change)<br/>
+                    <code>.max, .max[100,200,300,..,1000]</code> — block max-width limiter
+                </p>
+                <p>
+                    <code>.mt[0..5]</code> — margin-top<br/>
+                    <code>.mb[0..5]</code> — margin-bottom<br/>
+                    <code>.ml[0..5]</code> — margin-left<br/>
+                    <code>.mla</code> — margin-left: auto<br/>
+                    <code>.mr[0..5]</code> — margin-right<br/>
+                    <code>.mra</code> — margin-right: auto<br/>
+                    <code>.mx[0..5]</code> — margin-left and margin-right<br/>
+                    <code>.mxa</code> — margin-left: auto and margin-right: auto<br/>
+                    <code>.my[0..5]</code> — margin-top and margin-bottom<br/>
+                    <code>.m[0..5]</code> — margin-left and margin-right, margin-top and margin-bottom<br/>
+                    Supports <code>md:</code>, <code>sm:</code> modifiers.
+                </p>
+                <p>
+                    <code>.pt[0..5]</code> — padding-top<br/>
+                    <code>.pb[0..5]</code> — padding-bottom<br/>
+                    <code>.pl[0..5]</code> — padding-left<br/>
+                    <code>.pr[0..5]</code> — padding-right<br/>
+                    <code>.px[0..5]</code> — padding-left and padding-right<br/>
+                    <code>.py[0..5]</code> — padding-top and padding-bottom<br/>
+                    <code>.p[0..5]</code> — padding-left and padding-right, padding-top and padding-bottom<br/>
+                    Supports <code>md:</code>, <code>sm:</code> modifiers.
+                </p>
+                <p>
+                    <code>.r[0..5]</code> — border-radius<br/>
+                    <code>.sh[0..3]</code> — box-shadow<br/>
+                    Supports <code>md:</code>, <code>sm:</code> modifiers.
                 </p>
 
                 <iframe height="1200" style="width: 100%;" scrolling="no" title="Auto / Helpers" src="https://codepen.io/andreyshpigunov/embed/WNGjRBG?height=1280&theme-id=dark&default-tab=html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
@@ -124,20 +165,24 @@
                 <p>To create a button, add a class to the element <code>.button</code>.</p>
 
                 <div class="section-example">
-                    <a class="button xlarge">.xlarge</a>
-                    <a class="button large">.large</a>
-                    <a class="button">default</a>
-                    <a class="button small">.small</a>
-                    <a class="button xsmall">.xsmall</a>
+                    <div class="flex gap1 aic">
+                        <div><a class="button xlarge">.xlarge</a></div>
+                        <div><a class="button large">.large</a></div>
+                        <div><a class="button">default</a></div>
+                        <div><a class="button small">.small</a></div>
+                        <div><a class="button xsmall">.xsmall</a></div>
+                    </div>
                 </div>
                 <br/>
                 <div class="section-example">
-                    <a class="button">default</a>
-                    <a class="button bold">.bold</a>
-                    <a class="button primary">.primary</a>
-                    <a class="button success">.success</a>
-                    <a class="button danger">.danger</a>
-                    <a class="button warning">.warning</a>
+                    <div class="flex gap1 aic">
+                        <div><a class="button">default</a></div>
+                        <div><a class="button bold">.bold</a></div>
+                        <div><a class="button primary">.primary</a></div>
+                        <div><a class="button success">.success</a></div>
+                        <div><a class="button danger">.danger</a></div>
+                        <div><a class="button warning">.warning</a></div>
+                    </div>
                 </div>
 
                 <br/>
@@ -152,10 +197,31 @@
                 <p>Flexible 1–12 columns grid system.</p>
                 <p>
                     <code>.grid</code> — main grid element<br/>
-                    <code>.grid.g[1..12]</code> — 1..12 columns grid<br/>
-                    <code>.c[1..12]</code> — 1..12 wide column<br/>
+                    <code>.grid.gap[0..5]</code> — 0..5 gap levels (default — 1)<br/>
+                    <code>.grid.g[1..12]</code> — 1..12 columns grid (default — 12)<br/>
+                    <code>.grid .c[1..12]</code> — 1..12 wide column<br/>
                 </p>
-
+                <p>
+                    On medium screens:
+                    <code>.md:gap[0..5]</code>,
+                    <code>.md:g[1..12]</code>,
+                    <code>.md:c[1..12]</code>
+                    <br/>
+                    
+                    On small screens:
+                    <code>.sm:gap[0..5]</code>,
+                    <code>.sm:g[1..12]</code>,
+                    <code>.sm:c[1..12]</code>
+                </p>
+                <p>Use <code>-grid-gap</code> variable on grid element for custom gap.</p>
+                <p>
+                    Grid gap margins:
+                    <code>.mtg</code>,
+                    <code>.mbg</code>,
+                    <code>.mlg</code>,
+                    <code>.mrg</code>
+                </p>
+                
                 <div class="section-example">
                     <div class="grid g12">
                         <div class="c1">C1</div>
@@ -176,6 +242,58 @@
                 <br/>
 
                 <iframe height="980" style="width: 100%;" scrolling="no" title="Auto / Grid" src="https://codepen.io/andreyshpigunov/embed/MWjmmKx?height=800&theme-id=dark&default-tab=html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
+                
+            </section>
+            
+            <section id="flex">
+
+                <h2>Flex</h2>
+                <p>Flexbox layout.</p>
+                <p>
+                    <code>.flex</code> — main flexbox element<br/>
+                    <code>.flex.gap[1..5]</code> — 0..5 gap levels (default — 0)<br/>
+                </p>
+                <p>
+                    <code>.flex.fr</code> — direction row,<br/>
+                    <code>.flex.fc</code> — direction column,<br/>
+                    <code>.flex.fw</code> — wrap,<br/>
+                    <code>.flex.fnw</code> — nowrap
+                </p>
+                <p>
+                    <code>.flex.ais</code> — align-items: stretch,<br/>
+                    <code>.flex.ait</code> — align-items: flex-start,<br/>
+                    <code>.flex.aic</code> — align-items: center,<br/>
+                    <code>.flex.aib</code> — align-items: flex-end
+                </p>
+                <p>
+                    <code>.flex.jct</code> — justify-content: flex-start,<br/>
+                    <code>.flex.jcc</code> — justify-content: center,<br/>
+                    <code>.flex.jcb</code> — justify-content: flex-end,<br/>
+                    <code>.flex.jcsb</code> — justify-content: space-between,<br/>
+                    <code>.flex.jcsa</code> — justify-content: space-around
+                </p>
+                <p>
+                    <code>.flex .f[1..10]</code> — flex: [1..10],<br/>
+                    <code>.flex .o[1..10]</code> — order: [1..10]
+                </p>
+                <p>All options supports <code>md:</code>, <code>sm:</code> modifiers.</p>
+                
+                <div class="section-example">
+                    <div class="flex gap1">
+                        <div>C1</div>
+                        <div>C2</div>
+                        <div>C3</div>
+                        <div>C4</div>
+                        <div>C5</div>
+                        <div>C6</div>
+                        <div>C7</div>
+                        <div>C8</div>
+                        <div>C9</div>
+                        <div>C10</div>
+                        <div>C11</div>
+                        <div>C12</div>
+                    </div>
+                </div>
                 
             </section>
 

@@ -15,6 +15,13 @@ Created by andreyshpigunov on 19.01.2022.
     display: flex;
     gap: var(--flex-gap);
     
+    &.gap0 { --flex-gap: 0 }
+    &.gap1 { --flex-gap: 1rem }
+    &.gap2 { --flex-gap: 1.5rem }
+    &.gap3 { --flex-gap: 2rem }
+    &.gap4 { --flex-gap: 2.5rem }
+    &.gap5 { --flex-gap: 3rem }
+    
     &.fr { flex-direction: row }
     &.fc { flex-direction: column }
     &.fw { flex-wrap: wrap }
@@ -54,6 +61,13 @@ Created by andreyshpigunov on 19.01.2022.
     & .o10 { order: 10 }
     
     @media(max-width: 1023px){
+        
+        &.md\:gap0 { --flex-gap: 0 }
+        &.md\:gap1 { --flex-gap: 1rem }
+        &.md\:gap2 { --flex-gap: 1.5rem }
+        &.md\:gap3 { --flex-gap: 2rem }
+        &.md\:gap4 { --flex-gap: 2.5rem }
+        &.md\:gap5 { --flex-gap: 3rem }
         
         &.md\:fr { flex-direction: row }
         &.md\:fc { flex-direction: column }
@@ -95,6 +109,13 @@ Created by andreyshpigunov on 19.01.2022.
     }
     
     @media(max-width: 639px){
+        
+        &.sm\:gap0 { --flex-gap: 0 }
+        &.sm\:gap1 { --flex-gap: 1rem }
+        &.sm\:gap2 { --flex-gap: 1.5rem }
+        &.sm\:gap3 { --flex-gap: 2rem }
+        &.sm\:gap4 { --flex-gap: 2.5rem }
+        &.sm\:gap5 { --flex-gap: 3rem }
         
         &.sm\:fr { flex-direction: row }
         &.sm\:fc { flex-direction: column }
