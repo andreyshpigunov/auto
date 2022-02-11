@@ -21,8 +21,8 @@ const lib = {
     
     // Reload page with new hash
     reloadWithHash(hash) {
-        redirectTo(location.href.replace(location.hash, '#' + hash));
-        reload()
+        this.redirectTo(location.href.replace(location.hash, '#' + hash));
+        this.reload()
     },
     
     // Redirect to url
