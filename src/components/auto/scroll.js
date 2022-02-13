@@ -107,7 +107,7 @@ class Scroll {
             offset = offset || this.offset;
             parent = document.querySelector(parent) || window;
             
-            let elementY, startingY, targetY, diff;
+            let elementY, startingY, targetY, parentY, diff;
             
             if (parent == window) {
                 // Page scroll offset value

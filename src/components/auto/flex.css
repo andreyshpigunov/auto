@@ -38,6 +38,7 @@ Created by andreyshpigunov on 19.01.2022.
     &.jcsb { justify-content: space-between }
     &.jcsa { justify-content: space-around }
     
+    & .f0 { flex: 0 }
     & .f1 { flex: 1 }
     & .f2 { flex: 2 }
     & .f3 { flex: 3 }
@@ -49,6 +50,7 @@ Created by andreyshpigunov on 19.01.2022.
     & .f9 { flex: 9 }
     & .f10 { flex: 10 }
     
+    & .o0 { order: 0 }
     & .o1 { order: 1 }
     & .o2 { order: 2 }
     & .o3 { order: 3 }
@@ -85,6 +87,7 @@ Created by andreyshpigunov on 19.01.2022.
         &.md\:jcsb { justify-content: space-between }
         &.md\:jcsa { justify-content: space-around }
         
+        & .md\:f0 { flex: 0 }
         & .md\:f1 { flex: 1 }
         & .md\:f2 { flex: 2 }
         & .md\:f3 { flex: 3 }
@@ -96,6 +99,7 @@ Created by andreyshpigunov on 19.01.2022.
         & .md\:f9 { flex: 9 }
         & .md\:f10 { flex: 10 }
         
+        & .md\:o0 { order: 0 }
         & .md\:o1 { order: 1 }
         & .md\:o2 { order: 2 }
         & .md\:o3 { order: 3 }
@@ -133,6 +137,7 @@ Created by andreyshpigunov on 19.01.2022.
         &.sm\:jcsb { justify-content: space-between }
         &.sm\:jcsa { justify-content: space-around }
         
+        & .sm\:f0 { flex: 0 }
         & .sm\:f1 { flex: 1 }
         & .sm\:f2 { flex: 2 }
         & .sm\:f3 { flex: 3 }
@@ -144,6 +149,7 @@ Created by andreyshpigunov on 19.01.2022.
         & .sm\:f9 { flex: 9 }
         & .sm\:f10 { flex: 10 }
         
+        & .sm\:o0 { order: 0 }
         & .sm\:o1 { order: 1 }
         & .sm\:o2 { order: 2 }
         & .sm\:o3 { order: 3 }

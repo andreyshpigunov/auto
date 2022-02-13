@@ -44,7 +44,7 @@ time, mark, audio, video {
 html,
 body {
     height: 100vh;
-    max-height: -webkit-fill-available;
+    max-height: stretch;
 }
 html {
     line-height: var(--line-height);
