@@ -8,7 +8,7 @@
 //
 //  <div class="element" data-animate='
 //    {
-//      "triggerID": "element-trigger",
+//      "triggerId": "element-trigger",
 //      "start": "120vh",
 //      "end": "0vh",
 //      "functionName": "coverOut",
@@ -17,7 +17,7 @@
 //    }
 //  '>...</div>
 //
-//  triggerID     pointer to the ID element that we are tracking the position
+//  triggerId     pointer to the id element that we are tracking the position
 //  start         animation start point (height from the top in px or vh)
 //  end           animation end point (height from the top in px or vh)
 //  functionName  name of the function that starts executing when the element
@@ -45,10 +45,10 @@ class Animate {
                         let item = {};
                         
                         if (
-                            json.hasOwnProperty("triggerID") &&
-                            document.getElementById(json.triggerID)
+                            json.hasOwnProperty("triggerId") &&
+                            document.getElementById(json.triggerId)
                         ) {
-                            item.trigger = document.getElementById(json.triggerID);
+                            item.trigger = document.getElementById(json.triggerId);
                         } else {
                             item.trigger = e;
                         }
@@ -66,11 +66,11 @@ class Animate {
                             let item = {};
                             
                             if (
-                                json[i].hasOwnProperty("triggerID") &&
-                                document.getElementById(json[i].triggerID)
+                                json[i].hasOwnProperty("triggerId") &&
+                                document.getElementById(json[i].triggerId)
                             ) {
                                 item.trigger = document.getElementById(
-                                    json[i].triggerID
+                                    json[i].triggerId
                                 );
                             } else {
                                 item.trigger = e;

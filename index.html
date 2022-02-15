@@ -356,7 +356,7 @@
                 <iframe height="285" style="width: 100%;" scrolling="no" title="Auto / Animation init" src="https://codepen.io/andreyshpigunov/embed/mdrwEWG?height=285&theme-id=dark&default-tab=html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
 
                 <p>
-                    <code>triggerID</code> — pointer to the ID of the element that we are tracking the position<br/>
+                    <code>triggerId</code> — pointer to the id of the element that we are tracking the position<br/>
                     <code>start</code> — animation start point (height from the top edge of the screen in px or vh)<br/>
                     <code>end</code> — animation end point (height from the top edge of the screen in px or vh)<br/>
                     <code>functionName</code> — name of the function that starts executing when the element moves between "start" and "end"<br/>
@@ -364,7 +364,7 @@
                     <code>classRemove</code> — whether to delete the "class" from the element after it leaves the animation zone, by default false
                 </p>
 
-                <p>if the element itself is a trigger, you don't need to specify the triggerID.</p>
+                <p>if the element itself is a trigger, you don't need to specify the triggerId.</p>
 
                 <p>The "functionName" function gets a parameter with all the fields of the element described above and the "progress" parameter, which changes from 0 to 1, as the page scrolls and the element moves.</p>
 
@@ -375,7 +375,7 @@
             <section id="scrollto">
                 <h2>Scroller</h2>
                 <p>
-                    Scrolls the page to the element with the specified ID.<br/>
+                    Scrolls the page to the element with the specified id.<br/>
                     Automatically applied to elements with "data-scroll".
                 </p>
 
@@ -384,7 +384,7 @@
 
                 <p>
                     <code>parent</code> — parent selector (default use window)<br/>
-                    <code>target</code> — target ID (required)<br/>
+                    <code>target</code> — target id (required)<br/>
                     <code>offset</code> — offset in pixels (default 0)<br/>
                     <code>speed</code> — scroll speed (default 500 ms)<br/>
                     <code>classActive</code> — class assigned to a reference when the "target" is in the viewport zone

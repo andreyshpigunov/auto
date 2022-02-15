@@ -4,7 +4,7 @@
 //
 //  Created by andreyshpigunov on 25.05.2021.
 //
-//  Scroll page to element ID
+//  Scroll page to element id.
 //  Automatically works on element with data-scroll:
 //  <div id="top">...</div>
 //  <a data-scrollto="top">Up</a>
