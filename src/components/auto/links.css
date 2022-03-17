@@ -8,7 +8,7 @@ Created by andreyshpigunov on 25.05.2021.
 /* Links styles */
 
 :root {
-    --link-color: #0366c6;
+    --link-color: #0477cc;
     --link-hovered-color: #f40000;
     --link-visited-color: var(--link-color);
     --link-hovered-decoration: none;

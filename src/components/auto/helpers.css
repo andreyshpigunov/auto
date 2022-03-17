@@ -58,10 +58,13 @@ Created by andreyshpigunov on 25.05.2021.
         height: 100%;
     }
 }
-.break-word {
-    overflow-wrap: break-word;
+.break-word,
+.breakWord {
+    overflow-wrap: anywhere;
+    word-break: break-word;
 }
-.visuallyhidden {
+.visuallyhidden,
+.visuallyHidden {
     position: absolute;
     top: 0;
     left: 0;
@@ -75,24 +78,28 @@ Created by andreyshpigunov on 25.05.2021.
 }
 
 .hidden,
-.hidden-next + * {
+.hidden-next + *,
+.hiddenNext + * {
     display: none !important;
 }
 @media (min-width: 1024px) {
     .lg\:hidden,
-    .lg\:hidden-next + * {
+    .lg\:hidden-next + *,
+    .lg\:hiddenNext + * {
         display: none !important;
     }
 }
 @media (min-width: 640px) and (max-width: 1023px) {
     .md\:hidden,
-    .md\:hidden-next + * {
+    .md\:hidden-next + *,
+    .md\:hiddenNext + * {
         display: none !important;
     }
 }
 @media (max-width: 639px) {
     .sm\:hidden,
-    .sm\:hidden-next + * {
+    .sm\:hidden-next + *,
+    .sm\:hiddenNext + * {
         display: none !important;
     }
 }
@@ -100,7 +107,8 @@ Created by andreyshpigunov on 25.05.2021.
 .invisible {
     visibility: hidden !important;
 }
-.table-responsive {
+.table-responsive
+.tableResponsive {
     overflow-x: auto;
 }
 
@@ -243,13 +251,13 @@ Created by andreyshpigunov on 25.05.2021.
 .tar { text-align: right }
 .tac { text-align: center }
 
-.r0 { border-radius: 0 }
-.r1 { border-radius: 4px }
-.r2 { border-radius: 6px }
-.r3 { border-radius: 8px }
-.r4 { border-radius: 10px }
-.r5 { border-radius: 12px }
-.r6 { border-radius: 16px }
+.r0 { border-radius: 0 !important }
+.r1 { border-radius: 4px !important }
+.r2 { border-radius: 6px !important }
+.r3 { border-radius: 8px !important }
+.r4 { border-radius: 10px !important }
+.r5 { border-radius: 12px !important }
+.r6 { border-radius: 16px !important }
 
 .sh0 { box-shadow: none }
 .sh1 { box-shadow: 0 4px 20px rgba(0,0,0,0.05) }
@@ -384,13 +392,13 @@ Created by andreyshpigunov on 25.05.2021.
     .md\:tar { text-align: right }
     .md\:tac { text-align: center }
     
-    .md\:r0 { border-radius: 0 }
-    .md\:r1 { border-radius: 4px }
-    .md\:r2 { border-radius: 6px }
-    .md\:r3 { border-radius: 8px }
-    .md\:r4 { border-radius: 10px }
-    .md\:r5 { border-radius: 12px }
-    .md\:r6 { border-radius: 16px }
+    .md\:r0 { border-radius: 0 !important }
+    .md\:r1 { border-radius: 4px !important }
+    .md\:r2 { border-radius: 6px !important }
+    .md\:r3 { border-radius: 8px !important }
+    .md\:r4 { border-radius: 10px !important }
+    .md\:r5 { border-radius: 12px !important }
+    .md\:r6 { border-radius: 16px !important }
     
     .md\:sh0 { box-shadow: none }
     .md\:sh1 { box-shadow: 0 4px 20px rgba(0,0,0,0.05) }
@@ -526,13 +534,13 @@ Created by andreyshpigunov on 25.05.2021.
     .sm\:tar { text-align: right }
     .sm\:tac { text-align: center }
     
-    .sm\:r0 { border-radius: 0 }
-    .sm\:r1 { border-radius: 4px }
-    .sm\:r2 { border-radius: 6px }
-    .sm\:r3 { border-radius: 8px }
-    .sm\:r4 { border-radius: 10px }
-    .sm\:r5 { border-radius: 12px }
-    .sm\:r6 { border-radius: 16px }
+    .sm\:r0 { border-radius: 0 !important }
+    .sm\:r1 { border-radius: 4px !important }
+    .sm\:r2 { border-radius: 6px !important }
+    .sm\:r3 { border-radius: 8px !important }
+    .sm\:r4 { border-radius: 10px !important }
+    .sm\:r5 { border-radius: 12px !important }
+    .sm\:r6 { border-radius: 16px !important }
     
     .sm\:sh0 { box-shadow: none }
     .sm\:sh1 { box-shadow: 0 4px 20px rgba(0,0,0,0.05) }

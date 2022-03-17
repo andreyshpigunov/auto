@@ -15,6 +15,7 @@ Created by andreyshpigunov on 25.05.2021.
     --modal-overlay-background-color: rgba(0,0,0,.4);
 }
 
+html.modal-active body,
 html.modal-active body {
     overflow: hidden;
 }
@@ -212,7 +213,8 @@ html.modal-active body {
 
 /* Zoom in */
 
-.modal.effect-in {
+.modal.effect-in,
+.modal.effectIn {
     & .modal-window {
         transform: scale(.9);
         transition: all .15s ease-out;
@@ -225,7 +227,8 @@ html.modal-active body {
 
 /* Zoom out */
 
-.modal.effect-out {
+.modal.effect-out,
+.modal.effectOut {
     & .modal-window {
         transform: scale(1.1);
         transition: all .15s ease-out;
@@ -238,7 +241,8 @@ html.modal-active body {
 
 /* Slide up */
 
-.modal.effect-up {
+.modal.effect-up,
+.modal.effectUp {
     & .modal-window {
         transform: translateY(30px);
         transition: all .2s ease-out;
@@ -250,7 +254,8 @@ html.modal-active body {
 
 /* Slide down */
 
-.modal.effect-down {
+.modal.effect-down,
+.modal.effectDown {
     & .modal-window {
         transform: translateY(-30px);
         transition: all .2s ease-out;
@@ -262,7 +267,8 @@ html.modal-active body {
 
 /* Slide from left */
 
-.modal.effect-left {
+.modal.effect-left,
+.modal.-effectLeft {
     & .modal-window {
         transform: translateX(-30px);
         transition: all .2s ease-out;
@@ -274,7 +280,8 @@ html.modal-active body {
 
 /* Slide from right */
 
-.modal.effect-right {
+.modal.effect-right,
+.modal.-effectRight {
     & .modal-window {
         transform: translateX(30px);
         transition: all .2s ease-out;
