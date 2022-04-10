@@ -7,9 +7,9 @@
 //  Appeared element callback
 //  Load callback when element appeared in viewport from bottom.
 //
-//  <div data-loadmore='{"functionName": "loadMore", "offset": "100"}'>...</div>
+//  <div data-loadmore='{"functionName": "load", "offset": "100"}'>...</div>
 //  Callback function has paramenter "page":
-//  function loadMore(page) { ... }
+//  function load(page) { ... }
 //
 //  Stop watching:
 //  loadmore.unwatch()

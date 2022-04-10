@@ -87,7 +87,7 @@ class Modal {
                 event.target.matches(".modal.active, .modal.active *") &&
                 (
                     event.target.classList.contains("modal-close") ||
-                    event.target.classList.contains("modal-custom-close") ||
+                    event.target.classList.contains("modal-customClose") ||
                     !event.target.matches(".modal-window, .modal-window *")
                 )
             ) {
@@ -126,7 +126,7 @@ class Modal {
                 html.classList.add(id + "-active");
                 modal.dispatchEvent(this.eventReady);
                 this.modalLevel++;
-                modal.classList.add("top", "active", "level-" + this.modalLevel);
+                modal.classList.add("top", "active", "level" + this.modalLevel);
                 setTimeout(() => { modal.dispatchEvent(this.eventOpen) }, 400);
                 
                 if (device.iphone || device.ipad || device.android) {
@@ -147,7 +147,7 @@ class Modal {
         
         setTimeout(() => {
             document.documentElement.classList.remove(id + "-active");
-            modal.classList.remove("top", "level-" + this.modalLevel);
+            modal.classList.remove("top", "level" + this.modalLevel);
             this.modalLevel--;
             if (this.modalLevel == 0) {
                 document.documentElement.classList.remove("modal-active");

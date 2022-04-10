@@ -13,7 +13,7 @@
 class Appear {
     
     constructor() {
-        this.classIsAppeared = "is-appeared";
+        this.classIsAppeared = "isAppeared";
         this.classAppeared = "appeared";
         this.classVisible = "visible";
     }

@@ -9,10 +9,12 @@ Created by andreyshpigunov on 25.05.2021.
 
 :root {
     --link-color: #0477cc;
-    --link-hovered-color: #f40000;
-    --link-visited-color: var(--link-color);
-    --link-hovered-decoration: none;
-    --link-hovered-decoration-pseudo: none;
+    --link-color-hover: #f40000;
+    --link-color-visited: var(--link-color);
+    
+    --link-decoration: none;
+    --link-decoration-hover: none;
+    --link-decoration-pseudo: none;
 }
 
 a {
@@ -21,18 +23,18 @@ a {
         outline: none;
         cursor: pointer;
         color: var(--link-color);
-        text-decoration: none;
+        text-decoration: var(--link-decoration);
     }
     &:visited {
-        color: var(--link-visited-color);
+        color: var(--link-color-visited);
     }
     &:hover, &.hover,
     &:active, &.active {
-        color: var(--link-hovered-color);
-        text-decoration: var(--link-hovered-decoration);
+        color: var(--link-color-hover);
+        text-decoration: var(--link-decoration-hover);
     }
     &.pseudo {
-        text-decoration-style: var(--link-hovered-decoration-pseudo);
+        text-decoration-style: var(--link-decoration-pseudo);
     }
 }
 

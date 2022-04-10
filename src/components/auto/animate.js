@@ -8,7 +8,7 @@
 //
 //  <div class="element" data-animate='
 //    {
-//      "triggerId": "element-trigger",
+//      "triggerId": "elementTrigger",
 //      "start": "120vh",
 //      "end": "0vh",
 //      "functionName": "coverOut",
@@ -98,6 +98,8 @@ class Animate {
                 document.addEventListener("scroll", () => {
                     this._scroll(animationsHash);
                 }, { passive: true });
+                // If animated not in body scroll, for example —
+                // scrollable <div> with animated elements
                 if (document.querySelector(".animate-scrollarea")) {
                     document
                         .querySelector(".animate-scrollarea")
@@ -108,14 +110,14 @@ class Animate {
             }
         }
     }
-
+    
     _scroll(animationsHash) {
         Object.keys(animationsHash).forEach(i => {
             let item = animationsHash[i],
                 offset = item.trigger.getBoundingClientRect(),
                 start,
                 end;
-                
+            
             if (item.start.match(/px/)) start = item.start.replace("px", "");
             if (item.start.match(/vh/)) start = this._vh2px(item.start.replace("vh", ""));
             if (item.start.match(/%/)) start = this._vh2px(item.start.replace("%", ""));
@@ -129,7 +131,6 @@ class Animate {
                 if (item.class != null) {
                     item.element.classList.add(item.class);
                 }
-                
                 if (typeof window[item.functionName] === "function") {
                     item.progress = (start - offset.top) / item.duration;
                     item.progress = item.progress.toFixed(4);
@@ -143,7 +144,6 @@ class Animate {
                 ) {
                     item.element.classList.remove(item.class);
                 }
-                
                 if (typeof window[item.functionName] === "function") {
                     if (offset.top > start && item.progress > 0) {
                         item.progress = 0;
@@ -156,20 +156,20 @@ class Animate {
                     }
                 }
             }
-        });
+        })
     }
-
+    
     _vh2px(value) {
         let w = window,
             d = document,
             e = d.documentElement,
             g = d.getElementsByTagName("body")[0],
-            x = w.innerWidth || e.clientWidth || g.clientWidth,
+            // x = w.innerWidth || e.clientWidth || g.clientWidth,
             y = w.innerHeight || e.clientHeight || g.clientHeight,
             result = (y * value) / 100;
         return result;
     }
-
+    
 }
 
 const animate = new Animate();

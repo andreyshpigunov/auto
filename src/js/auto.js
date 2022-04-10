@@ -16,7 +16,6 @@ import loadmore from "../components/auto/loadmore";
 import device from "../components/auto/device";
 import scroll from "../components/auto/scroll";
 import modal from "../components/auto/modal";
-import ajax from "../components/auto/ajax";
 import lib from "../components/auto/lib";
 
 const auto = {
@@ -24,7 +23,6 @@ const auto = {
     device: device,
     scroll: scroll,
     modal: modal,
-    ajax: ajax,
     lib: lib,
     
     init() {

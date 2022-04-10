@@ -15,7 +15,7 @@ class Hover {
     }
     
     init() {
-        let hovers = document.querySelectorAll(".sync-hover");
+        let hovers = document.querySelectorAll(".syncHover");
         if (hovers.length) {
             hovers.forEach((elem, index) => {
                 // Add listeners for all synced elements

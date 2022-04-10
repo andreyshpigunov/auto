@@ -164,7 +164,7 @@ const lib = {
     //   function () { Callback function... },
     //   async|defer
     // )
-    loadScript(path, callback, type) {
+    loadScript(path, callback, type = 'async') {
         if (this.loadedScripts.indexOf(path) == -1) {
             let script = document.createElement('script');
             script.onload = () => {
@@ -183,6 +183,40 @@ const lib = {
         }
     },
     loadedScripts: [],
+    
+    // Deffered code execution
+    deffered(code, delay = 10000) {
+        let fired = false;
+        
+        function run() {
+            if (fired === false) {
+                fired = true;
+                
+                window.removeEventListener('scroll', run, false);
+                window.removeEventListener('resize', run, false);
+                window.removeEventListener('click', run, false);
+                window.removeEventListener('keydown', run, false);
+                window.removeEventListener('mousemove', run, false);
+                window.removeEventListener('touchmove', run, false);
+                
+                // Load or set load event
+                if (document.readyState == 'complete') {
+                    code();
+                } else {
+                    window.addEventListener('load', code, false);
+                }
+            }
+        }
+        
+        setTimeout(run, delay);
+        
+        window.addEventListener('scroll', run, { capture: false, passive: true });
+        window.addEventListener('resize', run, { capture: false, passive: true });
+        window.addEventListener('click', run, { capture: false, passive: true });
+        window.addEventListener('keydown', run, { capture: false, passive: true });
+        window.addEventListener('mousemove', run, { capture: false, passive: true });
+        window.addEventListener('touchmove', run, { capture: false, passive: true });
+    },
     
     // Check email format
     isEmail(email) {

@@ -48,8 +48,8 @@ class Lazyload {
         const images = document.querySelectorAll(".lazyload:not(.loaded)");
         if (images) {
             images.forEach((img) => {
-                const srcset = img.dataset.srcset,
-                      src = img.dataset.src;
+                const srcset = img.dataset.srcset;
+                const src = img.dataset.src;
                 if (srcset) img.srcset = srcset;
                 if (src) img.src = src;
                 img.classList.add("loaded");

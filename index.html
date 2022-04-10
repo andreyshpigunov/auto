@@ -34,34 +34,33 @@
                         <li><a data-scrollto="scrollto">Scroller</a></li>
                         <li><a data-scrollto="loadmore">Loader</a></li>
                         <li><a data-scrollto="lazyload">Lazyload</a></li>
-                        <li><a data-scrollto="ajax">Ajax</a></li>
                         <li><a data-scrollto="others">Others</a></li>
                     </ul>
                 </nav>
             </aside>
-
-            <nav class="header-menu">
+            
+            <nav class="headerMenu">
                 <ul>
-                    <li class="active">Docs 1.0 β</li>
+                    <li class="active">Docs 1.1 β</li>
                     <li><a href="https://github.com/andreyshpigunov/auto">GitHub →</a></li>
                 </ul>
             </nav>
-
-            <nav class="header-menu-mobile">
+            
+            <nav class="headerMenuMobile">
                 <ul>
-                    <li class="header-menu-mobile_button">
+                    <li class="headerMenuMobile-button">
                         <i></i>
                         <i></i>
                         <i></i>
                     </li>
-                    <li class="header-menu-mobile_logo" data-scrollto="app">
+                    <li class="headerMenuMobile-logo" data-scrollto="app">
                         <img src="assets/logo.svg" alt="Auto"/>
                         <img class="-light" src="assets/logo-light.svg" alt="Auto"/>
                     </li>
-                    <li class="header-menu-mobile_github"><a href="https://github.com/andreyshpigunov/auto">GitHub →</a></li>
+                    <li class="headerMenuMobile-github"><a href="https://github.com/andreyshpigunov/auto">GitHub →</a></li>
                 </ul>
             </nav>
-
+            
             <section id="setup">
                 <h2>GitHub</h2>
                 <p>Download and connect files manually: <a href="https://github.com/andreyshpigunov/auto">https://github.com/andreyshpigunov/auto</a></p>
@@ -71,28 +70,24 @@
                 <p>Current versions of files are available at the following links:</p>
                 
                 <h3>JsDelivr</h3>
-                <p class="break-word">
+                <p class="breakWord">
                     Latest release:<br/>
                     <a href="https://cdn.jsdelivr.net/gh/andreyshpigunov/auto@1.0.beta.6/dist/auto.css">https://cdn.jsdelivr.net/gh/andreyshpigunov/auto@1.0.beta.6/dist/auto.css</a><br/>
                     <a href="https://cdn.jsdelivr.net/gh/andreyshpigunov/auto@1.0.beta.6/dist/auto.js">https://cdn.jsdelivr.net/gh/andreyshpigunov/auto@1.0.beta.6/dist/auto.js</a>
                 </p>
-                <p class="break-word">
+                <p class="breakWord">
                     Latest:<br/>
                     <a href="https://cdn.jsdelivr.net/gh/andreyshpigunov/auto/dist/auto.css">https://cdn.jsdelivr.net/gh/andreyshpigunov/auto/dist/auto.css</a><br/>
                     <a href="https://cdn.jsdelivr.net/gh/andreyshpigunov/auto/dist/auto.js">https://cdn.jsdelivr.net/gh/andreyshpigunov/auto/dist/auto.js</a>
                 </p>
             </section>
-
+            
             <h2>Auto.css</h2>
-
+            
             <section id="helpers">
-                           
                 <h2>Helpers</h2>
                 <p>Extend the functionality of elements.</p>
-
-                <h3>Links</h3>
-                <p><code>.pseudo</code> — pseudo-link, underlined with dots<br/></p>
-
+                
                 <h3>Helpers classes</h3>
                 <p>
                     <code>.unselectable</code> — disables the selection of an element and all its descendants<br/>
@@ -101,13 +96,17 @@
                     <code>.lowercase</code> — lowercase text<br/>
                     <code>.nowrap</code> — prohibiting line wrapping<br/>
                     <code>.hyphens</code> — automatic hyphenation (works only in modern browsers)<br/>
-                    <code>.video</code> — wrapper for <code>iframe</code>, <code>object</code> и <code>embed</code>, proportionally scale filter<br/>
-                    <code>.break-word</code> — transfers non-portable text constructs<br/>
-                    <code>.visuallyhidden</code> — hides the block in a special way<br/>
-                    <code>.hidden</code> — assigns to a block <code>display: none</code><br/>
-                    <code>.hidden-next</code> — assigns to the next block <code>display: none</code><br/>
+                    <code>.sticky</code> — sticky top<br/>
+                    <code>.ratio[1x1|2x1|4x3|16x9]</code> — wrapper for <code>iframe</code>, <code>object</code> and <code>embed</code>, proportionally scale filter<br/>
+                    <code>.breakWord</code> — transfers non-portable text constructs<br/>
+                    <code>.visuallyHidden</code> — hides the block in a special way<br/>
                     <code>.invisible</code> — assigns to a block <code>visibility: hidden</code><br/>
-                    <code>.table-responsive</code> — horizontal scrolling of the table if it doesn't fit
+                    <code>.tableResponsive</code> — horizontal scrolling of the table if it doesn't fit
+                </p>
+                <p>
+                    <code>.hidden</code> — assigns to a block <code>display: none</code><br/>
+                    <code>.hiddenNext</code> — assigns to the next block <code>display: none</code><br/>
+                    Supports <code>lg:</code>, <code>md:</code>, <code>sm:</code> modifiers.
                 </p>
                 <p>
                     <code>.tal</code> — text-align: left<br/>
@@ -126,81 +125,61 @@
                 
                 <h3>Actions classes</h3>
                 <p>
-                    <code>.sync-hover</code> — adding a class synchronously <code>.hover</code> to links with the same <code>href</code><br/>
-                    <code>.is-appeared</code> — when it appears in the viewport, the element is assigned classes <code>.appeared</code> and <code>.visible</code>. When disappearing from viewport class <code>.visible</code> disappear, <code>.appeared</code> remains.
+                    <code>.syncHover</code> — adding a class synchronously <code>.hover</code> to links with the same <code>href</code><br/>
+                    <code>.isAppeared</code> — when it appears in the viewport, the element is assigned classes <code>.appeared</code> and <code>.visible</code>. When disappearing from viewport class <code>.visible</code> disappear, <code>.appeared</code> remains.
                 </p>
                 
                 <h3>Spacers</h3>
                 <p>
-                    <code>.container</code> — max width container (use --container-max-width variable for change)<br/>
-                    <code>.max, .max[100,200,300,..,1000]</code> — block max-width limiter
+                    <code>.container</code> — max width centered container (use --container-max-width variable for change)<br/>
+                    <code>.max</code> — block max-width 100%<br/>
+                    <code>.max[60,80,100,120,140,160,180,200,300,..,1400]</code> — block max-width limiter
                 </p>
                 <p>
-                    <code>.mt[0..6]</code> — margin-top<br/>
-                    <code>.mb[0..6]</code> — margin-bottom<br/>
-                    <code>.ml[0..6]</code> — margin-left<br/>
+                    <code>.m[0..7]</code> — margin<br/>
+                    <code>.mt[0..7]</code> — margin-top<br/>
+                    <code>.mb[0..7]</code> — margin-bottom<br/>
+                    <code>.ml[0..7]</code> — margin-left<br/>
+                    <code>.mr[0..7]</code> — margin-right<br/>
+                    <code>.mx[0..7]</code> — margin-left and margin-right<br/>
+                    <code>.my[0..7]</code> — margin-top and margin-bottom<br/>
+                    <code>.ma</code> — margin: auto<br/>
+                    <code>.mta</code> — margin-top: auto<br/>
+                    <code>.mba</code> — margin-bottom: auto<br/>
                     <code>.mla</code> — margin-left: auto<br/>
-                    <code>.mr[0..6]</code> — margin-right<br/>
                     <code>.mra</code> — margin-right: auto<br/>
-                    <code>.mx[0..6]</code> — margin-left and margin-right<br/>
                     <code>.mxa</code> — margin-left: auto and margin-right: auto<br/>
-                    <code>.my[0..6]</code> — margin-top and margin-bottom<br/>
-                    <code>.m[0..6]</code> — margin-left and margin-right, margin-top and margin-bottom<br/>
+                    <code>.mya</code> — margin-top: auto and margin-bottom: auto<br/>
                     Supports <code>md:</code>, <code>sm:</code> modifiers.
                 </p>
                 <p>
-                    <code>.pt[0..6]</code> — padding-top<br/>
-                    <code>.pb[0..6]</code> — padding-bottom<br/>
-                    <code>.pl[0..6]</code> — padding-left<br/>
-                    <code>.pr[0..6]</code> — padding-right<br/>
-                    <code>.px[0..6]</code> — padding-left and padding-right<br/>
-                    <code>.py[0..6]</code> — padding-top and padding-bottom<br/>
-                    <code>.p[0..6]</code> — padding-left and padding-right, padding-top and padding-bottom<br/>
+                    <code>.p[0..7]</code> — padding<br/>
+                    <code>.pt[0..7]</code> — padding-top<br/>
+                    <code>.pb[0..7]</code> — padding-bottom<br/>
+                    <code>.pl[0..7]</code> — padding-left<br/>
+                    <code>.pr[0..7]</code> — padding-right<br/>
+                    <code>.px[0..7]</code> — padding-left and padding-right<br/>
+                    <code>.py[0..7]</code> — padding-top and padding-bottom<br/>
                     Supports <code>md:</code>, <code>sm:</code> modifiers.
                 </p>
                 <p>
-                    <code>.r[0..6]</code> — border-radius<br/>
+                    <code>.r100</code> — border-radius: 100%<br/>
+                    <code>.r[0..7]</code> — border-radius<br/>
                     <code>.sh[0..4]</code> — box-shadow<br/>
                     Supports <code>md:</code>, <code>sm:</code> modifiers.
                 </p>
-
-                <iframe height="1200" style="width: 100%;" scrolling="no" title="Auto / Helpers" src="https://codepen.io/andreyshpigunov/embed/WNGjRBG?height=1280&theme-id=dark&default-tab=html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
+                
+                <iframe height="1280" style="width: 100%;" scrolling="no" title="Auto / Helpers" src="https://codepen.io/andreyshpigunov/embed/WNGjRBG?height=1280&theme-id=dark&default-tab=html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
             </section>
-
+            
             <section id="buttons">
-
                 <h2>Buttons</h2>
                 <p>To create a button, add a class to the element <code>.button</code>.</p>
-
-                <div class="section-example">
-                    <div class="flex gap1 aic">
-                        <div><a class="button xlarge">.xlarge</a></div>
-                        <div><a class="button large">.large</a></div>
-                        <div><a class="button">default</a></div>
-                        <div><a class="button small">.small</a></div>
-                        <div><a class="button xsmall">.xsmall</a></div>
-                    </div>
-                </div>
-                <br/>
-                <div class="section-example">
-                    <div class="flex gap1 aic">
-                        <div><a class="button">default</a></div>
-                        <div><a class="button bold">.bold</a></div>
-                        <div><a class="button primary">.primary</a></div>
-                        <div><a class="button success">.success</a></div>
-                        <div><a class="button danger">.danger</a></div>
-                        <div><a class="button warning">.warning</a></div>
-                    </div>
-                </div>
-
-                <br/>
-
-                <iframe height="520" style="width: 100%;" scrolling="no" title="Auto / Buttons" src="https://codepen.io/andreyshpigunov/embed/qBajZjb?height=800&theme-id=dark&default-tab=html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
-
+                
+                <iframe height="600" style="width: 100%;" scrolling="no" title="Auto / Buttons" src="https://codepen.io/andreyshpigunov/embed/qBajZjb?height=800&theme-id=dark&default-tab=html,result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
             </section>
-
+            
             <section id="grid">
-
                 <h2>Grid</h2>
                 <p>Flexible 1–12 columns grid system.</p>
                 <p>
@@ -230,31 +209,10 @@
                     <code>.mrg</code>
                 </p>
                 
-                <div class="section-example">
-                    <div class="grid g12">
-                        <div class="c1">C1</div>
-                        <div class="c1">C2</div>
-                        <div class="c1">C3</div>
-                        <div class="c1">C4</div>
-                        <div class="c1">C5</div>
-                        <div class="c1">C6</div>
-                        <div class="c1">C7</div>
-                        <div class="c1">C8</div>
-                        <div class="c1">C9</div>
-                        <div class="c1">C10</div>
-                        <div class="c1">C11</div>
-                        <div class="c1">C12</div>
-                    </div>
-                </div>
-
-                <br/>
-
-                <iframe height="980" style="width: 100%;" scrolling="no" title="Auto / Grid" src="https://codepen.io/andreyshpigunov/embed/MWjmmKx?height=800&theme-id=dark&default-tab=html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
-                
+                <iframe height="1000" style="width: 100%;" scrolling="no" title="Auto / Grid" src="https://codepen.io/andreyshpigunov/embed/MWjmmKx?height=800&theme-id=dark&default-tab=html,result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
             </section>
             
             <section id="flex">
-
                 <h2>Flex</h2>
                 <p>Flexbox layout.</p>
                 <p>
@@ -285,50 +243,30 @@
                     <code>.flex .o[0..10]</code> — order: [0..10]
                 </p>
                 <p>All options supports <code>md:</code>, <code>sm:</code> modifiers.</p>
-                
-                <div class="section-example">
-                    <div class="flex gap1">
-                        <div>C1</div>
-                        <div>C2</div>
-                        <div>C3</div>
-                        <div>C4</div>
-                        <div>C5</div>
-                        <div>C6</div>
-                        <div>C7</div>
-                        <div>C8</div>
-                        <div>C9</div>
-                        <div>C10</div>
-                        <div>C11</div>
-                        <div>C12</div>
-                    </div>
-                </div>
-                
             </section>
-
+            
             <h2>Auto.js</h2>
-
+            
             <section id="modal">
                 <h2>Modals</h2>
                 <p>Universal modal windows.</p>
                 <p>By default, the modal window code is added to the end of the body tag, but if you need to place it elsewhere, you need to add a class <code>.modal-here</code> to the block where the window code should be located.</p>
-
+                
                 <h3>API</h3>
                 <p>
                     <code>auto.modal.show(id)</code> — open modal<br/>
                     <code>auto.modal.hide(id)</code> — close modal
                 </p>
-
-                <a class="button" data-modal="modal-test">TEST</a>
-                <a class="button" onclick="auto.modal.show('modal-test')">API SHOW</a>
                 
-                <div id="modal-test" class="modal-content">
-                    <div class="text">
-                        <h2>Modal windows</h2>
-                        <p>Universal modal window.</p>
-                        <p>By default, the modal window code is added to the end of the body tag, but if you need to place it elsewhere, you need to add a class <code>.modal-here</code> to the block where the window code should be located.</p>
-                    </div>
+                <a class="button" data-modal="modalTest">TEST</a>
+                <a class="button" onclick="auto.modal.show('modalTest')">API SHOW</a>
+                
+                <div id="modalTest" class="modal-content">
+                    <h2>Modal windows</h2>
+                    <p>Universal modal window.</p>
+                    <p>By default, the modal window code is added to the end of the body tag, but if you need to place it elsewhere, you need to add a class <code>.modal-here</code> to the block where the window code should be located.</p>
                 </div>
-
+                
                 <h3>Events</h3>
                 <p>
                     <code>modal:ready</code> — before modal opened<br/>
@@ -337,24 +275,23 @@
                 </p>
                 <p>
                     Example:<br/>
-                    <code>document.getElementById('modal-id').addEventListener('modal:ready', event => { ... })</code>
+                    <code>qs('#modalId').addEventListener('modal:ready', event => { ... })</code>
                 </p>
-
+                
                 <h3>Init modals</h3>
-                <iframe height="700" style="width: 100%;" scrolling="no" title="Auto / Modal init" src="https://codepen.io/andreyshpigunov/embed/vYXZGpm?height=700&theme-id=dark&default-tab=html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
-
+                <iframe height="720" style="width: 100%;" scrolling="no" title="Auto / Modal init" src="https://codepen.io/andreyshpigunov/embed/vYXZGpm?height=700&theme-id=dark&default-tab=html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
+                
                 <h3>Examples</h3>
                 <iframe height="800" style="width: 100%;" scrolling="no" title="Auto / Modals examples" src="https://codepen.io/andreyshpigunov/embed/KKgqzBE?height=800&theme-id=dark&default-tab=html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
             </section>
-
+            
             <section id="animate">
                 <h2>Animations</h2>
-
                 <p>Starts a function with animation or controls the class of an element when it or its trigger element reaches a certain scroll point.</p>
 
                 <h3>Initialization</h3>
                 <iframe height="285" style="width: 100%;" scrolling="no" title="Auto / Animation init" src="https://codepen.io/andreyshpigunov/embed/mdrwEWG?height=285&theme-id=dark&default-tab=html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
-
+                
                 <p>
                     <code>triggerId</code> — pointer to the id of the element that we are tracking the position<br/>
                     <code>start</code> — animation start point (height from the top edge of the screen in px or vh)<br/>
@@ -363,54 +300,54 @@
                     <code>class</code> — class assigned to a reference when "target" is between "start" and "end"<br/>
                     <code>classRemove</code> — whether to delete the "class" from the element after it leaves the animation zone, by default false
                 </p>
-
+                
                 <p>if the element itself is a trigger, you don't need to specify the triggerId.</p>
-
+                
                 <p>The "functionName" function gets a parameter with all the fields of the element described above and the "progress" parameter, which changes from 0 to 1, as the page scrolls and the element moves.</p>
-
+                
                 <h3>Example</h3>
                 <iframe height="400" style="width: 100%;" scrolling="no" title="Auto / Animation example" src="https://codepen.io/andreyshpigunov/embed/jOMwrGE?height=400&theme-id=dark&default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
             </section>
-
+            
             <section id="scrollto">
                 <h2>Scroller</h2>
                 <p>
                     Scrolls the page to the element with the specified id.<br/>
                     Automatically applied to elements with "data-scroll".
                 </p>
-
+                
                 <h3>Init</h3>
                 <iframe height="265" style="width: 100%;" scrolling="no" title="Auto / Scroller" src="https://codepen.io/andreyshpigunov/embed/qBajNxp?height=350&theme-id=dark&default-tab=html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
-
+                
                 <p>
                     <code>parent</code> — parent selector (default use window)<br/>
-                    <code>target</code> — target id (required)<br/>
+                    <code>targetId</code> — target id (required)<br/>
                     <code>offset</code> — offset in pixels (default 0)<br/>
-                    <code>speed</code> — scroll speed (default 500 ms)<br/>
+                    <code>duration</code> — scroll duration (default 1000 ms)<br/>
                     <code>classActive</code> — class assigned to a reference when the "target" is in the viewport zone
                 </p>
-
+                
                 <h3>API</h3>
-                <p><code>auto.scroll.to(target, offset, speed, parent)</code></p>
-                <p><code>target</code> — element or element selector (string)</p>
+                <p><code>auto.scroll.to(target, offset, duration, parent)</code></p>
+                <p><code>target</code> — element id or element</p>
             </section>
-
+            
             <section id="loadmore">
                 <h2>Loader</h2>
                 <p>
                     Starts the data loading function when scrolling to the end of the block.<br/>
                     Automatically applied to elements with "data-loadmore".
                 </p>
-
+                
                 <h3>Init</h3>
-                <iframe height="265" style="width: 100%;" scrolling="no" title="Auto / Loader" src="https://codepen.io/andreyshpigunov/embed/LYRLZmd?height=265&theme-id=dark&default-tab=html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
+                <iframe height="265" style="width: 100%" scrolling="no" title="Auto / Loader" src="https://codepen.io/andreyshpigunov/embed/LYRLZmd?height=265&theme-id=dark&default-tab=html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
                 <p>
                     <code>functionName</code> — loader function name<br/>
                     <code>offset</code> — offset in pixels from the bottom edge of the page (default 0)
                 </p>
                 <p>An incremental parameter <code>page</code> is passed to the function each time it is run.</p>
             </section>
-
+            
             <section id="lazyload">
                 <h2>Lazyload</h2>
                 <p>
@@ -418,43 +355,11 @@
                     Works with the IntersectionObserver method, only in modern browsers.<br/>
                     If IntersectionObserver is not supported, images are loaded in the usual way.
                 </p>
-
+                
                 <h3>Init</h3>
                 <iframe height="200" style="width: 100%;" scrolling="no" title="Auto / Lazyload" src="https://codepen.io/andreyshpigunov/embed/YzGQWvO?height=200&theme-id=dark&default-tab=html" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
             </section>
-
-            <section id="ajax">
-                <h2>AJAX</h2>
-                <p style="color: red">Working, but not supported. Move to axios, fetch or others actual libraries.</p>
-                <p>Library for working with ajax requests.</p>
-                <p>Source documentation: <a href="https://github.com/fdaciuk/ajax/blob/dev/README.md" target="_blank">https://github.com/fdaciuk/ajax/blob/dev/README.md</a></p>
-
-                <h3>Using</h3>
-                <iframe height="265" style="width: 100%;" scrolling="no" title="Auto / Ajax using" src="https://codepen.io/andreyshpigunov/embed/OJRgXrK?height=265&theme-id=dark&default-tab=js" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
-
-                <h3>GET</h3>
-                <iframe height="160" style="width: 100%;" scrolling="no" title="Auto / Ajax GET" src="https://codepen.io/andreyshpigunov/embed/abmwZXE?height=160&theme-id=dark&default-tab=js" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
-
-                <h3>POST</h3>
-                <iframe height="290" style="width: 100%;" scrolling="no" title="Auto / Ajax POST" src="https://codepen.io/andreyshpigunov/embed/QWKgEoy?height=290&theme-id=dark&default-tab=js" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
-
-                <h3>POST FormData</h3>
-                <iframe height="265" style="width: 100%;" scrolling="no" title="Auto / Ajax POST FormData" src="https://codepen.io/andreyshpigunov/embed/vYXZXBP?height=265&theme-id=dark&default-tab=js" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
-
-                <h3>PUT</h3>
-                <iframe height="160" style="width: 100%;" scrolling="no" title="Auto / Ajax PUT" src="https://codepen.io/andreyshpigunov/embed/zYKzBbP?height=160&theme-id=dark&default-tab=js" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
-
-                <h3>DELETE</h3>
-                <iframe height="160" style="width: 100%;" scrolling="no" title="Auto / Ajax DELETE" src="https://codepen.io/andreyshpigunov/embed/gOwRMEN?height=160&theme-id=dark&default-tab=js" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
-
-                <h3>Processing responses</h3>
-                <iframe height="300" style="width: 100%;" scrolling="no" title="Auto / Ajax processing responses" src="https://codepen.io/andreyshpigunov/embed/wvzeWbB?height=300&theme-id=dark&default-tab=js" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
-
-                <h3>Cancel request</h3>
-                <iframe height="290" style="width: 100%;" scrolling="no" title="Auto / Ajax cancel requests" src="https://codepen.io/andreyshpigunov/embed/MWjoedp?height=290&theme-id=dark&default-tab=js" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
-
-            </section>
-
+            
             <section id="others">
                 <h2>Others</h2>
                 <p>Frequently used functions.</p>
@@ -462,27 +367,16 @@
             </section>
         </main>
     </div>
-
+    
     <script src="dist/auto.js"></script>
-    <script src="https://unpkg.com/vue@next"></script>
     <script>
-        const App = {
-            data() {
-                return {
-                    
-                }
-            },
-            mounted() {
-                auto.init();
-            }
-        }
-        Vue.createApp(App).mount('#app');
+        auto.init();
         
-        let mb = document.querySelector('.header-menu-mobile_button'),
-            html = document.documentElement;
+        let mb = qs('.headerMenuMobile-button');
+        let html = document.documentElement;
             
         mb.addEventListener('click', (event) => {
-            html.classList.toggle('show-menu')
+            html.classList.toggle('showMenu')
         });
     </script>
 </body>

@@ -12,7 +12,7 @@ Created by andreyshpigunov on 25.05.2021.
     --modal-box-shadow: 0 6px 30px rgba(0,0,0,.25);
     --modal-border-radius: 8px;
     --modal-closer-color: #ccc;
-    --modal-overlay-background-color: rgba(0,0,0,.4);
+    --modal-overlay-background-color: rgba(0,0,0,.55);
 }
 
 html.modal-active body,
@@ -42,16 +42,16 @@ html.modal-active body {
         visibility: visible;
         pointer-events: all;
         
-        &.level-1 { z-index: 10001; }
-        &.level-2 { z-index: 10002; }
-        &.level-3 { z-index: 10003; }
-        &.level-4 { z-index: 10004; }
-        &.level-5 { z-index: 10005; }
-        &.level-6 { z-index: 10006; }
-        &.level-7 { z-index: 10007; }
-        &.level-8 { z-index: 10008; }
-        &.level-9 { z-index: 10009; }
-        &.level-10 { z-index: 10010; }
+        &.level1 { z-index: 10001; }
+        &.level2 { z-index: 10002; }
+        &.level3 { z-index: 10003; }
+        &.level4 { z-index: 10004; }
+        &.level5 { z-index: 10005; }
+        &.level6 { z-index: 10006; }
+        &.level7 { z-index: 10007; }
+        &.level8 { z-index: 10008; }
+        &.level9 { z-index: 10009; }
+        &.level10 { z-index: 10010; }
     }
     
     /* Overlay */
@@ -213,7 +213,6 @@ html.modal-active body {
 
 /* Zoom in */
 
-.modal.effect-in,
 .modal.effectIn {
     & .modal-window {
         transform: scale(.9);
@@ -227,7 +226,6 @@ html.modal-active body {
 
 /* Zoom out */
 
-.modal.effect-out,
 .modal.effectOut {
     & .modal-window {
         transform: scale(1.1);
@@ -241,7 +239,6 @@ html.modal-active body {
 
 /* Slide up */
 
-.modal.effect-up,
 .modal.effectUp {
     & .modal-window {
         transform: translateY(30px);
@@ -254,7 +251,6 @@ html.modal-active body {
 
 /* Slide down */
 
-.modal.effect-down,
 .modal.effectDown {
     & .modal-window {
         transform: translateY(-30px);
@@ -267,8 +263,7 @@ html.modal-active body {
 
 /* Slide from left */
 
-.modal.effect-left,
-.modal.-effectLeft {
+.modal.effectLeft {
     & .modal-window {
         transform: translateX(-30px);
         transition: all .2s ease-out;
@@ -280,8 +275,7 @@ html.modal-active body {
 
 /* Slide from right */
 
-.modal.effect-right,
-.modal.-effectRight {
+.modal.effectRight {
     & .modal-window {
         transform: translateX(30px);
         transition: all .2s ease-out;

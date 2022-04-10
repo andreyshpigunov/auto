@@ -12,8 +12,9 @@ Created by andreyshpigunov on 25.05.2021.
 @media (prefers-color-scheme: dark) {
     :root {
         --link-color: #8bcdff;
-        --link-color-hovered: #8bcdff;
+        --link-color-hover: #8bcdff;
         --link-color-visited: #8bcdff;
+        --link-decoration-hover: underline;
     }
 }
 
@@ -67,7 +68,7 @@ h2 {
 }
 
 
-.header-menu {
+.headerMenu {
     height: 60px;
     margin-bottom: 30px;
 
@@ -98,7 +99,7 @@ h2 {
 }
 
 
-.header-menu-mobile {
+.headerMenuMobile {
     display: none;
     position: fixed;
     z-index: 20;
@@ -156,7 +157,7 @@ h2 {
 }
 
 
-.header-menu-mobile_button {
+.headerMenuMobile-button {
     position: relative;
     width: 70px;
     height: 40px;
@@ -190,7 +191,7 @@ h2 {
 
 
 
-.header-menu-mobile_logo {
+.headerMenuMobile-logo {
     width: 30px;
     height: 30px;
 
@@ -215,7 +216,7 @@ h2 {
         }
     }
 }
-.header-menu-mobile_github {
+.headerMenuMobile-github {
     width: 70px;
     text-align: right;
 }
@@ -224,8 +225,8 @@ h2 {
 
 @media (max-width: 639px) {
 
-    html.show-menu {
-        & .header-menu-mobile_button {
+    html.showMenu {
+        & .headerMenuMobile-button {
             & i {
                 &:nth-child(1) {
                     top: 19px;
@@ -336,7 +337,7 @@ h2 {
 
 
 @media (max-width: 639px) {
-    html.show-menu {
+    html.showMenu {
         & .sidebar {
             transform: translateX(0);
         }
