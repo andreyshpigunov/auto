@@ -13,7 +13,7 @@
 //    {
 //      "parent": "#id or .class selector" — default "window"
 //      "targetId": "top",
-//      "duration": "1000",
+//      "duration": "400",
 //      "offset": "0",
 //      "classActive": "active"
 //    }
@@ -21,7 +21,7 @@
 //
 //  API call:
 //  this.scrollTo() — old method
-//  this.to(target, offset = 0, duration = 1000, parent) — new method
+//  this.to(target, offset = 0, duration = 400, parent) — new method
 //  target — element id or element
 //  offset — top offset
 //  duration — scroll duration
@@ -32,7 +32,7 @@ class Scroll {
     
     constructor() {
         this.offset = 0;
-        this.duration = 1000;
+        this.duration = 400;
         this.classActive = "active";
         this.to = this.scrollTo;
     }
@@ -118,13 +118,13 @@ class Scroll {
                 startingY = parent.pageYOffset;
                 // Distance to target element, from page top
                 elementY = parent.pageYOffset + target.getBoundingClientRect().top;
-                diff = elementY - startingY + offset;
+                diff = elementY - startingY - offset;
             } else {
                 // Code for not window object (scrollable div and others)
                 startingY = parent.scrollTop;
                 parentY = parent.getBoundingClientRect().top;
                 elementY = parent.scrollTop + target.getBoundingClientRect().top - parentY;
-                diff = elementY - startingY + offset;
+                diff = elementY - startingY - offset;
             }
             
             let easeInOutCubic = (t) => {

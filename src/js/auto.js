@@ -15,6 +15,7 @@ import appear from "../components/auto/appear";
 import loadmore from "../components/auto/loadmore";
 import device from "../components/auto/device";
 import scroll from "../components/auto/scroll";
+import sheets from "../components/auto/sheets";
 import modal from "../components/auto/modal";
 import lib from "../components/auto/lib";
 
@@ -22,6 +23,7 @@ const auto = {
     loadmore: loadmore,
     device: device,
     scroll: scroll,
+    sheets: sheets,
     modal: modal,
     lib: lib,
     
@@ -31,6 +33,7 @@ const auto = {
         lazyload.init();
         loadmore.init();
         scroll.init();
+        sheets.init();
         modal.init();
         hover.init();
     }

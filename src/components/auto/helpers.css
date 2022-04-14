@@ -20,7 +20,11 @@ Created by andreyshpigunov on 25.05.2021.
 .unselectable * {
     user-select: none;
 }
-.clear:after {
+.unclickable,
+.unclickable * {
+    pointer-events: none;
+}
+.clear::after {
     content: "";
     display: table;
     width: 100%;
@@ -117,7 +121,10 @@ Created by andreyshpigunov on 25.05.2021.
 }
 
 
-.max { width: 100% !important }
+.max {
+    width: 100% !important;
+    max-width: 100% !important;
+}
 .max60 { max-width: 80px !important }
 .max80 { max-width: 80px !important }
 .max100 { max-width: 100px !important }
@@ -150,9 +157,12 @@ Created by andreyshpigunov on 25.05.2021.
 .fss { font-size: .9rem }
 .fsxs { font-size: .8rem }
 
-.tal { text-align: left }
-.tar { text-align: right }
-.tac { text-align: center }
+.al { text-align: left }
+.ar { text-align: right }
+.ac { text-align: center }
+.aj { text-align: justify }
+.fl { float: left }
+.fr { float: right }
 
 .m0 { margin: 0 !important }
 .m1 { margin: 0.25rem !important }
@@ -315,9 +325,12 @@ Created by andreyshpigunov on 25.05.2021.
     .md\:fss { font-size: .9rem }
     .md\:fsxs { font-size: .8rem }
     
-    .md\:tal { text-align: left }
-    .md\:tar { text-align: right }
-    .md\:tac { text-align: center }
+    .md\:al { text-align: left }
+    .md\:ar { text-align: right }
+    .md\:ac { text-align: center }
+    .md\:aj { text-align: justify }
+    .md\:fl { float: left }
+    .md\:fr { float: right }
     
     .md\:m0 { margin: 0 !important }
     .md\:m1 { margin: 0.25rem !important }
@@ -481,9 +494,12 @@ Created by andreyshpigunov on 25.05.2021.
     .sm\:fss { font-size: .9rem }
     .sm\:fsxs { font-size: .8rem }
     
-    .sm\:tal { text-align: left }
-    .sm\:tar { text-align: right }
-    .sm\:tac { text-align: center }
+    .sm\:al { text-align: left }
+    .sm\:ar { text-align: right }
+    .sm\:ac { text-align: center }
+    .sm\:aj { text-align: justify }
+    .sm\:fl { float: left }
+    .sm\:fr { float: right }
     
     .sm\:m0 { margin: 0 !important }
     .sm\:m1 { margin: 0.25rem !important }

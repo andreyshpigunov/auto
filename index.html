@@ -33,6 +33,7 @@
                         <li><a data-scrollto="animate">Animations</a></li>
                         <li><a data-scrollto="scrollto">Scroller</a></li>
                         <li><a data-scrollto="loadmore">Loader</a></li>
+                        <li><a data-scrollto="sheets">Sheets</a></li>
                         <li><a data-scrollto="lazyload">Lazyload</a></li>
                         <li><a data-scrollto="others">Others</a></li>
                     </ul>
@@ -109,9 +110,12 @@
                     Supports <code>lg:</code>, <code>md:</code>, <code>sm:</code> modifiers.
                 </p>
                 <p>
-                    <code>.tal</code> — text-align: left<br/>
-                    <code>.tar</code> — text-align: right<br/>
-                    <code>.tac</code> — text-align: center<br/>
+                    <code>.al</code> — text-align: left<br/>
+                    <code>.ar</code> — text-align: right<br/>
+                    <code>.ac</code> — text-align: center<br/>
+                    <code>.aj</code> — text-align: justify<br/>
+                    <code>.fl</code> — float: left<br/>
+                    <code>.fr</code> — float: right<br/>
                     Supports <code>md:</code>, <code>sm:</code> modifiers.
                 </p>
                 <p>
@@ -346,6 +350,36 @@
                     <code>offset</code> — offset in pixels from the bottom edge of the page (default 0)
                 </p>
                 <p>An incremental parameter <code>page</code> is passed to the function each time it is run.</p>
+            </section>
+            
+            <section id="sheets">
+                <h2>Sheets</h2>
+                <p>
+                    Tab sheets. No limits for wrapping tabs and sheets in another tags.
+                </p>
+                
+                <h3>Init</h3>
+                <iframe height="300" style="width: 100%;" scrolling="no" title="Auto / Tab sheets" src="https://codepen.io/andreyshpigunov/embed/qBpJaeO?theme-id=dark&default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
+                
+                <h3>API</h3>
+                <p>
+                    <code>auto.sheets.show(id)</code> — show sheet
+                </p>
+                
+                <p>Demo:</p>
+                
+                <div class="sheets">
+                    <div>
+                        <a class="sheets-tab button" data-sheet="sheet1">Tab 1</a>
+                        <a class="sheets-tab button" data-sheet="sheet2">Tab 2</a>
+                        <a class="sheets-tab button" data-sheet="sheet3">Tab 3</a>
+                    </div>
+                    <div class="p2">
+                        <div id="sheet1" class="sheets-body">Body 1</div>
+                        <div id="sheet2" class="sheets-body">Body 2</div>
+                        <div id="sheet3" class="sheets-body">Body 3</div>
+                    </div>
+                </div>
             </section>
             
             <section id="lazyload">
