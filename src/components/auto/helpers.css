@@ -125,9 +125,13 @@ Created by andreyshpigunov on 25.05.2021.
     width: 100% !important;
     max-width: 100% !important;
 }
-.max60 { max-width: 80px !important }
+.max50 { max-width: 50px !important }
+.max60 { max-width: 60px !important }
+.max70 { max-width: 70px !important }
 .max80 { max-width: 80px !important }
+.max90 { max-width: 90px !important }
 .max100 { max-width: 100px !important }
+.max110 { max-width: 110px !important }
 .max120 { max-width: 120px !important }
 .max140 { max-width: 140px !important }
 .max160 { max-width: 160px !important }
