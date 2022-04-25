@@ -12,7 +12,8 @@ Created by andreyshpigunov on 25.05.2021.
     --modal-box-shadow: 0 6px 30px rgba(0,0,0,.25);
     --modal-border-radius: 8px;
     --modal-closer-color: #ccc;
-    --modal-overlay-background-color: rgba(0,0,0,.55);
+    --modal-closer-color-hover: #f00;
+    --modal-overlay-background-color: rgba(0,0,0,.6);
 }
 
 html.modal-active body,
@@ -53,60 +54,61 @@ html.modal-active body {
         &.level9 { z-index: 10009; }
         &.level10 { z-index: 10010; }
     }
+}
+
+/* Overlay */
+.modal-overlay {
+    position: absolute;
+    z-index: 10010;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--modal-overlay-background-color);
+}
+
+/* Main structure */
+.modal-outer {
+    position: relative;
+    z-index: 10020;
+    width: 100%;
+    height: 100%;
+    padding: 60px;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
     
-    /* Overlay */
-    & .modal-overlay {
-        position: absolute;
-        z-index: 10010;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background-color: var(--modal-overlay-background-color);
-    }
-    
-    /* Main structure */
-    & .modal-outer {
-        position: relative;
-        z-index: 10020;
-        width: 100%;
-        height: 100%;
-        padding: 60px;
-        overflow: auto;
-        -webkit-overflow-scrolling: touch;
-        
-        @media (max-width: 639px) {
-            & {
-                padding: 5px;
-            }
+    @media (max-width: 639px) {
+        & {
+            padding: 5px;
         }
     }
-    & .modal-inner {
-        display: flex;
-        flex-direction: column;
-        min-height: 100%;
-    }
+}
+.modal-inner {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+/* Modal window */
+.modal-window {
+    position: relative;
+    z-index: 10030;
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    padding: 40px 50px;
+    text-align: left;
+    background: var(--modal-background);
+    box-shadow: var(--modal-box-shadow);
+    border-radius: var(--modal-border-radius);
     
-    /* Modal window */
-    & .modal-window {
-        position: relative;
-        z-index: 10030;
-        width: 100%;
-        max-width: 800px;
-        margin: auto;
-        padding: 40px 50px;
-        text-align: left;
-        background: var(--modal-background);
-        box-shadow: var(--modal-box-shadow);
-        border-radius: var(--modal-border-radius);
-        
-        @media (max-width: 639px) {
-            & {
-                padding: 40px 6vw;
-                box-shadow: none;
-            }
-        }
+    @media (max-width: 639px) {
+        padding: 40px 6vw;
+        box-shadow: none;
     }
+}
+
+.modal{
     
     &.max,
     &.max400,
@@ -127,55 +129,68 @@ html.modal-active body {
     &.max800 .modal-window { max-width: 800px }
     &.max900 .modal-window { max-width: 900px }
     &.max1000 .modal-window { max-width: 1000px }
+}
+
+/* Close cross */
+.modal-rail {
+    position: absolute;
+    top: 6px;
+    bottom: 6px;
+    right: 6px;
+    width: 0;
+    background: red;
+}
+.modal-close {
+    display: block;
+    position: sticky;
+    z-index: 10040;
+    top: -54px;
+    width: 40px;
+    height: 40px;
+    margin-left: -40px;
+    font-weight: 200;
+    border: none;
+    border-radius: var(--modal-border-radius);
     
-    /* Close cross */
-    & .modal-close {
-        display: block;
-        position: absolute;
-        z-index: 10040;
-        top: 6px;
-        right: 6px;
-        width: 40px;
-        height: 40px;
-        font-weight: 200;
-        border: none;
-        border-radius: 100%;
-        
-        will-change: opacity;
-        opacity: 0;
-        transition: opacity .15s ease-out;
-        
-        &:before,
-        &:after {
-            content: "";
-            display: block;
-            position: absolute;
-            top: 19px;
-            left: 8px;
-            width: 24px;
-            height: 2px;
-            
-            will-change: color;
-            background: var(--modal-closer-color);
-            transition: background .15s ease-out;
-            transform-origin: center;
-        }
-        &:before {
-            transform: rotate(-45deg);
-        }
-        &:after {
-            transform: rotate(45deg);
-        }
+    will-change: opacity;
+    opacity: 0;
+    transition: opacity .15s ease-out;
+    
+    @media (max-width: 639px) {
+        top: 1px;
+        background: #fff;
     }
     
-    &.active {
-        & .modal-close {
-            opacity: 1;
-            
-            &:hover:before, &:hover:after,
-            &:active:before, &:active:after {
-                background: #f00;
-            }
+    &:before,
+    &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 19px;
+        left: 8px;
+        width: 24px;
+        height: 2px;
+        
+        will-change: color;
+        background: var(--modal-closer-color);
+        transition: background .15s ease-out;
+        transform-origin: center;
+    }
+    &:before {
+        transform: rotate(-45deg);
+    }
+    &:after {
+        transform: rotate(45deg);
+    }
+}
+
+.modal.active {
+    & .modal-close {
+        opacity: 1;
+        
+        &:hover:before, &:hover:after,
+        &:active:before, &:active:after {
+            background: var(--modal-closer-color-hover);
         }
     }
 }

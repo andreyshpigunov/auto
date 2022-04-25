@@ -8,10 +8,8 @@
 //  <a data-modal="my-modal">Open modal</a>
 //
 //  <div id="my-modal" class="modal-content [custom-classes]">
-//    <div class="text">
 //      <p>Hello modal!</p>
 //      <p><a class="button modal-close">Close</a></p>
-//    </div>
 //  </div>
 //
 //  <script>
@@ -60,7 +58,9 @@ class Modal {
                             <div class="modal-inner">
                                 <div class="modal-window">
                                     ${content}
-                                    <a class="modal-close"></a>
+                                    <div class="modal-rail">
+                                        <a class="modal-close"></a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -109,19 +109,22 @@ class Modal {
     
     // Show window
     show(id) {
-        let html = document.documentElement,
-            modal = document.getElementById(id);
+        if (this.isActive(id)) {
+            this.hide(id);
+            return false
+        }
+        
+        let modal = document.getElementById(id);
         
         if (modal) {
-            let activeModals = document.querySelectorAll(".modal.active"),
-                timeout = 0;
+            if (modal.classList.contains("uniq")) {
+                this.hideAll();
+            }
+            
+            let html = document.documentElement;
+            let timeout = 0;
             
             setTimeout(() => {
-                this._closerPosition(id);
-                window.addEventListener(
-                    "resize",
-                    (this.cp = (event) => { this._closerPosition(id) })
-                );
                 html.classList.add("modal-active");
                 html.classList.add(id + "-active");
                 modal.dispatchEvent(this.eventReady);
@@ -163,26 +166,19 @@ class Modal {
         }
     }
     
-    // Move closer depends to window size. We need to fix it on small screen.
-    // Simple "transform: fixed" not working (transform feature).
-    _closerPosition(id) {
-        let modal = document.getElementById(id),
-            closer;
-        
-        if (
-            window.innerWidth < 640 &&
-            modal.querySelector(".modal-window").scrollHeight >= window.innerHeight
-        ) {
-            closer = document.querySelector("#" + id + " .modal-window .modal-close");
-            if (closer) modal.appendChild(closer);
-        } else {
-            closer = document.querySelector("#" + id + " > .modal-close");
-            if (closer) {
-                document
-                    .querySelector("#" + id + " .modal-window")
-                    .appendChild(closer);
-            }
+    // Hide all active modals
+    hideAll() {
+        let activeModals = document.querySelectorAll(".modal.active");
+        if (activeModals) {
+            activeModals.forEach(item => {
+                this.hide(item.getAttribute("id"))
+            })
         }
+    }
+    
+    // Check modal activity
+    isActive(id) {
+        return document.querySelector("#" + id + ".active")
     }
 }
 
