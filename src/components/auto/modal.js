@@ -33,6 +33,8 @@ class Modal {
         this.eventReady = new CustomEvent("modal:ready");
         this.eventOpen  = new CustomEvent("modal:open");
         this.eventClose = new CustomEvent("modal:close");
+        
+        this.lock = false;
     }
     
     // Init windows
@@ -115,54 +117,68 @@ class Modal {
         }
         
         let modal = document.getElementById(id);
-        
-        if (modal) {
+        if (!this.lock && modal) {
+            
             if (modal.classList.contains("uniq")) {
                 this.hideAll();
             }
             
+            this.lock = true;
+            
             let html = document.documentElement;
-            let timeout = 0;
+            
+            html.classList.add("modal-active");
+            html.classList.add(id + "-active");
             
             setTimeout(() => {
-                html.classList.add("modal-active");
-                html.classList.add(id + "-active");
                 modal.dispatchEvent(this.eventReady);
                 this.modalLevel++;
                 modal.classList.add("top", "active", "level" + this.modalLevel);
-                setTimeout(() => { modal.dispatchEvent(this.eventOpen) }, 400);
+                setTimeout(() => {
+                    modal.dispatchEvent(this.eventOpen);
+                    this.lock = false
+                }, 400);
                 
-                if (device.iphone || device.ipad || device.android) {
-                    this.scrollPosition = window.pageYOffset;
-                    document.body.style.position = "fixed";
-                    document.body.style.top = "-" + this.scrollPosition + "px";
-                    document.body.style.width = window.innerWidth + "px";
-                }
-            }, timeout);
+            }, 0);
+            
+            if (device.iphone || device.ipad || device.android) {
+                this.scrollPosition = window.pageYOffset;
+                document.body.style.position = "fixed";
+                document.body.style.top = "-" + this.scrollPosition + "px";
+                document.body.style.width = window.innerWidth + "px";
+            }
         }
     }
     
     // Hide window
     hide(id) {
         let modal = document.getElementById(id);
-        window.removeEventListener("resize", this.cp);
-        modal.classList.remove("active");
-        
-        setTimeout(() => {
-            document.documentElement.classList.remove(id + "-active");
-            modal.classList.remove("top", "level" + this.modalLevel);
+        if (!this.lock && modal) {
+            this.lock = true;
+            
+            let html = document.documentElement;
+            
+            window.removeEventListener("resize", this.cp);
+            modal.classList.remove("active");
+            
+            html.classList.remove(id + "-active");
             this.modalLevel--;
             if (this.modalLevel == 0) {
-                document.documentElement.classList.remove("modal-active");
+                html.classList.remove("modal-active");
             }
-            modal.dispatchEvent(this.eventClose);
-        }, 400);
-        
-        if (device.iphone || device.ipad || device.android) {
-            document.body.style.position = null;
-            document.body.style.top = null;
-            document.body.style.width = null;
-            window.scrollTo(0, this.scrollPosition);
+            
+            setTimeout(() => {
+                modal.classList.remove("top", "level" + this.modalLevel);
+                modal.dispatchEvent(this.eventClose);
+                this.lock = false
+            }, 400);
+            
+            if (device.iphone || device.ipad || device.android) {
+                document.body.style.position = null;
+                document.body.style.top = null;
+                document.body.style.width = null;
+                window.scrollTo(0, this.scrollPosition);
+            }
         }
     }
     
