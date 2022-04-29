@@ -139,53 +139,54 @@ html.modal-active body {
     right: 6px;
     width: 0;
     background: red;
-}
-.modal-close {
-    display: block;
-    position: sticky;
-    z-index: 10040;
-    top: -54px;
-    width: 40px;
-    height: 40px;
-    margin-left: -40px;
-    font-weight: 200;
-    border: none;
-    border-radius: var(--modal-border-radius);
     
-    will-change: opacity;
-    opacity: 0;
-    transition: opacity .15s ease-out;
-    
-    @media (max-width: 639px) {
-        top: 1px;
-        background: #fff;
-    }
-    
-    &:before,
-    &:after {
-        content: "";
+    & .modal-close {
         display: block;
-        position: absolute;
-        top: 19px;
-        left: 8px;
-        width: 24px;
-        height: 2px;
+        position: sticky;
+        z-index: 10040;
+        top: -54px;
+        width: 40px;
+        height: 40px;
+        margin-left: -40px;
+        font-weight: 200;
+        border: none;
+        border-radius: var(--modal-border-radius);
         
-        will-change: color;
-        background: var(--modal-closer-color);
-        transition: background .15s ease-out;
-        transform-origin: center;
-    }
-    &:before {
-        transform: rotate(-45deg);
-    }
-    &:after {
-        transform: rotate(45deg);
+        will-change: opacity;
+        opacity: 0;
+        transition: opacity .15s ease-out;
+        
+        @media (max-width: 639px) {
+            top: 1px;
+            background: #fff;
+        }
+        
+        &:before,
+        &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 19px;
+            left: 8px;
+            width: 24px;
+            height: 2px;
+            
+            will-change: color;
+            background: var(--modal-closer-color);
+            transition: background .15s ease-out;
+            transform-origin: center;
+        }
+        &:before {
+            transform: rotate(-45deg);
+        }
+        &:after {
+            transform: rotate(45deg);
+        }
     }
 }
 
 .modal.active {
-    & .modal-close {
+    & .modal-rail .modal-close {
         opacity: 1;
         
         &:hover:before, &:hover:after,

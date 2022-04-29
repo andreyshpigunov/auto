@@ -9,7 +9,7 @@
 //
 //  <div id="my-modal" class="modal-content [custom-classes]">
 //      <p>Hello modal!</p>
-//      <p><a class="button modal-close">Close</a></p>
+//      <p><a class="button modal-close">Close</a></p> — optional
 //  </div>
 //
 //  <script>
@@ -61,7 +61,7 @@ class Modal {
                                 <div class="modal-window">
                                     ${content}
                                     <div class="modal-rail">
-                                        <a class="modal-close"></a>
+                                        <a role="button" class="modal-close"></a>
                                     </div>
                                 </div>
                             </div>
@@ -89,7 +89,6 @@ class Modal {
                 event.target.matches(".modal.active, .modal.active *") &&
                 (
                     event.target.classList.contains("modal-close") ||
-                    event.target.classList.contains("modal-customClose") ||
                     !event.target.matches(".modal-window, .modal-window *")
                 )
             ) {

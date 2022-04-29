@@ -2,9 +2,10 @@
 <html lang="ru">
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Auto — super simple CSS + JS library for you website</title>
+    <meta name="description" content="Modern CSS&Javascript library for website building."/>
     <link rel="shortcut icon" href="https://andreyshpigunov.github.io/auto/assets/logo.png">
     <link rel="apple-touch-icon" href="https://andreyshpigunov.github.io/auto/assets/apple-touch-icon.png">
     <link rel="stylesheet" href="dist/docs.css" />
@@ -14,7 +15,7 @@
         <main>
             <aside class="sidebar unselectable">
                 <div class="sidebar-logo small-hide">
-                    <a data-scrollto="app">
+                    <a role="button" data-scrollto="app">
                         <img src="assets/logo.svg" alt="Auto"/>
                         <img class="-light" src="assets/logo-light.svg" alt="Auto"/>
                     </a>
@@ -22,20 +23,20 @@
                 <nav>
                     <ul class="reset">
                         <li><h4>auto.css</h4></li>
-                        <li><a data-scrollto="helpers">Helpers</a></li>
-                        <li><a data-scrollto="buttons">Buttons</a></li>
-                        <li><a data-scrollto="grid">Grid</a></li>
-                        <li><a data-scrollto="flex">Flex</a></li>
+                        <li><a role="button" data-scrollto="helpers">Helpers</a></li>
+                        <li><a role="button" data-scrollto="buttons">Buttons</a></li>
+                        <li><a role="button" data-scrollto="grid">Grid</a></li>
+                        <li><a role="button" data-scrollto="flex">Flex</a></li>
                     </ul>
                     <ul class="reset">
                         <li><h4>auto.js</h4></li>
-                        <li><a data-scrollto="modal">Modals</a></li>
-                        <li><a data-scrollto="animate">Animations</a></li>
-                        <li><a data-scrollto="scrollto">Scroller</a></li>
-                        <li><a data-scrollto="loadmore">Loader</a></li>
-                        <li><a data-scrollto="sheets">Sheets</a></li>
-                        <li><a data-scrollto="lazyload">Lazyload</a></li>
-                        <li><a data-scrollto="others">Others</a></li>
+                        <li><a role="button" data-scrollto="modal">Modals</a></li>
+                        <li><a role="button" data-scrollto="animate">Animations</a></li>
+                        <li><a role="button" data-scrollto="scrollto">Scroller</a></li>
+                        <li><a role="button" data-scrollto="loadmore">Loader</a></li>
+                        <li><a role="button" data-scrollto="sheets">Sheets</a></li>
+                        <li><a role="button" data-scrollto="lazyload">Lazyload</a></li>
+                        <li><a role="button" data-scrollto="others">Others</a></li>
                     </ul>
                 </nav>
             </aside>
@@ -262,13 +263,14 @@
                     <code>auto.modal.hide(id)</code> — close modal
                 </p>
                 
-                <a class="button" data-modal="modalTest">TEST</a>
-                <a class="button" onclick="auto.modal.show('modalTest')">API SHOW</a>
+                <a role="button" class="button" data-modal="modalTest">TEST</a>
+                <a role="button" class="button" onclick="auto.modal.show('modalTest')">API SHOW</a>
                 
                 <div id="modalTest" class="modal-content">
                     <h2>Modal windows</h2>
                     <p>Universal modal window.</p>
                     <p>By default, the modal window code is added to the end of the body tag, but if you need to place it elsewhere, you need to add a class <code>.modal-here</code> to the block where the window code should be located.</p>
+                    <a class="modal-close">Close</a>
                 </div>
                 
                 <h3>Events</h3>
@@ -370,9 +372,9 @@
                 
                 <div class="sheets">
                     <div>
-                        <a class="sheets-tab button" data-sheet="sheet1">Tab 1</a>
-                        <a class="sheets-tab button" data-sheet="sheet2">Tab 2</a>
-                        <a class="sheets-tab button" data-sheet="sheet3">Tab 3</a>
+                        <a role="button" class="sheets-tab button" data-sheet="sheet1">Tab 1</a>
+                        <a role="button" class="sheets-tab button" data-sheet="sheet2">Tab 2</a>
+                        <a role="button" class="sheets-tab button" data-sheet="sheet3">Tab 3</a>
                     </div>
                     <div class="p2">
                         <div id="sheet1" class="sheets-body">Body 1</div>
