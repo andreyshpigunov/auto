@@ -37,6 +37,7 @@ Created by andreyshpigunov on 19.01.2022.
     &.jcb { justify-content: flex-end }
     &.jcsb { justify-content: space-between }
     &.jcsa { justify-content: space-around }
+    &.jcse { justify-content: space-evenly }
     
     & .f0 { flex: 0 }
     & .f1 { flex: 1 }
@@ -98,6 +99,7 @@ Created by andreyshpigunov on 19.01.2022.
         &.md\:jcb { justify-content: flex-end }
         &.md\:jcsb { justify-content: space-between }
         &.md\:jcsa { justify-content: space-around }
+        &.md\:jcse { justify-content: space-evenly }
         
         & .md\:f0 { flex: 0 }
         & .md\:f1 { flex: 1 }
@@ -160,6 +162,7 @@ Created by andreyshpigunov on 19.01.2022.
         &.sm\:jcb { justify-content: flex-end }
         &.sm\:jcsb { justify-content: space-between }
         &.sm\:jcsa { justify-content: space-around }
+        &.sm\:jcse { justify-content: space-evenly }
         
         & .sm\:f0 { flex: 0 }
         & .sm\:f1 { flex: 1 }

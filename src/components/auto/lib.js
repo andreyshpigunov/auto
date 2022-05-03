@@ -14,6 +14,22 @@ const lib = {
     qs: (s, o = document) => o.querySelector(s),
     qsa: (s, o = document) => o.querySelectorAll(s),
     
+    // Hide element (add class .hidden)
+    hide(element) {
+        let item = typeof element == 'string' ?
+            document.querySelector(element) :
+            element;
+        if (item) e.classList.add('hidden')
+    },
+    
+    // Show element (remove class .hidden)
+    show(element) {
+        let item = typeof element == 'string' ?
+                   document.querySelector(element) :
+                   element;
+        if (e) e.classList.remove('hidden')
+    },
+    
     // Reload page
     reload() {
         location.reload()
