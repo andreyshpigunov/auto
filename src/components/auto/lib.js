@@ -19,7 +19,7 @@ const lib = {
         let item = typeof element == 'string' ?
             document.querySelector(element) :
             element;
-        if (item) e.classList.add('hidden')
+        if (item) item.classList.add('hidden')
     },
     
     // Show element (remove class .hidden)
@@ -27,7 +27,7 @@ const lib = {
         let item = typeof element == 'string' ?
                    document.querySelector(element) :
                    element;
-        if (e) e.classList.remove('hidden')
+        if (item) item.classList.remove('hidden')
     },
     
     // Reload page
@@ -238,6 +238,24 @@ const lib = {
     isEmail(email) {
         let regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
         return regex.test(email);
+    },
+    
+    // Show alert window with errors
+    // data — object (with key:value), array or string (object and array splitted by '\n')
+    // return false
+    alertErrors(data) {
+        if (data) {
+            if (
+                typeof data === 'string' ||
+                data instanceof String
+            ) {
+                alert(data)
+            } else {
+                let err = []
+                for (let e in data) { err.push(data[e]) }
+                alert(err.join('\n'))
+            }
+        }
     }
 }
 

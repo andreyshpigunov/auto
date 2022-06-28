@@ -25,6 +25,7 @@ Created by andreyshpigunov on 25.05.2021.
     --forms-border-color-readonly: #ddd;
     --forms-border-color-disabled: #ddd;
     
+    --forms-background-color: #fff;
     --forms-background-color-readonly: #f8f8f8;
     --forms-background-color-disabled: #f6f6f6;
 }
@@ -90,6 +91,7 @@ input[type=url],
 input[type=week],
 textarea,
 select {
+    background-color: var(--forms-background-color);
     
     &[readonly],
     &[readonly]:focus {

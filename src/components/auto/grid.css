@@ -18,11 +18,13 @@ Created by andreyshpigunov on 26.05.2021.
     grid-template-columns: repeat(12, 1fr);
     
     &.gap0 { --grid-gap: 0 }
-    &.gap1 { --grid-gap: 1rem }
-    &.gap2 { --grid-gap: 1.5rem }
-    &.gap3 { --grid-gap: 2rem }
-    &.gap4 { --grid-gap: 2.5rem }
-    &.gap5 { --grid-gap: 3rem }
+    &.gap1 { --grid-gap: 0.5rem }
+    &.gap2 { --grid-gap: 1rem }
+    &.gap3 { --grid-gap: 1.5rem }
+    &.gap4 { --grid-gap: 2rem }
+    &.gap5 { --grid-gap: 2.5rem }
+    &.gap6 { --grid-gap: 3rem }
+    &.gap7 { --grid-gap: 4rem }
     
     &.g1 { grid-template-columns: repeat(1, 1fr) }
     &.g2 { grid-template-columns: repeat(2, 1fr) }
@@ -53,11 +55,13 @@ Created by andreyshpigunov on 26.05.2021.
     @media(max-width: 1023px){
         
         &.md\:gap0 { --grid-gap: 0 }
-        &.md\:gap1 { --grid-gap: 1rem }
-        &.md\:gap2 { --grid-gap: 1.5rem }
-        &.md\:gap3 { --grid-gap: 2rem }
-        &.md\:gap4 { --grid-gap: 2.5rem }
-        &.md\:gap5 { --grid-gap: 3rem }
+        &.md\:gap1 { --grid-gap: 0.5rem }
+        &.md\:gap2 { --grid-gap: 1rem }
+        &.md\:gap3 { --grid-gap: 1.5rem }
+        &.md\:gap4 { --grid-gap: 2rem }
+        &.md\:gap5 { --grid-gap: 2.5rem }
+        &.md\:gap6 { --grid-gap: 3rem }
+        &.md\:gap7 { --grid-gap: 4rem }
         
         &.md\:g1 { grid-template-columns: repeat(1, 1fr) }
         &.md\:g2 { grid-template-columns: repeat(2, 1fr) }
@@ -89,11 +93,13 @@ Created by andreyshpigunov on 26.05.2021.
     @media(max-width: 639px){
         
         &.sm\:gap0 { --grid-gap: 0 }
-        &.sm\:gap1 { --grid-gap: 1rem }
-        &.sm\:gap2 { --grid-gap: 1.5rem }
-        &.sm\:gap3 { --grid-gap: 2rem }
-        &.sm\:gap4 { --grid-gap: 2.5rem }
-        &.sm\:gap5 { --grid-gap: 3rem }
+        &.sm\:gap1 { --grid-gap: 0.5rem }
+        &.sm\:gap2 { --grid-gap: 1rem }
+        &.sm\:gap3 { --grid-gap: 1.5rem }
+        &.sm\:gap4 { --grid-gap: 2rem }
+        &.sm\:gap5 { --grid-gap: 2.5rem }
+        &.sm\:gap6 { --grid-gap: 3rem }
+        &.sm\:gap7 { --grid-gap: 4rem }
         
         &.sm\:g1 { grid-template-columns: repeat(1, 1fr) }
         &.sm\:g2 { grid-template-columns: repeat(2, 1fr) }

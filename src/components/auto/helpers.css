@@ -43,6 +43,9 @@ Created by andreyshpigunov on 25.05.2021.
 .hyphens {
     hyphens: auto;
 }
+.pointer {
+    cursor: pointer;
+}
 
 .sticky {
     position: sticky;
@@ -319,6 +322,11 @@ Created by andreyshpigunov on 25.05.2021.
 
 @media (max-width: 1023px) {
     
+    .md\:max {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    
     .md\:block { display: block }
     .md\:inline { display: inline }
     .md\:inlineBlock { display: inline-block }
@@ -487,6 +495,11 @@ Created by andreyshpigunov on 25.05.2021.
 }
 
 @media (max-width: 639px) {
+    
+    .sm\:max {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
     
     .sm\:block { display: block }
     .sm\:inline { display: inline }
