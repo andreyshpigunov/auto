@@ -17,7 +17,7 @@ Created by andreyshpigunov on 25.05.2021.
     --link-border-color-hover: var(--link-color-hover);
     
     --link-color-visited: var(--link-color);
-    --link-border-color-visited: #0477cc44;
+    --link-border-color-visited: var(--link-border-color);
     
     --link-decoration: none;
     --link-decoration-hover: none;
@@ -25,7 +25,9 @@ Created by andreyshpigunov on 25.05.2021.
 }
 
 a {
-
+    &[role=button] {
+        cursor: pointer;
+    }
     &:link, &.link {
         outline: none;
         cursor: pointer;
@@ -49,6 +51,7 @@ a {
         border-bottom-style: dotted;
         text-decoration-style: var(--link-decoration-pseudo);
     }
+    
 }
 
 

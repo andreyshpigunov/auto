@@ -8,36 +8,41 @@ Created by andreyshpigunov on 25.05.2021.
 /* Buttons */
 
 :root {
-    --button-padding: .6em 1em;
+    --button-padding: .64em 1em;
     --button-font-family: var(--font-family);
     --button-font-size: var(--font-size);
     --button-font-weight: 400;
     --button-border-radius: 6px;
-    --button-transition: all .1s linear;
+    --button-transition: all .1s ease-out;
     
-    --button-color: #f6f6f6;
-    --button-color-hover: #f8f8f8;
-    --button-color-active: #ededed;
+    --button-transform: scale(1);
+    --button-transform-hover: scale(1);
+    --button-transform-active: scale(1);
+    --button-transform-origin: center;
+    
+    --button-color: #f2f4f6;
+    --button-color-hover: #f6f8fa;
+    --button-color-active: var(--button-color-hover);
     --button-font-color: #000;
     
     --button-primary-color: #0074d9;
-    --button-primary-color-hover: #007de2;
-    --button-primary-color-active: #006acf;
+    --button-primary-color-hover: #1084e9;
+    --button-primary-color-active: var(--button-primary-color-hover);
     --button-primary-font-color: #fff;
     
-    --button-success-color: #2ecc40;
-    --button-success-color-hover: #38d549;
-    --button-success-color-active: #23c249;
+    --button-success-color: #2bc016;
+    --button-success-color-hover: #3bd026;
+    --button-success-color-active: var(--button-success-color-hover);
     --button-success-font-color: #fff;
     
-    --button-danger-color: #ff4136;
-    --button-danger-color-hover: #ff4a40;
-    --button-danger-color-active: #f5372c;
+    --button-danger-color: #e63838;
+    --button-danger-color-hover: #f64848;
+    --button-danger-color-active: var(--button-danger-color-hover);
     --button-danger-font-color: #fff;
     
-    --button-warning-color: #ff851b;
-    --button-warning-color-hover: #ff8f24;
-    --button-warning-color-active: #f57a11;
+    --button-warning-color: #fb8500;
+    --button-warning-color-hover: #ff9510;
+    --button-warning-color-active: var(--button-warning-color-hover);
     --button-warning-font-color: #fff;
 }
 
@@ -66,6 +71,8 @@ a.button {
     border-radius: var(--button-border-radius);
     background-color: var(--button-color);
     transition: var(--button-transition);
+    transform: var(--button-transform);
+    transform-origin: var(--button-transform-origin);
     user-select: none;
     appearance: none;
     
@@ -74,6 +81,7 @@ a.button {
         text-decoration: none;
         color: var(--button-font-color);
         background-color: var(--button-color-hover);
+        transform: var(--button-transform-hover);
     }
     
     &:active,
@@ -81,6 +89,7 @@ a.button {
         text-decoration: none;
         color: var(--button-font-color);
         background-color: var(--button-color-active);
+        transform: var(--button-transform-active);
     }
     
     &[disabled],

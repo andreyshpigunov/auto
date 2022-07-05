@@ -29,16 +29,21 @@ class Sheets {
                 try {
                     let tabs = document.querySelectorAll(".sheets-tab", e);
                     if (tabs) {
-                        let i = 1;
                         tabs.forEach(tab => {
-                            if (i == 1) {
-                                this.show(tab.dataset.sheet);
-                                i++
-                            }
                             tab.addEventListener("click", (event) => {
                                 event.preventDefault();
                                 this.show(tab.dataset.sheet)
                             })
+                        })
+                    }
+                    let bodies = document.querySelectorAll(".sheets-body", e);
+                    if (bodies) {
+                        let i = 1;
+                        bodies.forEach(body => {
+                            if (i == 1) {
+                                this.show(body.getAttribute("id"));
+                                i++
+                            }
                         })
                     }
                 } catch (err) {
