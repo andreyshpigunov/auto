@@ -8,8 +8,8 @@ Created by andreyshpigunov on 25.05.2021.
 /* Typo */
 
 :root {
-    --headers-margin-top: 24px;
-    --headers-margin-bottom: 16px;
+    --headers-margin-top: 28px;
+    --headers-margin-bottom: 20px;
     --headers-font-family: var(--font-family);
     --headers-font-weight: 700;
     --h1-font-size: 44px;
