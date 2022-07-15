@@ -48,7 +48,7 @@ a {
         text-decoration: var(--link-decoration-hover);
     }
     &.pseudo {
-        border-bottom-style: dotted;
+        border-bottom-style: dashed;
         text-decoration-style: var(--link-decoration-pseudo);
     }
     
