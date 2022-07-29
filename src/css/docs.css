@@ -14,7 +14,7 @@ Created by andreyshpigunov on 25.05.2021.
         --link-color: #8bcdff;
         --link-color-hover: #8bcdff;
         --link-color-visited: #8bcdff;
-        --link-decoration-hover: underline;
+        --link-border-color: #8bcdff66;
     }
 }
 
