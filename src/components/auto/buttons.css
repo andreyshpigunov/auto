@@ -76,12 +76,14 @@ a.button {
     user-select: none;
     appearance: none;
     
-    &:hover,
-    &.hover {
-        text-decoration: none;
-        color: var(--button-font-color);
-        background-color: var(--button-color-hover);
-        transform: var(--button-transform-hover);
+    @media (hover: hover) {
+        &:hover,
+        &.hover {
+            text-decoration: none;
+            color: var(--button-font-color);
+            background-color: var(--button-color-hover);
+            transform: var(--button-transform-hover);
+        }
     }
     
     &:active,
@@ -125,12 +127,15 @@ a.button {
 .button.primary {
     color: var(--button-primary-font-color);
     background-color: var(--button-primary-color);
-
-    &:hover,
-    &.hover {
-        color: var(--button-primary-font-color);
-        background-color: var(--button-primary-color-hover);
+    
+    @media (hover: hover) {
+        &:hover,
+        &.hover {
+            color: var(--button-primary-font-color);
+            background-color: var(--button-primary-color-hover);
+        }
     }
+    
     &:active,
     &.active {
         color: var(--button-primary-font-color);
@@ -144,11 +149,14 @@ a.button {
     color: var(--button-success-font-color);
     background-color: var(--button-success-color);
     
-    &:hover,
-    &.hover {
-        color: var(--button-success-font-color);
-        background-color: var(--button-success-color-hover);
+    @media (hover: hover) {
+        &:hover,
+        &.hover {
+            color: var(--button-success-font-color);
+            background-color: var(--button-success-color-hover);
+        }
     }
+    
     &:active,
     &.active {
         color: var(--button-success-font-color);
@@ -162,11 +170,14 @@ a.button {
     color: var(--button-danger-font-color);
     background-color: var(--button-danger-color);
     
-    &:hover,
-    &.hover {
-        color: var(--button-danger-font-color);
-        background-color: var(--button-danger-color-hover);
+    @media (hover: hover) {
+        &:hover,
+        &.hover {
+            color: var(--button-danger-font-color);
+            background-color: var(--button-danger-color-hover);
+        }
     }
+    
     &:active,
     &.active {
         color: var(--button-danger-font-color);
@@ -179,12 +190,14 @@ a.button {
 .button.warning {
     color: var(--button-warning-font-color);
     background-color: var(--button-warning-color);
-    
-    &:hover,
-    &.hover {
-        color: var(--button-warning-font-color);
-        background-color: var(--button-warning-color-hover);
+    @media (hover: hover) {
+        &:hover,
+        &.hover {
+            color: var(--button-warning-font-color);
+            background-color: var(--button-warning-color-hover);
+        }
     }
+    
     &:active,
     &.active {
         color: var(--button-warning-font-color);

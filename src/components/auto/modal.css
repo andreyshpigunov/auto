@@ -188,9 +188,11 @@ html.modal-active body {
     & .modal-rail .modal-close {
         opacity: 1;
         
-        &:hover:before, &:hover:after,
-        &:active:before, &:active:after {
-            background: var(--modal-closer-color-hover);
+        @media (hover: hover) {
+            &:hover:before, &:hover:after,
+            &:active:before, &:active:after {
+                background: var(--modal-closer-color-hover);
+            }
         }
     }
 }
@@ -215,7 +217,7 @@ html.modal-active body {
 
 .modal {
     & .modal-window {
-        will-change: opacity, transform;
+        will-change: visibility, opacity, transform;
         opacity: 0;
         transform: scale(.97);
         transition: all .12s ease-out;

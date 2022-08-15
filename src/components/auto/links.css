@@ -41,7 +41,13 @@ a {
         color: var(--link-color-visited);
         border-bottom-color: var(--link-border-color-visited);
     }
-    &:hover, &.hover,
+    @media (hover: hover) {
+        &:hover, &.hover {
+            color: var(--link-color-hover);
+            border-bottom-color: var(--link-border-color-hover);
+            text-decoration: var(--link-decoration-hover);
+        }
+    }
     &:active, &.active {
         color: var(--link-color-hover);
         border-bottom-color: var(--link-border-color-hover);
