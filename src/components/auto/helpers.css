@@ -96,6 +96,7 @@ Created by andreyshpigunov on 25.05.2021.
     visibility: hidden !important;
 }
 
+.scrollResponsive,
 .tableResponsive {
     overflow-x: auto;
 }

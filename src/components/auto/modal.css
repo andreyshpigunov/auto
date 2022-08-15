@@ -138,7 +138,6 @@ html.modal-active body {
     bottom: 6px;
     right: 6px;
     width: 0;
-    background: red;
     
     & .modal-close {
         display: block;

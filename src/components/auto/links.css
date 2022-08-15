@@ -8,10 +8,10 @@ Created by andreyshpigunov on 25.05.2021.
 /* Links styles */
 
 :root {
-    --link-color: #0477cc;
+    --link-color: #0066cc;
     --link-border-style: solid;
     --link-border-width: 1px;
-    --link-border-color: #0477cc44;
+    --link-border-color: #0066cc44;
     
     --link-color-hover: #f40000;
     --link-border-color-hover: var(--link-color-hover);
