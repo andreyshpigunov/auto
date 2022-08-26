@@ -34,9 +34,9 @@ Created by andreyshpigunov on 19.01.2022.
     &.aic { align-items: center }
     &.aib { align-items: flex-end }
     
-    &.jct { justify-content: flex-start }
+    &.jcl { justify-content: flex-start }
     &.jcc { justify-content: center }
-    &.jcb { justify-content: flex-end }
+    &.jcr { justify-content: flex-end }
     &.jcsb { justify-content: space-between }
     &.jcsa { justify-content: space-around }
     &.jcse { justify-content: space-evenly }
@@ -98,9 +98,9 @@ Created by andreyshpigunov on 19.01.2022.
         &.md\:aic { align-items: center }
         &.md\:aib { align-items: flex-end }
         
-        &.md\:jct { justify-content: flex-start }
+        &.md\:jcl { justify-content: flex-start }
         &.md\:jcc { justify-content: center }
-        &.md\:jcb { justify-content: flex-end }
+        &.md\:jcr { justify-content: flex-end }
         &.md\:jcsb { justify-content: space-between }
         &.md\:jcsa { justify-content: space-around }
         &.md\:jcse { justify-content: space-evenly }
@@ -163,9 +163,9 @@ Created by andreyshpigunov on 19.01.2022.
         &.sm\:aic { align-items: center }
         &.sm\:aib { align-items: flex-end }
         
-        &.sm\:jct { justify-content: flex-start }
+        &.sm\:jcl { justify-content: flex-start }
         &.sm\:jcc { justify-content: center }
-        &.sm\:jcb { justify-content: flex-end }
+        &.sm\:jcr { justify-content: flex-end }
         &.sm\:jcsb { justify-content: space-between }
         &.sm\:jcsa { justify-content: space-around }
         &.sm\:jcse { justify-content: space-evenly }
