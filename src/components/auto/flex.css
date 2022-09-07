@@ -30,13 +30,13 @@ Created by andreyshpigunov on 19.01.2022.
     &.fnw { flex-wrap: nowrap }
     
     &.ais { align-items: stretch }
-    &.ait { align-items: flex-start }
+    &.aifs { align-items: flex-start }
     &.aic { align-items: center }
-    &.aib { align-items: flex-end }
+    &.aife { align-items: flex-end }
     
-    &.jcl { justify-content: flex-start }
+    &.jcfs { justify-content: flex-start }
     &.jcc { justify-content: center }
-    &.jcr { justify-content: flex-end }
+    &.jcfe { justify-content: flex-end }
     &.jcsb { justify-content: space-between }
     &.jcsa { justify-content: space-around }
     &.jcse { justify-content: space-evenly }
@@ -65,18 +65,6 @@ Created by andreyshpigunov on 19.01.2022.
     & .fb9 { flex: 0 0 90% }
     & .fb10 { flex: 0 0 100% }
     
-    & .o0 { order: 0 }
-    & .o1 { order: 1 }
-    & .o2 { order: 2 }
-    & .o3 { order: 3 }
-    & .o4 { order: 4 }
-    & .o5 { order: 5 }
-    & .o6 { order: 6 }
-    & .o7 { order: 7 }
-    & .o8 { order: 8 }
-    & .o9 { order: 9 }
-    & .o10 { order: 10 }
-    
     @media(max-width: 1023px){
         
         &.md\:gap0 { --flex-gap: 0 }
@@ -94,13 +82,13 @@ Created by andreyshpigunov on 19.01.2022.
         &.md\:fnw { flex-wrap: nowrap }
         
         &.md\:ais { align-items: stretch }
-        &.md\:ait { align-items: flex-start }
+        &.md\:aifs { align-items: flex-start }
         &.md\:aic { align-items: center }
-        &.md\:aib { align-items: flex-end }
+        &.md\:aife { align-items: flex-end }
         
-        &.md\:jcl { justify-content: flex-start }
+        &.md\:jcfs { justify-content: flex-start }
         &.md\:jcc { justify-content: center }
-        &.md\:jcr { justify-content: flex-end }
+        &.md\:jcfe { justify-content: flex-end }
         &.md\:jcsb { justify-content: space-between }
         &.md\:jcsa { justify-content: space-around }
         &.md\:jcse { justify-content: space-evenly }
@@ -128,18 +116,6 @@ Created by andreyshpigunov on 19.01.2022.
         & .md\:fb8 { flex: 80% }
         & .md\:fb9 { flex: 90% }
         & .md\:fb10 { flex: 100% }
-        
-        & .md\:o0 { order: 0 }
-        & .md\:o1 { order: 1 }
-        & .md\:o2 { order: 2 }
-        & .md\:o3 { order: 3 }
-        & .md\:o4 { order: 4 }
-        & .md\:o5 { order: 5 }
-        & .md\:o6 { order: 6 }
-        & .md\:o7 { order: 7 }
-        & .md\:o8 { order: 8 }
-        & .md\:o9 { order: 9 }
-        & .md\:o10 { order: 10 }
     }
     
     @media(max-width: 639px){
@@ -159,13 +135,13 @@ Created by andreyshpigunov on 19.01.2022.
         &.sm\:fnw { flex-wrap: nowrap }
         
         &.sm\:ais { align-items: stretch }
-        &.sm\:ait { align-items: flex-start }
+        &.sm\:aifs { align-items: flex-start }
         &.sm\:aic { align-items: center }
-        &.sm\:aib { align-items: flex-end }
+        &.sm\:aife { align-items: flex-end }
         
-        &.sm\:jcl { justify-content: flex-start }
+        &.sm\:jcfs { justify-content: flex-start }
         &.sm\:jcc { justify-content: center }
-        &.sm\:jcr { justify-content: flex-end }
+        &.sm\:jcfe { justify-content: flex-end }
         &.sm\:jcsb { justify-content: space-between }
         &.sm\:jcsa { justify-content: space-around }
         &.sm\:jcse { justify-content: space-evenly }
@@ -193,17 +169,5 @@ Created by andreyshpigunov on 19.01.2022.
         & .sm\:fb8 { flex: 80% }
         & .sm\:fb9 { flex: 90% }
         & .sm\:fb10 { flex: 100% }
-        
-        & .sm\:o0 { order: 0 }
-        & .sm\:o1 { order: 1 }
-        & .sm\:o2 { order: 2 }
-        & .sm\:o3 { order: 3 }
-        & .sm\:o4 { order: 4 }
-        & .sm\:o5 { order: 5 }
-        & .sm\:o6 { order: 6 }
-        & .sm\:o7 { order: 7 }
-        & .sm\:o8 { order: 8 }
-        & .sm\:o9 { order: 9 }
-        & .sm\:o10 { order: 10 }
     }
 }

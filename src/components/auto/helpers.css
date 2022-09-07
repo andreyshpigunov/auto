@@ -331,6 +331,18 @@ Created by andreyshpigunov on 25.05.2021.
 .sh3 { box-shadow: 0 4px 20px rgba(0,0,0,.15) }
 .sh4 { box-shadow: 0 4px 20px rgba(0,0,0,.2) }
 
+.o0 { order: 0 }
+.o1 { order: 1 }
+.o2 { order: 2 }
+.o3 { order: 3 }
+.o4 { order: 4 }
+.o5 { order: 5 }
+.o6 { order: 6 }
+.o7 { order: 7 }
+.o8 { order: 8 }
+.o9 { order: 9 }
+.o10 { order: 10 }
+
 @media (max-width: 1023px) {
     
     .md\:max {
@@ -503,6 +515,18 @@ Created by andreyshpigunov on 25.05.2021.
     .md\:sh2 { box-shadow: 0 4px 20px rgba(0,0,0,.1) }
     .md\:sh3 { box-shadow: 0 4px 20px rgba(0,0,0,.15) }
     .md\:sh4 { box-shadow: 0 4px 20px rgba(0,0,0,.2) }
+    
+    .md\:o0 { order: 0 }
+    .md\:o1 { order: 1 }
+    .md\:o2 { order: 2 }
+    .md\:o3 { order: 3 }
+    .md\:o4 { order: 4 }
+    .md\:o5 { order: 5 }
+    .md\:o6 { order: 6 }
+    .md\:o7 { order: 7 }
+    .md\:o8 { order: 8 }
+    .md\:o9 { order: 9 }
+    .md\:o10 { order: 10 }
 }
 
 @media (max-width: 639px) {
@@ -677,4 +701,16 @@ Created by andreyshpigunov on 25.05.2021.
     .sm\:sh2 { box-shadow: 0 4px 20px rgba(0,0,0,.1) }
     .sm\:sh3 { box-shadow: 0 4px 20px rgba(0,0,0,.15) }
     .sm\:sh4 { box-shadow: 0 4px 20px rgba(0,0,0,.2) }
+    
+    .sm\:o0 { order: 0 }
+    .sm\:o1 { order: 1 }
+    .sm\:o2 { order: 2 }
+    .sm\:o3 { order: 3 }
+    .sm\:o4 { order: 4 }
+    .sm\:o5 { order: 5 }
+    .sm\:o6 { order: 6 }
+    .sm\:o7 { order: 7 }
+    .sm\:o8 { order: 8 }
+    .sm\:o9 { order: 9 }
+    .sm\:o10 { order: 10 }
 }
