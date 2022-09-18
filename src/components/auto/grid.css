@@ -25,6 +25,8 @@ Created by andreyshpigunov on 26.05.2021.
     &.gap5 { --grid-gap: 2.5rem }
     &.gap6 { --grid-gap: 3rem }
     &.gap7 { --grid-gap: 4rem }
+    &.gap8 { --grid-gap: 5rem }
+    &.gap9 { --grid-gap: 6rem }
     
     &.g1 { grid-template-columns: repeat(1, 1fr) }
     &.g2 { grid-template-columns: repeat(2, 1fr) }
@@ -62,6 +64,8 @@ Created by andreyshpigunov on 26.05.2021.
         &.md\:gap5 { --grid-gap: 2.5rem }
         &.md\:gap6 { --grid-gap: 3rem }
         &.md\:gap7 { --grid-gap: 4rem }
+        &.md\:gap8 { --grid-gap: 5rem }
+        &.md\:gap9 { --grid-gap: 6rem }
         
         &.md\:g1 { grid-template-columns: repeat(1, 1fr) }
         &.md\:g2 { grid-template-columns: repeat(2, 1fr) }
@@ -100,6 +104,8 @@ Created by andreyshpigunov on 26.05.2021.
         &.sm\:gap5 { --grid-gap: 2.5rem }
         &.sm\:gap6 { --grid-gap: 3rem }
         &.sm\:gap7 { --grid-gap: 4rem }
+        &.sm\:gap8 { --grid-gap: 5rem }
+        &.sm\:gap9 { --grid-gap: 6rem }
         
         &.sm\:g1 { grid-template-columns: repeat(1, 1fr) }
         &.sm\:g2 { grid-template-columns: repeat(2, 1fr) }

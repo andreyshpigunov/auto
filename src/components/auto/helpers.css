@@ -190,6 +190,8 @@ Created by andreyshpigunov on 25.05.2021.
 .m5 { margin: 2rem !important }
 .m6 { margin: 2.5rem !important }
 .m7 { margin: 3rem !important }
+.m8 { margin: 4rem !important }
+.m9 { margin: 5rem !important }
 .ma { margin: auto !important }
 
 .mx0 { margin-left: 0 !important; margin-right: 0 !important }
@@ -200,6 +202,8 @@ Created by andreyshpigunov on 25.05.2021.
 .mx5 { margin-left: 2rem !important; margin-right: 2rem !important }
 .mx6 { margin-left: 2.5rem !important; margin-right: 2.5rem !important }
 .mx7 { margin-left: 3rem !important; margin-right: 3rem !important }
+.mx8 { margin-left: 4rem !important; margin-right: 4rem !important }
+.mx9 { margin-left: 5rem !important; margin-right: 5rem !important }
 .mxa { margin-left: auto !important; margin-right: auto !important }
 
 .my0 { margin-top: 0 !important; margin-bottom: 0 !important }
@@ -210,6 +214,8 @@ Created by andreyshpigunov on 25.05.2021.
 .my5 { margin-top: 2rem !important; margin-bottom: 2rem !important }
 .my6 { margin-top: 2.5rem !important; margin-bottom: 2.5rem !important }
 .my7 { margin-top: 3rem !important; margin-bottom: 3rem !important }
+.my8 { margin-top: 4rem !important; margin-bottom: 4rem !important }
+.my9 { margin-top: 5rem !important; margin-bottom: 5rem !important }
 .mya { margin-top: auto !important; margin-bottom: auto !important }
 
 .mt0 { margin-top: 0 !important }
@@ -220,6 +226,8 @@ Created by andreyshpigunov on 25.05.2021.
 .mt5 { margin-top: 2rem !important }
 .mt6 { margin-top: 2.5rem !important }
 .mt7 { margin-top: 3rem !important }
+.mt8 { margin-top: 4rem !important }
+.mt9 { margin-top: 5rem !important }
 .mta { margin-top: auto !important }
 
 .mb0 { margin-bottom: 0 !important }
@@ -230,6 +238,8 @@ Created by andreyshpigunov on 25.05.2021.
 .mb5 { margin-bottom: 2rem !important }
 .mb6 { margin-bottom: 2.5rem !important }
 .mb7 { margin-bottom: 3rem !important }
+.mb8 { margin-bottom: 4rem !important }
+.mb9 { margin-bottom: 5rem !important }
 .mba { margin-bottom: auto !important }
 
 .ml0 { margin-left: 0 !important }
@@ -240,6 +250,8 @@ Created by andreyshpigunov on 25.05.2021.
 .ml5 { margin-left: 2rem !important }
 .ml6 { margin-left: 2.5rem !important }
 .ml7 { margin-left: 3rem !important }
+.ml8 { margin-left: 4rem !important }
+.ml9 { margin-left: 5rem !important }
 .mla { margin-left: auto !important }
 
 .mr0 { margin-right: 0 !important }
@@ -250,6 +262,8 @@ Created by andreyshpigunov on 25.05.2021.
 .mr5 { margin-right: 2rem !important }
 .mr6 { margin-right: 2.5rem !important }
 .mr7 { margin-right: 3rem !important }
+.mr8 { margin-right: 4rem !important }
+.mr9 { margin-right: 5rem !important }
 .mra { margin-right: auto !important }
 
 .p0 { padding: 0 !important }
@@ -260,6 +274,8 @@ Created by andreyshpigunov on 25.05.2021.
 .p5 { padding: 2rem !important }
 .p6 { padding: 2.5rem !important }
 .p7 { padding: 3rem !important }
+.p8 { padding: 4rem !important }
+.p9 { padding: 5rem !important }
 
 .px0 { padding-left: 0 !important; padding-right: 0 !important }
 .px1 { padding-left: 0.25rem !important; padding-right: 0.25rem !important }
@@ -269,6 +285,8 @@ Created by andreyshpigunov on 25.05.2021.
 .px5 { padding-left: 2rem !important; padding-right: 2rem !important }
 .px6 { padding-left: 2.5rem !important; padding-right: 2.5rem !important }
 .px7 { padding-left: 3rem !important; padding-right: 3rem !important }
+.px8 { padding-left: 4rem !important; padding-right: 4rem !important }
+.px9 { padding-left: 5rem !important; padding-right: 5rem !important }
 
 .py0 { padding-top: 0 !important; padding-bottom: 0 !important }
 .py1 { padding-top: 0.25rem !important; padding-bottom: 0.25rem !important }
@@ -278,6 +296,8 @@ Created by andreyshpigunov on 25.05.2021.
 .py5 { padding-top: 2rem !important; padding-bottom: 2rem !important }
 .py6 { padding-top: 2.5rem !important; padding-bottom: 2.5rem !important }
 .py7 { padding-top: 3rem !important; padding-bottom: 3rem !important }
+.py8 { padding-top: 4rem !important; padding-bottom: 4rem !important }
+.py8 { padding-top: 5rem !important; padding-bottom: 5rem !important }
 
 .pt0 { padding-top: 0 !important }
 .pt1 { padding-top: 0.25rem !important }
@@ -287,6 +307,8 @@ Created by andreyshpigunov on 25.05.2021.
 .pt5 { padding-top: 2rem !important }
 .pt6 { padding-top: 2.5rem !important }
 .pt7 { padding-top: 3rem !important }
+.pt8 { padding-top: 4rem !important }
+.pt9 { padding-top: 5rem !important }
 
 .pb0 { padding-bottom: 0 !important }
 .pb1 { padding-bottom: 0.25rem !important }
@@ -296,6 +318,8 @@ Created by andreyshpigunov on 25.05.2021.
 .pb5 { padding-bottom: 2rem !important }
 .pb6 { padding-bottom: 2.5rem !important }
 .pb7 { padding-bottom: 3rem !important }
+.pb8 { padding-bottom: 4rem !important }
+.pb9 { padding-bottom: 5rem !important }
 
 .pl0 { padding-left: 0 !important }
 .pl1 { padding-left: 0.25rem !important }
@@ -305,6 +329,8 @@ Created by andreyshpigunov on 25.05.2021.
 .pl5 { padding-left: 2rem !important }
 .pl6 { padding-left: 2.5rem !important }
 .pl7 { padding-left: 3rem !important }
+.pl8 { padding-left: 4rem !important }
+.pl9 { padding-left: 5rem !important }
 
 .pr0 { padding-right: 0 !important }
 .pr1 { padding-right: 0.25rem !important }
@@ -314,6 +340,8 @@ Created by andreyshpigunov on 25.05.2021.
 .pr5 { padding-right: 2rem !important }
 .pr6 { padding-right: 2.5rem !important }
 .pr7 { padding-right: 3rem !important }
+.pr8 { padding-right: 4rem !important }
+.pr9 { padding-right: 5rem !important }
 
 .r0 { border-radius: 0 }
 .r1 { border-radius: 2px }
@@ -323,6 +351,8 @@ Created by andreyshpigunov on 25.05.2021.
 .r5 { border-radius: 10px }
 .r6 { border-radius: 12px }
 .r7 { border-radius: 16px }
+.r8 { border-radius: 20px }
+.r9 { border-radius: 26px }
 .r100 { border-radius: 100% }
 
 .sh0 { box-shadow: none }
@@ -375,6 +405,8 @@ Created by andreyshpigunov on 25.05.2021.
     .md\:m5 { margin: 2rem !important }
     .md\:m6 { margin: 2.5rem !important }
     .md\:m7 { margin: 3rem !important }
+    .md\:m8 { margin: 4rem !important }
+    .md\:m9 { margin: 5rem !important }
     .md\:ma { margin: auto !important }
     
     .md\:mx0 { margin-left: 0 !important; margin-right: 0 !important }
@@ -385,6 +417,8 @@ Created by andreyshpigunov on 25.05.2021.
     .md\:mx5 { margin-left: 2rem !important; margin-right: 2rem !important }
     .md\:mx6 { margin-left: 2.5rem !important; margin-right: 2.5rem !important }
     .md\:mx7 { margin-left: 3rem !important; margin-right: 3rem !important }
+    .md\:mx8 { margin-left: 4rem !important; margin-right: 4rem !important }
+    .md\:mx9 { margin-left: 5rem !important; margin-right: 5rem !important }
     .md\:mxa { margin-left: auto !important; margin-right: auto !important }
     
     .md\:my0 { margin-top: 0 !important; margin-bottom: 0 !important }
@@ -395,6 +429,8 @@ Created by andreyshpigunov on 25.05.2021.
     .md\:my5 { margin-top: 2rem !important; margin-bottom: 2rem !important }
     .md\:my6 { margin-top: 2.5rem !important; margin-bottom: 2.5rem !important }
     .md\:my7 { margin-top: 3rem !important; margin-bottom: 3rem !important }
+    .md\:my8 { margin-top: 4rem !important; margin-bottom: 4rem !important }
+    .md\:my9 { margin-top: 5rem !important; margin-bottom: 5rem !important }
     .md\:mya { margin-top: auto !important; margin-bottom: auto !important }
     
     .md\:mt0 { margin-top: 0 !important }
@@ -405,6 +441,8 @@ Created by andreyshpigunov on 25.05.2021.
     .md\:mt5 { margin-top: 2rem !important }
     .md\:mt6 { margin-top: 2.5rem !important }
     .md\:mt7 { margin-top: 3rem !important }
+    .md\:mt8 { margin-top: 4rem !important }
+    .md\:mt9 { margin-top: 5rem !important }
     .md\:mta { margin-top: auto !important }
     
     .md\:mb0 { margin-bottom: 0 !important }
@@ -415,6 +453,8 @@ Created by andreyshpigunov on 25.05.2021.
     .md\:mb5 { margin-bottom: 2rem !important }
     .md\:mb6 { margin-bottom: 2.5rem !important }
     .md\:mb7 { margin-bottom: 3rem !important }
+    .md\:mb8 { margin-bottom: 4rem !important }
+    .md\:mb9 { margin-bottom: 5rem !important }
     .md\:mba { margin-bottom: auto !important }
     
     .md\:ml0 { margin-left: 0 !important }
@@ -425,6 +465,8 @@ Created by andreyshpigunov on 25.05.2021.
     .md\:ml5 { margin-left: 2rem !important }
     .md\:ml6 { margin-left: 2.5rem !important }
     .md\:ml7 { margin-left: 3rem !important }
+    .md\:ml8 { margin-left: 4rem !important }
+    .md\:ml9 { margin-left: 5rem !important }
     .md\:mla { margin-left: auto !important }
     
     .md\:mr0 { margin-right: 0 !important }
@@ -435,6 +477,8 @@ Created by andreyshpigunov on 25.05.2021.
     .md\:mr5 { margin-right: 2rem !important }
     .md\:mr6 { margin-right: 2.5rem !important }
     .md\:mr7 { margin-right: 3rem !important }
+    .md\:mr8 { margin-right: 4rem !important }
+    .md\:mr9 { margin-right: 5rem !important }
     .md\:mra { margin-right: auto !important }
     
     .md\:p0 { padding: 0 !important }
@@ -445,6 +489,8 @@ Created by andreyshpigunov on 25.05.2021.
     .md\:p5 { padding: 2rem !important }
     .md\:p6 { padding: 2.5rem !important }
     .md\:p7 { padding: 3rem !important }
+    .md\:p8 { padding: 4rem !important }
+    .md\:p9 { padding: 5rem !important }
     
     .md\:px0 { padding-left: 0 !important; padding-right: 0 !important }
     .md\:px1 { padding-left: 0.25rem !important; padding-right: 0.25rem !important }
@@ -454,6 +500,8 @@ Created by andreyshpigunov on 25.05.2021.
     .md\:px5 { padding-left: 2rem !important; padding-right: 2rem !important }
     .md\:px6 { padding-left: 2.5rem !important; padding-right: 2.5rem !important }
     .md\:px7 { padding-left: 3rem !important; padding-right: 3rem !important }
+    .md\:px8 { padding-left: 4rem !important; padding-right: 4rem !important }
+    .md\:px9 { padding-left: 5rem !important; padding-right: 5rem !important }
     
     .md\:py0 { padding-top: 0 !important; padding-bottom: 0 !important }
     .md\:py1 { padding-top: 0.25rem !important; padding-bottom: 0.25rem !important }
@@ -463,6 +511,8 @@ Created by andreyshpigunov on 25.05.2021.
     .md\:py5 { padding-top: 2rem !important; padding-bottom: 2rem !important }
     .md\:py6 { padding-top: 2.5rem !important; padding-bottom: 2.5rem !important }
     .md\:py7 { padding-top: 3rem !important; padding-bottom: 3rem !important }
+    .md\:py8 { padding-top: 4rem !important; padding-bottom: 4rem !important }
+    .md\:py9 { padding-top: 5rem !important; padding-bottom: 5rem !important }
     
     .md\:pt0 { padding-top: 0 !important }
     .md\:pt1 { padding-top: 0.25rem !important }
@@ -472,6 +522,8 @@ Created by andreyshpigunov on 25.05.2021.
     .md\:pt5 { padding-top: 2rem !important }
     .md\:pt6 { padding-top: 2.5rem !important }
     .md\:pt7 { padding-top: 3rem !important }
+    .md\:pt8 { padding-top: 4rem !important }
+    .md\:pt9 { padding-top: 5rem !important }
     
     .md\:pb0 { padding-bottom: 0 !important }
     .md\:pb1 { padding-bottom: 0.25rem !important }
@@ -481,6 +533,8 @@ Created by andreyshpigunov on 25.05.2021.
     .md\:pb5 { padding-bottom: 2rem !important }
     .md\:pb6 { padding-bottom: 2.5rem !important }
     .md\:pb7 { padding-bottom: 3rem !important }
+    .md\:pb8 { padding-bottom: 4rem !important }
+    .md\:pb9 { padding-bottom: 5rem !important }
     
     .md\:pl0 { padding-left: 0 !important }
     .md\:pl1 { padding-left: 0.25rem !important }
@@ -490,6 +544,8 @@ Created by andreyshpigunov on 25.05.2021.
     .md\:pl5 { padding-left: 2rem !important }
     .md\:pl6 { padding-left: 2.5rem !important }
     .md\:pl7 { padding-left: 3rem !important }
+    .md\:pl8 { padding-left: 4rem !important }
+    .md\:pl9 { padding-left: 5rem !important }
     
     .md\:pr0 { padding-right: 0 !important }
     .md\:pr1 { padding-right: 0.25rem !important }
@@ -499,6 +555,8 @@ Created by andreyshpigunov on 25.05.2021.
     .md\:pr5 { padding-right: 2rem !important }
     .md\:pr6 { padding-right: 2.5rem !important }
     .md\:pr7 { padding-right: 3rem !important }
+    .md\:pr8 { padding-right: 4rem !important }
+    .md\:pr9 { padding-right: 5rem !important }
     
     .md\:r0 { border-radius: 0 }
     .md\:r1 { border-radius: 2px }
@@ -508,6 +566,8 @@ Created by andreyshpigunov on 25.05.2021.
     .md\:r5 { border-radius: 10px }
     .md\:r6 { border-radius: 12px }
     .md\:r7 { border-radius: 16px }
+    .md\:r8 { border-radius: 20px }
+    .md\:r9 { border-radius: 26px }
     .md\:r100 { border-radius: 100% }
     
     .md\:sh0 { box-shadow: none }
@@ -561,6 +621,8 @@ Created by andreyshpigunov on 25.05.2021.
     .sm\:m5 { margin: 2rem !important }
     .sm\:m6 { margin: 2.5rem !important }
     .sm\:m7 { margin: 3rem !important }
+    .sm\:m8 { margin: 4rem !important }
+    .sm\:m9 { margin: 5rem !important }
     .sm\:ma { margin: auto !important }
     
     .sm\:mx0 { margin-left: 0 !important; margin-right: 0 !important }
@@ -571,6 +633,8 @@ Created by andreyshpigunov on 25.05.2021.
     .sm\:mx5 { margin-left: 2rem !important; margin-right: 2rem !important }
     .sm\:mx6 { margin-left: 2.5rem !important; margin-right: 2.5rem !important }
     .sm\:mx7 { margin-left: 3rem !important; margin-right: 3rem !important }
+    .sm\:mx8 { margin-left: 4rem !important; margin-right: 4rem !important }
+    .sm\:mx9 { margin-left: 5rem !important; margin-right: 5rem !important }
     .sm\:mxa { margin-left: auto !important; margin-right: auto !important }
     
     .sm\:my0 { margin-top: 0 !important; margin-bottom: 0 !important }
@@ -581,6 +645,8 @@ Created by andreyshpigunov on 25.05.2021.
     .sm\:my5 { margin-top: 2rem !important; margin-bottom: 2rem !important }
     .sm\:my6 { margin-top: 2.5rem !important; margin-bottom: 2.5rem !important }
     .sm\:my7 { margin-top: 3rem !important; margin-bottom: 3rem !important }
+    .sm\:my8 { margin-top: 4rem !important; margin-bottom: 4rem !important }
+    .sm\:my9 { margin-top: 5rem !important; margin-bottom: 5rem !important }
     .sm\:mya { margin-top: auto !important; margin-bottom: auto !important }
     
     .sm\:mt0 { margin-top: 0 !important }
@@ -591,6 +657,8 @@ Created by andreyshpigunov on 25.05.2021.
     .sm\:mt5 { margin-top: 2rem !important }
     .sm\:mt6 { margin-top: 2.5rem !important }
     .sm\:mt7 { margin-top: 3rem !important }
+    .sm\:mt8 { margin-top: 4rem !important }
+    .sm\:mt9 { margin-top: 5rem !important }
     .sm\:mta { margin-top: auto !important }
     
     .sm\:mb0 { margin-bottom: 0 !important }
@@ -601,6 +669,8 @@ Created by andreyshpigunov on 25.05.2021.
     .sm\:mb5 { margin-bottom: 2rem !important }
     .sm\:mb6 { margin-bottom: 2.5rem !important }
     .sm\:mb7 { margin-bottom: 3rem !important }
+    .sm\:mb8 { margin-bottom: 4rem !important }
+    .sm\:mb9 { margin-bottom: 5rem !important }
     .sm\:mba { margin-bottom: auto !important }
     
     .sm\:ml0 { margin-left: 0 !important }
@@ -611,6 +681,8 @@ Created by andreyshpigunov on 25.05.2021.
     .sm\:ml5 { margin-left: 2rem !important }
     .sm\:ml6 { margin-left: 2.5rem !important }
     .sm\:ml7 { margin-left: 3rem !important }
+    .sm\:ml8 { margin-left: 4rem !important }
+    .sm\:ml9 { margin-left: 5rem !important }
     .sm\:mla { margin-left: auto !important }
     
     .sm\:mr0 { margin-right: 0 !important }
@@ -621,6 +693,8 @@ Created by andreyshpigunov on 25.05.2021.
     .sm\:mr5 { margin-right: 2rem !important }
     .sm\:mr6 { margin-right: 2.5rem !important }
     .sm\:mr7 { margin-right: 3rem !important }
+    .sm\:mr8 { margin-right: 4rem !important }
+    .sm\:mr9 { margin-right: 5rem !important }
     .sm\:mra { margin-right: auto !important }
     
     .sm\:p0 { padding: 0 !important }
@@ -631,6 +705,8 @@ Created by andreyshpigunov on 25.05.2021.
     .sm\:p5 { padding: 2rem !important }
     .sm\:p6 { padding: 2.5rem !important }
     .sm\:p7 { padding: 3rem !important }
+    .sm\:p8 { padding: 4rem !important }
+    .sm\:p9 { padding: 5rem !important }
     
     .sm\:px0 { padding-left: 0 !important; padding-right: 0 !important }
     .sm\:px1 { padding-left: 0.25rem !important; padding-right: 0.25rem !important }
@@ -640,6 +716,8 @@ Created by andreyshpigunov on 25.05.2021.
     .sm\:px5 { padding-left: 2rem !important; padding-right: 2rem !important }
     .sm\:px6 { padding-left: 2.5rem !important; padding-right: 2.5rem !important }
     .sm\:px7 { padding-left: 3rem !important; padding-right: 3rem !important }
+    .sm\:px8 { padding-left: 4rem !important; padding-right: 4rem !important }
+    .sm\:px9 { padding-left: 5rem !important; padding-right: 5rem !important }
     
     .sm\:py0 { padding-top: 0 !important; padding-bottom: 0 !important }
     .sm\:py1 { padding-top: 0.25rem !important; padding-bottom: 0.25rem !important }
@@ -649,6 +727,8 @@ Created by andreyshpigunov on 25.05.2021.
     .sm\:py5 { padding-top: 2rem !important; padding-bottom: 2rem !important }
     .sm\:py6 { padding-top: 2.5rem !important; padding-bottom: 2.5rem !important }
     .sm\:py7 { padding-top: 3rem !important; padding-bottom: 3rem !important }
+    .sm\:py8 { padding-top: 4rem !important; padding-bottom: 4rem !important }
+    .sm\:py9 { padding-top: 5rem !important; padding-bottom: 5rem !important }
     
     .sm\:pt0 { padding-top: 0 !important }
     .sm\:pt1 { padding-top: 0.25rem !important }
@@ -658,6 +738,8 @@ Created by andreyshpigunov on 25.05.2021.
     .sm\:pt5 { padding-top: 2rem !important }
     .sm\:pt6 { padding-top: 2.5rem !important }
     .sm\:pt7 { padding-top: 3rem !important }
+    .sm\:pt8 { padding-top: 4rem !important }
+    .sm\:pt9 { padding-top: 5rem !important }
     
     .sm\:pb0 { padding-bottom: 0 !important }
     .sm\:pb1 { padding-bottom: 0.25rem !important }
@@ -667,6 +749,8 @@ Created by andreyshpigunov on 25.05.2021.
     .sm\:pb5 { padding-bottom: 2rem !important }
     .sm\:pb6 { padding-bottom: 2.5rem !important }
     .sm\:pb7 { padding-bottom: 3rem !important }
+    .sm\:pb8 { padding-bottom: 4rem !important }
+    .sm\:pb9 { padding-bottom: 5rem !important }
     
     .sm\:pl0 { padding-left: 0 !important }
     .sm\:pl1 { padding-left: 0.25rem !important }
@@ -676,6 +760,8 @@ Created by andreyshpigunov on 25.05.2021.
     .sm\:pl5 { padding-left: 2rem !important }
     .sm\:pl6 { padding-left: 2.5rem !important }
     .sm\:pl7 { padding-left: 3rem !important }
+    .sm\:pl8 { padding-left: 4rem !important }
+    .sm\:pl9 { padding-left: 5rem !important }
     
     .sm\:pr0 { padding-right: 0 !important }
     .sm\:pr1 { padding-right: 0.25rem !important }
@@ -685,6 +771,8 @@ Created by andreyshpigunov on 25.05.2021.
     .sm\:pr5 { padding-right: 2rem !important }
     .sm\:pr6 { padding-right: 2.5rem !important }
     .sm\:pr7 { padding-right: 3rem !important }
+    .sm\:pr8 { padding-right: 4rem !important }
+    .sm\:pr9 { padding-right: 5rem !important }
     
     .sm\:r0 { border-radius: 0 }
     .sm\:r1 { border-radius: 2px }
@@ -694,6 +782,8 @@ Created by andreyshpigunov on 25.05.2021.
     .sm\:r5 { border-radius: 10px }
     .sm\:r6 { border-radius: 12px }
     .sm\:r7 { border-radius: 16px }
+    .sm\:r8 { border-radius: 20px }
+    .sm\:r9 { border-radius: 26px }
     .sm\:r100 { border-radius: 100% }
     
     .sm\:sh0 { box-shadow: none }

@@ -8,20 +8,20 @@ Created by andreyshpigunov on 25.05.2021.
 /* Typo */
 
 :root {
-    --headers-margin-top: 28px;
+    --headers-margin-top: 30px;
     --headers-margin-bottom: 20px;
     --headers-font-family: var(--font-family);
     --headers-font-weight: 700;
-    --h1-font-size: 44px;
-    --h2-font-size: 36px;
-    --h3-font-size: 28px;
-    --h4-font-size: 24px;
-    --h5-font-size: 20px;
-    --h6-font-size: 16px;
+    --h1-font-size: 46px;
+    --h2-font-size: 38px;
+    --h3-font-size: 30px;
+    --h4-font-size: 26px;
+    --h5-font-size: 22px;
+    --h6-font-size: 18px;
     --h1-line-height: 1.2;
     --h2-line-height: 1.3;
     --h3-line-height: 1.4;
-    --paragraph-margin: 16px;
+    --paragraph-margin: 20px;
     --figcaption-font-size: 14px;
     --figcaption-color: #999;
     --table-border-color: #eee;

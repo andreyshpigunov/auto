@@ -23,6 +23,8 @@ Created by andreyshpigunov on 19.01.2022.
     &.gap5 { --flex-gap: 2.5rem }
     &.gap6 { --flex-gap: 3rem }
     &.gap7 { --flex-gap: 4rem }
+    &.gap8 { --flex-gap: 5rem }
+    &.gap9 { --flex-gap: 6rem }
     
     &.fr { flex-direction: row }
     &.fc { flex-direction: column }
@@ -75,6 +77,8 @@ Created by andreyshpigunov on 19.01.2022.
         &.md\:gap5 { --flex-gap: 2.5rem }
         &.md\:gap6 { --flex-gap: 3rem }
         &.md\:gap7 { --flex-gap: 4rem }
+        &.md\:gap8 { --flex-gap: 5rem }
+        &.md\:gap9 { --flex-gap: 6rem }
         
         &.md\:fr { flex-direction: row }
         &.md\:fc { flex-direction: column }
@@ -128,6 +132,8 @@ Created by andreyshpigunov on 19.01.2022.
         &.sm\:gap5 { --flex-gap: 2.5rem }
         &.sm\:gap6 { --flex-gap: 3rem }
         &.sm\:gap7 { --flex-gap: 4rem }
+        &.sm\:gap8 { --flex-gap: 5rem }
+        &.sm\:gap9 { --flex-gap: 6rem }
         
         &.sm\:fr { flex-direction: row }
         &.sm\:fc { flex-direction: column }
