@@ -32,8 +32,8 @@ class Appear {
                     item.classVisible = this.classVisible;
                     itemsHash[index] = item;
                     
-                    if (item.element.classList.contains(_classIsAppeared)) {
-                        item.element.classList.remove(_classIsAppeared);
+                    if (item.element.classList.contains(this.classIsAppeared)) {
+                        item.element.classList.remove(this.classIsAppeared);
                     }
                 } catch (err) {
                     console.log(err);
