@@ -158,8 +158,8 @@ class Scroll {
                 offset = item.offset;
                 
             if (
-                targetOffset.top <= offset + 5 &&
-                targetOffset.bottom > offset + 5
+                targetOffset.top <= document.documentElement.clientHeight / 2 &&
+                targetOffset.bottom > document.documentElement.clientHeight / 2
             ) {
                 if (item.classActive != null) {
                     item.link.classList.add(item.classActive);
