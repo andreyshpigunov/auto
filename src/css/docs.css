@@ -6,9 +6,6 @@ Created by andreyshpigunov on 25.05.2021.
 ---------------------------*/
 
 
-@import "./auto.css";
-
-
 @media (prefers-color-scheme: dark) {
     :root {
         --link-color: #8bcdff;
