@@ -157,7 +157,7 @@ html.modal-active body {
         
         @media (max-width: 639px) {
             top: 1px;
-            background: #fff;
+            background: var(--modal-background);
         }
         
         &:before,
