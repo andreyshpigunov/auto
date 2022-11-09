@@ -182,6 +182,8 @@ Created by andreyshpigunov on 25.05.2021.
     }
 }
 
+.w100 { width: 100% }
+.h100 { height: 100% }
 
 .max {
     width: 100% !important;
