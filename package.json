@@ -1,6 +1,6 @@
 {
 	"name": "auto",
-	"version": "1.0.0",
+	"version": "1.4.3",
 	"devDependencies": {
 		"@parcel/logger": "*",
 		"autoprefixer": "^10.1.0",
@@ -9,7 +9,7 @@
 		"postcss": "^8.2.1",
 		"postcss-cli": "^8.3.0",
 		"postcss-import": "^14.0.2",
-		"postcss-nesting": "^8.0.1"
+		"postcss-nesting": "^10.2.0"
 	},
 	"scripts": {
 		"css": "postcss src/css/*.css --use postcss-import --use postcss-nesting --use autoprefixer --use cssnano --no-map --dir dist/",

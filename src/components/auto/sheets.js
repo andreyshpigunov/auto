@@ -36,15 +36,20 @@ class Sheets {
                             })
                         })
                     }
-                    let bodies = document.querySelectorAll(".sheets-body", e);
-                    if (bodies) {
-                        let i = 1;
-                        bodies.forEach(body => {
-                            if (i == 1) {
-                                this.show(body.getAttribute("id"));
-                                i++
-                            }
-                        })
+                    let activeTab = document.querySelector(".sheets-tab.active", e);
+                    if (activeTab) {
+                        this.show(activeTab.dataset.sheet)
+                    } else {
+                        let bodies = document.querySelectorAll(".sheets-body", e);
+                        if (bodies) {
+                            let i = 1;
+                            bodies.forEach(body => {
+                                if (i == 1) {
+                                    this.show(body.getAttribute("id"));
+                                    i++
+                                }
+                            })
+                        }
                     }
                 } catch (err) {
                     console.error(err);
