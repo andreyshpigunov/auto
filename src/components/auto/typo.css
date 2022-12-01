@@ -88,7 +88,7 @@ p {
 }
 
 figure {
-    margin: var(--paragraph-margin) 0;
+    margin: calc(var(--paragraph-margin) * 2) auto;
 
     & figcaption {
         font-size: var(--figcaption-font-size);
@@ -97,7 +97,7 @@ figure {
 }
 
 blockquote {
-    margin: var(--paragraph-margin) 0;
+    margin: calc(var(--paragraph-margin) * 2) 0;
     padding: 1rem 1.6rem;
     background: #fafafa;
     font-style: italic;

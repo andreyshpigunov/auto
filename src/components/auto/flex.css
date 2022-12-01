@@ -55,17 +55,17 @@ Created by andreyshpigunov on 19.01.2022.
     & .f9 { flex: 9 }
     & .f10 { flex: 10 }
     
-    & .fb0 { flex: 0 0 0% }
-    & .fb1 { flex: 0 0 10% }
-    & .fb2 { flex: 0 0 20% }
-    & .fb3 { flex: 0 0 30% }
-    & .fb4 { flex: 0 0 40% }
-    & .fb5 { flex: 0 0 50% }
-    & .fb6 { flex: 0 0 60% }
-    & .fb7 { flex: 0 0 70% }
-    & .fb8 { flex: 0 0 80% }
-    & .fb9 { flex: 0 0 90% }
-    & .fb10 { flex: 0 0 100% }
+    & .fb0 { flex: 0 0 0%;  max-width: 0% }
+    & .fb1 { flex: 0 0 10%; max-width: 10% }
+    & .fb2 { flex: 0 0 20%; max-width: 20% }
+    & .fb3 { flex: 0 0 30%; max-width: 30% }
+    & .fb4 { flex: 0 0 40%; max-width: 40% }
+    & .fb5 { flex: 0 0 50%; max-width: 50% }
+    & .fb6 { flex: 0 0 60%; max-width: 60% }
+    & .fb7 { flex: 0 0 70%; max-width: 70% }
+    & .fb8 { flex: 0 0 80%; max-width: 80% }
+    & .fb9 { flex: 0 0 90%; max-width: 90% }
+    & .fb10 { flex: 0 0 100%; max-width: 100% }
     
     @media(max-width: 1023px){
         
@@ -109,17 +109,17 @@ Created by andreyshpigunov on 19.01.2022.
         & .md\:f9 { flex: 9 }
         & .md\:f10 { flex: 10 }
         
-        & .md\:fb0 { flex: 0% }
-        & .md\:fb1 { flex: 10% }
-        & .md\:fb2 { flex: 20% }
-        & .md\:fb3 { flex: 30% }
-        & .md\:fb4 { flex: 40% }
-        & .md\:fb5 { flex: 50% }
-        & .md\:fb6 { flex: 60% }
-        & .md\:fb7 { flex: 70% }
-        & .md\:fb8 { flex: 80% }
-        & .md\:fb9 { flex: 90% }
-        & .md\:fb10 { flex: 100% }
+        & .md\:fb0 { flex: 0 0 0%;  max-width: 0% }
+        & .md\:fb1 { flex: 0 0 10%; max-width: 10% }
+        & .md\:fb2 { flex: 0 0 20%; max-width: 20% }
+        & .md\:fb3 { flex: 0 0 30%; max-width: 30% }
+        & .md\:fb4 { flex: 0 0 40%; max-width: 40% }
+        & .md\:fb5 { flex: 0 0 50%; max-width: 50% }
+        & .md\:fb6 { flex: 0 0 60%; max-width: 60% }
+        & .md\:fb7 { flex: 0 0 70%; max-width: 70% }
+        & .md\:fb8 { flex: 0 0 80%; max-width: 80% }
+        & .md\:fb9 { flex: 0 0 90%; max-width: 90% }
+        & .md\:fb10 { flex: 0 0 100%; max-width: 100% }
     }
     
     @media(max-width: 639px){
@@ -164,16 +164,16 @@ Created by andreyshpigunov on 19.01.2022.
         & .sm\:f9 { flex: 9 }
         & .sm\:f10 { flex: 10 }
         
-        & .sm\:fb0 { flex: 0% }
-        & .sm\:fb1 { flex: 10% }
-        & .sm\:fb2 { flex: 20% }
-        & .sm\:fb3 { flex: 30% }
-        & .sm\:fb4 { flex: 40% }
-        & .sm\:fb5 { flex: 50% }
-        & .sm\:fb6 { flex: 60% }
-        & .sm\:fb7 { flex: 70% }
-        & .sm\:fb8 { flex: 80% }
-        & .sm\:fb9 { flex: 90% }
-        & .sm\:fb10 { flex: 100% }
+        & .sm\:fb0 { flex: 0 0 0%;  max-width: 0% }
+        & .sm\:fb1 { flex: 0 0 10%; max-width: 10% }
+        & .sm\:fb2 { flex: 0 0 20%; max-width: 20% }
+        & .sm\:fb3 { flex: 0 0 30%; max-width: 30% }
+        & .sm\:fb4 { flex: 0 0 40%; max-width: 40% }
+        & .sm\:fb5 { flex: 0 0 50%; max-width: 50% }
+        & .sm\:fb6 { flex: 0 0 60%; max-width: 60% }
+        & .sm\:fb7 { flex: 0 0 70%; max-width: 70% }
+        & .sm\:fb8 { flex: 0 0 80%; max-width: 80% }
+        & .sm\:fb9 { flex: 0 0 90%; max-width: 90% }
+        & .sm\:fb10 { flex: 0 0 100%; max-width: 100% }
     }
 }
