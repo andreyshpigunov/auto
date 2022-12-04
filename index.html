@@ -191,19 +191,19 @@
                 <p>Flexible 1–12 columns grid system.</p>
                 <p>
                     <code>.grid</code> — main grid element<br/>
-                    <code>.grid.gap[0..5]</code> — 0..5 gap levels (default — 1)<br/>
+                    <code>.grid.gap[0..9]</code> — 0..9 gap levels (default — 1)<br/>
                     <code>.grid.g[1..12]</code> — 1..12 columns grid (default — 12)<br/>
                     <code>.grid .c[1..12]</code> — 1..12 wide column<br/>
                 </p>
                 <p>
                     On medium screens:
-                    <code>.md:gap[0..5]</code>,
+                    <code>.md:gap[0..9]</code>,
                     <code>.md:g[1..12]</code>,
                     <code>.md:c[1..12]</code>
                     <br/>
                     
                     On small screens:
-                    <code>.sm:gap[0..5]</code>,
+                    <code>.sm:gap[0..9]</code>,
                     <code>.sm:g[1..12]</code>,
                     <code>.sm:c[1..12]</code>
                 </p>
@@ -224,7 +224,7 @@
                 <p>Flexbox layout.</p>
                 <p>
                     <code>.flex</code> — main flexbox element<br/>
-                    <code>.flex.gap[1..5]</code> — 0..5 gap levels (default — 0)<br/>
+                    <code>.flex.gap[1..9]</code> — 0..9 gap levels (default — 0)<br/>
                 </p>
                 <p>
                     <code>.flex.fr</code> — direction row,<br/>
@@ -234,19 +234,20 @@
                 </p>
                 <p>
                     <code>.flex.ais</code> — align-items: stretch,<br/>
-                    <code>.flex.ait</code> — align-items: flex-start,<br/>
+                    <code>.flex.aifs</code> — align-items: flex-start,<br/>
                     <code>.flex.aic</code> — align-items: center,<br/>
-                    <code>.flex.aib</code> — align-items: flex-end
+                    <code>.flex.aife</code> — align-items: flex-end
                 </p>
                 <p>
-                    <code>.flex.jcl</code> — justify-content: flex-start,<br/>
+                    <code>.flex.jcfs</code> — justify-content: flex-start,<br/>
                     <code>.flex.jcc</code> — justify-content: center,<br/>
-                    <code>.flex.jcr</code> — justify-content: flex-end,<br/>
+                    <code>.flex.jcfe</code> — justify-content: flex-end,<br/>
                     <code>.flex.jcsb</code> — justify-content: space-between,<br/>
                     <code>.flex.jcsa</code> — justify-content: space-around
                 </p>
                 <p>
                     <code>.flex .f[0..10]</code> — flex: [0..10],<br/>
+                    <code>.flex .fb[0..10]</code> — flex-basis: [0..10] 0%,10%,..,100%,<br/>
                     <code>.flex .o[0..10]</code> — order: [0..10]
                 </p>
                 <p>All options supports <code>md:</code>, <code>sm:</code> modifiers.</p>
