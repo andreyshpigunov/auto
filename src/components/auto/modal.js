@@ -7,7 +7,7 @@
 //  Usage:
 //  <a data-modal="my-modal">Open modal</a>
 //
-//  <div id="my-modal" class="modal-content [custom-classes]">
+//  <div id="my-modal" class="modal-content [custom-classes]" data-window-class="[window-classes]">
 //      <p>Hello modal!</p>
 //      <p><a class="button modal-close">Close</a></p> — optional
 //  </div>
@@ -49,6 +49,7 @@ class Modal {
                 
                     id = e.getAttribute("id"),
                     classes = e.getAttribute("class").replace("modal-content", ""),
+                    windowClasses = e.dataset.windowClass,
                     content = e.innerHTML;
                 
                 if (here) placeholder = here;
@@ -58,7 +59,7 @@ class Modal {
                         <div class="modal-overlay"></div>
                         <div class="modal-outer">
                             <div class="modal-inner">
-                                <div class="modal-window">
+                                <div class="modal-window ${windowClasses}">
                                     ${content}
                                     <div class="modal-rail">
                                         <a role="button" class="modal-close"></a>

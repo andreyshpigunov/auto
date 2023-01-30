@@ -8,6 +8,8 @@ Created by andreyshpigunov on 25.05.2021.
 /* Modal windows */
 
 :root {
+    --modal-padding: 40px 50px;
+    --modal-padding-small: 40px 6vw;
     --modal-background: #fff;
     --modal-box-shadow: 0 6px 30px rgba(0,0,0,.25);
     --modal-border-radius: 8px;
@@ -96,14 +98,14 @@ html.modal-active body {
     width: 100%;
     max-width: 800px;
     margin: auto;
-    padding: 40px 50px;
+    padding: var(--modal-padding);
     text-align: left;
     background: var(--modal-background);
     box-shadow: var(--modal-box-shadow);
     border-radius: var(--modal-border-radius);
     
     @media (max-width: 639px) {
-        padding: 40px 6vw;
+        padding: var(--modal-padding-small);
         box-shadow: none;
     }
 }
