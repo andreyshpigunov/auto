@@ -106,8 +106,10 @@ Created by andreyshpigunov on 25.05.2021.
     .sm\:b5 { bottom: 2rem !important }
 }
 
+.ratio,
 .ratio1x1,
 .ratio2x1,
+.ratio3x2,
 .ratio4x3,
 .ratio16x9 {
     overflow: hidden;
@@ -130,6 +132,7 @@ Created by andreyshpigunov on 25.05.2021.
 }
 .ratio1x1 { padding-bottom: 100% }
 .ratio2x1 { padding-bottom: 50% }
+.ratio3x2 { padding-bottom: 66.67% }
 .ratio4x3 { padding-bottom: 75% }
 .ratio16x9 { padding-bottom: 56.25% }
 
