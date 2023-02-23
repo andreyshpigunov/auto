@@ -89,7 +89,7 @@ const lib = {
     numberDecline(a, b, c, d) {
         let e = '';
         if (a > 10 && 1 == parseInt((a % 100) / 10)) {
-            e = b;
+            e = d;
         } else {
             switch (a % 10) {
                 case 1:
