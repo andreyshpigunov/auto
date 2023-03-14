@@ -41,7 +41,7 @@ Created by andreyshpigunov on 25.05.2021.
     white-space: nowrap !important;
 }
 .wrap {
-    white-space: wrap !important;
+    white-space: normal !important;
 }
 .hyphens {
     hyphens: auto;
