@@ -12,6 +12,7 @@ Created by andreyshpigunov on 25.05.2021.
     --button-font-family: var(--font-family);
     --button-font-size: var(--font-size);
     --button-font-weight: 400;
+    --button-line-height: 1;
     --button-border-radius: 8px;
     --button-transition: all .1s ease-out;
     
@@ -83,7 +84,7 @@ a.button {
     font-weight: var(--button-font-weight);
     vertical-align: bottom;
     white-space: nowrap;
-    line-height: 1;
+    line-height: var(--button-line-height);
     text-align: center;
     text-shadow: none;
     text-transform: none;

@@ -38,7 +38,10 @@ Created by andreyshpigunov on 25.05.2021.
     text-transform: lowercase;
 }
 .nowrap {
-    white-space: nowrap;
+    white-space: nowrap !important;
+}
+.wrap {
+    white-space: wrap !important;
 }
 .hyphens {
     hyphens: auto;
