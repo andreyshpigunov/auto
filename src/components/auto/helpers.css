@@ -243,10 +243,10 @@ Created by andreyshpigunov on 25.05.2021.
 .fw800 { font-weight: 800 !important }
 .fw900 { font-weight: 900 !important }
 
-.al { text-align: left }
-.ar { text-align: right }
-.ac { text-align: center }
-.aj { text-align: justify }
+.al { text-align: left !important }
+.ar { text-align: right !important }
+.ac { text-align: center !important }
+.aj { text-align: justify !important }
 .fl { float: left }
 .fr { float: right }
 
@@ -475,10 +475,10 @@ Created by andreyshpigunov on 25.05.2021.
     .md\:fsxs { font-size: .8rem !important }
     .md\:fsxxs { font-size: .7rem !important }
     
-    .md\:al { text-align: left }
-    .md\:ar { text-align: right }
-    .md\:ac { text-align: center }
-    .md\:aj { text-align: justify }
+    .md\:al { text-align: left !important }
+    .md\:ar { text-align: right !important }
+    .md\:ac { text-align: center !important }
+    .md\:aj { text-align: justify !important }
     .md\:fl { float: left }
     .md\:fr { float: right }
     
@@ -708,10 +708,10 @@ Created by andreyshpigunov on 25.05.2021.
     .sm\:fsxs { font-size: .8rem !important }
     .sm\:fsxxs { font-size: .7rem !important }
     
-    .sm\:al { text-align: left }
-    .sm\:ar { text-align: right }
-    .sm\:ac { text-align: center }
-    .sm\:aj { text-align: justify }
+    .sm\:al { text-align: left !important }
+    .sm\:ar { text-align: right !important }
+    .sm\:ac { text-align: center !important }
+    .sm\:aj { text-align: justify !important }
     .sm\:fl { float: left }
     .sm\:fr { float: right }
     
