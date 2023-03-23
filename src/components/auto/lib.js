@@ -256,6 +256,24 @@ const lib = {
                 alert(err.join('\n'))
             }
         }
+    },
+    
+    // Print text with errors
+    // data — object (with key:value), array or string (object and array splitted by '<br/>')
+    // return string
+    printErrors(data) {
+        if (data) {
+            if (
+                typeof data === 'string' ||
+                data instanceof String
+            ) {
+                return data
+            } else {
+                let err = []
+                for (let e in data) { err.push(data[e]) }
+                return err.join('<br/>')
+            }
+        }
     }
 }
 
