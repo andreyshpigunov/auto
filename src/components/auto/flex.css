@@ -15,17 +15,6 @@ Created by andreyshpigunov on 19.01.2022.
     display: flex;
     gap: var(--flex-gap);
     
-    &.gap0 { --flex-gap: 0 }
-    &.gap1 { --flex-gap: 0.5rem }
-    &.gap2 { --flex-gap: 1rem }
-    &.gap3 { --flex-gap: 1.5rem }
-    &.gap4 { --flex-gap: 2rem }
-    &.gap5 { --flex-gap: 2.5rem }
-    &.gap6 { --flex-gap: 3rem }
-    &.gap7 { --flex-gap: 4rem }
-    &.gap8 { --flex-gap: 5rem }
-    &.gap9 { --flex-gap: 6rem }
-    
     &.fr { flex-direction: row }
     &.fc { flex-direction: column }
     &.fw { flex-wrap: wrap }
@@ -67,18 +56,19 @@ Created by andreyshpigunov on 19.01.2022.
     & .fb9 { flex: 0 0 90%; max-width: 90% }
     & .fb10 { flex: 0 0 100%; max-width: 100% }
     
+    & .fg0 { flex-grow: 0 }
+    & .fg1 { flex-grow: 1 }
+    & .fg2 { flex-grow: 2 }
+    & .fg3 { flex-grow: 3 }
+    & .fg4 { flex-grow: 4 }
+    & .fg5 { flex-grow: 5 }
+    & .fg6 { flex-grow: 6 }
+    & .fg7 { flex-grow: 7 }
+    & .fg8 { flex-grow: 8 }
+    & .fg9 { flex-grow: 9 }
+    & .fg10 { flex-grow: 10 }
+    
     @media(max-width: 1023px){
-        
-        &.md\:gap0 { --flex-gap: 0 }
-        &.md\:gap1 { --flex-gap: 0.5rem }
-        &.md\:gap2 { --flex-gap: 1rem }
-        &.md\:gap3 { --flex-gap: 1.5rem }
-        &.md\:gap4 { --flex-gap: 2rem }
-        &.md\:gap5 { --flex-gap: 2.5rem }
-        &.md\:gap6 { --flex-gap: 3rem }
-        &.md\:gap7 { --flex-gap: 4rem }
-        &.md\:gap8 { --flex-gap: 5rem }
-        &.md\:gap9 { --flex-gap: 6rem }
         
         &.md\:fr { flex-direction: row }
         &.md\:fc { flex-direction: column }
@@ -120,20 +110,21 @@ Created by andreyshpigunov on 19.01.2022.
         & .md\:fb8 { flex: 0 0 80%; max-width: 80% }
         & .md\:fb9 { flex: 0 0 90%; max-width: 90% }
         & .md\:fb10 { flex: 0 0 100%; max-width: 100% }
+        
+        & .md\:fg0 { flex-grow: 0 }
+        & .md\:fg1 { flex-grow: 1 }
+        & .md\:fg2 { flex-grow: 2 }
+        & .md\:fg3 { flex-grow: 3 }
+        & .md\:fg4 { flex-grow: 4 }
+        & .md\:fg5 { flex-grow: 5 }
+        & .md\:fg6 { flex-grow: 6 }
+        & .md\:fg7 { flex-grow: 7 }
+        & .md\:fg8 { flex-grow: 8 }
+        & .md\:fg9 { flex-grow: 9 }
+        & .md\:fg10 { flex-grow: 10 }
     }
     
     @media(max-width: 639px){
-        
-        &.sm\:gap0 { --flex-gap: 0 }
-        &.sm\:gap1 { --flex-gap: 0.5rem }
-        &.sm\:gap2 { --flex-gap: 1rem }
-        &.sm\:gap3 { --flex-gap: 1.5rem }
-        &.sm\:gap4 { --flex-gap: 2rem }
-        &.sm\:gap5 { --flex-gap: 2.5rem }
-        &.sm\:gap6 { --flex-gap: 3rem }
-        &.sm\:gap7 { --flex-gap: 4rem }
-        &.sm\:gap8 { --flex-gap: 5rem }
-        &.sm\:gap9 { --flex-gap: 6rem }
         
         &.sm\:fr { flex-direction: row }
         &.sm\:fc { flex-direction: column }
@@ -175,5 +166,17 @@ Created by andreyshpigunov on 19.01.2022.
         & .sm\:fb8 { flex: 0 0 80%; max-width: 80% }
         & .sm\:fb9 { flex: 0 0 90%; max-width: 90% }
         & .sm\:fb10 { flex: 0 0 100%; max-width: 100% }
+        
+        & .sm\:fg0 { flex-grow: 0 }
+        & .sm\:fg1 { flex-grow: 1 }
+        & .sm\:fg2 { flex-grow: 2 }
+        & .sm\:fg3 { flex-grow: 3 }
+        & .sm\:fg4 { flex-grow: 4 }
+        & .sm\:fg5 { flex-grow: 5 }
+        & .sm\:fg6 { flex-grow: 6 }
+        & .sm\:fg7 { flex-grow: 7 }
+        & .sm\:fg8 { flex-grow: 8 }
+        & .sm\:fg9 { flex-grow: 9 }
+        & .sm\:fg10 { flex-grow: 10 }
     }
 }

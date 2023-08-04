@@ -14,14 +14,18 @@ Created by andreyshpigunov on 25.05.2021.
     --link-border-color: #0066cc44;
     
     --link-color-hover: #f40000;
+    --link-border-width-hover: var(--link-border-width);
     --link-border-color-hover: var(--link-color-hover);
     
     --link-color-visited: var(--link-color);
+    --link-border-width-visited: var(--link-border-width);
     --link-border-color-visited: var(--link-border-color);
     
     --link-decoration: none;
     --link-decoration-hover: none;
     --link-decoration-pseudo: none;
+    
+    --link-transition: none;
 }
 
 a {
@@ -36,20 +40,24 @@ a {
         border-bottom-width: var(--link-border-width);
         border-bottom-color: var(--link-border-color);
         text-decoration: var(--link-decoration);
+        transition: var(--link-transition);
     }
     &:visited {
         color: var(--link-color-visited);
+        border-bottom-width: var(--link-border-width-visited);
         border-bottom-color: var(--link-border-color-visited);
     }
     @media (hover: hover) {
         &:hover, &.hover {
             color: var(--link-color-hover);
+            border-bottom-width: var(--link-border-width-hover);
             border-bottom-color: var(--link-border-color-hover);
             text-decoration: var(--link-decoration-hover);
         }
     }
     &:active, &.active {
         color: var(--link-color-hover);
+        border-bottom-width: var(--link-border-width-hover);
         border-bottom-color: var(--link-border-color-hover);
         text-decoration: var(--link-decoration-hover);
     }

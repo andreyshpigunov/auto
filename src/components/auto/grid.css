@@ -17,16 +17,41 @@ Created by andreyshpigunov on 26.05.2021.
     gap: var(--grid-gap);
     grid-template-columns: repeat(12, 1fr);
     
-    &.gap0 { --grid-gap: 0 }
-    &.gap1 { --grid-gap: 0.5rem }
-    &.gap2 { --grid-gap: 1rem }
-    &.gap3 { --grid-gap: 1.5rem }
-    &.gap4 { --grid-gap: 2rem }
-    &.gap5 { --grid-gap: 2.5rem }
-    &.gap6 { --grid-gap: 3rem }
-    &.gap7 { --grid-gap: 4rem }
-    &.gap8 { --grid-gap: 5rem }
-    &.gap9 { --grid-gap: 6rem }
+    &.gap0 { gap: 0 }
+    &.gap1 { gap: 0.25rem }
+    &.gap2 { gap: 0.5rem }
+    &.gap3 { gap: 1rem }
+    &.gap4 { gap: 1.5rem }
+    &.gap5 { gap: 2rem }
+    &.gap6 { gap: 3rem }
+    &.gap7 { gap: 4rem }
+    &.gap8 { gap: 6rem }
+    &.gap9 { gap: 8rem }
+    &.gap10 { gap: 10rem }
+    
+    &.gapx0 { column-gap: 0 }
+    &.gapx1 { column-gap: 0.25rem }
+    &.gapx2 { column-gap: 0.5rem }
+    &.gapx3 { column-gap: 1rem }
+    &.gapx4 { column-gap: 1.5rem }
+    &.gapx5 { column-gap: 2rem }
+    &.gapx6 { column-gap: 3rem }
+    &.gapx7 { column-gap: 4rem }
+    &.gapx8 { column-gap: 6rem }
+    &.gapx9 { column-gap: 8rem }
+    &.gapx10 { column-gap: 10rem }
+    
+    &.gapy0 { row-gap: 0 }
+    &.gapy1 { row-gap: 0.25rem }
+    &.gapy2 { row-gap: 0.5rem }
+    &.gapy3 { row-gap: 1rem }
+    &.gapy4 { row-gap: 1.5rem }
+    &.gapy5 { row-gap: 2rem }
+    &.gapy6 { row-gap: 3rem }
+    &.gapy7 { row-gap: 4rem }
+    &.gapy8 { row-gap: 6rem }
+    &.gapy9 { row-gap: 8rem }
+    &.gapy10 { row-gap: 10rem }
     
     &.g1 { grid-template-columns: repeat(1, 1fr) }
     &.g2 { grid-template-columns: repeat(2, 1fr) }
@@ -56,16 +81,41 @@ Created by andreyshpigunov on 26.05.2021.
     
     @media(max-width: 1023px){
         
-        &.md\:gap0 { --grid-gap: 0 }
-        &.md\:gap1 { --grid-gap: 0.5rem }
-        &.md\:gap2 { --grid-gap: 1rem }
-        &.md\:gap3 { --grid-gap: 1.5rem }
-        &.md\:gap4 { --grid-gap: 2rem }
-        &.md\:gap5 { --grid-gap: 2.5rem }
-        &.md\:gap6 { --grid-gap: 3rem }
-        &.md\:gap7 { --grid-gap: 4rem }
-        &.md\:gap8 { --grid-gap: 5rem }
-        &.md\:gap9 { --grid-gap: 6rem }
+        &.md\:gap0 { gap: 0 }
+        &.md\:gap1 { gap: 0.25rem }
+        &.md\:gap2 { gap: 0.5rem }
+        &.md\:gap3 { gap: 1rem }
+        &.md\:gap4 { gap: 1.5rem }
+        &.md\:gap5 { gap: 2rem }
+        &.md\:gap6 { gap: 3rem }
+        &.md\:gap7 { gap: 4rem }
+        &.md\:gap8 { gap: 6rem }
+        &.md\:gap9 { gap: 8rem }
+        &.md\:gap10 { gap: 10rem }
+        
+        &.md\:gapx0 { column-gap: 0 }
+        &.md\:gapx1 { column-gap: 0.25rem }
+        &.md\:gapx2 { column-gap: 0.5rem }
+        &.md\:gapx3 { column-gap: 1rem }
+        &.md\:gapx4 { column-gap: 1.5rem }
+        &.md\:gapx5 { column-gap: 2rem }
+        &.md\:gapx6 { column-gap: 3rem }
+        &.md\:gapx7 { column-gap: 4rem }
+        &.md\:gapx8 { column-gap: 6rem }
+        &.md\:gapx9 { column-gap: 8rem }
+        &.md\:gapx10 { column-gap: 10rem }
+        
+        &.md\:gapy0 { row-gap: 0 }
+        &.md\:gapy1 { row-gap: 0.25rem }
+        &.md\:gapy2 { row-gap: 0.5rem }
+        &.md\:gapy3 { row-gap: 1rem }
+        &.md\:gapy4 { row-gap: 1.5rem }
+        &.md\:gapy5 { row-gap: 2rem }
+        &.md\:gapy6 { row-gap: 3rem }
+        &.md\:gapy7 { row-gap: 4rem }
+        &.md\:gapy8 { row-gap: 6rem }
+        &.md\:gapy9 { row-gap: 8rem }
+        &.md\:gapy10 { row-gap: 10rem }
         
         &.md\:g1 { grid-template-columns: repeat(1, 1fr) }
         &.md\:g2 { grid-template-columns: repeat(2, 1fr) }
@@ -96,16 +146,41 @@ Created by andreyshpigunov on 26.05.2021.
     
     @media(max-width: 639px){
         
-        &.sm\:gap0 { --grid-gap: 0 }
-        &.sm\:gap1 { --grid-gap: 0.5rem }
-        &.sm\:gap2 { --grid-gap: 1rem }
-        &.sm\:gap3 { --grid-gap: 1.5rem }
-        &.sm\:gap4 { --grid-gap: 2rem }
-        &.sm\:gap5 { --grid-gap: 2.5rem }
-        &.sm\:gap6 { --grid-gap: 3rem }
-        &.sm\:gap7 { --grid-gap: 4rem }
-        &.sm\:gap8 { --grid-gap: 5rem }
-        &.sm\:gap9 { --grid-gap: 6rem }
+        &.sm\:gap0 { gap: 0 }
+        &.sm\:gap1 { gap: 0.25rem }
+        &.sm\:gap2 { gap: 0.5rem }
+        &.sm\:gap3 { gap: 1rem }
+        &.sm\:gap4 { gap: 1.5rem }
+        &.sm\:gap5 { gap: 2rem }
+        &.sm\:gap6 { gap: 3rem }
+        &.sm\:gap7 { gap: 4rem }
+        &.sm\:gap8 { gap: 6rem }
+        &.sm\:gap9 { gap: 8rem }
+        &.sm\:gap10 { gap: 10rem }
+        
+        &.sm\:gapx0 { column-gap: 0 }
+        &.sm\:gapx1 { column-gap: 0.25rem }
+        &.sm\:gapx2 { column-gap: 0.5rem }
+        &.sm\:gapx3 { column-gap: 1rem }
+        &.sm\:gapx4 { column-gap: 1.5rem }
+        &.sm\:gapx5 { column-gap: 2rem }
+        &.sm\:gapx6 { column-gap: 3rem }
+        &.sm\:gapx7 { column-gap: 4rem }
+        &.sm\:gapx8 { column-gap: 6rem }
+        &.sm\:gapx9 { column-gap: 8rem }
+        &.sm\:gapx10 { column-gap: 10rem }
+        
+        &.sm\:gapy0 { row-gap: 0 }
+        &.sm\:gapy1 { row-gap: 0.25rem }
+        &.sm\:gapy2 { row-gap: 0.5rem }
+        &.sm\:gapy3 { row-gap: 1rem }
+        &.sm\:gapy4 { row-gap: 1.5rem }
+        &.sm\:gapy5 { row-gap: 2rem }
+        &.sm\:gapy6 { row-gap: 3rem }
+        &.sm\:gapy7 { row-gap: 4rem }
+        &.sm\:gapy8 { row-gap: 6rem }
+        &.sm\:gapy9 { row-gap: 8rem }
+        &.sm\:gapy10 { row-gap: 10rem }
         
         &.sm\:g1 { grid-template-columns: repeat(1, 1fr) }
         &.sm\:g2 { grid-template-columns: repeat(2, 1fr) }
@@ -135,7 +210,7 @@ Created by andreyshpigunov on 26.05.2021.
     }
 }
 
-/* Margins */
+/* Margins with grid gap size */
 
 .mtg { margin-top: var(--grid-gap) }
 .mbg { margin-bottom: var(--grid-gap) }

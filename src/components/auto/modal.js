@@ -49,7 +49,7 @@ class Modal {
                 
                     id = e.getAttribute("id"),
                     classes = e.getAttribute("class").replace("modal-content", ""),
-                    windowClasses = e.dataset.windowClass,
+                    windowClasses = e.dataset.windowClass || '',
                     content = e.innerHTML;
                 
                 if (here) placeholder = here;

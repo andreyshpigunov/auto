@@ -43,7 +43,7 @@ time, mark, audio, video {
 }
 html,
 body {
-    height: 100vh;
+    min-height: 100vh;
     max-height: stretch;
 }
 html {
@@ -130,6 +130,7 @@ del, s {
     text-decoration: line-through;
 }
 img {
+    display: block;
     width: auto;
     height: auto;
     max-width: 100%;
