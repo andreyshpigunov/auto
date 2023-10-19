@@ -77,6 +77,7 @@ html.modal-active body {
     height: 100%;
     padding: 60px;
     overflow: auto;
+    overscroll-behavior: contain;
     -webkit-overflow-scrolling: touch;
     
     @media (max-width: 639px) {
