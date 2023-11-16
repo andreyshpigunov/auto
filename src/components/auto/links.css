@@ -8,22 +8,17 @@ Created by andreyshpigunov on 25.05.2021.
 /* Links styles */
 
 :root {
-    --link-color: #0066cc;
+    --link-decoration: underline;
     --link-border-style: solid;
-    --link-border-width: 1px;
-    --link-border-color: #0066cc44;
+    
+    --link-color: #0060cc;
+    --link-border-color: #0060cc77;
     
     --link-color-hover: #f40000;
-    --link-border-width-hover: var(--link-border-width);
     --link-border-color-hover: var(--link-color-hover);
     
     --link-color-visited: var(--link-color);
-    --link-border-width-visited: var(--link-border-width);
     --link-border-color-visited: var(--link-border-color);
-    
-    --link-decoration: none;
-    --link-decoration-hover: none;
-    --link-decoration-pseudo: none;
     
     --link-transition: none;
 }
@@ -36,34 +31,29 @@ a {
         outline: none;
         cursor: pointer;
         color: var(--link-color);
-        border-bottom-style: var(--link-border-style);
-        border-bottom-width: var(--link-border-width);
-        border-bottom-color: var(--link-border-color);
-        text-decoration: var(--link-decoration);
         transition: var(--link-transition);
+        
+        text-decoration-line: var(--link-decoration);
+        text-decoration-style: var(--link-border-style);
+        text-decoration-color: var(--link-border-color);
+        text-underline-offset: .3em;
     }
     &:visited {
         color: var(--link-color-visited);
-        border-bottom-width: var(--link-border-width-visited);
-        border-bottom-color: var(--link-border-color-visited);
+        text-decoration-color: var(--link-border-color-visited);
     }
     @media (hover: hover) {
         &:hover, &.hover {
             color: var(--link-color-hover);
-            border-bottom-width: var(--link-border-width-hover);
-            border-bottom-color: var(--link-border-color-hover);
-            text-decoration: var(--link-decoration-hover);
+            text-decoration-color: var(--link-border-color-hover);
         }
     }
     &:active, &.active {
         color: var(--link-color-hover);
-        border-bottom-width: var(--link-border-width-hover);
-        border-bottom-color: var(--link-border-color-hover);
-        text-decoration: var(--link-decoration-hover);
+        text-decoration-color: var(--link-border-color-hover);
     }
     &.pseudo {
-        border-bottom-style: dashed;
-        text-decoration-style: var(--link-decoration-pseudo);
+        text-decoration-style: dashed;
     }
     
 }

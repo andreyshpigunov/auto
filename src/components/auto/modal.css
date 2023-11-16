@@ -8,14 +8,17 @@ Created by andreyshpigunov on 25.05.2021.
 /* Modal windows */
 
 :root {
-    --modal-padding: 40px 50px;
+    --modal-padding: 50px;
     --modal-padding-small: 40px 6vw;
     --modal-background: #fff;
     --modal-box-shadow: 0 6px 30px rgba(0,0,0,.25);
-    --modal-border-radius: 8px;
+    --modal-border-radius: 10px;
+    --modal-closer-area: 40px;
+    --modal-closer-size: 26px;
+    --modal-closer-width: 2px;
     --modal-closer-color: #ccc;
     --modal-closer-color-hover: #f00;
-    --modal-overlay-background-color: rgba(0,0,0,.6);
+    --modal-overlay-background-color: #00000099;
 }
 
 html.modal-active body,
@@ -111,28 +114,6 @@ html.modal-active body {
     }
 }
 
-.modal{
-    
-    &.max,
-    &.max400,
-    &.max500,
-    &.max600,
-    &.max700,
-    &.max800,
-    &.max900,
-    &.max1000 {
-        max-width: 100% !important;
-    }
-    
-    &.max .modal-window { max-width: 100% }
-    &.max400 .modal-window { max-width: 400px }
-    &.max500 .modal-window { max-width: 500px }
-    &.max600 .modal-window { max-width: 600px }
-    &.max700 .modal-window { max-width: 700px }
-    &.max800 .modal-window { max-width: 800px }
-    &.max900 .modal-window { max-width: 900px }
-    &.max1000 .modal-window { max-width: 1000px }
-}
 
 /* Close cross */
 .modal-rail {
@@ -147,9 +128,9 @@ html.modal-active body {
         position: sticky;
         z-index: 10040;
         top: -54px;
-        width: 40px;
-        height: 40px;
-        margin-left: -40px;
+        width: var(--modal-closer-area);
+        height: var(--modal-closer-area);
+        margin-left: calc(-1 * var(--modal-closer-area));
         font-weight: 200;
         border: none;
         border-radius: var(--modal-border-radius);
@@ -168,10 +149,10 @@ html.modal-active body {
             content: "";
             display: block;
             position: absolute;
-            top: 19px;
-            left: 8px;
-            width: 24px;
-            height: 2px;
+            top: calc(var(--modal-closer-area) / 2 - var(--modal-closer-width) / 2);
+            left: calc((var(--modal-closer-area) - var(--modal-closer-size)) / 2);
+            width: var(--modal-closer-size);
+            height: var(--modal-closer-width);
             
             will-change: color;
             background: var(--modal-closer-color);

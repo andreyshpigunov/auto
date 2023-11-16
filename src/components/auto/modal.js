@@ -40,18 +40,17 @@ class Modal {
     // Init windows
     init() {
         let modalContents = document.querySelectorAll(".modal-content");
-        
         if (modalContents.length) {
             modalContents.forEach((e, index) => {
                 let html,
                     here = document.querySelector(".modal-here"),
                     placeholder = document.querySelector("body"),
-                
+                    
                     id = e.getAttribute("id"),
                     classes = e.getAttribute("class").replace("modal-content", ""),
                     windowClasses = e.dataset.windowClass || '',
                     content = e.innerHTML;
-                
+                    
                 if (here) placeholder = here;
                 
                 placeholder.insertAdjacentHTML("beforeend", `
@@ -80,6 +79,13 @@ class Modal {
                     event.preventDefault();
                     this.show(e.dataset.modal);
                 });
+                
+                if (window.location.hash == '#' + e.dataset.modal) {
+                    let modal = document.getElementById(e.dataset.modal);
+                    if (modal.classList.contains('hash')) {
+                        this.show(e.dataset.modal);
+                    }
+                }
             });
         }
         
@@ -113,7 +119,7 @@ class Modal {
     show(id) {
         if (this.isActive(id)) {
             this.hide(id);
-            return false
+            return false;
         }
         
         let modal = document.getElementById(id);
@@ -130,13 +136,17 @@ class Modal {
             html.classList.add("modal-active");
             html.classList.add(id + "-active");
             
+            if (modal.classList.contains('hash')) {
+                window.location.hash = id;
+            }
+            
             setTimeout(() => {
                 modal.dispatchEvent(this.eventReady);
                 this.modalLevel++;
                 modal.classList.add("top", "active", "level" + this.modalLevel);
                 setTimeout(() => {
                     modal.dispatchEvent(this.eventOpen);
-                    this.lock = false
+                    this.lock = false;
                 }, 400);
                 
             }, 0);
@@ -167,10 +177,18 @@ class Modal {
                 html.classList.remove("modal-active");
             }
             
+            if (
+                modal.classList.contains('hash') &&
+                window.location.hash == '#' + id
+            ) {
+                history.replaceState({}, document.title, window.location.href.split('#')[0]);
+            }
+            
             setTimeout(() => {
                 modal.classList.remove("top", "level" + this.modalLevel);
+                modal.querySelector('.modal-outer').scrollTo(0, 0);
                 modal.dispatchEvent(this.eventClose);
-                this.lock = false
+                this.lock = false;
             }, 400);
             
             if (device.iphone || device.ipad || device.android) {
@@ -187,14 +205,14 @@ class Modal {
         let activeModals = document.querySelectorAll(".modal.active");
         if (activeModals) {
             activeModals.forEach(item => {
-                this.hide(item.getAttribute("id"))
+                this.hide(item.getAttribute("id"));
             })
         }
     }
     
     // Check modal activity
     isActive(id) {
-        return document.querySelector("#" + id + ".active")
+        return document.querySelector("#" + id + ".active");
     }
 }
 

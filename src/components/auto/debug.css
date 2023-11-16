@@ -20,6 +20,7 @@ Created by andreyshpigunov on 25.05.2021.
     overflow: auto;
     -webkit-overflow-scrolling: touch;
     -ms-overflow-style: -ms-autohiding-scrollbar;
+    overscroll-behavior: contain;
     
     & * {
         font-family: var(--font-family-mono, monospace);

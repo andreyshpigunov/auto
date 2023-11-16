@@ -24,7 +24,9 @@ Created by andreyshpigunov on 25.05.2021.
     --paragraph-margin: 1.5rem;
     --figcaption-font-size: 14px;
     --figcaption-color: #999;
-    --table-border-color: #eee;
+    --table-padding: 6px 10px;
+    --table-border-color: #ccc;
+    --table-header-weight: 700;
 }
 
 input,
@@ -139,9 +141,12 @@ table {
     }
     & tr th,
     & tr td {
-        padding: 6px 10px;
+        padding: var(--table-padding);
         border: 1px solid var(--table-border-color);
         text-align: left;
         vertical-align: top;
+    }
+    & tr th {
+        font-weight: var(--table-header-weight);
     }
 }

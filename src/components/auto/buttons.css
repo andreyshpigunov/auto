@@ -13,7 +13,7 @@ Created by andreyshpigunov on 25.05.2021.
     --button-font-size: var(--font-size);
     --button-font-weight: 400;
     --button-line-height: 1;
-    --button-border-radius: 8px;
+    --button-border-radius: 10px;
     --button-transition: all .1s ease-out;
     
     --button-transform: scale(1);

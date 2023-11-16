@@ -11,29 +11,46 @@
 //  or
 //  <a data-scrollto='
 //    {
-//      "parent": "#id or .class selector" — default "window"
-//      "targetId": "top",
-//      "duration": "400",
-//      "offset": "0",
-//      "classActive": "active"
+//      "parent": "#id or .class selector", — default "window"
+//      "target": "top",
+//      "duration": 400,
+//      "offset": 0,
+//      "classActive": "active",
+//      "hash": false
 //    }
 //  '>Up</a>
 //
 //  API call:
 //  this.scrollTo() — old method
-//  this.to(target, offset = 0, duration = 400, parent) — new method
-//  target — element id or element
-//  offset — top offset
-//  duration — scroll duration
-//  parent — parent selector (not element!)
+//
+//  For simple scroll:
+//  this.to('element id, selector or element item')
+//  or
+//  this.to(element)
+//
+//  With params:
+//  this.to({
+//    parent: "element selector", — default value = window
+//    target: "element id, selector or element item",
+//    duration: 400, — scroll duration in ms
+//    offset: 0, — offset top in px
+//    classActive: 'active',
+//    hash: false
+//  })
+//
+//  scrollTo support async methods:
+//  auto.scroll.to(element).then((e) => { alert('Here!') })
 
 
 class Scroll {
     
     constructor() {
-        this.offset = 0;
+        this.parent = window;
         this.duration = 400;
+        this.offset = 0;
         this.classActive = "active";
+        this.hash = false;
+        // Link to new method
         this.to = this.scrollTo;
     }
     
@@ -50,32 +67,34 @@ class Scroll {
                     if (this._isValidJSON(e.dataset.scrollto)) {
                         let json = JSON.parse(e.dataset.scrollto);
                         if (
-                            json.hasOwnProperty("targetId") &&
-                            document.getElementById(json.targetId)
+                            json.hasOwnProperty("target") && this._getElement(json.target)
                         ) {
                             item.link = e;
-                            item.target = document.getElementById(json.targetId);
+                            item.parent = json.parent || this.parent;
+                            item.target = this._getElement(json.target);
                             item.duration = json.duration || this.duration;
                             item.offset = json.offset || this.offset;
-                            item.parent = json.parent || null;
                             item.classActive = json.classActive || this.classActive;
+                            item.hash = json.hash || this.hash;
                         } else {
-                            console.log(
-                                "Target required in JSON " + json +
-                                " or element not exist."
+                            console.error(
+                                'Target required in JSON ' + json + ' or element not exist'
                             );
                         }
                     } else {
-                        if (document.getElementById(e.dataset.scrollto)) {
+                        if (
+                            this._getElement(e.dataset.scrollto)
+                        ) {
                             item.link = e;
-                            item.target = document.getElementById(e.dataset.scrollto);
+                            item.parent = this.parent;
+                            item.target = this._getElement(e.dataset.scrollto);
                             item.duration = this.duration;
                             item.offset = this.offset;
-                            item.parent = null;
                             item.classActive = this.classActive;
+                            item.hash = this.hash;
                         } else {
-                            console.log(
-                                "Target '" + e.dataset.scrollto + "' not exist."
+                            console.error(
+                                'Target "' + e.dataset.scrollto + '" not found.'
                             );
                         }
                     }
@@ -85,7 +104,14 @@ class Scroll {
                         e.removeAttribute("data-scrollto");
                         e.addEventListener("click", (event) => {
                             event.preventDefault();
-                            this.scrollTo(item.target, item.offset, item.duration, item.parent);
+                            this.scrollTo({
+                                parent: item.parent,
+                                target: item.target,
+                                duration: item.duration,
+                                offset: item.offset,
+                                classActive: item.classActive,
+                                hash: item.hash
+                            });
                         });
                     }
                 } catch (err) {
@@ -95,21 +121,54 @@ class Scroll {
             
             if (Object.keys(linksHash).length) {
                 this._scrollObserve(linksHash);
-                document.addEventListener("scroll", () => {
-                    this._scrollObserve(linksHash);
-                }, { passive: true });
+                
+                let parents = [];
+                for (let k in linksHash) {
+                    if (
+                        Object.hasOwn(linksHash[k], 'parent') &&
+                        !parents.includes(linksHash[k].parent)
+                    ) {
+                        parents.push(linksHash[k].parent)
+                    }
+                };
+                
+                for (let p in parents) {
+                    let el = this._getElement(parents[p]);
+                    el.addEventListener("scroll", () => {
+                        this._scrollObserve(linksHash);
+                    }, { passive: true });
+                }
             }
         }
     }
     
-    scrollTo(target, offset, duration, parent) {
+    scrollTo(params) {
+    // params — string (id, selector) or element node
+    // or object with fields:
+    // {
+    //     parent: "element selector", — default value = window
+    //     target: "element id, selector or element item",
+    //     duration: 400, — scroll duration in ms
+    //     offset: 0, — offset top in px
+    //     classActive: 'active',
+    //     hash: false
+    //  }
         return new Promise((resolve, reject) => {
-            if (typeof target === "string") {
-                target = document.getElementById(target);
+            let parent = this._getElement(params.parent) || this.parent,
+                target,
+                duration = params.duration || this.duration,
+                offset = params.offset || this.offset,
+                hash = params.hash || this.hash;
+            
+            if (typeof params === "object") {
+                target = this._getElement(params.target);
+            } else {
+                target = this._getElement(params);
             }
-            offset = offset || this.offset;
-            duration = duration || this.duration;
-            parent = document.querySelector(parent) || window;
+            if (!target) {
+                console.error('Target ' + target + ' not found');
+                return;
+            }
             
             let elementY, startingY, targetY, parentY, diff;
             
@@ -144,6 +203,11 @@ class Scroll {
                 if (time < duration) {
                     window.requestAnimationFrame(step);
                 } else {
+                    if (hash && target.id) {
+                        window.location.hash = target.id;
+                    } else if (hash) {
+                        history.replaceState({}, document.title, window.location.href.split('#')[0]);
+                    }
                     resolve();
                 }
             })
@@ -181,6 +245,20 @@ class Scroll {
             return true;
         } catch (err) {
             return false;
+        }
+    }
+    
+    _getElement(element) {
+        if (element instanceof Window) {
+            return element;
+        } else if (element && element.nodeType === Node.ELEMENT_NODE) {
+            return element;
+        } else if (document.getElementById(element)) {
+            return document.getElementById(element);
+        } else if (document.querySelector(element)) {
+            return document.querySelector(element);
+        } else {
+            console.error('Element ' + element + ' not found');
         }
     }
 }
