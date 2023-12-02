@@ -11,14 +11,14 @@ Created by andreyshpigunov on 25.05.2021.
     --modal-padding: 50px;
     --modal-padding-small: 40px 6vw;
     --modal-background: #fff;
-    --modal-box-shadow: 0 6px 30px rgba(0,0,0,.25);
-    --modal-border-radius: 10px;
+    --modal-box-shadow: 0 10px 40px #00000044;
+    --modal-border-radius: 12px;
     --modal-closer-area: 40px;
     --modal-closer-size: 26px;
     --modal-closer-width: 2px;
     --modal-closer-color: #ccc;
     --modal-closer-color-hover: #f00;
-    --modal-overlay-background-color: #00000099;
+    --modal-overlay-background-color: #00000088;
 }
 
 html.modal-active body,
