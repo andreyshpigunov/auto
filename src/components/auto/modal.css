@@ -110,7 +110,6 @@ html.modal-active body {
     
     @media (max-width: 639px) {
         padding: var(--modal-padding-small);
-        box-shadow: none;
     }
 }
 

@@ -1675,7 +1675,7 @@
                 <code>&lt;a data-scrollto="top"&gt;Наверх&lt;/a&gt;</code>
                 <code>&lt;a data-scrollto="#top"&gt;Наверх&lt;/a&gt;</code>
             </div>
-            <p>Вызов с <a class="link pseudo" sddata-scrollto='{"parent": "#modalScroll .modal-outer", "target": "modalScrollParams"}'>параметрами</a> в формате JSON:</p>
+            <p>Вызов с <a class="link pseudo" data-scrollto='{"parent": "#modalScroll .modal-outer", "target": "modalScrollParams"}'>параметрами</a> в формате JSON:</p>
             <div class="codeBlock">
                 <code>&lt;a data-scrollto='{</code>
                 <code>    "parent": window,</code>
@@ -1785,6 +1785,7 @@
             <div class="codeBlock">
                 <code>&lt;div id="trigger"&gt;&lt;/div&gt;</code>
                 <code>&lt;div class="element" data-animate='{</code>
+                <!-- <code>    "parent": window,</code> -->
                 <code>    "triggerId": "trigger",</code>
                 <code>    "start": "120vh",</code>
                 <code>    "end": "0vh",</code>
@@ -1804,6 +1805,12 @@
                     <th width="20%">По умолчанию</th>
                     <th width="40%">Описание</th>
                 </tr>
+                <!-- <tr>
+                    <td><code>parent</code></td>
+                    <td><code>string, element</code></td>
+                    <td><code>window</code></td>
+                    <td><code>id</code>, селектор или элемент.</td>
+                </tr> -->
                 <tr>
                     <td><code>triggerId</code></td>
                     <td><code>string</code></td>
