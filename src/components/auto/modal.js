@@ -151,12 +151,12 @@ class Modal {
                 
             }, 0);
             
-            if (device.iphone || device.ipad || device.android) {
-                this.scrollPosition = window.pageYOffset;
-                document.body.style.position = "fixed";
-                document.body.style.top = "-" + this.scrollPosition + "px";
-                document.body.style.width = window.innerWidth + "px";
-            }
+            // if (device.iphone || device.ipad || device.android) {
+            //     this.scrollPosition = window.pageYOffset;
+            //     document.body.style.position = "fixed";
+            //     document.body.style.top = "-" + this.scrollPosition + "px";
+            //     document.body.style.width = window.innerWidth + "px";
+            // }
         }
     }
     
