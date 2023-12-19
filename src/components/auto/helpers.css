@@ -58,57 +58,6 @@ Created by andreyshpigunov on 25.05.2021.
     white-space: nowrap;
 }
 
-/* Letter spacing */
-.ls0 { letter-spacing: 0 !important }
-.ls1 { letter-spacing: 1px !important }
-.ls2 { letter-spacing: 2px !important }
-.ls3 { letter-spacing: 3px !important }
-.ls4 { letter-spacing: 4px !important }
-.ls5 { letter-spacing: 5px !important }
-.ls6 { letter-spacing: 6px !important }
-.ls7 { letter-spacing: 7px !important }
-.ls8 { letter-spacing: 8px !important }
-.ls9 { letter-spacing: 9px !important }
-.ls10 { letter-spacing: 10px !important }
-@media (min-width: 1024px) {
-    .lg\:ls0 { letter-spacing: 0 !important }
-    .lg\:ls1 { letter-spacing: 1px !important }
-    .lg\:ls2 { letter-spacing: 2px !important }
-    .lg\:ls3 { letter-spacing: 3px !important }
-    .lg\:ls4 { letter-spacing: 4px !important }
-    .lg\:ls5 { letter-spacing: 5px !important }
-    .lg\:ls6 { letter-spacing: 6px !important }
-    .lg\:ls7 { letter-spacing: 7px !important }
-    .lg\:ls8 { letter-spacing: 8px !important }
-    .lg\:ls9 { letter-spacing: 9px !important }
-    .lg\:ls10 { letter-spacing: 10px !important }
-}
-@media (min-width: 640px) and (max-width: 1023px) {
-    .md\:ls0 { letter-spacing: 0 !important }
-    .md\:ls1 { letter-spacing: 1px !important }
-    .md\:ls2 { letter-spacing: 2px !important }
-    .md\:ls3 { letter-spacing: 3px !important }
-    .md\:ls4 { letter-spacing: 4px !important }
-    .md\:ls5 { letter-spacing: 5px !important }
-    .md\:ls6 { letter-spacing: 6px !important }
-    .md\:ls7 { letter-spacing: 7px !important }
-    .md\:ls8 { letter-spacing: 8px !important }
-    .md\:ls9 { letter-spacing: 9px !important }
-    .md\:ls10 { letter-spacing: 10px !important }
-}
-@media (max-width: 639px) {
-    .sm\:ls0 { letter-spacing: 0 !important }
-    .sm\:ls1 { letter-spacing: 1px !important }
-    .sm\:ls2 { letter-spacing: 2px !important }
-    .sm\:ls3 { letter-spacing: 3px !important }
-    .sm\:ls4 { letter-spacing: 4px !important }
-    .sm\:ls5 { letter-spacing: 5px !important }
-    .sm\:ls6 { letter-spacing: 6px !important }
-    .sm\:ls7 { letter-spacing: 7px !important }
-    .sm\:ls8 { letter-spacing: 8px !important }
-    .sm\:ls9 { letter-spacing: 9px !important }
-    .sm\:ls10 { letter-spacing: 10px !important }
-}
 
 .sticky { position: sticky !important; top: 0 }
 .t0 { top: var(--space-0) !important }
@@ -360,6 +309,8 @@ Created by andreyshpigunov on 25.05.2021.
 .block { display: block }
 .inline { display: inline }
 .inlineBlock { display: inline-block }
+
+.italic { font-style: italic }
 
 .fsxxl { font-size: 1.5rem !important }
 .fsxl { font-size: 1.3rem !important }
@@ -653,10 +604,10 @@ Created by andreyshpigunov on 25.05.2021.
 .r100 { border-radius: 100% !important }
 
 .sh0 { box-shadow: none }
-.sh1 { box-shadow: 0 4px 20px rgba(0,0,0,.05) }
-.sh2 { box-shadow: 0 4px 20px rgba(0,0,0,.1) }
-.sh3 { box-shadow: 0 4px 20px rgba(0,0,0,.15) }
-.sh4 { box-shadow: 0 4px 20px rgba(0,0,0,.2) }
+.sh1 { box-shadow: 4px 4px 20px rgba(0,0,0,.05) }
+.sh2 { box-shadow: 4px 4px 20px rgba(0,0,0,.1) }
+.sh3 { box-shadow: 4px 4px 20px rgba(0,0,0,.15) }
+.sh4 { box-shadow: 4px 4px 20px rgba(0,0,0,.2) }
 
 .o0 { order: 0 }
 .o1 { order: 1 }
