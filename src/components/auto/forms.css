@@ -9,7 +9,7 @@ Created by andreyshpigunov on 25.05.2021.
 
 :root {
     --forms-width: 400px;
-    --forms-padding: .4rem .6rem;
+    --forms-padding: .5rem .6rem;
     
     --forms-font-size: var(--font-size);
     --forms-font-color: #000;

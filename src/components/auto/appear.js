@@ -13,6 +13,7 @@
 class Appear {
     
     constructor() {
+        this.itemsHash = {};
         this.classIsAppeared = "isAppeared";
         this.classAppeared = "appeared";
         this.classVisible = "visible";
@@ -21,7 +22,6 @@ class Appear {
     init() {
         let items = document.querySelectorAll("." + this.classIsAppeared);
         if (items.length) {
-            let itemsHash = {};
             
             items.forEach((e, index) => {
                 try {
@@ -30,7 +30,7 @@ class Appear {
                     item.element = e;
                     item.classAppeared = this.classAppeared;
                     item.classVisible = this.classVisible;
-                    itemsHash[index] = item;
+                    this.itemsHash[index] = item;
                     
                     if (item.element.classList.contains(this.classIsAppeared)) {
                         item.element.classList.remove(this.classIsAppeared);
@@ -40,13 +40,17 @@ class Appear {
                 }
             });
             
-            if (Object.keys(itemsHash).length) {
-                this._scroll(itemsHash);
+            if (Object.keys(this.itemsHash).length) {
+                this._scroll(this.itemsHash);
                 document.addEventListener("scroll", () => {
-                    this._scroll(itemsHash);
+                    this._scroll(this.itemsHash);
                 }, { passive: true });
             }
         }
+    }
+    
+    update() {
+        this._scroll(this.itemsHash);
     }
     
     _scroll(itemsHash) {

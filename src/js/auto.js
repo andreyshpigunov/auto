@@ -20,6 +20,7 @@ import scroll from "../components/auto/scroll";
 import lib from "../components/auto/lib";
 
 const auto = {
+    appear: appear,
     loadmore: loadmore,
     device: device,
     modal: modal,

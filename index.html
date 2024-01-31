@@ -14,7 +14,7 @@
 <body id="top">
     
     <header class="header flex aic">
-        <div class="header-version">2.0</div>
+        <div class="header-version">2.1</div>
         <div class="header-logo mxa">
             <a role="button" data-scrollto="top">
                 <img src="assets/logo.png" alt="Auto"/>
@@ -180,8 +180,8 @@
             <h3>JsDelivr</h3>
             <p class="breakWord">
                 Последний релиз:<br/>
-                <a href="https://cdn.jsdelivr.net/gh/andreyshpigunov/auto@2.0.0/dist/auto.css">https://cdn.jsdelivr.net/gh/andreyshpigunov/auto@2.0.0/dist/auto.css</a><br/>
-                <a href="https://cdn.jsdelivr.net/gh/andreyshpigunov/auto@2.0.0/dist/auto.js">https://cdn.jsdelivr.net/gh/andreyshpigunov/auto@2.0.0/dist/auto.js</a>
+                <a href="https://cdn.jsdelivr.net/gh/andreyshpigunov/auto@2.1.0/dist/auto.css">https://cdn.jsdelivr.net/gh/andreyshpigunov/auto@2.1.0/dist/auto.css</a><br/>
+                <a href="https://cdn.jsdelivr.net/gh/andreyshpigunov/auto@2.1.0/dist/auto.js">https://cdn.jsdelivr.net/gh/andreyshpigunov/auto@2.1.0/dist/auto.js</a>
             </p>
             <p class="breakWord">
                 Последняя сборка:<br/>
@@ -1069,14 +1069,14 @@
                 <td><code>position: sticky</code></td>
             </tr>
             <tr>
-                <td><code>.t[0..5]</code></td>
+                <td><code>.t[0..10]</code></td>
                 <td><code>lg: md: sm:</code></td>
-                <td><code>top: var(--space-[0..5])</code></td>
+                <td><code>top: var(--space-[0..10])</code></td>
             </tr>
             <tr>
-                <td><code>.b[0..5]</code></td>
+                <td><code>.b[0..10]</code></td>
                 <td><code>lg: md: sm:</code></td>
-                <td><code>bottom: var(--space-[0..5])</code></td>
+                <td><code>bottom: var(--space-[0..10])</code></td>
             </tr>
             <tr>
                 <td><code>.op[0..10]</code></td>
@@ -2263,7 +2263,7 @@
         </code></h4>
         <p>Последовательное переключение классов. Иногда удобно использовать, когда требуется задержка, пока не завершится анимация. По очереди запускает <code>addClass</code> и <code>removeClass</code>.</p>
         
-        <h4><code class="fs16">loadScript(path, callback, type = 'async|defer')</code></h4>
+        <h4><code class="fs16">auto.lib.loadScript(path, callback, type = 'async|defer')</code></h4>
         <p>Загружает скрипт и добавляет его в конец перед <code>&lt;/body&gt;</code>. После успешной загрузки выполняется <code>callback</code>.</p>
         <p>Пример:</p>
         <div class="codeBlock">
@@ -2274,20 +2274,27 @@
             <code>)</code>
         </div>
         
-        <h4><code class="fs16">deffered(code, delay = 10000)</code></h4>
-        <p>Отложенное выполнение кода. Код <code>code</code> будет запущен через время <code>delay</code> (по умолчанию 10 с), либо по наступлении одного из событий: <code>scroll</code>, <code>resize</code>, <code>click</code>, <code>keydown</code>, <code>mouseover</code>, <code>touchmove</code>.</p>
+        <h4><code class="fs16">auto.lib.deffered(code, delay = 10000)</code></h4>
+        <p>Отложенное выполнение кода. Анонимная функция с кодом <code>function () { code }</code> будет запущена через время <code>delay</code> (по умолчанию 10 с), либо по наступлении одного из событий: <code>scroll</code>, <code>resize</code>, <code>click</code>, <code>keydown</code>, <code>mouseover</code>, <code>touchmove</code>.</p>
+        <p>Пример:</p>
+        <div class="codeBlock">
+            <code>auto.lib.deffered(</code>
+            <code>    () => { Code... },</code>
+            <code>    10000</code>
+            <code>)</code>
+        </div>
         
-        <h4><code class="fs16">isEmail(email)</code></h4>
+        <h4><code class="fs16">auto.lib.isEmail(email)</code></h4>
         <p>Определяет валидность адреса электропочты.</p>
         
-        <h4><code class="fs16">alertErrors(data)</code></h4>
+        <h4><code class="fs16">auto.lib.alertErrors(data)</code></h4>
         <p>
             Показывает алерт с ошибками.<br/>
             <code>data</code> — объект (ключ: значение), массив или строка.<br/>
             Каждая ошибка будет выведена с новой строки (разделены <code>\n</code>).
         </p>
         
-        <h4><code class="fs16">printErrors(data)</code></h4>
+        <h4><code class="fs16">auto.lib.printErrors(data)</code></h4>
         <p>
             Печатает ошибки.<br/>
             <code>data</code> — объект (ключ: значение), массив или строка.<br/>

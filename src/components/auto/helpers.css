@@ -66,12 +66,22 @@ Created by andreyshpigunov on 25.05.2021.
 .t3 { top: var(--space-3) !important }
 .t4 { top: var(--space-4) !important }
 .t5 { top: var(--space-5) !important }
+.t6 { top: var(--space-6) !important }
+.t7 { top: var(--space-7) !important }
+.t8 { top: var(--space-8) !important }
+.t9 { top: var(--space-9) !important }
+.t10 { top: var(--space-10) !important }
 .b0 { bottom: var(--space-0) !important }
 .b1 { bottom: var(--space-1) !important }
 .b2 { bottom: var(--space-2) !important }
 .b3 { bottom: var(--space-3) !important }
 .b4 { bottom: var(--space-4) !important }
 .b5 { bottom: var(--space-5) !important }
+.b6 { bottom: var(--space-6) !important }
+.b7 { bottom: var(--space-7) !important }
+.b8 { bottom: var(--space-8) !important }
+.b9 { bottom: var(--space-9) !important }
+.b10 { bottom: var(--space-10) !important }
 @media (min-width: 1024px) {
     .lg\:sticky { position: sticky !important; top: 0 }
     .lg\:t0 { top: var(--space-0) !important }
@@ -80,12 +90,22 @@ Created by andreyshpigunov on 25.05.2021.
     .lg\:t3 { top: var(--space-3) !important }
     .lg\:t4 { top: var(--space-4) !important }
     .lg\:t5 { top: var(--space-5) !important }
+    .lg\:t6 { top: var(--space-6) !important }
+    .lg\:t7 { top: var(--space-7) !important }
+    .lg\:t8 { top: var(--space-8) !important }
+    .lg\:t9 { top: var(--space-9) !important }
+    .lg\:t10 { top: var(--space-10) !important }
     .lg\:b0 { bottom: var(--space-0) !important }
     .lg\:b1 { bottom: var(--space-1) !important }
     .lg\:b2 { bottom: var(--space-2) !important }
     .lg\:b3 { bottom: var(--space-3) !important }
     .lg\:b4 { bottom: var(--space-4) !important }
     .lg\:b5 { bottom: var(--space-5) !important }
+    .lg\:b6 { bottom: var(--space-6) !important }
+    .lg\:b7 { bottom: var(--space-7) !important }
+    .lg\:b8 { bottom: var(--space-8) !important }
+    .lg\:b9 { bottom: var(--space-9) !important }
+    .lg\:b10 { bottom: var(--space-10) !important }
 }
 @media (min-width: 640px) and (max-width: 1023px) {
     .md\:sticky { position: sticky !important; top: 0 }
@@ -95,12 +115,22 @@ Created by andreyshpigunov on 25.05.2021.
     .md\:t3 { top: var(--space-3) !important }
     .md\:t4 { top: var(--space-4) !important }
     .md\:t5 { top: var(--space-5) !important }
+    .md\:t6 { top: var(--space-6) !important }
+    .md\:t7 { top: var(--space-7) !important }
+    .md\:t8 { top: var(--space-8) !important }
+    .md\:t9 { top: var(--space-9) !important }
+    .md\:t10 { top: var(--space-10) !important }
     .md\:b0 { bottom: var(--space-0) !important }
     .md\:b1 { bottom: var(--space-1) !important }
     .md\:b2 { bottom: var(--space-2) !important }
     .md\:b3 { bottom: var(--space-3) !important }
     .md\:b4 { bottom: var(--space-4) !important }
     .md\:b5 { bottom: var(--space-5) !important }
+    .md\:b6 { bottom: var(--space-6) !important }
+    .md\:b7 { bottom: var(--space-7) !important }
+    .md\:b8 { bottom: var(--space-8) !important }
+    .md\:b9 { bottom: var(--space-9) !important }
+    .md\:b10 { bottom: var(--space-10) !important }
 }
 @media (max-width: 639px) {
     .sm\:sticky { position: sticky !important; top: 0 }
@@ -110,12 +140,22 @@ Created by andreyshpigunov on 25.05.2021.
     .sm\:t3 { top: var(--space-3) !important }
     .sm\:t4 { top: var(--space-4) !important }
     .sm\:t5 { top: var(--space-5) !important }
+    .sm\:t6 { top: var(--space-6) !important }
+    .sm\:t7 { top: var(--space-7) !important }
+    .sm\:t8 { top: var(--space-8) !important }
+    .sm\:t9 { top: var(--space-9) !important }
+    .sm\:t10 { top: var(--space-10) !important }
     .sm\:b0 { bottom: var(--space-0) !important }
     .sm\:b1 { bottom: var(--space-1) !important }
     .sm\:b2 { bottom: var(--space-2) !important }
     .sm\:b3 { bottom: var(--space-3) !important }
     .sm\:b4 { bottom: var(--space-4) !important }
     .sm\:b5 { bottom: var(--space-5) !important }
+    .sm\:b6 { bottom: var(--space-6) !important }
+    .sm\:b7 { bottom: var(--space-7) !important }
+    .sm\:b8 { bottom: var(--space-8) !important }
+    .sm\:b9 { bottom: var(--space-9) !important }
+    .sm\:b10 { bottom: var(--space-10) !important }
 }
 
 /* Opacity */

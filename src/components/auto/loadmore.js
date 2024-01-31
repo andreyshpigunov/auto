@@ -75,7 +75,7 @@ class Loadmore {
                 window.scrollY + document.documentElement.clientHeight
             );
             let scrollTarget = parseInt(
-                item.block.offsetTop + item.Block.clientHeight - item.offset
+                item.block.offsetTop + item.block.clientHeight - item.offset
             );
             
             if (scrollPosition >= scrollTarget) {

@@ -175,9 +175,9 @@ const lib = {
     
     // Load script and add it to the end of the body
     // Callback function run after the script loaded.
-    // auto.utils.loadScript(
+    // auto.lib.loadScript(
     //   '/path/to/file.js',
-    //   function () { Callback function... },
+    //   () => { Callback function... },
     //   async|defer
     // )
     loadScript(path, callback, type = 'async') {
@@ -201,6 +201,10 @@ const lib = {
     loadedScripts: [],
     
     // Deffered code execution
+    // auto.lib.deffered(
+    //   () => { Code... },
+    //   delay in ms
+    // )
     deffered(code, delay = 10000) {
         let fired = false;
         
