@@ -227,6 +227,7 @@ class Scroll {
             ) {
                 if (item.classActive != null) {
                     item.link.classList.add(item.classActive);
+                    item.target.classList.add(item.classActive);
                 }
             } else {
                 if (
@@ -234,6 +235,7 @@ class Scroll {
                     item.link.classList.contains(item.classActive)
                 ) {
                     item.link.classList.remove(item.classActive);
+                    item.target.classList.remove(item.classActive);
                 }
             }
         });
