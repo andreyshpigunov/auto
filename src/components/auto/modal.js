@@ -191,12 +191,12 @@ class Modal {
                 this.lock = false;
             }, 400);
             
-            if (device.iphone || device.ipad || device.android) {
-                document.body.style.position = null;
-                document.body.style.top = null;
-                document.body.style.width = null;
-                window.scrollTo(0, this.scrollPosition);
-            }
+            // if (device.iphone || device.ipad || device.android) {
+            //     document.body.style.position = null;
+            //     document.body.style.top = null;
+            //     document.body.style.width = null;
+            //     window.scrollTo(0, this.scrollPosition);
+            // }
         }
     }
     
