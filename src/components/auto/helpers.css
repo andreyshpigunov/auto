@@ -59,6 +59,44 @@ Created by andreyshpigunov on 25.05.2021.
 }
 
 
+.rel { position: relative }
+.abs { position: absolute }
+.fix { position: fixed }
+@media (max-width: 1023px) {
+    .md\:rel { position: relative }
+    .md\:abs { position: absolute }
+    .md\:fix { position: fixed }
+}
+@media (max-width: 639px) {
+    .sm\:rel { position: relative }
+    .sm\:abs { position: absolute }
+    .sm\:fix { position: fixed }
+}
+
+
+.fit-none,
+.fit-cover,
+.fit-contain {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+.fit-none { object-fit: none }
+.fit-cover { object-fit: cover }
+.fit-contain { object-fit: contain }
+@media (max-width: 1023px) {
+    .md\:fit-none { object-fit: none }
+    .md\:fit-cover { object-fit: cover }
+    .md\:fit-contain { object-fit: contain }
+}
+@media (max-width: 639px) {
+    .sm\:fit-none { object-fit: none }
+    .sm\:fit-cover { object-fit: cover }
+    .sm\:fit-contain { object-fit: contain }
+}
+
+
 .sticky { position: sticky !important; top: 0 }
 .t0 { top: var(--space-0) !important }
 .t1 { top: var(--space-1) !important }
@@ -228,6 +266,7 @@ Created by andreyshpigunov on 25.05.2021.
     position: relative;
     height: 0;
     
+    & > video,
     & > iframe,
     & > object,
     & > embed,

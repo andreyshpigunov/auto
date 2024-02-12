@@ -10,6 +10,7 @@ Created by andreyshpigunov on 25.05.2021.
 :root {
     /* Base variables */
     --line-height: 1.5;
+    --font-color: #000;
     --font-size: 16px;
     --font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica,
                    Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji,
@@ -63,6 +64,7 @@ html {
     line-height: var(--line-height);
     font-family: var(--font-family);
     font-size: var(--font-size);
+    color: var(--font-color);
     font-synthesis: initial;
     text-rendering: optimizeLegibility;
     -webkit-text-size-adjust: 100%;
