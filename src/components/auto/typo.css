@@ -8,8 +8,8 @@ Created by andreyshpigunov on 25.05.2021.
 /* Typo */
 
 :root {
-    --headers-margin-top: 2rem;
-    --headers-margin-bottom: 1.8rem;
+    --headers-margin-top: 2.2rem;
+    --headers-margin-bottom: 2rem;
     --headers-font-family: var(--font-family);
     --headers-font-weight: 700;
     --headers-font-color: #000;
@@ -66,6 +66,7 @@ h6, .h6 {
 h1, .h1 {
     font-size: var(--h1-font-size);
     line-height: var(--h1-line-height);
+    margin-bottom: calc(var(--headers-margin-bottom) * 1.25);
 }
 h2, .h2 {
     font-size: var(--h2-font-size);

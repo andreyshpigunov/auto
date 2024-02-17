@@ -173,6 +173,31 @@ const lib = {
         }
     },
     
+    // Make password with length (default — 8)
+    // selector — input or textarea field query selector
+    makePassword(length, selector) {
+        length = length || 8;
+        let password = '',
+            upper = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
+            lower = 'abcdefghijklmnopqrstuvwxyz',
+            chars = '!@#^$%^&*()-+:,.;_',
+            digits = '0123456789';
+            
+        for (var i = 0; i < length / 4; ++i) {
+            password += upper.charAt(Math.floor(Math.random() * upper.length));
+            password += lower.charAt(Math.floor(Math.random() * lower.length));
+            password += chars.charAt(Math.floor(Math.random() * chars.length));
+            password += digits.charAt(Math.floor(Math.random() * digits.length))
+        }
+        password = password.substring(0, length);
+        password = password.split('').sort(() => {return 0.5-Math.random()}).join('');
+        if (selector) {
+            qs(selector).value = password
+        } else {
+            return password
+        }
+    },
+    
     // Load script and add it to the end of the body
     // Callback function run after the script loaded.
     // auto.lib.loadScript(

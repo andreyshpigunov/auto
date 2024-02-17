@@ -14,7 +14,7 @@
 <body id="top">
     
     <header class="header flex aic">
-        <div class="header-version">2.1</div>
+        <div class="header-version">2.2</div>
         <div class="header-logo mxa">
             <a role="button" data-scrollto="top">
                 <img src="assets/logo.png" alt="Auto"/>
@@ -180,8 +180,8 @@
             <h3>JsDelivr</h3>
             <p class="breakWord">
                 Последний релиз:<br/>
-                <a href="https://cdn.jsdelivr.net/gh/andreyshpigunov/auto@2.1.0/dist/auto.css">https://cdn.jsdelivr.net/gh/andreyshpigunov/auto@2.1.0/dist/auto.css</a><br/>
-                <a href="https://cdn.jsdelivr.net/gh/andreyshpigunov/auto@2.1.0/dist/auto.js">https://cdn.jsdelivr.net/gh/andreyshpigunov/auto@2.1.0/dist/auto.js</a>
+                <a href="https://cdn.jsdelivr.net/gh/andreyshpigunov/auto@2.2.0/dist/auto.css">https://cdn.jsdelivr.net/gh/andreyshpigunov/auto@2.2.0/dist/auto.css</a><br/>
+                <a href="https://cdn.jsdelivr.net/gh/andreyshpigunov/auto@2.2.0/dist/auto.js">https://cdn.jsdelivr.net/gh/andreyshpigunov/auto@2.2.0/dist/auto.js</a>
             </p>
             <p class="breakWord">
                 Последняя сборка:<br/>
@@ -2297,6 +2297,12 @@
         <h4><code class="fs16">auto.lib.toggleClass(element, readyClass, activeClass, delayAdd, delayRemove)
         </code></h4>
         <p>Последовательное переключение классов. Иногда удобно использовать, когда требуется задержка, пока не завершится анимация. По очереди запускает <code>addClass</code> и <code>removeClass</code>.</p>
+        
+        <h4><code class="fs16">auto.lib.makePassword(length, selector)
+        </code></h4>
+        <p>Создает пароль указанной длины (по умолчанию — 8).</p>
+        <p>Если созданный пароль сразу нужно вставить в поле input или textarea, вы можете указать выражение для querySelector этого поля в переменной selector.</p>
+        <p><a class="button small" onclick="alert(auto.lib.makePassword())">Придумать пароль!</a></p>
         
         <h4><code class="fs16">auto.lib.loadScript(path, callback, type = 'async|defer')</code></h4>
         <p>Загружает скрипт и добавляет его в конец перед <code>&lt;/body&gt;</code>. После успешной загрузки выполняется <code>callback</code>.</p>
