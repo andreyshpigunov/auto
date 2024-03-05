@@ -11,10 +11,10 @@ Created by andreyshpigunov on 25.05.2021.
     --button-padding: .7em 1.1em;
     --button-font-family: var(--font-family);
     --button-font-size: var(--font-size);
-    --button-font-size-xsmall: calc(var(--font-size) * .8);
-    --button-font-size-small: calc(var(--font-size) * .9);
-    --button-font-size-large: calc(var(--font-size) * 1.2);
-    --button-font-size-xlarge: calc(var(--font-size) * 1.4);
+    --button-font-size-xsmall: calc(var(--button-font-size) * .8);
+    --button-font-size-small: calc(var(--button-font-size) * .9);
+    --button-font-size-large: calc(var(--button-font-size) * 1.2);
+    --button-font-size-xlarge: calc(var(--button-font-size) * 1.4);
     --button-font-weight: 400;
     --button-line-height: 1;
     --button-border-radius: 10px;
