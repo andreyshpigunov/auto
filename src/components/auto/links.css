@@ -53,7 +53,8 @@ a {
         text-decoration-color: var(--link-border-color-hover);
     }
     &.pseudo {
-        text-decoration-style: dashed;
+        --link-decoration: underline;
+        --link-border-style: dashed;
     }
     
 }
