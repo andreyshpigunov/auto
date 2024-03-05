@@ -113,10 +113,6 @@ blockquote {
     background: #fafafa;
     font-style: italic;
     hyphens: auto;
-
-    & p:last-child {
-        margin-bottom: 0;
-    }
 }
 
 pre {
