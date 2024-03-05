@@ -8,9 +8,13 @@ Created by andreyshpigunov on 25.05.2021.
 /* Buttons */
 
 :root {
-    --button-padding: .64em 1em;
+    --button-padding: .7em 1.1em;
     --button-font-family: var(--font-family);
     --button-font-size: var(--font-size);
+    --button-font-size-xsmall: calc(var(--font-size) * .8);
+    --button-font-size-small: calc(var(--font-size) * .9);
+    --button-font-size-large: calc(var(--font-size) * 1.2);
+    --button-font-size-xlarge: calc(var(--font-size) * 1.4);
     --button-font-weight: 400;
     --button-line-height: 1;
     --button-border-radius: 10px;
@@ -125,25 +129,23 @@ a.button {
         pointer-events: none;
     }
     
-    &.bold { font-weight: 700 }
-    
-    &.xsmall { font-size: calc(var(--button-font-size) * .8) }
-    &.small  { font-size: calc(var(--button-font-size) * .9) }
-    &.large  { font-size: calc(var(--button-font-size) * 1.2) }
-    &.xlarge { font-size: calc(var(--button-font-size) * 1.4) }
+    &.xsmall { font-size: var(--button-font-size-xsmall) }
+    &.small  { font-size: var(--button-font-size-small) }
+    &.large  { font-size: var(--button-font-size-large) }
+    &.xlarge { font-size: var(--button-font-size-xlarge) }
     
     @media(max-width: 1023px){
-        &.md\:xsmall { font-size: calc(var(--button-font-size) * .8) }
-        &.md\:small  { font-size: calc(var(--button-font-size) * .9) }
-        &.md\:large  { font-size: calc(var(--button-font-size) * 1.2) }
-        &.md\:xlarge { font-size: calc(var(--button-font-size) * 1.4) }
+        &.md\:xsmall { font-size: var(--button-font-size-xsmall) }
+        &.md\:small  { font-size: var(--button-font-size-small) }
+        &.md\:large  { font-size: var(--button-font-size-large) }
+        &.md\:xlarge { font-size: var(--button-font-size-xlarge) }
     }
     
     @media(max-width: 639px){
-        &.sm\:xsmall { font-size: calc(var(--button-font-size) * .8) }
-        &.sm\:small  { font-size: calc(var(--button-font-size) * .9) }
-        &.sm\:large  { font-size: calc(var(--button-font-size) * 1.2) }
-        &.sm\:xlarge { font-size: calc(var(--button-font-size) * 1.4) }
+        &.sm\:xsmall { font-size: var(--button-font-size-xsmall) }
+        &.sm\:small  { font-size: var(--button-font-size-small) }
+        &.sm\:large  { font-size: var(--button-font-size-large) }
+        &.sm\:xlarge { font-size: var(--button-font-size-xlarge) }
     }
 }
 
