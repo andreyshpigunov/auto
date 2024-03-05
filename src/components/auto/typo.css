@@ -9,16 +9,16 @@ Created by andreyshpigunov on 25.05.2021.
 
 :root {
     --headers-margin-top: 2.2rem;
-    --headers-margin-bottom: 2rem;
+    --headers-margin-bottom: 1.8rem;
     --headers-font-family: var(--font-family);
     --headers-font-weight: 700;
     --headers-font-color: #000;
-    --h1-font-size: 46px;
-    --h2-font-size: 38px;
-    --h3-font-size: 30px;
-    --h4-font-size: 26px;
-    --h5-font-size: 22px;
-    --h6-font-size: 18px;
+    --h1-font-size: calc(var(--font-size) + 30px);
+    --h2-font-size: calc(var(--font-size) + 22px);
+    --h3-font-size: calc(var(--font-size) + 16px);
+    --h4-font-size: calc(var(--font-size) + 10px);
+    --h5-font-size: calc(var(--font-size) + 4px);
+    --h6-font-size: var(--font-size);
     --h1-line-height: 1.2;
     --h2-line-height: 1.3;
     --h3-line-height: 1.4;
@@ -89,10 +89,17 @@ h6, .h6 {
 p {
     margin: var(--paragraph-margin) 0;
     font-style: inherit;
+    
+    &:first-child {
+        margin-top: 0;
+    }
+    &:last-child {
+        margin-bottom: 0;
+    }
 }
 
 figure {
-    margin: calc(var(--paragraph-margin) * 2) auto;
+    margin: calc(var(--paragraph-margin) * 1.5) auto;
 
     & figcaption {
         font-size: var(--figcaption-font-size);
@@ -101,7 +108,7 @@ figure {
 }
 
 blockquote {
-    margin: calc(var(--paragraph-margin) * 2) 0;
+    margin: calc(var(--paragraph-margin) * 1.5) 0;
     padding: 1rem 1.6rem;
     background: #fafafa;
     font-style: italic;
