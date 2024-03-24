@@ -120,6 +120,41 @@ Created by andreyshpigunov on 25.05.2021.
 .b8 { bottom: var(--space-8) !important }
 .b9 { bottom: var(--space-9) !important }
 .b10 { bottom: var(--space-10) !important }
+.l0 { left: var(--space-0) !important }
+.l1 { left: var(--space-1) !important }
+.l2 { left: var(--space-2) !important }
+.l3 { left: var(--space-3) !important }
+.l4 { left: var(--space-4) !important }
+.l5 { left: var(--space-5) !important }
+.l6 { left: var(--space-6) !important }
+.l7 { left: var(--space-7) !important }
+.l8 { left: var(--space-8) !important }
+.l9 { left: var(--space-9) !important }
+.l10 { left: var(--space-10) !important }
+.r0 { right: var(--space-0) !important }
+.r1 { right: var(--space-1) !important }
+.r2 { right: var(--space-2) !important }
+.r3 { right: var(--space-3) !important }
+.r4 { right: var(--space-4) !important }
+.r5 { right: var(--space-5) !important }
+.r6 { right: var(--space-6) !important }
+.r7 { right: var(--space-7) !important }
+.r8 { right: var(--space-8) !important }
+.r9 { right: var(--space-9) !important }
+.r10 { right: var(--space-10) !important }
+
+.z0 { z-index: 0 !important }
+.z1 { z-index: 1 !important }
+.z2 { z-index: 2 !important }
+.z3 { z-index: 3 !important }
+.z4 { z-index: 4 !important }
+.z5 { z-index: 5 !important }
+.z6 { z-index: 6 !important }
+.z7 { z-index: 7 !important }
+.z8 { z-index: 8 !important }
+.z9 { z-index: 9 !important }
+.z10 { z-index: 10 !important }
+
 @media (min-width: 1024px) {
     .lg\:sticky { position: sticky !important; top: 0 }
     .lg\:t0 { top: var(--space-0) !important }
@@ -144,6 +179,40 @@ Created by andreyshpigunov on 25.05.2021.
     .lg\:b8 { bottom: var(--space-8) !important }
     .lg\:b9 { bottom: var(--space-9) !important }
     .lg\:b10 { bottom: var(--space-10) !important }
+    .lg\:l0 { left: var(--space-0) !important }
+    .lg\:l1 { left: var(--space-1) !important }
+    .lg\:l2 { left: var(--space-2) !important }
+    .lg\:l3 { left: var(--space-3) !important }
+    .lg\:l4 { left: var(--space-4) !important }
+    .lg\:l5 { left: var(--space-5) !important }
+    .lg\:l6 { left: var(--space-6) !important }
+    .lg\:l7 { left: var(--space-7) !important }
+    .lg\:l8 { left: var(--space-8) !important }
+    .lg\:l9 { left: var(--space-9) !important }
+    .lg\:l10 { left: var(--space-10) !important }
+    .lg\:r0 { right: var(--space-0) !important }
+    .lg\:r1 { right: var(--space-1) !important }
+    .lg\:r2 { right: var(--space-2) !important }
+    .lg\:r3 { right: var(--space-3) !important }
+    .lg\:r4 { right: var(--space-4) !important }
+    .lg\:r5 { right: var(--space-5) !important }
+    .lg\:r6 { right: var(--space-6) !important }
+    .lg\:r7 { right: var(--space-7) !important }
+    .lg\:r8 { right: var(--space-8) !important }
+    .lg\:r9 { right: var(--space-9) !important }
+    .lg\:r10 { right: var(--space-10) !important }
+    
+    .lg\:z0 { z-index: 0 !important }
+    .lg\:z1 { z-index: 1 !important }
+    .lg\:z2 { z-index: 2 !important }
+    .lg\:z3 { z-index: 3 !important }
+    .lg\:z4 { z-index: 4 !important }
+    .lg\:z5 { z-index: 5 !important }
+    .lg\:z6 { z-index: 6 !important }
+    .lg\:z7 { z-index: 7 !important }
+    .lg\:z8 { z-index: 8 !important }
+    .lg\:z9 { z-index: 9 !important }
+    .lg\:z10 { z-index: 10 !important }
 }
 @media (min-width: 640px) and (max-width: 1023px) {
     .md\:sticky { position: sticky !important; top: 0 }
@@ -169,6 +238,40 @@ Created by andreyshpigunov on 25.05.2021.
     .md\:b8 { bottom: var(--space-8) !important }
     .md\:b9 { bottom: var(--space-9) !important }
     .md\:b10 { bottom: var(--space-10) !important }
+    .md\:l0 { left: var(--space-0) !important }
+    .md\:l1 { left: var(--space-1) !important }
+    .md\:l2 { left: var(--space-2) !important }
+    .md\:l3 { left: var(--space-3) !important }
+    .md\:l4 { left: var(--space-4) !important }
+    .md\:l5 { left: var(--space-5) !important }
+    .md\:l6 { left: var(--space-6) !important }
+    .md\:l7 { left: var(--space-7) !important }
+    .md\:l8 { left: var(--space-8) !important }
+    .md\:l9 { left: var(--space-9) !important }
+    .md\:l10 { left: var(--space-10) !important }
+    .md\:r0 { right: var(--space-0) !important }
+    .md\:r1 { right: var(--space-1) !important }
+    .md\:r2 { right: var(--space-2) !important }
+    .md\:r3 { right: var(--space-3) !important }
+    .md\:r4 { right: var(--space-4) !important }
+    .md\:r5 { right: var(--space-5) !important }
+    .md\:r6 { right: var(--space-6) !important }
+    .md\:r7 { right: var(--space-7) !important }
+    .md\:r8 { right: var(--space-8) !important }
+    .md\:r9 { right: var(--space-9) !important }
+    .md\:r10 { right: var(--space-10) !important }
+    
+    .md\:z0 { z-index: 0 !important }
+    .md\:z1 { z-index: 1 !important }
+    .md\:z2 { z-index: 2 !important }
+    .md\:z3 { z-index: 3 !important }
+    .md\:z4 { z-index: 4 !important }
+    .md\:z5 { z-index: 5 !important }
+    .md\:z6 { z-index: 6 !important }
+    .md\:z7 { z-index: 7 !important }
+    .md\:z8 { z-index: 8 !important }
+    .md\:z9 { z-index: 9 !important }
+    .md\:z10 { z-index: 10 !important }
 }
 @media (max-width: 639px) {
     .sm\:sticky { position: sticky !important; top: 0 }
@@ -194,6 +297,40 @@ Created by andreyshpigunov on 25.05.2021.
     .sm\:b8 { bottom: var(--space-8) !important }
     .sm\:b9 { bottom: var(--space-9) !important }
     .sm\:b10 { bottom: var(--space-10) !important }
+    .sm\:l0 { left: var(--space-0) !important }
+    .sm\:l1 { left: var(--space-1) !important }
+    .sm\:l2 { left: var(--space-2) !important }
+    .sm\:l3 { left: var(--space-3) !important }
+    .sm\:l4 { left: var(--space-4) !important }
+    .sm\:l5 { left: var(--space-5) !important }
+    .sm\:l6 { left: var(--space-6) !important }
+    .sm\:l7 { left: var(--space-7) !important }
+    .sm\:l8 { left: var(--space-8) !important }
+    .sm\:l9 { left: var(--space-9) !important }
+    .sm\:l10 { left: var(--space-10) !important }
+    .sm\:r0 { right: var(--space-0) !important }
+    .sm\:r1 { right: var(--space-1) !important }
+    .sm\:r2 { right: var(--space-2) !important }
+    .sm\:r3 { right: var(--space-3) !important }
+    .sm\:r4 { right: var(--space-4) !important }
+    .sm\:r5 { right: var(--space-5) !important }
+    .sm\:r6 { right: var(--space-6) !important }
+    .sm\:r7 { right: var(--space-7) !important }
+    .sm\:r8 { right: var(--space-8) !important }
+    .sm\:r9 { right: var(--space-9) !important }
+    .sm\:r10 { right: var(--space-10) !important }
+    
+    .sm\:z0 { z-index: 0 !important }
+    .sm\:z1 { z-index: 1 !important }
+    .sm\:z2 { z-index: 2 !important }
+    .sm\:z3 { z-index: 3 !important }
+    .sm\:z4 { z-index: 4 !important }
+    .sm\:z5 { z-index: 5 !important }
+    .sm\:z6 { z-index: 6 !important }
+    .sm\:z7 { z-index: 7 !important }
+    .sm\:z8 { z-index: 8 !important }
+    .sm\:z9 { z-index: 9 !important }
+    .sm\:z10 { z-index: 10 !important }
 }
 
 /* Opacity */
@@ -359,6 +496,10 @@ Created by andreyshpigunov on 25.05.2021.
     width: 100% !important;
     max-width: 100% !important;
 }
+.max10 { max-width: 10px !important }
+.max20 { max-width: 20px !important }
+.max30 { max-width: 30px !important }
+.max40 { max-width: 40px !important }
 .max50 { max-width: 50px !important }
 .max60 { max-width: 60px !important }
 .max70 { max-width: 70px !important }
@@ -383,6 +524,8 @@ Created by andreyshpigunov on 25.05.2021.
 .max1200 { max-width: 1200px !important }
 .max1300 { max-width: 1300px !important }
 .max1400 { max-width: 1400px !important }
+.max1500 { max-width: 1500px !important }
+.max1600 { max-width: 1600px !important }
 
 
 .block { display: block }
@@ -677,6 +820,10 @@ Created by andreyshpigunov on 25.05.2021.
         width: 100% !important;
         max-width: 100% !important;
     }
+    .md\:max10 { max-width: 10px !important }
+    .md\:max20 { max-width: 20px !important }
+    .md\:max30 { max-width: 30px !important }
+    .md\:max40 { max-width: 40px !important }
     .md\:max50 { max-width: 50px !important }
     .md\:max60 { max-width: 60px !important }
     .md\:max70 { max-width: 70px !important }
@@ -701,6 +848,8 @@ Created by andreyshpigunov on 25.05.2021.
     .md\:max1200 { max-width: 1200px !important }
     .md\:max1300 { max-width: 1300px !important }
     .md\:max1400 { max-width: 1400px !important }
+    .md\:max1500 { max-width: 1500px !important }
+    .md\:max1600 { max-width: 1600px !important }
     
     .md\:m0 { margin: var(--space-0) !important }
     .md\:m1 { margin: var(--space-1) !important }
@@ -997,6 +1146,10 @@ Created by andreyshpigunov on 25.05.2021.
         width: 100% !important;
         max-width: 100% !important;
     }
+    .sm\:max10 { max-width: 10px !important }
+    .sm\:max20 { max-width: 20px !important }
+    .sm\:max30 { max-width: 30px !important }
+    .sm\:max40 { max-width: 40px !important }
     .sm\:max50 { max-width: 50px !important }
     .sm\:max60 { max-width: 60px !important }
     .sm\:max70 { max-width: 70px !important }
@@ -1021,6 +1174,8 @@ Created by andreyshpigunov on 25.05.2021.
     .sm\:max1200 { max-width: 1200px !important }
     .sm\:max1300 { max-width: 1300px !important }
     .sm\:max1400 { max-width: 1400px !important }
+    .sm\:max1500 { max-width: 1500px !important }
+    .sm\:max1600 { max-width: 1600px !important }
     
     .sm\:m0 { margin: var(--space-0) !important }
     .sm\:m1 { margin: var(--space-1) !important }
