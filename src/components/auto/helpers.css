@@ -120,28 +120,6 @@ Created by andreyshpigunov on 25.05.2021.
 .b8 { bottom: var(--space-8) !important }
 .b9 { bottom: var(--space-9) !important }
 .b10 { bottom: var(--space-10) !important }
-.l0 { left: var(--space-0) !important }
-.l1 { left: var(--space-1) !important }
-.l2 { left: var(--space-2) !important }
-.l3 { left: var(--space-3) !important }
-.l4 { left: var(--space-4) !important }
-.l5 { left: var(--space-5) !important }
-.l6 { left: var(--space-6) !important }
-.l7 { left: var(--space-7) !important }
-.l8 { left: var(--space-8) !important }
-.l9 { left: var(--space-9) !important }
-.l10 { left: var(--space-10) !important }
-.r0 { right: var(--space-0) !important }
-.r1 { right: var(--space-1) !important }
-.r2 { right: var(--space-2) !important }
-.r3 { right: var(--space-3) !important }
-.r4 { right: var(--space-4) !important }
-.r5 { right: var(--space-5) !important }
-.r6 { right: var(--space-6) !important }
-.r7 { right: var(--space-7) !important }
-.r8 { right: var(--space-8) !important }
-.r9 { right: var(--space-9) !important }
-.r10 { right: var(--space-10) !important }
 
 .z0 { z-index: 0 !important }
 .z1 { z-index: 1 !important }
@@ -179,28 +157,6 @@ Created by andreyshpigunov on 25.05.2021.
     .lg\:b8 { bottom: var(--space-8) !important }
     .lg\:b9 { bottom: var(--space-9) !important }
     .lg\:b10 { bottom: var(--space-10) !important }
-    .lg\:l0 { left: var(--space-0) !important }
-    .lg\:l1 { left: var(--space-1) !important }
-    .lg\:l2 { left: var(--space-2) !important }
-    .lg\:l3 { left: var(--space-3) !important }
-    .lg\:l4 { left: var(--space-4) !important }
-    .lg\:l5 { left: var(--space-5) !important }
-    .lg\:l6 { left: var(--space-6) !important }
-    .lg\:l7 { left: var(--space-7) !important }
-    .lg\:l8 { left: var(--space-8) !important }
-    .lg\:l9 { left: var(--space-9) !important }
-    .lg\:l10 { left: var(--space-10) !important }
-    .lg\:r0 { right: var(--space-0) !important }
-    .lg\:r1 { right: var(--space-1) !important }
-    .lg\:r2 { right: var(--space-2) !important }
-    .lg\:r3 { right: var(--space-3) !important }
-    .lg\:r4 { right: var(--space-4) !important }
-    .lg\:r5 { right: var(--space-5) !important }
-    .lg\:r6 { right: var(--space-6) !important }
-    .lg\:r7 { right: var(--space-7) !important }
-    .lg\:r8 { right: var(--space-8) !important }
-    .lg\:r9 { right: var(--space-9) !important }
-    .lg\:r10 { right: var(--space-10) !important }
     
     .lg\:z0 { z-index: 0 !important }
     .lg\:z1 { z-index: 1 !important }
@@ -238,28 +194,6 @@ Created by andreyshpigunov on 25.05.2021.
     .md\:b8 { bottom: var(--space-8) !important }
     .md\:b9 { bottom: var(--space-9) !important }
     .md\:b10 { bottom: var(--space-10) !important }
-    .md\:l0 { left: var(--space-0) !important }
-    .md\:l1 { left: var(--space-1) !important }
-    .md\:l2 { left: var(--space-2) !important }
-    .md\:l3 { left: var(--space-3) !important }
-    .md\:l4 { left: var(--space-4) !important }
-    .md\:l5 { left: var(--space-5) !important }
-    .md\:l6 { left: var(--space-6) !important }
-    .md\:l7 { left: var(--space-7) !important }
-    .md\:l8 { left: var(--space-8) !important }
-    .md\:l9 { left: var(--space-9) !important }
-    .md\:l10 { left: var(--space-10) !important }
-    .md\:r0 { right: var(--space-0) !important }
-    .md\:r1 { right: var(--space-1) !important }
-    .md\:r2 { right: var(--space-2) !important }
-    .md\:r3 { right: var(--space-3) !important }
-    .md\:r4 { right: var(--space-4) !important }
-    .md\:r5 { right: var(--space-5) !important }
-    .md\:r6 { right: var(--space-6) !important }
-    .md\:r7 { right: var(--space-7) !important }
-    .md\:r8 { right: var(--space-8) !important }
-    .md\:r9 { right: var(--space-9) !important }
-    .md\:r10 { right: var(--space-10) !important }
     
     .md\:z0 { z-index: 0 !important }
     .md\:z1 { z-index: 1 !important }
@@ -297,28 +231,6 @@ Created by andreyshpigunov on 25.05.2021.
     .sm\:b8 { bottom: var(--space-8) !important }
     .sm\:b9 { bottom: var(--space-9) !important }
     .sm\:b10 { bottom: var(--space-10) !important }
-    .sm\:l0 { left: var(--space-0) !important }
-    .sm\:l1 { left: var(--space-1) !important }
-    .sm\:l2 { left: var(--space-2) !important }
-    .sm\:l3 { left: var(--space-3) !important }
-    .sm\:l4 { left: var(--space-4) !important }
-    .sm\:l5 { left: var(--space-5) !important }
-    .sm\:l6 { left: var(--space-6) !important }
-    .sm\:l7 { left: var(--space-7) !important }
-    .sm\:l8 { left: var(--space-8) !important }
-    .sm\:l9 { left: var(--space-9) !important }
-    .sm\:l10 { left: var(--space-10) !important }
-    .sm\:r0 { right: var(--space-0) !important }
-    .sm\:r1 { right: var(--space-1) !important }
-    .sm\:r2 { right: var(--space-2) !important }
-    .sm\:r3 { right: var(--space-3) !important }
-    .sm\:r4 { right: var(--space-4) !important }
-    .sm\:r5 { right: var(--space-5) !important }
-    .sm\:r6 { right: var(--space-6) !important }
-    .sm\:r7 { right: var(--space-7) !important }
-    .sm\:r8 { right: var(--space-8) !important }
-    .sm\:r9 { right: var(--space-9) !important }
-    .sm\:r10 { right: var(--space-10) !important }
     
     .sm\:z0 { z-index: 0 !important }
     .sm\:z1 { z-index: 1 !important }
