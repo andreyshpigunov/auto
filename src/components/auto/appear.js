@@ -13,71 +13,52 @@
 class Appear {
     
     constructor() {
-        this.itemsHash = {};
+        this.items = null;
         this.classIsAppeared = "isAppeared";
         this.classAppeared = "appeared";
         this.classVisible = "visible";
+        this.observer = null;
     }
     
     init() {
-        let items = document.querySelectorAll("." + this.classIsAppeared);
-        if (items.length) {
+        this.items = document.querySelectorAll("." + this.classIsAppeared);
+        if (this.items.length) {
             
-            items.forEach((e, index) => {
-                try {
-                    let item = {};
-                    
-                    item.element = e;
-                    item.classAppeared = this.classAppeared;
-                    item.classVisible = this.classVisible;
-                    this.itemsHash[index] = item;
-                    
-                    if (item.element.classList.contains(this.classIsAppeared)) {
-                        item.element.classList.remove(this.classIsAppeared);
-                    }
-                } catch (err) {
-                    console.log(err);
-                }
+            // Remove initial class 'classIsAppeared' on elements
+            this.items.forEach((item, index) => {
+                item.classList.remove(this.classIsAppeared);
             });
             
-            if (Object.keys(this.itemsHash).length) {
-                this._scroll(this.itemsHash);
-                document.addEventListener("scroll", () => {
-                    this._scroll(this.itemsHash);
-                }, { passive: true });
+            // Observe items
+            let observerCallback = (entries, observer) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        if (
+                            this.classAppeared != null &&
+                            !entry.target.classList.contains(this.classAppeared)
+                        ) {
+                            entry.target.classList.add(this.classAppeared);
+                        }
+                        if (this.classVisible != null) {
+                            entry.target.classList.add(this.classVisible);
+                        }
+                    } else {
+                        if (
+                            this.classVisible != null &&
+                            entry.target.classList.contains(this.classVisible)
+                        ) {
+                            entry.target.classList.remove(this.classVisible);
+                        }
+                    }
+                });
             }
+            this.observer = new IntersectionObserver(observerCallback);
+            this.items.forEach((item) => this.observer.observe(item));
         }
     }
     
     update() {
-        this._scroll(this.itemsHash);
-    }
-    
-    _scroll(itemsHash) {
-        Object.keys(itemsHash).forEach(i => {
-            let item = itemsHash[i],
-                elementOffset = item.element.getBoundingClientRect();
-            
-            if (
-                elementOffset.top < window.innerHeight &&
-                elementOffset.bottom > 0
-            ) {
-                if (item.classAppeared != null) {
-                    item.element.classList.add(item.classAppeared);
-                }
-                
-                if (item.classVisible != null) {
-                    item.element.classList.add(item.classVisible);
-                }
-            } else {
-                if (
-                    item.classVisible != null &&
-                    item.element.classList.contains(item.classVisible)
-                ) {
-                    item.element.classList.remove(item.classVisible);
-                }
-            }
-        });
+        this.items.forEach((item) => this.observer.observe(item));
     }
 }
 

@@ -140,7 +140,7 @@
     </section>
     
     <section class="section-header mt7">
-        <h2 class="ac">Начало использования</h2>
+        <h2 class="ac" id="test">Начало использования</h2>
     </section>
     
     <div class="element1" data-animate='
@@ -2365,12 +2365,23 @@
         </div>
         
         <h4><code class="fs16">auto.lib.deffered(code, delay = 10000)</code></h4>
-        <p>Отложенное выполнение кода. Анонимная функция с кодом <code>function () { code }</code> будет запущена через время <code>delay</code> (по умолчанию 10 с), либо по наступлении одного из событий: <code>scroll</code>, <code>resize</code>, <code>click</code>, <code>keydown</code>, <code>mouseover</code>, <code>touchmove</code>.</p>
+        <p>Отложенное выполнение кода. Анонимная функция с кодом <code>() => { code }</code> будет запущена через время <code>delay</code> (по умолчанию 10 с), либо по наступлении одного из событий: <code>scroll</code>, <code>resize</code>, <code>click</code>, <code>keydown</code>, <code>mouseover</code>, <code>touchmove</code>.</p>
         <p>Пример:</p>
         <div class="codeBlock">
             <code>auto.lib.deffered(</code>
             <code>    () => { Code... },</code>
             <code>    10000</code>
+            <code>)</code>
+        </div>
+        
+        <h4><code class="fs16">auto.lib.runOnAppear(selector, callback, options)</code></h4>
+        <p>Выполнение кода при его появлении во Viewport (по умолчанию ближе чем за 100px за Viewport). Анонимная функция с кодом <code>() => { code }</code> будет запущена при приближении указанного блока к Viewport.</p>
+        <p>Пример:</p>
+        <div class="codeBlock">
+            <code>auto.lib.runOnAppear(</code>
+            <code>    '.css_selector',</code>
+            <code>    () => { Code... },</code>
+            <code>    options (не обязательно)</code>
             <code>)</code>
         </div>
         
@@ -2423,6 +2434,10 @@
             qs('.header').style.height = height + 'px';
             qs('.header-logo img').style.height = height + 'px';
         }
+        
+        auto.lib.runOnAppear('#test', () => {
+            console.log('Load!')
+        })
     </script>
 </body>
 </html>

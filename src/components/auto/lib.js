@@ -225,12 +225,12 @@ const lib = {
     },
     loadedScripts: [],
     
-    // Deffered code execution
+    // Deffered callback execution
     // auto.lib.deffered(
     //   () => { Code... },
     //   delay in ms
     // )
-    deffered(code, delay = 10000) {
+    deffered(callback, delay = 10000) {
         let fired = false;
         
         function run() {
@@ -246,9 +246,9 @@ const lib = {
                 
                 // Load or set load event
                 if (document.readyState == 'complete') {
-                    code();
+                    callback();
                 } else {
-                    window.addEventListener('load', code, false);
+                    window.addEventListener('load', callback, false);
                 }
             }
         }
@@ -261,6 +261,38 @@ const lib = {
         window.addEventListener('keydown', run, { capture: false, passive: true });
         window.addEventListener('mousemove', run, { capture: false, passive: true });
         window.addEventListener('touchmove', run, { capture: false, passive: true });
+    },
+    
+    // Run on appear
+    // The callback is triggered when the object is approaching the viewport
+    // selector — trigger element
+    // options — IntersectionObserver options
+    // Example:
+    // auto.lib.appear(
+    //   '#map',
+    //   () => { Code... },
+    //   {
+    //       root: window,
+    //       rootMargin: '0px 0px 0px 0px',
+    //       threshold: 0.5
+    //   }
+    // )
+    runOnAppear(selector, callback, options) {
+        let params = options || {
+            rootMargin: '100px 0px',
+            threshold: 0
+        }
+        let element = qs(selector);
+        let observerCallback = (entries, observer) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    callback();
+                    observer.unobserve(element);
+                }
+            });
+        }
+        let observer = new IntersectionObserver(observerCallback, params);
+        observer.observe(element);
     },
     
     // Check email format
