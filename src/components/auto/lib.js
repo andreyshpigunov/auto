@@ -279,7 +279,7 @@ const lib = {
     // )
     runOnAppear(selector, callback, options) {
         let params = options || {
-            rootMargin: '100px 0px',
+            rootMargin: '200px 0px',
             threshold: 0
         }
         let element = qs(selector);
