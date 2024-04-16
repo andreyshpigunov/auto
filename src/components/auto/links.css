@@ -10,6 +10,7 @@ Created by andreyshpigunov on 25.05.2021.
 :root {
     --link-decoration: underline;
     --link-border-style: solid;
+    --link-underline-offset: .3em;
     
     --link-color: #0060cc;
     --link-border-color: #0060cc77;
@@ -36,7 +37,7 @@ a {
         text-decoration-line: var(--link-decoration);
         text-decoration-style: var(--link-border-style);
         text-decoration-color: var(--link-border-color);
-        text-underline-offset: .3em;
+        text-underline-offset: var(--link-underline-offset);
     }
     &:visited {
         color: var(--link-color-visited);
