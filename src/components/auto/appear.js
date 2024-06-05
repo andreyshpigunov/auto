@@ -18,6 +18,9 @@ class Appear {
         this.classAppeared = "appeared";
         this.classVisible = "visible";
         this.observer = null;
+        
+        this.eventVisible = new CustomEvent("visible");
+        this.eventInvisible  = new CustomEvent("invisible");
     }
     
     init() {
@@ -41,6 +44,7 @@ class Appear {
                         }
                         if (this.classVisible != null) {
                             entry.target.classList.add(this.classVisible);
+                            entry.target.dispatchEvent(this.eventVisible);
                         }
                     } else {
                         if (
@@ -48,6 +52,7 @@ class Appear {
                             entry.target.classList.contains(this.classVisible)
                         ) {
                             entry.target.classList.remove(this.classVisible);
+                            entry.target.dispatchEvent(this.eventInvisible);
                         }
                     }
                 });

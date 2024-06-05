@@ -263,7 +263,7 @@ const lib = {
         window.addEventListener('touchmove', run, { capture: false, passive: true });
     },
     
-    // Run on appear
+    // Run once on appear
     // The callback is triggered when the object is approaching the viewport
     // selector — trigger element
     // options — IntersectionObserver options
