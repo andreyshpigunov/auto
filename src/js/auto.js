@@ -8,42 +8,59 @@
 //
 
 
-import hover from "../components/auto/hover";
-import lazyload from "../components/auto/lazyload";
-import animate from "../components/auto/animate";
-import appear from "../components/auto/appear";
-import loadmore from "../components/auto/loadmore";
-import device from "../components/auto/device";
-import modal from "../components/auto/modal";
-import sheets from "../components/auto/sheets";
-import scroll from "../components/auto/scroll";
-import lib from "../components/auto/lib";
+import hover from "../components/hover";
+import lazyload from "../components/lazyload";
+import animate from "../components/animate";
+import appear from "../components/appear";
+import loadmore from "../components/loadmore";
+import device from "../components/device";
+import modal from "../components/modal";
+import sheets from "../components/sheets";
+import scroll from "../components/scroll";
+import lib from "../components/lib";
+import form from "../components/form";
 
-const auto = {
-    appear: appear,
-    loadmore: loadmore,
-    device: device,
-    modal: modal,
-    scroll: scroll,
-    sheets: sheets,
-    lib: lib,
+
+class Auto {
+    
+    constructor() {
+        this.modal = modal;
+        this.animate = animate;
+        this.appear = appear;
+        this.lazyload = lazyload;
+        this.loadmore = loadmore;
+        this.sheets = sheets;
+        this.scroll = scroll;
+        this.hover = hover;
+        this.device = device;
+        this.lib = lib;
+        this.form = form;
+        
+        this.initialized = false;
+    }
     
     init() {
-        modal.init();
-        animate.init();
-        appear.init();
-        lazyload.init();
-        loadmore.init();
-        sheets.init();
-        scroll.init();
-        hover.init();
+        if (!this.initialized) {
+            this.modal.init();
+            this.animate.init();
+            this.appear.init();
+            this.lazyload.init();
+            this.loadmore.init();
+            this.sheets.init();
+            this.scroll.init();
+            this.hover.init();
+            this.form.init();
+            this.initialized = true;
+        }
     }
+    
 };
+
+const auto = new Auto();
 
 // Shorthands
 window.qs = auto.lib.qs;
 window.qsa = auto.lib.qsa;
 
-// Export auto
+// Globally share auto
 window.auto = auto;
-export default auto;

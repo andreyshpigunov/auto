@@ -1,6 +1,6 @@
 {
 	"name": "auto",
-	"version": "1.4.3",
+	"version": "2.2.6",
 	"devDependencies": {
 		"@parcel/logger": "*",
 		"autoprefixer": "^10.1.0",

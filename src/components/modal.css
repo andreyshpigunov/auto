@@ -213,7 +213,8 @@ html.modal-active body {
 
 /* Zoom in */
 
-.modal.effectIn {
+.modal.effectIn,
+.modal.effect-in {
     & .modal-window {
         transform: scale(.9);
         transition: all .15s ease-out;
@@ -226,7 +227,8 @@ html.modal-active body {
 
 /* Zoom out */
 
-.modal.effectOut {
+.modal.effectOut,
+.modal.effect-out {
     & .modal-window {
         transform: scale(1.1);
         transition: all .15s ease-out;
@@ -239,7 +241,8 @@ html.modal-active body {
 
 /* Slide up */
 
-.modal.effectUp {
+.modal.effectUp,
+.modal.effect-up {
     & .modal-window {
         transform: translateY(30px);
         transition: all .2s ease-out;
@@ -251,7 +254,8 @@ html.modal-active body {
 
 /* Slide down */
 
-.modal.effectDown {
+.modal.effectDown,
+.modal.effect-down {
     & .modal-window {
         transform: translateY(-30px);
         transition: all .2s ease-out;
@@ -263,7 +267,8 @@ html.modal-active body {
 
 /* Slide from left */
 
-.modal.effectLeft {
+.modal.effectLeft,
+.modal.effect-left {
     & .modal-window {
         transform: translateX(-30px);
         transition: all .2s ease-out;
@@ -275,7 +280,8 @@ html.modal-active body {
 
 /* Slide from right */
 
-.modal.effectRight {
+.modal.effectRight,
+.modal.effect-right {
     & .modal-window {
         transform: translateX(30px);
         transition: all .2s ease-out;

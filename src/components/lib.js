@@ -8,44 +8,49 @@
 //
 
 
-const lib = {
+class Lib {
+    constructor() {
+        this.loadedScripts = [];
+    }
     
-    // Shorthands
-    qs: (s, o = document) => o.querySelector(s),
-    qsa: (s, o = document) => o.querySelectorAll(s),
+    // querySelector
+    qs(selector, context = document) {
+        return context.querySelector(selector)
+    }
     
-    // Hide element (add class .hidden)
+    // querySelectorAll
+    qsa(selector, context = document) {
+        return context.querySelectorAll(selector)
+    }
+    
+    // Hide element(s) (add class .hidden)
     hide(element) {
-        let item = typeof element == 'string' ?
-            document.querySelector(element) :
-            element;
-        if (item) item.classList.add('hidden')
-    },
+        let item = typeof element == 'string' ? this.qsa(element) : element;
+        if (item) item.forEach(i => i.classList.add('hidden'));
+    }
     
     // Show element (remove class .hidden)
     show(element) {
-        let item = typeof element == 'string' ?
-                   document.querySelector(element) :
-                   element;
-        if (item) item.classList.remove('hidden')
-    },
+        let item = typeof element == 'string' ? this.qsa(element) : element;
+        if (item) item.forEach(i => i.classList.remove('hidden'))
+    }
     
     // Reload page
     reload() {
         location.reload()
-    },
+    }
     
     // Reload page with new hash
     reloadWithHash(hash) {
         window.location.hash = hash;
         this.reload()
-    },
+    }
     
     // Redirect to url
     redirectTo(url) {
         window.location = url;
         return false
-    },
+    }
     
     // Update title and page url without reload
     // You can add only hash: lib.updateURL('#ok').
@@ -55,26 +60,26 @@ const lib = {
         } else {
             location.href = url
         }
-    },
+    }
     
     // Random number
     random(a, b) {
         return Math.floor(Math.random() * (b - a + 1)) + a;
-    },
+    }
     
     // Price format 9 999 999.99
     price(price) {
         let p = parseFloat(price);
         return p
             .toFixed(2)
-            .replace(/\d(?=(\d{3})+\.)/g, '$& ')
+            .replace(/\d(?=(\d{3})+\.)/g, '$& ')
             .replace('.00', '')
-    },
+    }
     
     // Number format
     number(a) {
         return this.numberFormat(a);
-    },
+    }
     
     numberFormat(a) {
         a = parseFloat(a) + '';
@@ -83,7 +88,7 @@ const lib = {
             x2 = x.length > 1 ? '.' + x[1] : '';
         for (let b = /(\d+)(\d{3})/; b.test(x1);) x1 = x1.replace(b, '$1 $2');
         return x1 + x2;
-    },
+    }
     
     // Number decline
     numberDecline(a, b, c, d) {
@@ -110,7 +115,7 @@ const lib = {
             }
         }
         return e;
-    },
+    }
     
     // Add activeClass after readyClass in two steps, with delay
     addClass(
@@ -120,9 +125,7 @@ const lib = {
         delay = 50
     ) {
         // If element value is html element or query selector
-        let item = typeof element == 'string' ?
-                   document.querySelector(element) :
-                   element;
+        let item = typeof element == 'string' ? this.qs(element) : element;
         if (
             item &&
             !item.classList.contains(readyClass) &&
@@ -133,7 +136,7 @@ const lib = {
                 item.classList.add(activeClass);
             }, delay);
         }
-    },
+    }
     
     // Remove activeClass before removing readyClass in two steps, with delay
     removeClass(
@@ -143,9 +146,7 @@ const lib = {
         delay = 200
     ) {
         // If element value is html element or query selector
-        let item = typeof element == 'string' ?
-                   document.querySelector(element) :
-                   element;
+        let item = typeof element == 'string' ? qs(element) : element;
         if (
             item &&
             item.classList.contains(readyClass) &&
@@ -156,14 +157,12 @@ const lib = {
                 item.classList.remove(readyClass);
             }, delay);
         }
-    },
+    }
     
     // Toggle activeClass using readyClass in two steps, with delay
     toggleClass(element, readyClass, activeClass, delayAdd, delayRemove) {
         // If element value is html element or query selector
-        let item = typeof element == 'string' ?
-                   document.querySelector(element) :
-                   element;
+        let item = typeof element == 'string' ? qs(element) : element;
         if (item) {
             if (!item.classList.contains(activeClass)) {
                 this.addClass(element, readyClass, activeClass, delayAdd);
@@ -171,7 +170,7 @@ const lib = {
                 this.removeClass(element, readyClass, activeClass, delayRemove);
             }
         }
-    },
+    }
     
     // Make password with length (default — 8)
     // selector — input or textarea field query selector
@@ -196,7 +195,7 @@ const lib = {
         } else {
             return password
         }
-    },
+    }
     
     // Load script and add it to the end of the body
     // Callback function run after the script loaded.
@@ -222,8 +221,7 @@ const lib = {
                 callback();
             }
         }
-    },
-    loadedScripts: [],
+    }
     
     // Deffered callback execution
     // auto.lib.deffered(
@@ -261,7 +259,7 @@ const lib = {
         window.addEventListener('keydown', run, { capture: false, passive: true });
         window.addEventListener('mousemove', run, { capture: false, passive: true });
         window.addEventListener('touchmove', run, { capture: false, passive: true });
-    },
+    }
     
     // Run once on appear
     // The callback is triggered when the object is approaching the viewport
@@ -293,13 +291,13 @@ const lib = {
         }
         let observer = new IntersectionObserver(observerCallback, params);
         observer.observe(element);
-    },
+    }
     
     // Check email format
     isEmail(email) {
         let regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
         return regex.test(email);
-    },
+    }
     
     // Show alert window with errors
     // data — object (with key:value), array or string (object and array splitted by '\n')
@@ -317,7 +315,7 @@ const lib = {
                 alert(err.join('\n'))
             }
         }
-    },
+    }
     
     // Print text with errors
     // data — object (with key:value), array or string (object and array splitted by '<br/>')
@@ -338,5 +336,6 @@ const lib = {
     }
 }
 
-export default lib;
+const lib = new Lib();
 
+export default lib;
