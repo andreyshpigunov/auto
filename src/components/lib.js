@@ -26,13 +26,25 @@ class Lib {
     // Hide element(s) (add class .hidden)
     hide(element) {
         let item = typeof element == 'string' ? this.qsa(element) : element;
-        if (item) item.forEach(i => i.classList.add('hidden'));
+        if (item) {
+            if (item instanceof NodeList) {
+                item.forEach(i => i.classList.add('hidden'))
+            } else {
+                item.classList.add('hidden')
+            }
+        }
     }
     
     // Show element (remove class .hidden)
     show(element) {
         let item = typeof element == 'string' ? this.qsa(element) : element;
-        if (item) item.forEach(i => i.classList.remove('hidden'))
+        if (item) {
+            if (item instanceof NodeList) {
+                item.forEach(i => i.classList.remove('hidden'))
+            } else {
+                item.classList.remove('hidden')
+            }
+        }
     }
     
     // Reload page
