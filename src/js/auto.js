@@ -49,7 +49,6 @@ class Auto {
             this.sheets.init();
             this.scroll.init();
             this.hover.init();
-            this.form.init();
             this.initialized = true;
         }
     }
